@@ -4,6 +4,43 @@
 @tailwind components;
 @tailwind utilities;
 
+/* CSS Custom Properties for Runtime Theme Switching */
+:root {
+  /* Default Theme Colors */
+  --color-primary: #111111;
+  --color-secondary: #287fff;
+  --color-accent: #e63b32;
+  --color-background: #fafafa;
+  --color-surface: #ffffff;
+  --color-surface-light: #f4f6fa;
+  --color-text-primary: #111111;
+  --color-text-secondary: #454545;
+}
+
+[data-theme="professional"] {
+  /* Professional Theme Colors */
+  --color-primary: #0f172a;
+  --color-secondary: #1e3a8a;
+  --color-accent: #d97706;
+  --color-background: #f1f5f9;
+  --color-surface: #ffffff;
+  --color-surface-light: #e2e8f0;
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+}
+
+[data-theme="professional-dark"] {
+  /* Professional Dark Theme Colors */
+  --color-primary: #0f172a;
+  --color-secondary: #1e40af;
+  --color-accent: #f59e0b;
+  --color-background: #e2e8f0;
+  --color-surface: #f8fafc;
+  --color-surface-light: #cbd5e1;
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #374151;
+}
+
 * {
    font-family: "Quicksand", sans-serif;
 }

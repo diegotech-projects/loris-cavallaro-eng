@@ -7,18 +7,18 @@ function BookDoctor() {
     <div className="container-custom">
       {/* Header Section */}
       <div className="text-center mb-16">
-        <button className="bg-gray-100 text-gray-700 px-6 py-3 rounded-full text-sm font-medium mb-6">
+        <button className="bg-themeSurfaceLight text-themeTextSecondary px-6 py-3 rounded-full text-sm font-medium mb-6">
           Our Specialists
         </button>
         <div className="flex items-center justify-between">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
+          <h2 className="text-4xl lg:text-5xl font-bold text-themeTextPrimary">
             Most popular<br />specialists
           </h2>
           <div className="flex gap-4">
-            <button className="bg-gray-900 text-white px-6 py-3 rounded-lg font-medium">
+            <button className="bg-themeSecondary text-themeSurface px-6 py-3 rounded-lg font-medium hover:bg-themeAccent transition-colors">
               View more
             </button>
-            <button className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium">
+            <button className="border border-themeSurfaceLight text-themeTextSecondary px-6 py-3 rounded-lg font-medium hover:bg-themeSurfaceLight transition-colors">
               Contact Us
             </button>
           </div>
@@ -29,7 +29,7 @@ function BookDoctor() {
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
         {Object.keys(Doctors).slice(0, 4).map((doctor) => (
           <div key={Doctors[doctor].name} className="group">
-            <div className="relative overflow-hidden rounded-lg bg-gray-100 aspect-square mb-4">
+            <div className="relative overflow-hidden rounded-lg bg-themeSurfaceLight aspect-square mb-4">
               <Image
                 src={Doctors[doctor].image}
                 alt={Doctors[doctor].name}
@@ -37,10 +37,10 @@ function BookDoctor() {
               />
             </div>
             <div className="text-center">
-              <h3 className="font-semibold text-lg text-gray-900 mb-1">
+              <h3 className="font-semibold text-lg text-themeTextPrimary mb-1">
                 {Doctors[doctor].name}
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-themeTextSecondary text-sm">
                 {Doctors[doctor].occupation}
               </p>
             </div>

@@ -40,7 +40,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="">
+      <body className="bg-themeBackground min-h-screen">
         <Header />
         {children}
         <Footer />

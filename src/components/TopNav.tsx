@@ -6,10 +6,10 @@ import MenuBar from './MenuBar';
 
 const TopNav = () => {
   return (
-    <div className="container-custom text-primary">
+    <div className="container-custom text-themeTextPrimary">
       <div className="wrapper flex w-full items-center justify-between">
         <div className="flex w-[30%] items-center gap-1 font-bold 2xl:text-2xl">
-          PlusCare <BsFillHeartFill className="text-customBlue" />
+          PlusCare <BsFillHeartFill className="text-themeSecondary" />
         </div>
         <div className="hidden w-[40%] items-center justify-center gap-x-5 text-sm font-semibold lg:flex 2xl:gap-x-10 2xl:text-base">
           <a className="anchor" href="/">
@@ -29,7 +29,7 @@ const TopNav = () => {
           <a href="/#FAQ">FAQ</a>
           <a
             href="/#appointment"
-            className="rounded-full bg-customBlue px-4 py-3 text-customWhite"
+            className="rounded-full bg-themeSecondary px-4 py-3 text-themeSurface"
           >
             Book Appointment
           </a>

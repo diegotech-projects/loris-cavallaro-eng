@@ -10,20 +10,20 @@ function Services() {
       <div className="text-center mb-16">
         <button
           type="button"
-          className="flex items-center gap-2 bg-gray-100 px-6 py-3 rounded-full text-sm font-medium text-gray-700 mb-6 mx-auto"
+          className="flex items-center gap-2 bg-themeSurfaceLight px-6 py-3 rounded-full text-sm font-medium text-themeTextSecondary mb-6 mx-auto"
         >
           <span>Our Services</span>
           <Image src={emogi} alt="emoji" className="w-5" />
         </button>
-        <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        <h2 className="text-4xl lg:text-5xl font-bold text-themeTextPrimary mb-4">
           A comprehensive set of services
         </h2>
         <div className="flex justify-end">
           <div className="flex gap-4">
-            <button className="bg-gray-900 text-white px-6 py-3 rounded-lg font-medium">
+            <button className="bg-themeSecondary text-themeSurface px-6 py-3 rounded-lg font-medium hover:bg-themeAccent transition-colors">
               View more
             </button>
-            <button className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium">
+            <button className="border border-themeSurfaceLight text-themeTextSecondary px-6 py-3 rounded-lg font-medium hover:bg-themeSurfaceLight transition-colors">
               Contact Us
             </button>
           </div>

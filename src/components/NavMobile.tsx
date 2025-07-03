@@ -79,14 +79,14 @@ const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
   ];
 
   return (
-    <div className="h-screen w-full divide-y-2 divide-neutral-100 overflow-y-auto bg-white py-2 shadow-lg ring-1  transition">
+    <div className="h-screen w-full divide-y-2 divide-neutral-100 overflow-y-auto bg-themeSurface py-2 shadow-lg ring-1  transition">
       <div className="px-5 py-2">
-        <div className="flex w-[30%] items-center gap-1 font-bold 2xl:text-2xl">
-          PlusCare <BsFillHeartFill className="text-customBlue" />
+        <div className="flex w-[30%] items-center gap-1 font-bold text-themeTextPrimary 2xl:text-2xl">
+          PlusCare <BsFillHeartFill className="text-themeSecondary" />
         </div>
         <button
           type="button"
-          className="absolute right-2 top-2 p-1"
+          className="absolute right-2 top-2 p-1 text-themeTextPrimary"
           onKeyDownCapture={onClickClose}
           onClick={onClickClose}
         >
@@ -100,7 +100,7 @@ const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
             onClick={onClickClose}
             href={item.href}
             key={item.title}
-            className="capitalize"
+            className="capitalize text-themeTextPrimary"
           >
             {item.title}
           </Link>
@@ -110,7 +110,7 @@ const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
         <Link
           onClick={onClickClose}
           href="/#appointment"
-          className="rounded-full bg-customBlue px-4 py-3 text-customWhite"
+          className="rounded-full bg-themeSecondary px-4 py-3 text-themeSurface"
         >
           Book Appointment
         </Link>
