@@ -1,13 +1,17 @@
 /* eslint-disable import/no-extraneous-dependencies, import/extensions */
 import './src/libs/Env.mjs';
 import withBundleAnalyzer from '@next/bundle-analyzer';
+import createNextIntlPlugin from 'next-intl/plugin';
+
 
 const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
+const withNextIntl = createNextIntlPlugin();
+
 /** @type {import('next').NextConfig} */
-export default bundleAnalyzer({
+export default withNextIntl(bundleAnalyzer({
   eslint: {
     dirs: ['.'],
   },
@@ -53,4 +57,4 @@ export default bundleAnalyzer({
 
     return config;
   },
-});
+}));
