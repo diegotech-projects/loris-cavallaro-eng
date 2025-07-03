@@ -1,0 +1,39 @@
+{
+  "heading": {
+    "premiumQuality": "Qualità Premium",
+    "medical": "Medici",
+    "careServices": "Servizi di Cura",
+    "description": "Servizi medici esperti con cure di livello mondiale e professionisti fidati che forniscono soluzioni sanitarie complete per il benessere della tua famiglia.",
+    "getProducts": "Ottieni Prodotti",
+    "contactUs": "Contattaci",
+    "serviceRich": "Servizi <medical>Medici</medical> di Cura"
+  },
+  "services": {
+    "ourServices": "I nostri Servizi",
+    "comprehensiveSet": "Un insieme completo di servizi",
+    "viewMore": "Scopri di Più",
+    "contactUs": "Contattaci",
+
+
+    "telemedicine": {
+      "title": "Telemedicina",
+      "content": "Consulta i medici direttamente tramite videoconferenze, messaggi o anche chiamate telefoniche"
+    },
+    "onlineBooking": {
+      "title": "Prenotazione Online",
+      "content": "I pazienti possono facilmente prenotare appuntamenti con medici e specialisti utilizzando una piattaforma online"
+    },
+    "healthRecords": {
+      "title": "Cartelle Cliniche Elettroniche",
+      "content": "I servizi medici online possono aiutare i pazienti a tenere traccia della loro storia medica"
+    },
+    "remoteTracking": {
+      "title": "Monitoraggio Remoto",
+      "content": "Alcuni servizi medici online consentono ai pazienti di monitorare a distanza le loro condizioni di salute"
+    },
+    "prescriptionRefill": {
+      "title": "Rinnovo Prescrizioni",
+      "content": "I pazienti possono richiedere il rinnovo delle prescrizioni online e i medici possono rivedere la richiesta"
+    }
+  }
+}

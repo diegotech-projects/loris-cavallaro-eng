@@ -1,0 +1,37 @@
+{
+  "heading": {
+    "premiumQuality": "Premium Quality",
+    "medical": "Medical",
+    "careServices": "Care Services",
+    "description": "Expert medical services with world-class care and trusted professionals providing comprehensive healthcare solutions for your family's wellbeing.",
+    "getProducts": "Get Products",
+    "contactUs": "Contact Us",
+    "serviceRich": "<medical>Medical</medical> Care Services"
+  },
+  "services": {
+    "ourServices": "Our Services",
+    "comprehensiveSet": "A comprehensive set of services",
+    "viewMore": "View More",
+    "contactUs": "Contact Us",
+    "telemedicine": {
+      "title": "Telemedicine",
+      "content": "Consult with doctors directly via Video Conferencing, Messages or even Phone Calls"
+    },
+    "onlineBooking": {
+      "title": "Online Booking",
+      "content": "Patients can easily book appointments with Doctors and Specialists using an Online Platform"
+    },
+    "healthRecords": {
+      "title": "Electronic Health Records",
+      "content": "Online Medical Services can help patients keep track of their Medical History"
+    },
+    "remoteTracking": {
+      "title": "Remote Tracking",
+      "content": "Some Medical Online Services allow patients to Remotely Monitor Their Health Conditions"
+    },
+    "prescriptionRefill": {
+      "title": "Prescription Refill",
+      "content": "Patients can request Prescription Refills Online, And Doctors can review the request"
+    }
+  }
+}

@@ -1,9 +1,14 @@
 import Image from 'next/image';
 
-import { serviceData } from '@/data/content';
+import {useTranslations} from 'next-intl';
+
+import { userServiceData } from '@/data/content';
 import emogi from '@/images/emogi2.png';
 
 function Services() {
+  const t = useTranslations('services');
+  const serviceData = userServiceData();
+
   return (
     <div className="container-custom">
       {/* Header Section */}
@@ -12,19 +17,19 @@ function Services() {
           type="button"
           className="flex items-center gap-2 bg-themeSurfaceLight px-6 py-3 rounded-full text-sm font-medium text-themeTextSecondary mb-6 mx-auto"
         >
-          <span>Our Services</span>
+          <span>{t('ourServices')}</span>
           <Image src={emogi} alt="emoji" className="w-5" />
         </button>
         <h2 className="text-4xl lg:text-5xl font-bold text-themeTextPrimary mb-4">
-          A comprehensive set of services
+          {t("comprehensiveSet")}
         </h2>
         <div className="flex justify-end">
           <div className="flex gap-4">
             <button className="bg-themeSecondary text-themeSurface px-6 py-3 rounded-lg font-medium hover:bg-themeAccent transition-colors">
-              View more
+              {t("viewMore")}
             </button>
             <button className="border border-themeSurfaceLight text-themeTextSecondary px-6 py-3 rounded-lg font-medium hover:bg-themeSurfaceLight transition-colors">
-              Contact Us
+              {t("contactUs")}
             </button>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import {useTranslations} from 'next-intl';
 import exodus from '@/images/companies/exodus.png';
 import firstbase from '@/images/companies/firstbase.png';
 import omada from '@/images/companies/omada.png';
@@ -19,43 +20,43 @@ import type { Service } from './types';
 
 export const companyLogos = [omada, robinhood, samsara, firstbase, exodus];
 
-export const serviceData: Service[] = [
-  {
-    id: 1,
-    icon: phone,
-    title: 'Telemedicine',
-    content:
-      'Consult with doctors directly via Video Conferencing, Messages or even Phone Calls',
-  },
-  {
-    id: 2,
-    icon: booking,
-    title: 'Online Booking',
-    content:
-      'Patients can easily book appointments with Doctors and Specialists using an Online Platform',
-  },
-  {
-    id: 3,
-    icon: records,
-    title: 'Electronic Health Records',
-    content:
-      'Online Medical Services can help patients keep track of their Medical History',
-  },
-  {
-    id: 4,
-    icon: remote,
-    title: 'Remote Tracking',
-    content:
-      'Some Medical Online Servicesallow patients to Remotely Monitor Their Health Conditions',
-  },
-  {
-    id: 5,
-    icon: prescription,
-    title: 'Prescription Refill',
-    content:
-      'Patienst can request Prescription Refills Online, And Doctors can review the request',
-  },
-];
+export const userServiceData = () => {
+  const t = useTranslations('services');
+  
+  return [
+    {
+      id: 1,
+      icon: phone,
+      title: t('telemedicine.title'),
+      content: t('telemedicine.content'),
+    },
+    {
+      id: 2,
+      icon: booking,
+      title: t('onlineBooking.title'),
+      content: t('onlineBooking.content'),
+    },
+    {
+      id: 3,
+      icon: records,
+      title: t('healthRecords.title'),
+      content: t('healthRecords.content'),
+    },
+    {
+      id: 4,
+      icon: remote,
+      title: t('remoteTracking.title'),
+      content: t('remoteTracking.content'),
+    },
+    {
+      id: 5,
+      icon: prescription,
+      title: t('prescriptionRefill.title'),
+      content: t('prescriptionRefill.content'),
+    },
+  ];
+};
+
 
 export const StatsData = {
   content:

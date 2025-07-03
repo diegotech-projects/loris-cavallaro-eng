@@ -1,9 +1,12 @@
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import badge from '@/images/badge.png';
 import eu8_01 from '@/images/eu8_01.jpg';
 
 function Heading() {
+  const t = useTranslations('heading');
+  
   return (
     <div className="relative py-20 lg:py-32 overflow-hidden">
       {/* Diagonal Background */}
@@ -18,20 +21,22 @@ function Heading() {
       <div className="wrapper container-custom flex flex-col items-center justify-between gap-y-10 md:flex-row md:gap-y-0 relative z-10">
         <div className="flex flex-col gap-y-8 md:w-1/2 2xl:gap-y-10">
           <div className="text-4xl lg:text-6xl 2xl:text-7xl font-bold text-whiteOne leading-tight">
-            <p>Premium Quality</p>
+            <p>{t('premiumQuality')}</p>
             <p>
-              <span className="text-eliteGold">Medical</span> Care Services
+              {t.rich("serviceRich", {
+                medical: (chunks) => <span className="text-eliteGold">{chunks}</span>,
+              })}
             </p>
           </div>
           <div className="text-lg text-blue-100 2xl:text-xl max-w-lg">
-            <p>Expert medical services with world-class care and trusted professionals providing comprehensive healthcare solutions for your family's wellbeing.</p>
+            <p>{t('description')}</p>
           </div>
           <div className="flex items-center gap-6">
             <button className="bg-eliteGold text-whiteOne px-8 py-4 rounded-lg font-semibold hover:bg-eliteAccent transition-colors">
-              Get Products
+              {t('getProducts')}
             </button>
             <button className="border-2 border-whiteOne text-whiteOne px-6 py-3 rounded-lg font-semibold hover:bg-whiteOne hover:text-eliteNavy transition-colors">
-              Contact Us
+              {t('contactUs')}
             </button>
           </div>
         </div>
