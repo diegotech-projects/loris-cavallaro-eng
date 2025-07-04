@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Appointment from '@/components/Appointment';
+import Appointment from '@/components/Contacts';
 import BgGlassmorphism from '@/components/BgGlassMorphism';
 import ProjectShowcase from '@/components/PortfolioSection';
 import FAQS from '@/components/FAQS';
