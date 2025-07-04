@@ -5,6 +5,7 @@ import type {ReactNode} from 'react';
 import Header from '@/components/Header/Header';
 import Footer from '@/shared/Footer/Footer';
 import CookieConsent from '@/components/CookieConsent';
+import '@/styles/leaflet.css';
 
 type Props = {
   children: ReactNode;

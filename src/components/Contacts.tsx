@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { FaBuilding, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import ContactMap from './ContactMap';
 
 function Appointment() {
   const [formData, setFormData] = useState({
@@ -207,6 +208,12 @@ function Appointment() {
                 <p className="text-white/60 text-sm">Servizi su tutto il territorio nazionale</p>
               </div>
             </div>
+          </div>
+
+          {/* Map Section */}
+          <div className="mb-8">
+            <h3 className="font-semibold text-lg mb-4 text-white">La nostra zona di servizio</h3>
+            <ContactMap />
           </div>
 
           {/* Footer Grid */}
