@@ -18,7 +18,7 @@ const themes = {
     accent: '#d97706',       // Gold accent for highlights
     background: '#f1f5f9',   // Slightly darker than white for sophistication
     surface: '#ffffff',      // Pure white for cards/surfaces
-    surfaceLight: '#e2e8f0', // Light slate for subtle backgrounds
+    surfaceLight: '#b3aa94', // Light slate for subtle backgrounds
     textPrimary: '#0f172a',  // Dark slate for main text
     textSecondary: '#475569', // Medium slate for secondary text
   },

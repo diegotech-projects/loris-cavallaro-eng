@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 import badge from '@/images/badge.png';
-import lorisImg from '@/_docs/data/profilo/01_loris_img.jpeg';
+import engineeringImg from '@/_docs/data/progetti_img/01_3D_esterno casa.jpeg';
 
 function Heading() {
   const t = useTranslations('heading');
@@ -14,7 +14,7 @@ function Heading() {
       <div 
         className="absolute inset-0 bg-eliteLight"
         style={{
-          clipPath: 'polygon(55% 0, 100% 0, 100% 100%, 45% 100%)'
+          clipPath: 'polygon(55% 0, 100% 0, 100% 100%, 95% 100%)'
         }}
       ></div>
       
@@ -48,8 +48,8 @@ function Heading() {
             <Image
               height={900}
               width={700}
-              src={lorisImg}
-              alt="Ingegnere Loris Cavallaro"
+              src={engineeringImg}
+              alt="Progetto di Ingegneria Civile"
               className="h-full w-full object-cover object-center"
             />
           </div>

@@ -15,10 +15,10 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl lg:text-5xl font-bold text-whiteOne mb-6">
-                Chi sono
+                Chi Siamo
               </h1>
               <p className="text-xl text-blue-100 mb-8">
-                Ingegnere civile e ambientale per contribuire a realizzare progetti di grande valore.
+                Studio di ingegneria civile e ambientale specializzato in progetti di grande valore e sostenibilità.
               </p>
             </div>
             <div className="relative h-96 rounded-lg overflow-hidden">
@@ -33,28 +33,61 @@ const AboutPage = () => {
         </div>
       </div>
 
-      {/* Bio Section */}
+      {/* Company Section */}
       <div className="bg-whiteOne py-20">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-primary mb-8">Loris Cavallaro</h2>
+            <h2 className="text-3xl font-bold text-primary mb-8">Il Nostro Studio</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-gray-700 mb-6">
-                Ingegnere civile e ambientale per contribuire a realizzare progetti di grande valore. 
-                Con una laurea magistrale in sicurezza sui luoghi di lavoro, Loris è il professionista 
-                che si occupa di bandi di gara, gare d'appalto, progettazioni civili, pratiche urbanistiche, 
-                diagnosi legge 10, APE convenzionale e progettazione di impianti fotovoltaici.
+                XYZENGINEERING è uno studio di ingegneria civile e ambientale che si distingue per 
+                l'approccio professionale e innovativo nella progettazione edile, sostenibilità e sicurezza. 
+                Il nostro team è guidato dall'Ing. Loris Cavallaro, specializzato in sicurezza sui luoghi di lavoro.
               </p>
               <p className="text-lg text-gray-700 mb-6">
-                Insomma, un vero e proprio punto di riferimento quando si parla di progettazione e sostenibilità.
+                Ci occupiamo di bandi di gara, gare d'appalto, progettazioni civili, pratiche urbanistiche, 
+                diagnosi energetiche secondo Legge 10, certificazioni APE e progettazione di impianti fotovoltaici. 
+                Un vero e proprio punto di riferimento per progettazione e sostenibilità.
               </p>
               <blockquote className="border-l-4 border-eliteGold pl-6 py-4 bg-eliteLight">
                 <p className="text-xl font-medium text-primary italic">
-                  "Vedere che ciò che crea sulla carta si trasforma in realtà tangibile, 
-                  costruendo non solo strutture, ma anche bellezza e funzionalità, 
-                  è per lui l'aspetto più gratificante di far parte di questa realtà."
+                  "La nostra missione è vedere ciò che creiamo sulla carta trasformarsi in realtà tangibile, 
+                  costruendo non solo strutture, ma anche bellezza, funzionalità e sostenibilità per le future generazioni."
                 </p>
               </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Team Section */}
+      <div className="bg-eliteLight py-20">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-primary mb-8 text-center">Il Nostro Team</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div className="relative h-96 rounded-lg overflow-hidden">
+                <Image
+                  src={lorisImg}
+                  alt="Ing. Loris Cavallaro - Direttore Tecnico"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-primary mb-4">Ing. Loris Cavallaro</h3>
+                <p className="text-lg text-eliteGold font-semibold mb-4">Direttore Tecnico e Fondatore</p>
+                <p className="text-gray-700 mb-4">
+                  Ingegnere civile e ambientale con specializzazione in sicurezza sui luoghi di lavoro. 
+                  Con anni di esperienza nel settore, guida il team tecnico dello studio con competenza 
+                  e dedizione verso l'eccellenza progettuale.
+                </p>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Laurea Magistrale in Ingegneria Civile e Ambientale</li>
+                  <li>• Specializzazione in Sicurezza sui Luoghi di Lavoro</li>
+                  <li>• Esperto in Efficienza Energetica e Sostenibilità</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
