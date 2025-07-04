@@ -10,7 +10,8 @@ function Appointment() {
     email: '',
     phone: '',
     projectType: '',
-    message: ''
+    message: '',
+    gdprConsent: false
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -20,9 +21,12 @@ function Appointment() {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const target = e.target;
+    const value = target.type === 'checkbox' ? (target as HTMLInputElement).checked : target.value;
+    
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [target.name]: value
     });
   };
 
@@ -124,9 +128,36 @@ function Appointment() {
               />
             </div>
             
+            {/* GDPR Consent Checkbox */}
+            <div className="border-t border-gray-200 pt-6">
+              <div className="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  id="gdprConsent"
+                  name="gdprConsent"
+                  required
+                  checked={formData.gdprConsent}
+                  onChange={handleChange}
+                  className="mt-1 w-4 h-4 text-themeSecondary bg-gray-100 border-gray-300 rounded focus:ring-themeAccent focus:ring-2"
+                />
+                <label htmlFor="gdprConsent" className="text-sm text-themeTextSecondary">
+                  <span className="font-medium text-themeTextPrimary">Consenso al trattamento dei dati personali *</span>
+                  <br />
+                  Acconsento al trattamento dei miei dati personali per rispondere alla mia richiesta di contatto, 
+                  come descritto nella{' '}
+                  <Link href="/privacy" className="text-themeSecondary hover:text-themeAccent underline">
+                    Privacy Policy
+                  </Link>
+                  . I dati verranno utilizzati esclusivamente per fornire le informazioni richieste e non verranno 
+                  condivisi con terze parti.
+                </label>
+              </div>
+            </div>
+            
             <button
               type="submit"
-              className="w-full bg-themeSecondary text-white px-8 py-4 rounded-lg font-semibold hover:bg-themeAccent transition-colors"
+              disabled={!formData.gdprConsent}
+              className="w-full bg-themeSecondary text-white px-8 py-4 rounded-lg font-semibold hover:bg-themeAccent transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
             >
               Invia Richiesta
             </button>

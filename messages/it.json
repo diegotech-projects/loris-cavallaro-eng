@@ -198,6 +198,14 @@
       "content": "Questa Cookie Policy può essere aggiornata. Controlla regolarmente per eventuali modifiche.",
       "lastUpdate": "Ultimo aggiornamento"
     }
+  },
+  "contactForm": {
+    "gdprConsent": {
+      "title": "Consenso al trattamento dei dati personali *",
+      "text": "Acconsento al trattamento dei miei dati personali per rispondere alla mia richiesta di contatto, come descritto nella",
+      "privacyLink": "Privacy Policy",
+      "continuation": ". I dati verranno utilizzati esclusivamente per fornire le informazioni richieste e non verranno condivisi con terze parti."
+    }
   }
 }
 

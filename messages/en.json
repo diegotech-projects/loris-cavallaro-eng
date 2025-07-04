@@ -197,5 +197,13 @@
       "content": "This Cookie Policy may be updated. Check regularly for any changes.",
       "lastUpdate": "Last updated"
     }
+  },
+  "contactForm": {
+    "gdprConsent": {
+      "title": "Consent to personal data processing *",
+      "text": "I consent to the processing of my personal data to respond to my contact request, as described in the",
+      "privacyLink": "Privacy Policy",
+      "continuation": ". The data will be used exclusively to provide the requested information and will not be shared with third parties."
+    }
   }
 }
