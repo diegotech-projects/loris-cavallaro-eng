@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { FaBuilding, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import ContactMap from './ContactMap';
+import emailjs from '@emailjs/browser';
 
 function Appointment() {
   const [formData, setFormData] = useState({
@@ -15,10 +16,54 @@ function Appointment() {
     gdprConsent: false
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would handle form submission
-    console.log('Form submitted:', formData);
+    
+    if (!formData.gdprConsent) {
+      alert('Devi accettare il consenso al trattamento dei dati per inviare il modulo.');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      // EmailJS configuration - Replace with your actual IDs
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'your_service_id';
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'your_template_id';
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'your_public_key';
+
+      // Template parameters for EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        project_type: formData.projectType,
+        message: formData.message,
+        to_email: 'loriscavallaro22@gmail.com', // Loris's email
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      setSubmitStatus('success');
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        projectType: '',
+        message: '',
+        gdprConsent: false
+      });
+    } catch (error) {
+      console.error('Email send failed:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -155,12 +200,31 @@ function Appointment() {
               </div>
             </div>
             
+            {/* Success/Error Messages */}
+            {submitStatus === 'success' && (
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <p className="text-green-800 font-medium">✅ Messaggio inviato con successo!</p>
+                <p className="text-green-600 text-sm mt-1">
+                  Ti risponderemo al più presto al tuo indirizzo email.
+                </p>
+              </div>
+            )}
+            
+            {submitStatus === 'error' && (
+              <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                <p className="text-red-800 font-medium">❌ Errore nell'invio del messaggio</p>
+                <p className="text-red-600 text-sm mt-1">
+                  Riprova o contattaci direttamente via email: loriscavallaro22@gmail.com
+                </p>
+              </div>
+            )}
+            
             <button
               type="submit"
-              disabled={!formData.gdprConsent}
+              disabled={!formData.gdprConsent || isSubmitting}
               className="w-full bg-themeSecondary text-white px-8 py-4 rounded-lg font-semibold hover:bg-themeAccent transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
             >
-              Invia Richiesta
+              {isSubmitting ? 'Invio in corso...' : 'Invia Richiesta'}
             </button>
           </form>
         </div>
