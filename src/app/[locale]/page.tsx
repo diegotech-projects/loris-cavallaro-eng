@@ -2,7 +2,7 @@ import React from 'react';
 
 import Appointment from '@/components/Appointment';
 import BgGlassmorphism from '@/components/BgGlassMorphism';
-import BookDoctor from '@/components/BookDoctor';
+import ProjectShowcase from '@/components/PortfolioSection';
 import FAQS from '@/components/FAQS';
 import Heading from '@/components/Heading';
 import Reviews from '@/components/Reviews';
@@ -29,9 +29,9 @@ const page = () => {
         <Services />
       </div>
 
-      {/* Featured Products/Services */}
-      <div className="bg-whiteTwo py-20" id="doctors">
-        <BookDoctor />
+      {/* Featured Projects */}
+      <div className="bg-whiteTwo py-20" id="projects">
+        <ProjectShowcase />
       </div>
 
       {/* Most Popular Products */}

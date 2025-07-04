@@ -60,20 +60,24 @@ export const userServiceData = () => {
 
 export const StatsData = {
   content:
-    'Healing you, one step at a time, putting your health first.Compassionate care for all kinds of people! Healing you, one step at a time, putting your health first.Compassionate care for all kinds of people!',
+    'Eccellenza nell\'ingegneria civile e ambientale. Costruiamo il futuro con competenza, sostenibilità e innovazione tecnica per ogni progetto.',
 
   stats: [
     {
-      title: '50',
-      stat: 'Specialized Doctors',
+      title: '50+',
+      stat: 'Progetti Completati',
     },
     {
-      title: '2K',
-      stat: 'Total Employees',
+      title: '10+',
+      stat: 'Anni di Esperienza',
     },
     {
-      title: '12K',
-      stat: 'Happy Clients',
+      title: '95%',
+      stat: 'Clienti Soddisfatti',
+    },
+    {
+      title: '25+',
+      stat: 'Impianti Fotovoltaici',
     },
   ],
 };
