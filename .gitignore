@@ -9,7 +9,7 @@
 
 # Database
 *.db
-
+_docs/
 # testing
 /coverage
 
