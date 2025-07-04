@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 import badge from '@/images/badge.png';
-import eu8_01 from '@/images/eu8_01.jpg';
+import lorisImg from '@/_docs/data/profilo/01_loris_img.jpeg';
 
 function Heading() {
   const t = useTranslations('heading');
@@ -24,7 +24,7 @@ function Heading() {
             <p>{t('premiumQuality')}</p>
             <p>
               {t.rich("serviceRich", {
-                medical: (chunks) => <span className="text-eliteGold">{chunks}</span>,
+                engineering: (chunks) => <span className="text-eliteGold">{chunks}</span>,
               })}
             </p>
           </div>
@@ -48,8 +48,8 @@ function Heading() {
             <Image
               height={900}
               width={700}
-              src={eu8_01}
-              alt="Doctor"
+              src={lorisImg}
+              alt="Ingegnere Loris Cavallaro"
               className="h-full w-full object-cover object-center"
             />
           </div>

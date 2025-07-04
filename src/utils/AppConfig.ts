@@ -1,8 +1,6 @@
-// FIXME: Update this configuration file based on your project information
-
 export const AppConfig = {
-  site_name: 'Starter',
-  title: 'Nextjs Starter',
-  description: 'Starter code for your Nextjs Boilerplate with Tailwind CSS',
-  locale: 'en',
+  site_name: 'Loris Cavallaro - Ingegnere Civile',
+  title: 'Loris Cavallaro - Ingegnere Civile Ambientale',
+  description: 'Ingegnere civile e ambientale specializzato in progettazione edile, sostenibilità e sicurezza sui luoghi di lavoro. Servizi di progettazione, bandi di gara e consulenza tecnica.',
+  locale: 'it', // Default to Italian as requested
 };

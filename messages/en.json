@@ -1,37 +1,37 @@
 {
   "heading": {
     "premiumQuality": "Premium Quality",
-    "medical": "Medical",
-    "careServices": "Care Services",
-    "description": "Expert medical services with world-class care and trusted professionals providing comprehensive healthcare solutions for your family's wellbeing.",
-    "getProducts": "Get Products",
+    "engineering": "Engineering",
+    "civilServices": "Civil Engineering Services",
+    "description": "Expert civil and environmental engineering services with world-class design and trusted professionals providing comprehensive technical solutions for your projects.",
+    "getProducts": "View Projects",
     "contactUs": "Contact Us",
-    "serviceRich": "<medical>Medical</medical> Care Services"
+    "serviceRich": "<engineering>Civil Engineering</engineering> Services"
   },
   "services": {
     "ourServices": "Our Services",
-    "comprehensiveSet": "A comprehensive set of services",
+    "comprehensiveSet": "A comprehensive set of technical services",
     "viewMore": "View More",
     "contactUs": "Contact Us",
-    "telemedicine": {
-      "title": "Telemedicine",
-      "content": "Consult with doctors directly via Video Conferencing, Messages or even Phone Calls"
+    "structuralDesign": {
+      "title": "Structural Design",
+      "content": "Building structural design, structural calculations and static verifications for residential and commercial buildings"
     },
-    "onlineBooking": {
-      "title": "Online Booking",
-      "content": "Patients can easily book appointments with Doctors and Specialists using an Online Platform"
+    "projectManagement": {
+      "title": "Project Management",
+      "content": "Coordination and supervision of construction works, technical management and quality control during all construction phases"
     },
-    "healthRecords": {
-      "title": "Electronic Health Records",
-      "content": "Online Medical Services can help patients keep track of their Medical History"
+    "buildingPermits": {
+      "title": "Building Permits",
+      "content": "Complete management of building permits, construction permits and regulatory compliance for construction projects"
     },
-    "remoteTracking": {
-      "title": "Remote Tracking",
-      "content": "Some Medical Online Services allow patients to Remotely Monitor Their Health Conditions"
+    "energyEfficiency": {
+      "title": "Energy Efficiency",
+      "content": "Energy diagnostics Law 10, APE certifications and photovoltaic system design for sustainability"
     },
-    "prescriptionRefill": {
-      "title": "Prescription Refill",
-      "content": "Patients can request Prescription Refills Online, And Doctors can review the request"
+    "technicalConsulting": {
+      "title": "Technical Consulting",
+      "content": "Tender procedures, public contracts, technical verifications and specialized consulting for civil engineering projects"
     }
   }
 }

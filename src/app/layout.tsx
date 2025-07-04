@@ -41,9 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-themeBackground min-h-screen">
-        <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );

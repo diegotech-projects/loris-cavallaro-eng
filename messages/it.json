@@ -1,39 +1,38 @@
 {
   "heading": {
     "premiumQuality": "Qualità Premium",
-    "medical": "Medici",
-    "careServices": "Servizi di Cura",
-    "description": "Servizi medici esperti con cure di livello mondiale e professionisti fidati che forniscono soluzioni sanitarie complete per il benessere della tua famiglia.",
-    "getProducts": "Ottieni Prodotti",
+    "engineering": "Ingegneria",
+    "civilServices": "Servizi di Ingegneria",
+    "description": "Ingegneria civile e ambientale specializzata in progettazione edile, sostenibilità e sicurezza. Soluzioni tecniche complete per progetti di grande valore e qualità.",
+    "getProducts": "Scopri Progetti",
     "contactUs": "Contattaci",
-    "serviceRich": "Servizi <medical>Medici</medical> di Cura"
+    "serviceRich": "Servizi di <engineering>Ingegneria</engineering> Civile"
   },
   "services": {
     "ourServices": "I nostri Servizi",
-    "comprehensiveSet": "Un insieme completo di servizi",
+    "comprehensiveSet": "Un insieme completo di servizi tecnici",
     "viewMore": "Scopri di Più",
     "contactUs": "Contattaci",
 
-
-    "telemedicine": {
-      "title": "Telemedicina",
-      "content": "Consulta i medici direttamente tramite videoconferenze, messaggi o anche chiamate telefoniche"
+    "structuralDesign": {
+      "title": "Progettazione Strutturale",
+      "content": "Progettazione di strutture edili, calcoli strutturali e verifiche statiche per edifici residenziali e commerciali"
     },
-    "onlineBooking": {
-      "title": "Prenotazione Online",
-      "content": "I pazienti possono facilmente prenotare appuntamenti con medici e specialisti utilizzando una piattaforma online"
+    "projectManagement": {
+      "title": "Direzione Lavori",
+      "content": "Coordinamento e supervisione dei lavori edili, gestione tecnica e controllo qualità durante tutte le fasi costruttive"
     },
-    "healthRecords": {
-      "title": "Cartelle Cliniche Elettroniche",
-      "content": "I servizi medici online possono aiutare i pazienti a tenere traccia della loro storia medica"
+    "buildingPermits": {
+      "title": "Pratiche Urbanistiche",
+      "content": "Gestione completa di pratiche edilizie, permessi di costruire e conformità normativa per progetti edilizi"
     },
-    "remoteTracking": {
-      "title": "Monitoraggio Remoto",
-      "content": "Alcuni servizi medici online consentono ai pazienti di monitorare a distanza le loro condizioni di salute"
+    "energyEfficiency": {
+      "title": "Efficienza Energetica",
+      "content": "Diagnosi energetiche Legge 10, certificazioni APE e progettazione di impianti fotovoltaici per la sostenibilità"
     },
-    "prescriptionRefill": {
-      "title": "Rinnovo Prescrizioni",
-      "content": "I pazienti possono richiedere il rinnovo delle prescrizioni online e i medici possono rivedere la richiesta"
+    "technicalConsulting": {
+      "title": "Consulenza Tecnica",
+      "content": "Bandi di gara, gare d'appalto, verifiche tecniche e consulenza specializzata per progetti di ingegneria civile"
     }
   }
 }

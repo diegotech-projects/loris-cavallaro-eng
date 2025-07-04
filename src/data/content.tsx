@@ -27,32 +27,32 @@ export const userServiceData = () => {
     {
       id: 1,
       icon: phone,
-      title: t('telemedicine.title'),
-      content: t('telemedicine.content'),
+      title: t('structuralDesign.title'),
+      content: t('structuralDesign.content'),
     },
     {
       id: 2,
       icon: booking,
-      title: t('onlineBooking.title'),
-      content: t('onlineBooking.content'),
+      title: t('projectManagement.title'),
+      content: t('projectManagement.content'),
     },
     {
       id: 3,
       icon: records,
-      title: t('healthRecords.title'),
-      content: t('healthRecords.content'),
+      title: t('buildingPermits.title'),
+      content: t('buildingPermits.content'),
     },
     {
       id: 4,
       icon: remote,
-      title: t('remoteTracking.title'),
-      content: t('remoteTracking.content'),
+      title: t('energyEfficiency.title'),
+      content: t('energyEfficiency.content'),
     },
     {
       id: 5,
       icon: prescription,
-      title: t('prescriptionRefill.title'),
-      content: t('prescriptionRefill.content'),
+      title: t('technicalConsulting.title'),
+      content: t('technicalConsulting.content'),
     },
   ];
 };
