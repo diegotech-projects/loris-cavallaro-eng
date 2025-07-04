@@ -33,5 +33,30 @@
       "title": "Technical Consulting",
       "content": "Tender procedures, public contracts, technical verifications and specialized consulting for civil engineering projects"
     }
+  },
+  "cookies": {
+    "notice": {
+      "title": "Cookie Usage",
+      "message": "This website uses technical cookies necessary for the proper functioning of the site and to save your preferences. We do not use tracking or advertising cookies.",
+      "accept": "Accept",
+      "learnMore": "Learn More",
+      "settings": "Cookie Settings"
+    },
+    "settings": {
+      "title": "Cookie Settings",
+      "description": "You can manage your cookie preferences below. Essential cookies are necessary for the site to function.",
+      "necessary": {
+        "title": "Essential Cookies",
+        "description": "These cookies are necessary for the basic functionality of the website and cannot be disabled.",
+        "always": "Always Active"
+      },
+      "preferences": {
+        "title": "Preference Cookies",
+        "description": "These cookies allow the website to remember your preferences (such as language or theme)."
+      },
+      "save": "Save Preferences",
+      "acceptAll": "Accept All",
+      "rejectAll": "Reject All"
+    }
   }
 }

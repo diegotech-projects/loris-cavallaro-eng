@@ -34,5 +34,170 @@
       "title": "Consulenza Tecnica",
       "content": "Bandi di gara, gare d'appalto, verifiche tecniche e consulenza specializzata per progetti di ingegneria civile"
     }
+  },
+  "cookies": {
+    "notice": {
+      "title": "Uso dei Cookie",
+      "message": "Questo sito utilizza cookie tecnici necessari per il corretto funzionamento del sito e per salvare le tue preferenze. Non utilizziamo cookie di tracciamento o pubblicitari.",
+      "accept": "Accetta",
+      "learnMore": "Scopri di più",
+      "settings": "Impostazioni Cookie"
+    },
+    "settings": {
+      "title": "Impostazioni Cookie",
+      "description": "Puoi gestire le tue preferenze sui cookie qui sotto. I cookie essenziali sono necessari per il funzionamento del sito.",
+      "necessary": {
+        "title": "Cookie Essenziali",
+        "description": "Questi cookie sono necessari per il funzionamento base del sito web e non possono essere disattivati.",
+        "always": "Sempre Attivi"
+      },
+      "preferences": {
+        "title": "Cookie delle Preferenze",
+        "description": "Questi cookie permettono al sito di ricordare le tue preferenze (come la lingua o il tema)."
+      },
+      "save": "Salva Preferenze",
+      "acceptAll": "Accetta Tutto",
+      "rejectAll": "Rifiuta Tutto"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "dataController": {
+      "title": "Titolare del Trattamento",
+      "content": "Il titolare del trattamento dei dati personali è:"
+    },
+    "dataCollection": {
+      "title": "Raccolta dei Dati",
+      "content": "Raccogliamo i tuoi dati personali nelle seguenti modalità:",
+      "contactForm": {
+        "title": "Modulo di Contatto",
+        "content": "Quando utilizzi il nostro modulo di contatto, raccogliamo i seguenti dati:",
+        "data": {
+          "name": "Nome e Cognome",
+          "email": "Indirizzo email",
+          "phone": "Numero di telefono",
+          "message": "Messaggio",
+          "projectType": "Tipo di progetto"
+        }
+      }
+    },
+    "dataUsage": {
+      "title": "Utilizzo dei Dati",
+      "content": "I tuoi dati personali vengono utilizzati per:",
+      "purposes": {
+        "respond": "Rispondere alle tue richieste di informazioni",
+        "quote": "Fornire preventivi per i servizi richiesti",
+        "contact": "Contattarti per discutere dei tuoi progetti",
+        "service": "Fornire i servizi di ingegneria richiesti"
+      }
+    },
+    "dataRetention": {
+      "title": "Conservazione dei Dati",
+      "content": "I tuoi dati personali vengono conservati per il tempo necessario a fornire i servizi richiesti e per adempiere agli obblighi legali. Generalmente, i dati vengono conservati per un periodo non superiore a 3 anni dalla fine del rapporto contrattuale."
+    },
+    "userRights": {
+      "title": "I Tuoi Diritti",
+      "content": "Hai il diritto di:",
+      "rights": {
+        "access": "Accedere ai tuoi dati personali",
+        "rectification": "Richiedere la correzione dei dati inesatti",
+        "erasure": "Richiedere la cancellazione dei tuoi dati",
+        "portability": "Richiedere la portabilità dei dati",
+        "restriction": "Richiedere la limitazione del trattamento",
+        "objection": "Opporti al trattamento dei tuoi dati"
+      }
+    },
+    "cookies": {
+      "title": "Cookie",
+      "content": "Il nostro sito utilizza i seguenti tipi di cookie:",
+      "types": {
+        "technical": {
+          "title": "Cookie Tecnici",
+          "content": "Necessari per il funzionamento base del sito web."
+        },
+        "preferences": {
+          "title": "Cookie delle Preferenze",
+          "content": "Utilizzati per ricordare le tue preferenze (lingua, tema)."
+        }
+      }
+    },
+    "contact": {
+      "title": "Contatti",
+      "content": "Per qualsiasi domanda relativa a questa Privacy Policy o per esercitare i tuoi diritti, puoi contattarci a:"
+    },
+    "updates": {
+      "title": "Aggiornamenti",
+      "content": "Questa Privacy Policy può essere aggiornata periodicamente. Ti consigliamo di consultarla regolarmente.",
+      "lastUpdate": "Ultimo aggiornamento"
+    }
+  },
+  "cookiePolicy": {
+    "title": "Cookie Policy",
+    "whatAreCookies": {
+      "title": "Cosa sono i Cookie",
+      "content": "I cookie sono piccoli file di testo che vengono memorizzati sul tuo dispositivo quando visiti un sito web. Ci aiutano a fornire una migliore esperienza utente e a far funzionare correttamente il sito."
+    },
+    "cookieTypes": {
+      "title": "Tipi di Cookie",
+      "content": "Utilizziamo i seguenti tipi di cookie:",
+      "technical": {
+        "title": "Cookie Tecnici",
+        "content": "Essenziali per il funzionamento del sito web. Senza questi cookie, il sito non può funzionare correttamente.",
+        "consent": "Non richiedono il consenso dell'utente"
+      },
+      "preferences": {
+        "title": "Cookie delle Preferenze",
+        "content": "Utilizzati per ricordare le tue preferenze come lingua e tema del sito.",
+        "consent": "Richiedono il consenso dell'utente"
+      }
+    },
+    "cookiesUsed": {
+      "title": "Cookie Utilizzati",
+      "content": "Il nostro sito utilizza i seguenti cookie:",
+      "table": {
+        "name": "Nome",
+        "purpose": "Scopo",
+        "duration": "Durata",
+        "type": "Tipo",
+        "rows": {
+          "consent": {
+            "purpose": "Memorizza le tue preferenze sui cookie",
+            "duration": "1 anno",
+            "type": "Tecnico"
+          },
+          "theme": {
+            "purpose": "Memorizza la tua preferenza del tema",
+            "duration": "Permanente",
+            "type": "Preferenze"
+          }
+        }
+      }
+    },
+    "cookieManagement": {
+      "title": "Gestione dei Cookie",
+      "content": "Puoi gestire i cookie in diversi modi:",
+      "website": {
+        "title": "Tramite il Sito Web",
+        "content": "Puoi modificare le tue preferenze sui cookie utilizzando il banner dei cookie o accedendo alle impostazioni dei cookie."
+      },
+      "browser": {
+        "title": "Tramite il Browser",
+        "content": "Puoi gestire i cookie attraverso le impostazioni del tuo browser:",
+        "chrome": "Impostazioni > Privacy e sicurezza > Cookie",
+        "firefox": "Impostazioni > Privacy e sicurezza > Cookie",
+        "safari": "Preferenze > Privacy > Cookie",
+        "edge": "Impostazioni > Privacy > Cookie"
+      }
+    },
+    "contact": {
+      "title": "Contatti",
+      "content": "Per domande sui cookie, contattaci a:"
+    },
+    "updates": {
+      "title": "Aggiornamenti",
+      "content": "Questa Cookie Policy può essere aggiornata. Controlla regolarmente per eventuali modifiche.",
+      "lastUpdate": "Ultimo aggiornamento"
+    }
   }
 }
+

@@ -53,7 +53,7 @@ const ContactPage = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-2">Ubicazione</h3>
+              <h3 className="text-xl font-semibold text-primary mb-2">Dove siamo</h3>
               <p className="text-gray-600">Sicilia, Italia</p>
               <p className="text-gray-500 text-sm">Servizi su tutto il territorio nazionale</p>
             </div>

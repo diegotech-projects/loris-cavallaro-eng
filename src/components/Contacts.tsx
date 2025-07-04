@@ -171,7 +171,7 @@ function Appointment() {
                 <FaMapMarkerAlt className="w-5 h-5 text-white" />
               </div>
               <div>
-                <p className="text-white font-semibold">Ubicazione</p>
+                <p className="text-white font-semibold">Dove siamo</p>
                 <p className="text-white/80">Sicilia, Italia</p>
                 <p className="text-white/60 text-sm">Servizi su tutto il territorio nazionale</p>
               </div>
