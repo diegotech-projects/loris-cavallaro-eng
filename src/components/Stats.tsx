@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import { StatsData } from '@/data/content';
+import PiantinaEsternoCasa from '@/_docs/data/progetti_img/01_3D_piantina_mappa_esterno.jpeg';
 
 function Stats() {
   return (
@@ -7,9 +9,11 @@ function Stats() {
         {/* Left Side - Image placeholder */}
         <div className="lg:w-1/2">
           <div className="h-80 lg:h-96 bg-themeSurfaceLight rounded-lg overflow-hidden">
-            <img 
-              src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-              alt="Medical Equipment" 
+            <Image
+              height={700}
+              width={600}
+              src={PiantinaEsternoCasa} 
+              alt="Piantina Esterno Casa" 
               className="w-full h-full object-cover"
             />
           </div>
@@ -38,14 +42,6 @@ function Stats() {
                 </p>
               </div>
             ))}
-            <div>
-              <h3 className="text-4xl lg:text-5xl font-bold text-themeTextPrimary mb-2">
-                100%
-              </h3>
-              <p className="text-themeTextSecondary font-medium">
-                Patient Satisfaction
-              </p>
-            </div>
           </div>
         </div>
       </div>
