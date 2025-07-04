@@ -6,13 +6,12 @@ function FAQS() {
       <div className="h-full md:w-[35%]">
         <div className="flex h-full flex-col gap-5 md:w-[90%]">
           <h1 className="text-center text-4xl font-bold md:text-start 2xl:text-5xl">
-            Frequently Asked Questions
+            Domande Frequenti
           </h1>
           <p>
-            FAQs are often organised into categories or sections to make it easy
-            for users to find the information they need. They can be found in
-            websites, software and in different types of support such as email
-            and chatbot
+            Trova le risposte alle domande più comuni sui nostri servizi di ingegneria civile, 
+            tempi di realizzazione, costi e procedure. Se non trovi quello che cerchi, 
+            contattaci per una consulenza personalizzata.
           </p>
         </div>
       </div>

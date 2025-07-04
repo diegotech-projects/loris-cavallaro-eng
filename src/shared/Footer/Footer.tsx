@@ -4,7 +4,7 @@ import FooterComp from '@/components/Footer';
 
 const Footer: React.FC = () => {
   return (
-    <div className="bg-customBlue">
+    <div className="bg-themeSecondary">
       <FooterComp />
     </div>
   );

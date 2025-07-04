@@ -117,55 +117,60 @@ export const Doctors: any = {
 
 export const ReviewData = [
   {
-    name: 'Chris Martin',
+    name: 'Marco Rossi',
     profile:
       'https://img.freepik.com/free-photo/young-male-posing-isolated-against-blank-studio-wall_273609-12356.jpg?size=626&ext=jpg&ga=GA1.2.1638277978.1690639805&semt=ais',
-    occupation: 'Uber Driver',
+    occupation: 'Imprenditore Edile',
     review:
-      'This exceptional hospital impressed me with its caring and compassionate staff, impeccably clean facilities, and overall positive experience. I highly recommend it for anyone seeking reliable medical care, offering a comforting environment for healing and peace of mind.',
+      'Abbiamo collaborato con XYZENGINEERING per la progettazione di un complesso residenziale. La loro competenza tecnica e l\'attenzione ai dettagli hanno superato le nostre aspettative. Progetto completato nei tempi previsti e con risultati eccellenti.',
   },
   {
-    name: 'Rebecca Alison',
+    name: 'Laura Bianchi',
     profile:
       'https://img.freepik.com/free-photo/confident-african-businesswoman-smiling-closeup-portrait-jobs-career-campaign_53876-129412.jpg?size=626&ext=jpg&ga=GA1.1.1638277978.1690639805&semt=ais',
-    occupation: 'Chef',
+    occupation: 'Architetto',
     review:
-      'This exceptional hospital impressed me with its caring and compassionate staff, impeccably clean facilities, and overall positive experience. I highly recommend it for anyone seeking reliable medical care, offering a comforting environment for healing and peace of mind.',
+      'La collaborazione con il team di XYZENGINEERING è stata fantastica. Hanno gestito tutti i calcoli strutturali per il nostro progetto architettonico con professionalità e precisione. Consigliatissimi per progetti complessi.',
   },
   {
-    name: 'James Harden',
+    name: 'Giuseppe Verdi',
     profile:
       'https://img.freepik.com/free-photo/happy-african-american-young-man-colorful-shirt-wearing-glasses-looking-camera-smiling-cheerfully_141793-108881.jpg?size=626&ext=jpg&ga=GA1.1.1638277978.1690639805&semt=ais',
-    occupation: 'SalesMan',
+    occupation: 'Proprietario Villa',
     review:
-      'This exceptional hospital impressed me with its caring and compassionate staff, impeccably clean facilities, and overall positive experience. I highly recommend it for anyone seeking reliable medical care, offering a comforting environment for healing and peace of mind.',
+      'Per la ristrutturazione della nostra villa hanno curato ogni aspetto: dalla progettazione alle pratiche burocratiche, fino alla certificazione energetica. Servizio completo e risultato finale straordinario. Villa ora in classe A+!',
   },
 ];
 
 export const FAQData = [
   {
-    question: 'What service does your medical clinic offer?',
+    question: 'Che tipo di servizi di ingegneria offrite?',
     answer:
-      'Our clinic offers a wide range of medical services, including primary care, pedriatrics, gynaecology and geriatrics',
+      'Offriamo servizi completi di ingegneria civile e ambientale: progettazione strutturale, direzione lavori, pratiche urbanistiche, diagnosi energetiche, certificazioni APE, progettazione impianti fotovoltaici e consulenza tecnica per bandi di gara.',
   },
   {
-    question: 'Do you accept insurance?',
+    question: 'Quanto tempo richiede la progettazione di un edificio?',
     answer:
-      'Our clinic offers a wide range of medical services, including primary care, pedriatrics, gynaecology and geriatrics',
+      'I tempi dipendono dalla complessità del progetto. Una progettazione residenziale standard richiede 4-8 settimane, mentre progetti commerciali più complessi possono richiedere 2-4 mesi. Forniamo sempre una stima precisa durante la consulenza iniziale.',
   },
   {
-    question: 'Do you have after hours or emergency services?',
+    question: 'Lavorate su tutto il territorio nazionale?',
     answer:
-      'Our clinic offers a wide range of medical services, including primary care, pedriatrics, gynaecology and geriatrics',
+      'Sì, pur avendo sede in Sicilia, offriamo i nostri servizi su tutto il territorio nazionale. Per progetti fuori regione organizziamo sopralluoghi e coordinamento tramite partnership locali qualificate.',
   },
   {
-    question: 'Can I schedule an appointment online?',
+    question: 'Quanto costa una consulenza o un preventivo?',
     answer:
-      'Our clinic offers a wide range of medical services, including primary care, pedriatrics, gynaecology and geriatrics',
+      'La prima consulenza è gratuita e include una valutazione preliminare del progetto. I preventivi vengono forniti gratuitamente entro 48 ore dal sopralluogo. I costi variano in base alla tipologia e complessità del progetto.',
   },
   {
-    question: 'How do I request a prescription refill?',
+    question: 'Gestite anche le pratiche burocratiche?',
     answer:
-      'Our clinic offers a wide range of medical services, including primary care, pedriatrics, gynaecology and geriatrics',
+      'Assolutamente sì. Ci occupiamo di tutte le pratiche urbanistiche, permessi di costruire, autorizzazioni edilizie e rapporti con gli enti pubblici. Il nostro servizio include il supporto completo dall\'ideazione alla realizzazione.',
+  },
+  {
+    question: 'Offrite servizi di efficienza energetica?',
+    answer:
+      'Sì, siamo specializzati in diagnosi energetiche secondo Legge 10, certificazioni APE (Attestato di Prestazione Energetica) e progettazione di impianti fotovoltaici. Aiutiamo i clienti a ottenere le migliori classi energetiche e accedere agli incentivi statali.',
   },
 ];
