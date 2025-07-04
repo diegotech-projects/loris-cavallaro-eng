@@ -1,6 +1,6 @@
 # Introduction
 
-I need to do a landing website for a civil engineer friends of mine, I am a developer but I almost never used frontend. I already set up a template project about medical services because I wanted a starting point since I don't want to mess around with css and html. The technologies used are Nextjs, Tailwind and next-intl for internationalization.
+I need to do a landing website for a civil engineer friends of mine, his company will be called XYZENGINEERING and his name is Loris Cavallaro. I am a developer but I almost never used frontend. I already set up a template project about medical services because I wanted a starting point since I don't want to mess around with css and html. The technologies used are Nextjs, Tailwind and next-intl for internationalization.
 
 The final website should present the civil engineering service, be multilingual (ita (default) and eng), have a contact info box, be responsive (probably is already), cookie management, have a cms like sanity to let him be able to edit the content of the website (text, img, documents)
 
@@ -23,27 +23,27 @@ Some screenshot
 
 - HOME (https://gadstudio.eu/)
 
-![alt text](src/_docs/ref_home.jpeg)
+![alt text](src/_docs/ref/ref_home.jpeg)
 
 - LA FORMULA (https://gadstudio.eu/la-formula-gad/)
 
-![alt text](src/_docs/ref_la-formula-gad.jpeg)
+![alt text](src/_docs/ref/ref_la-formula-gad.jpeg)
 
 - PROGETTI list (https://gadstudio.eu/progetti/)
 
-![alt text](src/_docs/ref_progetti.jpeg)
+![alt text](src/_docs/ref/ref_progetti.jpeg)
 
 - PROGETTI detail (https://gadstudio.eu/portfolio/via-pola-9-11/)
 
-![alt text](src/_docs/ref_progetti_details.jpeg)
+![alt text](src/_docs/ref/ref_progetti_details.jpeg)
 
 - SERVIZI (https://gadstudio.eu/servizi/)
 
-![alt text](src/_docs/ref_servizi.jpeg)
+![alt text](src/_docs/ref/ref_servizi.jpeg)
 
 - CONTATTI (https://gadstudio.eu/contatti/)
 
-![alt text](src/_docs/ref_contatti.jpeg)
+![alt text](src/_docs/ref/ref_contatti.jpeg)
 
 
 ## Material at our disposal and vocal requirements (media under src/_docs/data/)
