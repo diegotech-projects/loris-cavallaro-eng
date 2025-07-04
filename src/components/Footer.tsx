@@ -89,8 +89,16 @@ function FooterComp() {
           </span>{' '}
           2024 XYZENGINEERING. Tutti i diritti riservati.
         </div>
-        <div className="text-gray-400 text-xs mt-2 md:mt-0">
-          P.IVA: [DA INSERIRE] | Privacy Policy | Cookie Policy
+        <div className="text-gray-400 text-xs mt-2 md:mt-0 flex items-center gap-1">
+          <span>P.IVA: [DA INSERIRE]</span>
+          <span>|</span>
+          <Link href="/privacy" className="hover:text-themeAccent transition-colors">
+            Privacy Policy
+          </Link>
+          <span>|</span>
+          <Link href="/cookie-policy" className="hover:text-themeAccent transition-colors">
+            Cookie Policy
+          </Link>
         </div>
       </div>
     </div>

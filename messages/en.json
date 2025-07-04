@@ -58,5 +58,144 @@
       "acceptAll": "Accept All",
       "rejectAll": "Reject All"
     }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "dataController": {
+      "title": "Data Controller",
+      "content": "The data controller is:"
+    },
+    "dataCollection": {
+      "title": "Data Collection",
+      "content": "We collect your personal data in the following ways:",
+      "contactForm": {
+        "title": "Contact Form",
+        "content": "When you use our contact form, we collect the following data:",
+        "data": {
+          "name": "Full Name",
+          "email": "Email Address",
+          "phone": "Phone Number",
+          "message": "Message",
+          "projectType": "Project Type"
+        }
+      }
+    },
+    "dataUsage": {
+      "title": "Data Usage",
+      "content": "Your personal data is used for:",
+      "purposes": {
+        "respond": "Responding to your information requests",
+        "quote": "Providing quotes for requested services",
+        "contact": "Contacting you to discuss your projects",
+        "service": "Providing the requested engineering services"
+      }
+    },
+    "dataRetention": {
+      "title": "Data Retention",
+      "content": "Your personal data is retained for the time necessary to provide the requested services and to fulfill legal obligations. Generally, data is retained for no more than 3 years from the end of the contractual relationship."
+    },
+    "userRights": {
+      "title": "Your Rights",
+      "content": "You have the right to:",
+      "rights": {
+        "access": "Access your personal data",
+        "rectification": "Request correction of inaccurate data",
+        "erasure": "Request deletion of your data",
+        "portability": "Request data portability",
+        "restriction": "Request processing restriction",
+        "objection": "Object to data processing"
+      }
+    },
+    "cookies": {
+      "title": "Cookies",
+      "content": "Our website uses the following types of cookies:",
+      "types": {
+        "technical": {
+          "title": "Technical Cookies",
+          "content": "Necessary for the basic functioning of the website."
+        },
+        "preferences": {
+          "title": "Preference Cookies",
+          "content": "Used to remember your preferences (language, theme)."
+        }
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "For any questions regarding this Privacy Policy or to exercise your rights, you can contact us at:"
+    },
+    "updates": {
+      "title": "Updates",
+      "content": "This Privacy Policy may be updated periodically. We recommend checking it regularly.",
+      "lastUpdate": "Last updated"
+    }
+  },
+  "cookiePolicy": {
+    "title": "Cookie Policy",
+    "whatAreCookies": {
+      "title": "What are Cookies",
+      "content": "Cookies are small text files that are stored on your device when you visit a website. They help us provide a better user experience and make the site function properly."
+    },
+    "cookieTypes": {
+      "title": "Types of Cookies",
+      "content": "We use the following types of cookies:",
+      "technical": {
+        "title": "Technical Cookies",
+        "content": "Essential for the website to function. Without these cookies, the site cannot work properly.",
+        "consent": "Do not require user consent"
+      },
+      "preferences": {
+        "title": "Preference Cookies",
+        "content": "Used to remember your preferences such as language and site theme.",
+        "consent": "Require user consent"
+      }
+    },
+    "cookiesUsed": {
+      "title": "Cookies Used",
+      "content": "Our website uses the following cookies:",
+      "table": {
+        "name": "Name",
+        "purpose": "Purpose",
+        "duration": "Duration",
+        "type": "Type",
+        "rows": {
+          "consent": {
+            "purpose": "Stores your cookie preferences",
+            "duration": "1 year",
+            "type": "Technical"
+          },
+          "theme": {
+            "purpose": "Stores your theme preference",
+            "duration": "Permanent",
+            "type": "Preferences"
+          }
+        }
+      }
+    },
+    "cookieManagement": {
+      "title": "Cookie Management",
+      "content": "You can manage cookies in several ways:",
+      "website": {
+        "title": "Through the Website",
+        "content": "You can modify your cookie preferences using the cookie banner or accessing cookie settings."
+      },
+      "browser": {
+        "title": "Through the Browser",
+        "content": "You can manage cookies through your browser settings:",
+        "chrome": "Settings > Privacy and security > Cookies",
+        "firefox": "Settings > Privacy and security > Cookies",
+        "safari": "Preferences > Privacy > Cookies",
+        "edge": "Settings > Privacy > Cookies"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "For questions about cookies, contact us at:"
+    },
+    "updates": {
+      "title": "Updates",
+      "content": "This Cookie Policy may be updated. Check regularly for any changes.",
+      "lastUpdate": "Last updated"
+    }
   }
 }
