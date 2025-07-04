@@ -9,6 +9,8 @@ import { MdCopyright, MdEmail, MdPhone, MdLocationOn } from 'react-icons/md';
 import Link from 'next/link';
 
 function FooterComp() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className="container-custom pt-10 text-sm text-whiteOne md:pt-20 md:text-base">
       <div className="flex flex-col items-start justify-between gap-8 lg:flex-row">
@@ -87,7 +89,7 @@ function FooterComp() {
           <span className="mx-1">
             <MdCopyright />
           </span>{' '}
-          2024 XYZENGINEERING. Tutti i diritti riservati.
+          {currentYear} XYZENGINEERING. Tutti i diritti riservati.
         </div>
         <div className="text-gray-400 text-xs mt-2 md:mt-0 flex items-center gap-1">
           <span>P.IVA: [DA INSERIRE]</span>
