@@ -26,6 +26,12 @@ export default withNextIntl(bundleAnalyzer({
       },
       {
         protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
         hostname: 'framerusercontent.com',
         port: '',
         pathname: '/**',

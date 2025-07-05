@@ -40,7 +40,7 @@ const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
       <div className="px-5 py-2">
         <div className="flex items-center gap-2 font-bold text-themeTextPrimary text-lg">
           <BsBuilding className="text-themeSecondary" />
-          XYZENGINEERING
+          XYZENGINEERING_mob
         </div>
         <button
           type="button"
