@@ -6,3 +6,12 @@ export interface Service {
   title: string;
   content: string;
 }
+
+export interface Project {
+  id: number;
+  title: string;
+  category: string;
+  description: string;
+  images: StaticImageData[];
+  features: string[];
+}

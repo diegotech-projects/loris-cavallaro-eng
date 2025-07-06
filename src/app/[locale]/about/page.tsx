@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 import lorisImg from '@/_docs/data/profilo/02_loris_img.jpeg';
+import lorisImg2 from '@/_docs/data/profilo/01_loris_img.jpeg';
 
 const AboutPage = () => {
   const t = useTranslations('about');
@@ -68,7 +69,7 @@ const AboutPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="relative h-96 rounded-lg overflow-hidden">
                 <Image
-                  src={lorisImg}
+                  src={lorisImg2}
                   alt="Ing. Loris Cavallaro - Direttore Tecnico"
                   fill
                   className="object-cover"

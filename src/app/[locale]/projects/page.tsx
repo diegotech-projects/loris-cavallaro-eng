@@ -1,5 +1,9 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Image from 'next/image';
+import ProjectModal from '@/components/ProjectModal';
+import type { Project } from '@/data/types';
 
 // Import project images
 import project1_1 from '@/_docs/data/progetti_img/01_3D_esterno casa.jpeg';
@@ -8,9 +12,26 @@ import project1_3 from '@/_docs/data/progetti_img/01_3D_piantina_mappa_esterno.j
 import project2_1 from '@/_docs/data/progetti_img_2/01_esterno_giorno_notte.jpeg';
 import project2_2 from '@/_docs/data/progetti_img_2/02_esterno_giorno.jpeg';
 import project2_3 from '@/_docs/data/progetti_img_2/03_interno salone.jpeg';
+// Import photovoltaic project images
+import fotovoltaico1 from '@/_docs/data/fotovoltaico_lipari/02_fotovotaico.png';
+import fotovoltaico2 from '@/_docs/data/fotovoltaico_lipari/05_fotovotaico.png';
+import fotovoltaico3 from '@/_docs/data/fotovoltaico_lipari/07_fotovotaico.png';
 
 const ProjectsPage = () => {
-  const projects = [
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (project: Project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
+
+  const projects: Project[] = [
     {
       id: 1,
       title: "Villa Residenziale Moderna",
@@ -26,7 +47,15 @@ const ProjectsPage = () => {
       description: "Progetto di ristrutturazione e ampliamento per complesso residenziale con integrazione architettonica nel contesto urbano esistente.",
       images: [project2_1, project2_2, project2_3],
       features: ["Ristrutturazione completa", "Efficienza energetica", "Integrazione urbana", "Spazi comuni innovativi"]
-    }
+    },
+    {
+      id: 3,
+      title: "Impianto Fotovoltaico Lipari",
+      category: "Progettazione Energetica",
+      description: "Progettazione e realizzazione di impianto fotovoltaico residenziale con ottimizzazione del posizionamento e massimizzazione dell'efficienza energetica. Include studio di fattibilità e certificazione energetica.",
+      images: [fotovoltaico1, fotovoltaico2, fotovoltaico3],
+      features: ["Potenza 6 kW", "Pannelli ad alta efficienza", "Ottimizzazione orientamento", "Monitoraggio remoto", "ROI ottimizzato"]
+    },
   ];
 
   return (
@@ -55,28 +84,34 @@ const ProjectsPage = () => {
                 <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="col-span-2">
-                      <Image
-                        src={project.images[0]}
-                        alt={project.title}
-                        width={600}
-                        height={400}
-                        className="w-full h-64 object-cover rounded-lg shadow-lg"
-                      />
+                      {project.images[0] && (
+                        <Image
+                          src={project.images[0]}
+                          alt={project.title}
+                          width={600}
+                          height={400}
+                          className="w-full h-64 object-cover rounded-lg shadow-lg"
+                        />
+                      )}
                     </div>
-                    <Image
-                      src={project.images[1]}
-                      alt={`${project.title} - Interior`}
-                      width={290}
-                      height={200}
-                      className="w-full h-40 object-cover rounded-lg shadow-md"
-                    />
-                    <Image
-                      src={project.images[2]}
-                      alt={`${project.title} - Plan`}
-                      width={290}
-                      height={200}
-                      className="w-full h-40 object-cover rounded-lg shadow-md"
-                    />
+                    {project.images[1] && (
+                      <Image
+                        src={project.images[1]}
+                        alt={`${project.title} - Interior`}
+                        width={290}
+                        height={200}
+                        className="w-full h-40 object-cover rounded-lg shadow-md"
+                      />
+                    )}
+                    {project.images[2] && (
+                      <Image
+                        src={project.images[2]}
+                        alt={`${project.title} - Plan`}
+                        width={290}
+                        height={200}
+                        className="w-full h-40 object-cover rounded-lg shadow-md"
+                      />
+                    )}
                   </div>
                 </div>
 
@@ -94,7 +129,7 @@ const ProjectsPage = () => {
                     <h3 className="text-xl font-semibold text-primary mb-3">Caratteristiche Principali</h3>
                     <ul className="space-y-2">
                       {project.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-themeTextSecondary opacity-50">
+                        <li key={featureIndex} className="flex items-center text-themeTextSecondary opacity-70">
                           <span className="w-2 h-2 bg-eliteGold rounded-full mr-3"></span>
                           {feature}
                         </li>
@@ -103,11 +138,11 @@ const ProjectsPage = () => {
                   </div>
 
                   <div className="flex gap-4">
-                    <button className="bg-eliteNavy text-whiteOne px-6 py-3 rounded-lg font-medium hover:bg-eliteDark transition-colors">
-                      Dettagli Progetto
-                    </button>
-                    <button className="border border-eliteGray text-eliteSlate px-6 py-3 rounded-lg font-medium hover:bg-whiteTwo transition-colors">
-                      Galleria Immagini
+                    <button 
+                      onClick={() => openModal(project)}
+                      className="bg-themeAccent opacity-70 px-6 py-3 rounded-lg font-medium ext-themeSurface hover:bg-themeSecondary transition-colors"
+                    >
+                      Visualizza Progetto
                     </button>
                   </div>
                 </div>
@@ -171,12 +206,12 @@ const ProjectsPage = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-eliteGold py-20">
+      <div className="bg-eliteGray py-20">
         <div className="container-custom text-center">
           <h2 className="text-4xl font-bold text-whiteOne mb-6">
             Vuoi realizzare il tuo progetto?
           </h2>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-black-100 mb-8 max-w-2xl mx-auto">
             Contattaci per discutere del tuo progetto e scoprire come possiamo 
             trasformare le tue idee in soluzioni concrete e sostenibili.
           </p>
@@ -185,6 +220,15 @@ const ProjectsPage = () => {
           </button>
         </div>
       </div>
+
+      {/* Project Modal */}
+      {selectedProject && (
+        <ProjectModal 
+          project={selectedProject} 
+          isOpen={isModalOpen} 
+          onClose={closeModal} 
+        />
+      )}
     </div>
   );
 };
