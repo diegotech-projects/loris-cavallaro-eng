@@ -5,39 +5,40 @@ import PiantinaEsternoCasa from '@/_docs/data/progetti_img/01_3D_piantina_mappa_
 function Stats() {
   return (
     <div className="container-custom">
-      <div className="flex flex-col gap-16 lg:flex-row lg:gap-20">
-        {/* Left Side - Image placeholder */}
+      <div className="flex flex-col gap-20 lg:flex-row lg:gap-24">
+        {/* Left Side - Image */}
         <div className="lg:w-1/2">
-          <div className="h-80 lg:h-96 bg-themeSurfaceLight rounded-lg overflow-hidden">
+          <div className="h-80 lg:h-96 overflow-hidden">
             <Image
               height={700}
               width={600}
               src={PiantinaEsternoCasa} 
               alt="Piantina Esterno Casa" 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover opacity-80 hover:grayscale-0 transition-all duration-500"
             />
           </div>
         </div>
 
         {/* Right Side - Content */}
         <div className="lg:w-1/2">
-          <div className="mb-8">
-            <h2 className="text-4xl lg:text-5xl font-bold text-themeTextPrimary mb-4">
-              Our impact in numbers
+          <div className="mb-12">
+            <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-themeTextPrimary mb-6 tracking-tight">
+              OUR IMPACT IN NUMBERS
             </h2>
-            <p className="text-lg text-themeTextSecondary">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit semper nulla magna eleget mauris dapibus tincidunt amet.
+            <p className="text-lg text-themeTextSecondary leading-relaxed">
+              Anni di esperienza e risultati concreti nell'ingegneria civile e ambientale, 
+              con progetti che trasformano le comunità.
             </p>
           </div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-2 gap-12">
             {StatsData.stats.map((item, index) => (
-              <div key={index}>
-                <h3 className="text-4xl lg:text-5xl font-bold text-themeTextPrimary mb-2">
+              <div key={index} className="space-y-2">
+                <h3 className="text-5xl lg:text-6xl font-bold text-themeTextPrimary tracking-tight">
                   {item.title}+
                 </h3>
-                <p className="text-themeTextSecondary font-medium">
+                <p className="text-themeTextSecondary font-medium tracking-wide uppercase text-sm">
                   {item.stat}
                 </p>
               </div>

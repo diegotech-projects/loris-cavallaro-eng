@@ -32,11 +32,11 @@ const ServicesPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-primary mb-6">Progettazione Strutturale</h2>
-                <p className="text-lg text-gray-700 mb-6">
+                <p className="text-lg text-themeTextSecondary mb-6">
                   Progettazione completa di strutture edili con calcoli strutturali, verifiche statiche 
                   e dimensionamento per edifici residenziali, commerciali e industriali.
                 </p>
-                <ul className="space-y-3 text-gray-600">
+                <ul className="space-y-3 text-themeTextSecondary opacity-50">
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-eliteGold rounded-full mr-3"></span>
                     Calcoli strutturali e verifiche sismiche
@@ -54,7 +54,7 @@ const ServicesPage = () => {
               <div className="bg-gradient-to-br from-eliteNavy to-eliteGold p-8 rounded-lg text-center">
                 <div className="text-whiteOne">
                   <h3 className="text-2xl font-bold mb-4">Progetti Strutturali</h3>
-                  <p className="text-blue-100">Soluzioni tecniche innovative per ogni tipologia di costruzione</p>
+                  <p className="selection:">Soluzioni tecniche innovative per ogni tipologia di costruzione</p>
                 </div>
               </div>
             </div>
@@ -63,11 +63,11 @@ const ServicesPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="lg:order-2">
                 <h2 className="text-3xl font-bold text-primary mb-6">Efficienza Energetica</h2>
-                <p className="text-lg text-gray-700 mb-6">
+                <p className="text-lg text-themeTextSecondary mb-6">
                   Specializzazione in diagnosi energetiche, certificazioni APE e progettazione 
                   di impianti fotovoltaici per la sostenibilità ambientale.
                 </p>
-                <ul className="space-y-3 text-gray-600">
+                <ul className="space-y-3 text-themeTextSecondary opacity-50">
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-eliteGold rounded-full mr-3"></span>
                     Diagnosi energetiche secondo Legge 10
@@ -85,7 +85,7 @@ const ServicesPage = () => {
               <div className="lg:order-1 bg-gradient-to-br from-eliteGold to-eliteNavy p-8 rounded-lg text-center">
                 <div className="text-whiteOne">
                   <h3 className="text-2xl font-bold mb-4">Sostenibilità</h3>
-                  <p className="text-blue-100">Efficienza energetica e soluzioni eco-sostenibili</p>
+                  <p className="">Efficienza energetica e soluzioni eco-sostenibili</p>
                 </div>
               </div>
             </div>
@@ -94,11 +94,11 @@ const ServicesPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-primary mb-6">Direzione Lavori</h2>
-                <p className="text-lg text-gray-700 mb-6">
+                <p className="text-lg text-themeTextSecondary mb-6">
                   Coordinamento completo dei lavori edili con gestione tecnica, controllo qualità 
                   e supervisione durante tutte le fasi costruttive.
                 </p>
-                <ul className="space-y-3 text-gray-600">
+                <ul className="space-y-3 text-themeTextSecondary opacity-50">
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-eliteGold rounded-full mr-3"></span>
                     Coordinamento sicurezza in cantiere
@@ -116,7 +116,7 @@ const ServicesPage = () => {
               <div className="bg-gradient-to-br from-eliteNavy to-eliteGold p-8 rounded-lg text-center">
                 <div className="text-whiteOne">
                   <h3 className="text-2xl font-bold mb-4">Gestione Progetti</h3>
-                  <p className="text-blue-100">Controllo e coordinamento professionale</p>
+                  <p className="">Controllo e coordinamento professionale</p>
                 </div>
               </div>
             </div>

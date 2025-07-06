@@ -30,8 +30,8 @@ const ContactPage = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-primary mb-2">Email</h3>
-              <p className="text-gray-600 mb-2">loriscavallaro22@gmail.com</p>
-              <p className="text-gray-600">Ingegnerelorising@gmail.com</p>
+              <p className="text-themeTextSecondary mb-2">loriscavallaro22@gmail.com</p>
+              <p className="text-themeTextSecondary">Ingegnerelorising@gmail.com</p>
             </div>
 
             {/* Phone */}
@@ -42,7 +42,7 @@ const ContactPage = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-primary mb-2">Telefono</h3>
-              <p className="text-gray-600">+39 380 147 7121</p>
+              <p className="text-themeTextSecondary">+39 380 147 7121</p>
             </div>
 
             {/* Location */}
@@ -54,15 +54,15 @@ const ContactPage = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-primary mb-2">Dove siamo</h3>
-              <p className="text-gray-600">Sicilia, Italia</p>
-              <p className="text-gray-500 text-sm">Servizi su tutto il territorio nazionale</p>
+              <p className="text-themeTextSecondary">Sicilia, Italia</p>
+              <p className="text-themeTextSecondary opacity-50 text-sm">Servizi su tutto il territorio nazionale</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Contact Form */}
-      <div className="bg-eliteDark py-20">
+      <div className="bg-surfaceLight py-20">
         <Appointment />
       </div>
 
@@ -76,7 +76,7 @@ const ContactPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-eliteLight p-6 rounded-lg">
                 <h3 className="text-xl font-semibold text-primary mb-3">Qualifiche</h3>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-themeTextSecondary opacity-50 space-y-2">
                   <li>• Laurea Magistrale in Ingegneria Civile e Ambientale</li>
                   <li>• Specializzazione in Sicurezza sui Luoghi di Lavoro</li>
                   <li>• Abilitazione Professionale Ingegneri</li>
@@ -85,7 +85,7 @@ const ContactPage = () => {
               </div>
               <div className="bg-eliteLight p-6 rounded-lg">
                 <h3 className="text-xl font-semibold text-primary mb-3">Aree di Competenza</h3>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-themeTextSecondary opacity-50 space-y-2">
                   <li>• Progettazione Strutturale</li>
                   <li>• Bandi di Gara e Appalti Pubblici</li>
                   <li>• Diagnosi Energetiche e APE</li>
@@ -101,7 +101,7 @@ const ContactPage = () => {
       <div className="bg-eliteLight py-20">
         <div className="container-custom text-center">
           <h2 className="text-3xl font-bold text-primary mb-8">Documenti</h2>
-          <p className="text-lg text-gray-700 mb-8">Scarica il curriculum vitae e scopri di più sul nostro background professionale.</p>
+          <p className="text-lg text-themeTextSecondary mb-8">Scarica il curriculum vitae e scopri di più sul nostro background professionale.</p>
           <a 
             href="/src/_docs/data/profilo/cv_ing_loris_cavallaro.pdf" 
             download

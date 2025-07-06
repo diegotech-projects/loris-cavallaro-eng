@@ -9,7 +9,7 @@ type IMainProps = {
 };
 
 const Main = (props: IMainProps) => (
-  <div className="w-full px-1 text-gray-700 antialiased">
+  <div className="w-full px-1 text-themeTextSecondary antialiased ">
     {props.meta}
 
     <div className="mx-auto max-w-screen-md">
@@ -27,7 +27,7 @@ const Main = (props: IMainProps) => (
               <li className="mr-6">
                 <Link
                   href="/"
-                  className="border-none text-gray-700 hover:text-gray-900"
+                  className="border-none text-themeTextSecondary hover:text-gray-900"
                 >
                   Home
                 </Link>
@@ -35,7 +35,7 @@ const Main = (props: IMainProps) => (
               <li className="mr-6">
                 <Link
                   href="/about/"
-                  className="border-none text-gray-700 hover:text-gray-900"
+                  className="border-none text-themeTextSecondary hover:text-gray-900"
                 >
                   About
                 </Link>
@@ -43,7 +43,7 @@ const Main = (props: IMainProps) => (
               <li className="mr-6">
                 <Link
                   href="/guestbook/"
-                  className="border-none text-gray-700 hover:text-gray-900"
+                  className="border-none text-themeTextSecondary hover:text-gray-900"
                 >
                   Guestbook
                 </Link>
@@ -51,7 +51,7 @@ const Main = (props: IMainProps) => (
               <li className="mr-6">
                 <Link
                   href="/portfolio/"
-                  className="border-none text-gray-700 hover:text-gray-900"
+                  className="border-none text-themeTextSecondary hover:text-gray-900"
                 >
                   Portfolio
                 </Link>
@@ -59,14 +59,14 @@ const Main = (props: IMainProps) => (
               <li className="mr-6">
                 <Link
                   href="/blog/"
-                  className="border-none text-gray-700 hover:text-gray-900"
+                  className="border-none text-themeTextSecondary hover:text-gray-900"
                 >
                   Blog
                 </Link>
               </li>
               <li className="mr-6">
                 <a
-                  className="border-none text-gray-700 hover:text-gray-900"
+                  className="border-none text-themeTextSecondary hover:text-gray-900"
                   href="https://github.com/ixartz/Next-js-Boilerplate"
                 >
                   GitHub
@@ -80,7 +80,7 @@ const Main = (props: IMainProps) => (
               <li className="mr-6">
                 <Link
                   href="/sign-in/"
-                  className="border-none text-gray-700 hover:text-gray-900"
+                  className="border-none text-themeTextSecondary hover:text-gray-900"
                 >
                   Sign in
                 </Link>
@@ -89,7 +89,7 @@ const Main = (props: IMainProps) => (
               <li className="mr-6">
                 <Link
                   href="/sign-up/"
-                  className="border-none text-gray-700 hover:text-gray-900"
+                  className="border-none text-themeTextSecondary hover:text-gray-900"
                 >
                   Sign up
                 </Link>

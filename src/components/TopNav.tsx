@@ -3,13 +3,14 @@
 import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
 import { BsBuilding } from 'react-icons/bs';
-import { Link as LocalizedLink } from '@/i18n/navigation';
+import { Link as LocalizedLink, usePathname } from '@/i18n/navigation';
 
 import MenuBar from './MenuBar';
 
 const TopNav = () => {
   const t = useTranslations('navigation');
   const locale = useLocale();
+  const pathname = usePathname();
   
   return (
     <div className="container-custom text-themeTextPrimary">
@@ -20,16 +21,44 @@ const TopNav = () => {
           </Link>
         </div>
         <div className="hidden w-[40%] items-center justify-center gap-x-5 text-sm font-semibold lg:flex 2xl:gap-x-10 2xl:text-base">
-          <Link className="anchor hover:text-themeSecondary transition-colors" href="/">
+          <Link 
+            className={`anchor transition-colors ${
+              pathname === '/' 
+                ? 'text-themeSecondary' 
+                : 'hover:text-themeSecondary'
+            }`} 
+            href="/"
+          >
             Home
           </Link>
-          <Link className="anchor hover:text-themeSecondary transition-colors" href="/about">
+          <Link 
+            className={`anchor transition-colors ${
+              pathname === '/about' 
+                ? 'text-themeSecondary' 
+                : 'hover:text-themeSecondary'
+            }`} 
+            href="/about"
+          >
             Chi Siamo
           </Link>
-          <Link className="anchor hover:text-themeSecondary transition-colors" href="/services">
+          <Link 
+            className={`anchor transition-colors ${
+              pathname === '/services' 
+                ? 'text-themeSecondary' 
+                : 'hover:text-themeSecondary'
+            }`} 
+            href="/services"
+          >
             Servizi
           </Link>
-          <Link className="anchor hover:text-themeSecondary transition-colors" href="/projects">
+          <Link 
+            className={`anchor transition-colors ${
+              pathname === '/projects' 
+                ? 'text-themeSecondary' 
+                : 'hover:text-themeSecondary'
+            }`} 
+            href="/projects"
+          >
             Progetti
           </Link>
         </div>
@@ -68,7 +97,7 @@ const TopNav = () => {
           </Link>
           <Link
             href="/contact"
-            className="rounded-full bg-themeSecondary px-4 py-3 text-themeSurface hover:bg-themeAccent transition-colors"
+            className="rounded-full bg-themeAccent opacity-80 px-4 py-3 text-themeSurface hover:bg-themeSecondary transition-colors"
           >
             Richiedi Preventivo
           </Link>

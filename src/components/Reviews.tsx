@@ -5,42 +5,45 @@ import { ReviewData } from '@/data/content';
 function Reviews() {
   return (
     <div className="container-custom">
-      <div className="flex flex-col items-center gap-5">
-        <div className="flex justify-center">
-          <span className="bg-whiteTwo px-4 py-2 text-primary 2xl:text-xl">
-            Testimonials
-          </span>
-        </div>
-        <div className="flex items-center justify-center text-4xl font-bold text-primary 2xl:text-5xl">
-          <p className="text-center md:w-[60%]">
-            Here&apos;s What our Customers Have To Say
-          </p>
-        </div>
+      {/* Header */}
+      <div className="text-center mb-20">
+        <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-themeTextPrimary mb-6 tracking-tight">
+          TESTIMONIALS
+        </h2>
+        <p className="text-lg text-themeTextSecondary max-w-2xl mx-auto leading-relaxed">
+          Le parole dei nostri clienti raccontano la qualità del nostro lavoro e l'impegno verso l'eccellenza.
+        </p>
       </div>
-      <div className="mt-20 grid gap-5 text-sm md:grid-cols-3 lg:gap-10 lg:text-base 2xl:gap-20">
+
+      {/* Reviews Grid */}
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {ReviewData.map((review) => (
           <div
             key={review.name}
-            className="flex flex-col gap-5 bg-whiteOne p-5 text-primary shadow-2xl shadow-primary/70 2xl:p-10"
+            className="bg-themeSurface p-8 hover:bg-themeSurfaceLight transition-colors duration-300"
           >
-            <div className="flex items-center gap-10">
-              <div className="h-12 w-12 overflow-hidden rounded-full 2xl:h-16 2xl:w-16">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="h-12 w-12 overflow-hidden rounded-full grayscale">
                 <Image
                   width={300}
                   height={300}
                   src={review.profile}
                   alt={review.name}
-                  className="h-full w-full overflow-hidden object-cover"
+                  className="h-full w-full object-cover"
                 />
               </div>
               <div>
-                <h1 className="font-semibold 2xl:text-xl">{review.name}</h1>
-                <p className="text-sm tracking-wider text-gray-700 2xl:text-base">
+                <h3 className="font-bold text-themeTextPrimary tracking-wide">
+                  {review.name.toUpperCase()}
+                </h3>
+                <p className="text-sm text-themeTextSecondary tracking-wide">
                   {review.occupation}
                 </p>
               </div>
             </div>
-            <div className="">{review.review}</div>
+            <blockquote className="text-themeTextSecondary leading-relaxed">
+              "{review.review}"
+            </blockquote>
           </div>
         ))}
       </div>

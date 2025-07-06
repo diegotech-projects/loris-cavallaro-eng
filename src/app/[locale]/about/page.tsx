@@ -39,12 +39,12 @@ const AboutPage = () => {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-primary mb-8">Il Nostro Studio</h2>
             <div className="prose prose-lg max-w-none">
-              <p className="text-lg text-gray-700 mb-6">
+              <p className="text-lg text-themeTextSecondary mb-6 text-justify">
                 XYZENGINEERING è uno studio di ingegneria civile e ambientale che si distingue per 
                 l'approccio professionale e innovativo nella progettazione edile, sostenibilità e sicurezza. 
                 Il nostro team è guidato dall'Ing. Loris Cavallaro, specializzato in sicurezza sui luoghi di lavoro.
               </p>
-              <p className="text-lg text-gray-700 mb-6">
+              <p className="text-lg text-themeTextSecondary mb-6 text-justify">
                 Ci occupiamo di bandi di gara, gare d'appalto, progettazioni civili, pratiche urbanistiche, 
                 diagnosi energetiche secondo Legge 10, certificazioni APE e progettazione di impianti fotovoltaici. 
                 Un vero e proprio punto di riferimento per progettazione e sostenibilità.
@@ -77,12 +77,12 @@ const AboutPage = () => {
               <div>
                 <h3 className="text-2xl font-bold text-primary mb-4">Ing. Loris Cavallaro</h3>
                 <p className="text-lg text-eliteGold font-semibold mb-4">Direttore Tecnico e Fondatore</p>
-                <p className="text-gray-700 mb-4">
+                <p className="text-themeTextSecondary mb-4">
                   Ingegnere civile e ambientale con specializzazione in sicurezza sui luoghi di lavoro. 
                   Con anni di esperienza nel settore, guida il team tecnico dello studio con competenza 
                   e dedizione verso l'eccellenza progettuale.
                 </p>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-themeTextSecondary space-y-2">
                   <li>• Laurea Magistrale in Ingegneria Civile e Ambientale</li>
                   <li>• Specializzazione in Sicurezza sui Luoghi di Lavoro</li>
                   <li>• Esperto in Efficienza Energetica e Sostenibilità</li>
@@ -100,27 +100,27 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-whiteOne p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold text-primary mb-3">Progettazione Edile</h3>
-              <p className="text-gray-600">Progettazione strutturale e architettonica per edifici residenziali e commerciali</p>
+              <p className="text-themeTextSecondary">Progettazione strutturale e architettonica per edifici residenziali e commerciali</p>
             </div>
             <div className="bg-whiteOne p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold text-primary mb-3">Sostenibilità</h3>
-              <p className="text-gray-600">Efficienza energetica, certificazioni APE e impianti fotovoltaici</p>
+              <p className="text-themeTextSecondary">Efficienza energetica, certificazioni APE e impianti fotovoltaici</p>
             </div>
             <div className="bg-whiteOne p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold text-primary mb-3">Sicurezza</h3>
-              <p className="text-gray-600">Specializzazione in sicurezza sui luoghi di lavoro</p>
+              <p className="text-themeTextSecondary">Specializzazione in sicurezza sui luoghi di lavoro</p>
             </div>
             <div className="bg-whiteOne p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold text-primary mb-3">Bandi e Appalti</h3>
-              <p className="text-gray-600">Gestione di bandi di gara e procedure di appalto pubblico</p>
+              <p className="text-themeTextSecondary">Gestione di bandi di gara e procedure di appalto pubblico</p>
             </div>
             <div className="bg-whiteOne p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold text-primary mb-3">Pratiche Urbanistiche</h3>
-              <p className="text-gray-600">Autorizzazioni edilizie e conformità normativa</p>
+              <p className="text-themeTextSecondary">Autorizzazioni edilizie e conformità normativa</p>
             </div>
             <div className="bg-whiteOne p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold text-primary mb-3">Consulenza Tecnica</h3>
-              <p className="text-gray-600">Perizie, valutazioni tecniche e supporto specialistico</p>
+              <p className="text-themeTextSecondary">Perizie, valutazioni tecniche e supporto specialistico</p>
             </div>
           </div>
         </div>

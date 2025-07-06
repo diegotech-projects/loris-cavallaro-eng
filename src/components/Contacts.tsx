@@ -77,15 +77,15 @@ function Appointment() {
   };
 
   return (
-    <div className="container-custom">
+    <div className="container-custom bg-surfaceLight ">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         
         {/* Contact Form */}
-        <div className="bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-3xl font-bold text-themeTextPrimary mb-6">
-            Richiedi una Consulenza
+        <div className="bg-opacity-45 bg-surfaceLight p-8 shadow-lg shadow-black/100 hover:shadow-2xl hover:shadow-black/100 transition-all duration-300 rounded-lg">
+          <h2 className="text-4xl lg:text-5xl font-bold text-themeTextPrimary mb-6 tracking-tight">
+            RICHIEDI UNA CONSULENZA
           </h2>
-          <p className="text-themeTextSecondary mb-8">
+          <p className="text-themeTextSecondary mb-8 leading-relaxed">
             Contattaci per discutere del tuo progetto di ingegneria civile. 
             Il nostro team ti fornirà una consulenza professionale personalizzata.
           </p>
@@ -103,7 +103,7 @@ function Appointment() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-themeAccent focus:border-transparent"
+                  className="w-full px-4 py-3 border border-themeTextSecondary border-opacity-30 bg-themeBackground text-themeTextPrimary focus:ring-2 focus:ring-themeTextPrimary focus:border-transparent"
                 />
               </div>
               <div>
@@ -117,7 +117,7 @@ function Appointment() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-themeAccent focus:border-transparent"
+                  className="w-full px-4 py-3 border border-themeTextSecondary border-opacity-30 bg-themeBackground text-themeTextPrimary focus:ring-2 focus:ring-themeTextPrimary focus:border-transparent"
                 />
               </div>
             </div>
@@ -133,7 +133,7 @@ function Appointment() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-themeAccent focus:border-transparent"
+                  className="w-full px-4 py-3 border border-themeTextSecondary border-opacity-30 bg-themeBackground text-themeTextPrimary focus:ring-2 focus:ring-themeTextPrimary focus:border-transparent"
                 />
               </div>
               <div>
@@ -145,7 +145,7 @@ function Appointment() {
                   name="projectType"
                   value={formData.projectType}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-themeAccent focus:border-transparent"
+                  className="w-full px-4 py-3 border border-themeTextSecondary border-opacity-30 bg-themeBackground text-themeTextPrimary focus:ring-2 focus:ring-themeTextPrimary focus:border-transparent"
                 >
                   <option value="">Seleziona tipo progetto</option>
                   <option value="residential">Progettazione Residenziale</option>
@@ -222,19 +222,19 @@ function Appointment() {
             <button
               type="submit"
               disabled={!formData.gdprConsent || isSubmitting}
-              className="w-full bg-themeSecondary text-white px-8 py-4 rounded-lg font-semibold hover:bg-themeAccent transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+              className="w-full border-2 border-themeTextPrimary text-themeTextPrimary px-8 py-4 font-bold tracking-wide hover:bg-themeTextPrimary hover:text-themeBackground transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? 'Invio in corso...' : 'Invia Richiesta'}
+              {isSubmitting ? 'INVIO IN CORSO...' : 'INVIA RICHIESTA'}
             </button>
           </form>
         </div>
 
         {/* Contact Information */}
-        <div className="text-white">
-          <h2 className="text-3xl font-bold mb-6">
-            Inizia il Tuo Progetto Oggi
+        <div className="text-themeTextPrimary">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 tracking-tight">
+            INIZIA IL TUO PROGETTO OGGI
           </h2>
-          <p className="text-xl text-white/80 mb-8">
+          <p className="text-lg text-themeTextSecondary mb-8 leading-relaxed">
             Siamo pronti ad aiutarti a trasformare le tue idee in realtà con 
             soluzioni di ingegneria innovative e sostenibili.
           </p>
@@ -242,34 +242,34 @@ function Appointment() {
           {/* Contact Details */}
           <div className="space-y-6 mb-8">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-themeAccent rounded-lg flex items-center justify-center">
-                <FaEnvelope className="w-5 h-5 text-white" />
+              <div className="w-12 h-12 bg-themeTextSecondary flex items-center justify-center">
+                <FaEnvelope className="w-5 h-5 text-themeBackground" />
               </div>
               <div>
-                <p className="text-white font-semibold">Email</p>
-                <p className="text-white/80">loriscavallaro22@gmail.com</p>
-                <p className="text-white/80">Ingegnerelorising@gmail.com</p>
+                <p className="text-themeTextPrimary font-bold tracking-wide">EMAIL</p>
+                <p className="text-themeTextSecondary">loriscavallaro22@gmail.com</p>
+                <p className="text-themeTextSecondary">Ingegnerelorising@gmail.com</p>
               </div>
             </div>
             
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-themeAccent rounded-lg flex items-center justify-center">
-                <FaPhone className="w-5 h-5 text-white" />
+              <div className="w-12 h-12 bg-themeTextSecondary flex items-center justify-center">
+                <FaPhone className="w-5 h-5 text-themeBackground" />
               </div>
               <div>
-                <p className="text-white font-semibold">Telefono</p>
-                <p className="text-white/80">+39 380 147 7121</p>
+                <p className="text-themeTextPrimary font-bold tracking-wide">TELEFONO</p>
+                <p className="text-themeTextSecondary">+39 380 147 7121</p>
               </div>
             </div>
             
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-themeAccent rounded-lg flex items-center justify-center">
-                <FaMapMarkerAlt className="w-5 h-5 text-white" />
+              <div className="w-12 h-12 bg-themeTextSecondary flex items-center justify-center">
+                <FaMapMarkerAlt className="w-5 h-5 text-themeBackground" />
               </div>
               <div>
-                <p className="text-white font-semibold">Dove siamo</p>
-                <p className="text-white/80">Sicilia, Italia</p>
-                <p className="text-white/60 text-sm">Servizi su tutto il territorio nazionale</p>
+                <p className="text-themeTextPrimary font-bold tracking-wide">DOVE SIAMO</p>
+                <p className="text-themeTextSecondary">Sicilia, Italia</p>
+                <p className="text-themeTextSecondary text-sm">Servizi su tutto il territorio nazionale</p>
               </div>
             </div>
           </div>
@@ -278,32 +278,6 @@ function Appointment() {
           <div className="mb-8">
             <h3 className="font-semibold text-lg mb-4 text-white">La nostra zona di servizio</h3>
             <ContactMap />
-          </div>
-
-          {/* Footer Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-slate-700">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 bg-themeAccent rounded-lg flex items-center justify-center">
-                  <FaBuilding className="text-white text-sm" />
-                </div>
-                <span className="font-bold text-lg">XYZENGINEERING</span>
-              </div>
-              <p className="text-slate-400 text-sm mb-4">
-                Studio di ingegneria civile e ambientale specializzato in progettazione, 
-                sostenibilità e innovazione tecnica.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-lg mb-4 text-white">Navigazione</h3>
-              <div className="space-y-2 text-slate-400">
-                <Link href="/" className="block hover:text-white transition-colors">Home</Link>
-                <Link href="/about" className="block hover:text-white transition-colors">Chi Siamo</Link>
-                <Link href="/services" className="block hover:text-white transition-colors">Servizi</Link>
-                <Link href="/projects" className="block hover:text-white transition-colors">Progetti</Link>
-                <Link href="/contact" className="block hover:text-white transition-colors">Contatti</Link>
-              </div>
-            </div>
           </div>
         </div>
       </div>

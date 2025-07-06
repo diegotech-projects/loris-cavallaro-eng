@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import {useTranslations} from 'next-intl';
 import { FaBuilding, FaHardHat, FaFileAlt, FaSolarPanel, FaCalculator } from 'react-icons/fa';
 
@@ -46,56 +45,34 @@ function Services() {
   return (
     <div className="container-custom">
       {/* Header Section */}
-      <div className="text-center mb-16">
-        <button
-          type="button"
-          className="bg-themeAccent text-themeSurface px-6 py-3 rounded-full text-sm font-medium mb-6 mx-auto flex items-center gap-2"
-        >
-          <FaBuilding className="w-4 h-4" />
-          <span>{t('ourServices')}</span>
-        </button>
-        <h2 className="text-4xl lg:text-5xl font-bold text-themeTextPrimary mb-4">
-          {t("comprehensiveSet")}
+      <div className="text-center mb-20">
+        <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-themeTextPrimary mb-6 tracking-tight">
+          SERVICES
         </h2>
-        <p className="text-lg text-themeTextSecondary mb-8 max-w-2xl mx-auto">
+        <p className="text-lg text-themeTextSecondary mb-12 max-w-2xl mx-auto leading-relaxed">
           Soluzioni complete di ingegneria civile e ambientale per ogni tipologia di progetto
         </p>
-        <div className="flex justify-center gap-4">
-          <Link href="/services" className="bg-themeSecondary text-themeSurface px-6 py-3 rounded-lg font-medium hover:bg-themeAccent transition-colors">
-            {t("viewMore")}
-          </Link>
-          <Link href="/contact" className="border border-themeSecondary text-themeSecondary px-6 py-3 rounded-lg font-medium hover:bg-themeSecondary hover:text-themeSurface transition-colors">
-            {t("contactUs")}
-          </Link>
-        </div>
       </div>
 
-      {/* Services Grid - Show first 3 services */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+      {/* Services Grid - Minimal Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         {engineeringServices.slice(0, 3).map((service) => {
-          const IconComponent = service.icon;
           return (
             <div
               key={service.id}
-              className="group relative overflow-hidden rounded-lg bg-themeSurface shadow-md hover:shadow-xl transition-all duration-300"
+              className="group bg-themeSurface p-8 transition-all duration-300 hover:bg-themeSurfaceLight"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-48 mb-6 overflow-hidden">
                 <img 
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-themeSecondary bg-opacity-20 group-hover:bg-opacity-30 transition-all duration-300"></div>
               </div>
-              <div className="p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-themeAccent rounded-lg flex items-center justify-center">
-                    <IconComponent className="w-5 h-5 text-themeSurface" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-themeTextPrimary">
-                    {service.title}
-                  </h3>
-                </div>
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-themeTextPrimary tracking-wide">
+                  {service.title.toUpperCase()}
+                </h3>
                 <p className="text-themeTextSecondary text-sm leading-relaxed">
                   {service.content}
                 </p>
@@ -105,29 +82,35 @@ function Services() {
         })}
       </div>
 
-      {/* Additional Services Preview */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* Additional Services - Minimal List */}
+      <div className="space-y-6">
         {engineeringServices.slice(3, 5).map((service) => {
-          const IconComponent = service.icon;
           return (
             <div
               key={service.id}
-              className="flex items-center p-6 bg-themeSurface rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="flex items-center justify-between p-8 bg-themeSurface hover:bg-themeSurfaceLight transition-colors duration-300"
             >
-              <div className="w-12 h-12 bg-themeAccent rounded-lg flex items-center justify-center mr-4">
-                <IconComponent className="w-6 h-6 text-themeSurface" />
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-themeTextPrimary mb-2">
-                  {service.title}
+              <div className="flex-1">
+                <h4 className="text-lg font-bold text-themeTextPrimary mb-2 tracking-wide">
+                  {service.title.toUpperCase()}
                 </h4>
-                <p className="text-themeTextSecondary text-sm">
+                <p className="text-themeTextSecondary text-sm leading-relaxed">
                   {service.content}
                 </p>
+              </div>
+              <div className="ml-8 text-themeTextSecondary">
+                →
               </div>
             </div>
           );
         })}
+      </div>
+
+      {/* CTA Section */}
+      <div className="text-center mt-20">
+        <button className="border-2 border-themeTextPrimary text-themeTextPrimary px-8 py-4 font-medium tracking-wide hover:bg-themeTextPrimary hover:text-themeBackground transition-colors duration-300">
+          VIEW ALL SERVICES
+        </button>
       </div>
     </div>
   );

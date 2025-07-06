@@ -11,62 +11,60 @@ import Stats from '@/components/Stats';
 
 const page = () => {
   return (
-    <div className="relative bg-eliteLight">
-      <BgGlassmorphism />
-
+    <div className="relative bg-themeBackground">
       {/* Hero Section */}
-      <div className="relative w-full bg-eliteNavy">
+      <div className="relative w-full">
         <Heading />
       </div>
 
       {/* Impact Numbers */}
-      <div className="bg-eliteLight py-20">
+      <div className="bg-themeSurface py-24">
         <Stats />
       </div>
 
       {/* Services Overview */}
-      <div className="bg-whiteOne py-20" id="services">
+      <div className="bg-themeBackground py-24" id="services">
         <Services />
       </div>
 
       {/* Featured Projects */}
-      <div className="bg-whiteTwo py-20" id="projects">
+      <div className="bg-themeSurface py-24" id="projects">
         <ProjectShowcase />
       </div>
 
       {/* CTA Section */}
-      <div className="bg-eliteGold py-20">
+      <div className="bg-themeSurfaceLight py-24">
         <div className="container-custom text-center">
-          <h2 className="text-4xl font-bold text-whiteOne mb-6">
-            Pronti a Realizzare il Vostro Progetto?
+          <h2 className="text-4xl lg:text-5xl font-bold text-themeTextPrimary mb-8 tracking-tight">
+            PRONTI A REALIZZARE IL VOSTRO PROGETTO?
           </h2>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-themeTextSecondary mb-12 max-w-2xl mx-auto leading-relaxed">
             Iniziate oggi stesso il vostro progetto di ingegneria con le nostre soluzioni innovative, 
             sostenibili e tecnicamente avanzate.
           </p>
-          <div className="flex justify-center gap-4">
-            <button className="bg-whiteOne text-eliteGold px-8 py-4 rounded-lg font-semibold hover:bg-eliteLight transition-colors">
-              Scopri Progetti
+          <div className="flex justify-center gap-6">
+            <button className="border-2 border-themeTextPrimary text-themeTextPrimary px-8 py-4 font-medium tracking-wide hover:bg-themeTextPrimary hover:text-themeBackground transition-colors duration-300">
+              SCOPRI PROGETTI
             </button>
-            <button className="border-2 border-whiteOne text-whiteOne px-8 py-4 rounded-lg font-semibold hover:bg-whiteOne hover:text-eliteGold transition-colors">
-              Richiedi Preventivo
+            <button className="bg-themeTextPrimary text-themeBackground px-8 py-4 font-medium tracking-wide hover:bg-themeTextSecondary transition-colors duration-300">
+              RICHIEDI PREVENTIVO
             </button>
           </div>
         </div>
       </div>
 
       {/* Client Testimonials */}
-      <div className="bg-eliteLight py-20" id="testimonials">
+      <div className="bg-themeBackground py-24" id="testimonials">
         <Reviews />
       </div>
 
       {/* FAQ Section */}
-      <div className="bg-whiteOne py-20" id="FAQ">
+      <div className="bg-themeSurface py-24" id="FAQ">
         <FAQS />
       </div>
 
       {/* Final CTA */}
-      <div className="bg-eliteDark py-20" id="appointment">
+      <div className="bg-surfaceLight py-24" id="appointment">
         <Appointment />
       </div>
     </div>

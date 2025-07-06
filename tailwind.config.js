@@ -31,11 +31,31 @@ const themes = {
     surfaceLight: '#cbd5e1', // Darker light surface (slate-300)
     textPrimary: '#0f172a',  // Very dark text
     textSecondary: '#374151', // Darker secondary text
+  },
+  minimal: {
+    primary: '#111111',      // Pure black for strongest contrast
+    secondary: '#6b7280',    // Medium grey for secondary elements
+    accent: '#111111',       // Black accent (no colors)
+    background: '#f5f5f5',   // Light grey background
+    surface: '#ffffff',      // Pure white for cards/surfaces
+    surfaceLight: '#e5e7eb', // Light grey for subtle sections
+    textPrimary: '#111111',  // Black text for maximum readability
+    textSecondary: '#6b7280', // Medium grey for secondary text
+  },
+  minimalDark: {
+    primary: '#ffffff',      // White for primary elements on dark
+    secondary: '#767b85',    // Light grey for secondary elements
+    accent: '#ffffff',       // White accent for consistency
+    background: '#1f2937',   // Dark grey background (gray-800)
+    surface: '#374151',      // Medium dark grey for cards (gray-700)
+    surfaceLight: '#111827', // Very dark grey for subtle sections (gray-900)
+    textPrimary: '#ffffff',  // White text for contrast on dark
+    textSecondary: '#b8c2d1', // Light grey for secondary text (gray-300)
   }
 };
 
 // Choose your active theme here
-const activeTheme = themes.professional; // Change to themes.default to switch back
+const activeTheme = themes.minimalDark; // Switched to minimal theme
 
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],

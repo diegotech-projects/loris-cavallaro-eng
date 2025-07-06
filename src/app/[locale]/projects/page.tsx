@@ -88,13 +88,13 @@ const ProjectsPage = () => {
                     </span>
                   </div>
                   <h2 className="text-3xl font-bold text-primary mb-4">{project.title}</h2>
-                  <p className="text-lg text-gray-700 mb-6">{project.description}</p>
+                  <p className="text-lg text-themeTextSecondary mb-6">{project.description}</p>
                   
                   <div className="mb-6">
                     <h3 className="text-xl font-semibold text-primary mb-3">Caratteristiche Principali</h3>
                     <ul className="space-y-2">
                       {project.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-600">
+                        <li key={featureIndex} className="flex items-center text-themeTextSecondary opacity-50">
                           <span className="w-2 h-2 bg-eliteGold rounded-full mr-3"></span>
                           {feature}
                         </li>
@@ -131,7 +131,7 @@ const ProjectsPage = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-primary mb-3">Impianto Fotovoltaico Residenziale</h3>
-                <p className="text-gray-600 mb-4">Progettazione e installazione impianto fotovoltaico per abitazione privata con ottimizzazione energetica.</p>
+                <p className="text-themeTextSecondary opacity-50 mb-4">Progettazione e installazione impianto fotovoltaico per abitazione privata con ottimizzazione energetica.</p>
                 <div className="flex justify-between text-sm text-gray-500">
                   <span>Potenza: 6 kW</span>
                   <span>Anno: 2023</span>
@@ -145,7 +145,7 @@ const ProjectsPage = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-primary mb-3">Diagnosi Energetica Commerciale</h3>
-                <p className="text-gray-600 mb-4">Analisi energetica completa per edificio commerciale con proposte di miglioramento.</p>
+                <p className="text-themeTextSecondary opacity-50 mb-4">Analisi energetica completa per edificio commerciale con proposte di miglioramento.</p>
                 <div className="flex justify-between text-sm text-gray-500">
                   <span>Risparmio: 40%</span>
                   <span>Classe: A+</span>
@@ -159,7 +159,7 @@ const ProjectsPage = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-primary mb-3">Bando Pubblico Infrastrutture</h3>
-                <p className="text-gray-600 mb-4">Supporto tecnico per partecipazione a bando pubblico per opere infrastrutturali.</p>
+                <p className="text-themeTextSecondary opacity-50 mb-4">Supporto tecnico per partecipazione a bando pubblico per opere infrastrutturali.</p>
                 <div className="flex justify-between text-sm text-gray-500">
                   <span>Valore: €2M</span>
                   <span>Status: Aggiudicato</span>
