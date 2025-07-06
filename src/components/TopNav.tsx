@@ -24,7 +24,7 @@ const TopNav = () => {
           <Link 
             className={`anchor transition-colors ${
               pathname === '/' 
-                ? 'text-themeSecondary' 
+                ? 'underline underline-offset-4 text-themeSecondary' 
                 : 'hover:text-themeSecondary'
             }`} 
             href="/"
@@ -34,7 +34,7 @@ const TopNav = () => {
           <Link 
             className={`anchor transition-colors ${
               pathname === '/about' 
-                ? 'text-themeSecondary' 
+                ? 'underline underline-offset-4 text-themeSecondary' 
                 : 'hover:text-themeSecondary'
             }`} 
             href="/about"
@@ -44,7 +44,7 @@ const TopNav = () => {
           <Link 
             className={`anchor transition-colors ${
               pathname === '/services' 
-                ? 'text-themeSecondary' 
+                ? 'underline underline-offset-4 text-themeSecondary' 
                 : 'hover:text-themeSecondary'
             }`} 
             href="/services"
@@ -54,7 +54,7 @@ const TopNav = () => {
           <Link 
             className={`anchor transition-colors ${
               pathname === '/projects' 
-                ? 'text-themeSecondary' 
+                ? 'underline underline-offset-4 text-themeSecondary' 
                 : 'hover:text-themeSecondary'
             }`} 
             href="/projects"
