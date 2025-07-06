@@ -96,7 +96,7 @@ const TopNav = () => {
             Contatti
           </Link>
           <Link
-            href="/contact"
+            href="/contact#contact-form"
             className="rounded-full bg-themeAccent opacity-80 px-4 py-3 text-themeSurface hover:bg-themeSecondary transition-colors"
           >
             Richiedi Preventivo

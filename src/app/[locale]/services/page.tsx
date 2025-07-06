@@ -135,9 +135,9 @@ const ServicesPage = () => {
             Contattaci per una consulenza personalizzata e scopri come possiamo 
             trasformare le tue idee in realtà.
           </p>
-          <button className="bg-whiteOne text-eliteGold px-8 py-4 rounded-lg font-semibold hover:bg-eliteLight transition-colors">
+          <a href="/contact#contact-form" className="bg-whiteOne text-eliteGold px-8 py-4 rounded-lg font-semibold hover:bg-eliteLight transition-colors">
             Richiedi Preventivo
-          </button>
+          </a>
         </div>
       </div>
     </div>

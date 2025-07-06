@@ -56,7 +56,7 @@ function ProjectShowcase() {
             <Link href="/projects" className="bg-themeAccent text-themeSurface px-6 py-3 rounded-lg font-medium hover:bg-themeSecondary transition-colors">
               Tutti i Progetti
             </Link>
-            <Link href="/contact" className="bg-themeAccent opacity-65 text-themeSurface px-6 py-3 rounded-lg font-medium hover:bg-themeSecondary transition-colors">
+            <Link href="/contact#contact-form" className="bg-themeAccent opacity-65 text-themeSurface px-6 py-3 rounded-lg font-medium hover:bg-themeSecondary transition-colors">
               Richiedi Preventivo
             </Link>
           </div>

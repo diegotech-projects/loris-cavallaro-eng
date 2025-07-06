@@ -99,7 +99,7 @@ const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
       <div className="px-5 py-6">
         <Link
           onClick={onClickClose}
-          href="/contact"
+          href="/contact#contact-form"
           className="rounded-full bg-themeSecondary px-6 py-3 text-themeSurface font-semibold hover:bg-themeAccent transition-colors"
         >
           Richiedi Preventivo

@@ -215,9 +215,9 @@ const ProjectsPage = () => {
             Contattaci per discutere del tuo progetto e scoprire come possiamo 
             trasformare le tue idee in soluzioni concrete e sostenibili.
           </p>
-          <button className="bg-whiteOne text-eliteGold px-8 py-4 rounded-lg font-semibold hover:bg-eliteLight transition-colors">
+          <a href="/contact#contact-form" className="bg-whiteOne text-eliteGold px-8 py-4 rounded-lg font-semibold hover:bg-eliteLight transition-colors">
             Inizia il tuo Progetto
-          </button>
+          </a>
         </div>
       </div>
 

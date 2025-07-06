@@ -46,9 +46,12 @@ const page = () => {
             <button className="border-2 border-themeTextPrimary text-themeTextPrimary px-8 py-4 font-medium tracking-wide hover:bg-themeTextPrimary hover:text-themeBackground transition-colors duration-300">
               SCOPRI PROGETTI
             </button>
-            <button className="bg-themeTextPrimary text-themeBackground px-8 py-4 font-medium tracking-wide hover:bg-themeTextSecondary transition-colors duration-300">
+            <a 
+              href="/contact#contact-form"
+              className="bg-themeTextPrimary text-themeBackground px-8 py-4 font-medium tracking-wide hover:bg-themeTextSecondary transition-colors duration-300"
+            >
               RICHIEDI PREVENTIVO
-            </button>
+            </a>
           </div>
         </div>
       </div>
