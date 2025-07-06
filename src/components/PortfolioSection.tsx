@@ -48,19 +48,15 @@ function ProjectShowcase() {
     <div className="container-custom">
       {/* Header Section */}
       <div className="text-center mb-16">
-        <button className="bg-themeAccent text-themeSurface px-6 py-3 rounded-full text-sm font-medium mb-6 flex items-center gap-2 mx-auto">
-          <FaExternalLinkAlt className="w-4 h-4" />
-          I Nostri Progetti
-        </button>
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
           <h2 className="text-4xl lg:text-5xl font-bold text-themeTextPrimary">
             Progetti in<br />evidenza
           </h2>
           <div className="flex gap-4">
-            <Link href="/projects" className="bg-themeSecondary text-themeSurface px-6 py-3 rounded-lg font-medium hover:bg-themeAccent transition-colors">
+            <Link href="/projects" className="bg-themeAccent text-themeSurface px-6 py-3 rounded-lg font-medium hover:bg-themeSecondary transition-colors">
               Tutti i Progetti
             </Link>
-            <Link href="/contact" className="border border-themeSecondary text-themeSecondary px-6 py-3 rounded-lg font-medium hover:bg-themeSecondary hover:text-themeSurface transition-colors">
+            <Link href="/contact" className="bg-themeAccent opacity-65 text-themeSurface px-6 py-3 rounded-lg font-medium hover:bg-themeSecondary transition-colors">
               Richiedi Preventivo
             </Link>
           </div>
@@ -106,7 +102,7 @@ function ProjectShowcase() {
         </p>
         <Link 
           href="/projects" 
-          className="inline-flex items-center gap-2 bg-themeSecondary text-themeSurface px-8 py-3 rounded-lg font-medium hover:bg-themeAccent transition-colors"
+          className="inline-flex items-center gap-2 bg-themeAccent text-themeSurface px-6 py-3 rounded-lg font-medium hover:bg-themeSecondary transition-colors"
         >
           <FaExternalLinkAlt className="w-4 h-4" />
           Visualizza Tutti i Progetti

@@ -17,11 +17,6 @@ function Heading() {
             <div className="text-lg text-themeTextSecondary max-w-lg leading-relaxed">
               <p>{t('description')}</p>
             </div>
-            <div className="pt-4">
-              <button className="border-2 border-themeTextPrimary text-themeTextPrimary px-8 py-4 font-medium tracking-wide hover:bg-themeTextPrimary hover:text-themeBackground transition-colors duration-300">
-                LEARN MORE
-              </button>
-            </div>
           </div>
           
           {/* Right Image */}
