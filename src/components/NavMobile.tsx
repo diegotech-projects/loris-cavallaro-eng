@@ -3,7 +3,7 @@ import React from 'react';
 import { BsBuilding } from 'react-icons/bs';
 import { MdClose } from 'react-icons/md';
 import { useLocale, useTranslations } from 'next-intl';
-import { Link as LocalizedLink } from '@/i18n/navigation';
+import { Link as LocalizedLink, usePathname } from '@/i18n/navigation';
 
 export interface NavMobileProps {
   onClickClose?: () => void;
@@ -11,6 +11,7 @@ export interface NavMobileProps {
 
 const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
   const locale = useLocale();
+  const pathname = usePathname();
   const t = useTranslations('navigation');
 
   const list = [
@@ -63,7 +64,7 @@ const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
         <div className="flex items-center gap-2 mt-4">
           <span className="text-sm text-themeTextSecondary">{t('language')}:</span>
           <LocalizedLink 
-            href="/" 
+            href={pathname} 
             locale="it"
             onClick={onClickClose}
             className={`flex items-center gap-1 px-3 py-2 rounded transition-colors ${
@@ -76,7 +77,7 @@ const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
             <span className="text-sm font-medium">{t('italian')}</span>
           </LocalizedLink>
           <LocalizedLink 
-            href="/" 
+            href={pathname} 
             locale="en"
             onClick={onClickClose}
             className={`flex items-center gap-1 px-3 py-2 rounded transition-colors ${
@@ -93,25 +94,25 @@ const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
       
       <ul className="flex flex-col space-y-5 px-5 py-6">
         {list.map((item) => (
-          <Link
+          <LocalizedLink
             onClick={onClickClose}
             href={item.href}
             key={item.title}
             className="text-themeTextPrimary font-medium hover:text-themeSecondary transition-colors"
           >
             {item.title}
-          </Link>
+          </LocalizedLink>
         ))}
       </ul>
       
       <div className="px-5 py-6">
-        <Link
+        <LocalizedLink
           onClick={onClickClose}
           href="/contact#contact-form"
           className="rounded-full bg-themeSecondary px-6 py-3 text-themeSurface font-semibold hover:bg-themeAccent transition-colors"
         >
           {t('requestQuote')}
-        </Link>
+        </LocalizedLink>
       </div>
     </div>
   );

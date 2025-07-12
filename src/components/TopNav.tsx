@@ -25,7 +25,7 @@ const TopNav = () => {
             </Link>
         </div>
         <div className="hidden w-[40%] items-center justify-center gap-x-5 text-sm font-semibold lg:flex 2xl:gap-x-10 2xl:text-base">
-          <Link 
+          <LocalizedLink 
             className={`anchor transition-colors ${
               pathname === '/' 
                 ? 'underline underline-offset-4 text-themeSecondary' 
@@ -34,8 +34,8 @@ const TopNav = () => {
             href="/"
           >
             {t('home')}
-          </Link>
-          <Link 
+          </LocalizedLink>
+          <LocalizedLink 
             className={`anchor transition-colors ${
               pathname === '/about' 
                 ? 'underline underline-offset-4 text-themeSecondary' 
@@ -44,8 +44,8 @@ const TopNav = () => {
             href="/about"
           >
             {t('about')}
-          </Link>
-          <Link 
+          </LocalizedLink>
+          <LocalizedLink 
             className={`anchor transition-colors ${
               pathname === '/services' 
                 ? 'underline underline-offset-4 text-themeSecondary' 
@@ -54,8 +54,8 @@ const TopNav = () => {
             href="/services"
           >
             {t('services')}
-          </Link>
-          <Link 
+          </LocalizedLink>
+          <LocalizedLink 
             className={`anchor transition-colors ${
               pathname === '/projects' 
                 ? 'underline underline-offset-4 text-themeSecondary' 
@@ -64,8 +64,8 @@ const TopNav = () => {
             href="/projects"
           >
             {t('projects')}
-          </Link>
-          <Link 
+          </LocalizedLink>
+          <LocalizedLink 
             className={`anchor transition-colors ${
               pathname === '/faq' 
                 ? 'underline underline-offset-4 text-themeSecondary' 
@@ -74,13 +74,13 @@ const TopNav = () => {
             href="/faq"
           >
             {t('faq')}
-          </Link>
+          </LocalizedLink>
         </div>
         
         {/* Language Toggle */}
         <div className="hidden lg:flex items-center gap-2">
           <LocalizedLink 
-            href="/" 
+            href={pathname} 
             locale="it"
             className={`flex items-center gap-1 px-2 py-1 rounded transition-colors ${
               locale === 'it' 
@@ -92,7 +92,7 @@ const TopNav = () => {
             <span className="text-xs font-medium">IT</span>
           </LocalizedLink>
           <LocalizedLink 
-            href="/" 
+            href={pathname} 
             locale="en"
             className={`flex items-center gap-1 px-2 py-1 rounded transition-colors ${
               locale === 'en' 
@@ -106,15 +106,15 @@ const TopNav = () => {
         </div>
         
         <div className="hidden w-[30%] items-center justify-end gap-x-5 text-sm font-semibold lg:flex 2xl:gap-x-10 2xl:text-base">
-          <Link href="/contact" className="anchor hover:text-themeSecondary transition-colors">
+          <LocalizedLink href="/contact" className="anchor hover:text-themeSecondary transition-colors">
             {t('contact')}
-          </Link>
-          <Link
+          </LocalizedLink>
+          <LocalizedLink
             href="/contact#contact-form"
             className="rounded-full bg-themeAccent opacity-80 px-4 py-3 text-themeSurface hover:bg-themeSecondary transition-colors"
           >
             {t('requestQuote')}
-          </Link>
+          </LocalizedLink>
         </div>
         <div className="lg:hidden">
           <MenuBar />
