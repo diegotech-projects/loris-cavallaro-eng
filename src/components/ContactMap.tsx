@@ -49,7 +49,7 @@ const ContactMap = () => {
   }, []);
 
   // Coordinates for Sicily, Italy (approximate center)
-  const position: [number, number] = [37.5999, 14.0153];
+  const position: [number, number] = [parseFloat(process.env.NEXT_PUBLIC_LATITUDINE || '37.5999'), parseFloat(process.env.NEXT_PUBLIC_LONGITUDINE || '14.0153')];
 
   if (!isClient) {
     return (
@@ -63,7 +63,7 @@ const ContactMap = () => {
     <div className="w-full h-64 rounded-lg overflow-hidden shadow-lg">
       <MapContainer
         center={position}
-        zoom={8}
+        zoom={process.env.NEXT_PUBLIC_ZOOM ? parseInt(process.env.NEXT_PUBLIC_ZOOM, 10) : 9}
         style={{ height: '100%', width: '100%' }}
         className="z-0"
       >
@@ -74,7 +74,7 @@ const ContactMap = () => {
         <Marker position={position}>
           <Popup>
             <div className="text-center">
-              <strong>{process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} - Ingegneria & Costruzioni</strong>
+              <strong>{process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} - {process.env.NEXT_PUBLIC_SIGLA || 'Ingegneria & Costruzioni'}</strong>
               <br />
               Sicilia, Italia
               <br />

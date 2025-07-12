@@ -41,7 +41,7 @@ const AboutPage = () => {
             <h2 className="text-3xl font-bold text-primary mb-8">Il Nostro Studio</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-themeTextSecondary mb-6 text-justify">
-                {process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} - Ingegneria & Costruzioni è uno studio di ingegneria civile e ambientale che si distingue per 
+                {process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} - {process.env.NEXT_PUBLIC_SIGLA || 'Ingegneria & Costruzioni'} è uno studio di ingegneria civile e ambientale che si distingue per 
                 l'approccio professionale e innovativo nella progettazione edile, sostenibilità e sicurezza. 
                 Il nostro team è guidato dall'Ing. Loris Cavallaro, specializzato in sicurezza sui luoghi di lavoro.
               </p>
