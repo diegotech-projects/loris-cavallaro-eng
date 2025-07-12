@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import React from 'react';
 import { BsBuilding } from 'react-icons/bs';
 import { MdClose } from 'react-icons/md';

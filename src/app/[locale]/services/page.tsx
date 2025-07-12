@@ -111,7 +111,7 @@ const ServicesPage = () => {
           <h2 className="text-4xl font-bold text-whiteOne mb-6">
             {t('cta.title')}
           </h2>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-black-100 mb-8 max-w-2xl mx-auto">
             {t('cta.description')}
           </p>
           <a href="/contact#contact-form" className="bg-whiteOne text-eliteGold px-8 py-4 rounded-lg font-semibold hover:bg-eliteLight transition-colors">

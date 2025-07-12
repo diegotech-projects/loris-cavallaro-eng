@@ -95,7 +95,7 @@ function FooterComp() {
           {currentYear} {process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} - {process.env.NEXT_PUBLIC_SIGLA || 'Ingegneria & Costruzioni'}. {t('legal.copyright')}
         </div>
         <div className="text-gray-400 text-xs mt-2 md:mt-0 flex items-center gap-1">
-          <span>{t('legal.vatNumber')}</span>
+          <span>{t('legal.vatNumber').replace('[DA INSERIRE]', process.env.NEXT_PUBLIC_VAT_NUMBER || '[DA INSERIRE]').replace('[TO BE INSERTED]', process.env.NEXT_PUBLIC_VAT_NUMBER || '[TO BE INSERTED]')}</span>
           <span>|</span>
           <Link href="/privacy" className="hover:text-themeAccent transition-colors">
             {t('legal.privacy')}
