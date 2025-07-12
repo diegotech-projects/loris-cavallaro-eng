@@ -1,21 +1,25 @@
+import { useTranslations } from 'next-intl';
 import { FAQData } from '@/data/content';
 
 function FAQS() {
+  const t = useTranslations('faq');
+  const faqData = FAQData();
+  
   return (
     <div className="container-custom">
       {/* Header */}
       <div className="text-center mb-20">
         <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-themeTextPrimary mb-6 tracking-tight">
-          FAQ
+          {t('title')}
         </h2>
         <p className="text-lg text-themeTextSecondary max-w-2xl mx-auto leading-relaxed">
-          Le risposte alle domande più frequenti sui nostri servizi di ingegneria civile e ambientale.
+          {t('description')}
         </p>
       </div>
 
       {/* FAQ List */}
       <div className="max-w-4xl mx-auto">
-        {FAQData.map((item) => (
+        {faqData.map((item: any) => (
           <div key={item.question} className="border-b border-themeTextSecondary border-opacity-20">
             <details className="group">
               <summary className="flex cursor-pointer list-none items-center justify-between py-6 font-bold text-themeTextPrimary group-open:text-themeTextPrimary text-lg tracking-wide">

@@ -8,6 +8,174 @@
     "contactUs": "Contact Us",
     "serviceRich": "<engineering>Civil Engineering</engineering> Services"
   },
+  "home": {
+    "cta": {
+      "title": "READY TO REALIZE YOUR PROJECT?",
+      "description": "Start your engineering project today with our innovative, sustainable and technically advanced solutions.",
+      "discoverProjects": "DISCOVER PROJECTS",
+      "requestQuote": "REQUEST QUOTE"
+    },
+    "stats": {
+      "title": "OUR IMPACT IN NUMBERS",
+      "description": "Years of experience and concrete results in civil and environmental engineering, with projects that transform communities.",
+      "completedProjects": "Completed Projects",
+      "yearsExperience": "Years of Experience",
+      "satisfiedClients": "Satisfied Clients", 
+      "photovoltaicSystems": "Photovoltaic Systems"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Us",
+      "subtitle": "Civil and environmental engineering firm specialized in high-value projects and sustainability."
+    },
+    "company": {
+      "title": "Our Studio",
+      "description1": "is a civil and environmental engineering firm that stands out for its professional and innovative approach to building design, sustainability and safety. Our team is led by Eng. Loris Cavallaro, specialized in workplace safety.",
+      "description2": "We handle tenders, public procurement procedures, civil design, urban planning practices, energy diagnoses according to Law 10, APE certifications and photovoltaic system design. A true reference point for design and sustainability.",
+      "mission": "Our mission is to see what we create on paper transform into tangible reality, building not just structures, but also beauty, functionality and sustainability for future generations."
+    },
+    "team": {
+      "title": "Our Team",
+      "director": {
+        "name": "Eng. Loris Cavallaro",
+        "role": "Technical Director and Founder",
+        "description": "Civil and environmental engineer with specialization in workplace safety. With years of experience in the sector, he leads the studio's technical team with competence and dedication towards design excellence.",
+        "qualifications": [
+          "Master's Degree in Civil and Environmental Engineering",
+          "Specialization in Workplace Safety",
+          "Expert in Energy Efficiency and Sustainability"
+        ]
+      }
+    },
+    "competencies": {
+      "title": "Competencies",
+      "buildingDesign": {
+        "title": "Building Design",
+        "description": "Structural and architectural design for residential and commercial buildings"
+      },
+      "sustainability": {
+        "title": "Sustainability",
+        "description": "Energy efficiency, APE certifications and photovoltaic systems"
+      },
+      "safety": {
+        "title": "Safety",
+        "description": "Specialization in workplace safety"
+      },
+      "tenders": {
+        "title": "Tenders & Contracts",
+        "description": "Management of tenders and public procurement procedures"
+      },
+      "urbanPlanning": {
+        "title": "Urban Planning",
+        "description": "Building permits and regulatory compliance"
+      },
+      "consulting": {
+        "title": "Technical Consulting",
+        "description": "Expertise, technical evaluations and specialized support"
+      }
+    }
+  },
+  "reviews": {
+    "title": "TESTIMONIALS",
+    "description": "Our clients' words tell the story of our work quality and commitment to excellence.",
+    "review1": {
+      "name": "Marco Rossi",
+      "occupation": "Building Contractor",
+      "review": "for the design of a residential complex. Their technical expertise and attention to detail exceeded our expectations. Project completed on time with excellent results."
+    },
+    "review2": {
+      "name": "Laura Bianchi",
+      "occupation": "Architect",
+      "review": "was fantastic. They handled all structural calculations for our architectural project with professionalism and precision. Highly recommended for complex projects."
+    },
+    "review3": {
+      "name": "Giuseppe Verdi",
+      "occupation": "Villa Owner",
+      "review": "For the renovation of our villa they took care of every aspect: from design to bureaucratic procedures, up to energy certification. Complete service and extraordinary final result. Villa now in class A+!"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About Us", 
+    "services": "Services",
+    "projects": "Projects",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "requestQuote": "Request Quote",
+    "language": "Language",
+    "italian": "Italiano",
+    "english": "English"
+  },
+  "footer": {
+    "companyDescription": "Civil and environmental engineering firm specialized in building design, sustainability and technical innovation for high-value projects.",
+    "navigation": {
+      "title": "Navigation"
+    },
+    "services": {
+      "title": "Services",
+      "structuralDesign": "Structural Design",
+      "projectManagement": "Project Management", 
+      "urbanPlanning": "Urban Planning",
+      "energyEfficiency": "Energy Efficiency",
+      "consulting": "Technical Consulting"
+    },
+    "contact": {
+      "title": "Contact",
+      "location": "Sicily, Italy"
+    },
+    "legal": {
+      "copyright": "All rights reserved.",
+      "vatNumber": "VAT: [TO BE INSERTED]",
+      "privacy": "Privacy Policy",
+      "cookies": "Cookie Policy"
+    }
+  },
+  "contact": {
+    "form": {
+      "title": "REQUEST A CONSULTATION",
+      "description": "Contact us to discuss your civil engineering project. Our team will provide you with personalized professional consulting.",
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "projectType": "Project Type",
+      "message": "Project Description",
+      "messagePlaceholder": "Briefly describe your project, your needs and your objectives...",
+      "projectTypes": {
+        "placeholder": "Select project type",
+        "residential": "Residential Design",
+        "commercial": "Commercial Design",
+        "structural": "Structural Calculations",
+        "energy": "Energy Efficiency",
+        "permits": "Urban Planning",
+        "consulting": "Technical Consulting"
+      },
+      "gdprConsent": "Personal data processing consent",
+      "gdprText": "I consent to the processing of my personal data to respond to my contact request, as described in the Privacy Policy. The data will be used exclusively to provide the requested information and will not be shared with third parties.",
+      "privacyPolicy": "Privacy Policy",
+      "gdprRequired": "You must accept data processing consent to send the form.",
+      "submit": "SEND REQUEST",
+      "submitting": "SENDING...",
+      "success": "✅ Message sent successfully!",
+      "successDescription": "We will reply to your email address as soon as possible.",
+      "error": "❌ Error sending message",
+      "errorDescription": "Try again or contact us directly via email:",
+      "required": "*"
+    },
+    "info": {
+      "title": "START YOUR PROJECT TODAY",
+      "description": "We are ready to help you transform your ideas into reality with innovative and sustainable engineering solutions.",
+      "email": "EMAIL",
+      "phone": "PHONE",
+      "location": "WHERE WE ARE",
+      "serviceArea": "Our service area",
+      "nationalService": "Services throughout the national territory"
+    },
+    "map": {
+      "loading": "Loading map...",
+      "popupText": "Services throughout the national territory"
+    }
+  },
   "services": {
     "ourServices": "Our Services",
     "comprehensiveSet": "A comprehensive set of technical services",
@@ -204,6 +372,193 @@
       "text": "I consent to the processing of my personal data to respond to my contact request, as described in the",
       "privacyLink": "Privacy Policy",
       "continuation": ". The data will be used exclusively to provide the requested information and will not be shared with third parties."
+    }
+  },
+  "servicesPage": {
+    "hero": {
+      "title": "Our Services",
+      "subtitle": "Complete civil and environmental engineering solutions for quality, sustainability and safety projects."
+    },
+    "detailed": {
+      "structuralDesign": {
+        "title": "Structural Design",
+        "description": "Complete structural design with structural calculations, static verifications and sizing for residential, commercial and industrial buildings.",
+        "features": [
+          "Structural calculations and seismic verifications",
+          "Foundation and load-bearing structure design",
+          "Renovations and consolidations"
+        ],
+        "cardTitle": "Structural Projects",
+        "cardDescription": "Innovative technical solutions for every type of construction"
+      },
+      "energyEfficiency": {
+        "title": "Energy Efficiency",
+        "description": "Specialization in energy audits, APE certifications and photovoltaic system design for environmental sustainability.",
+        "features": [
+          "Energy audits according to Law 10",
+          "APE certifications (Energy Performance Certificate)",
+          "Photovoltaic system design"
+        ],
+        "cardTitle": "Sustainability",
+        "cardDescription": "Energy efficiency and eco-sustainable solutions"
+      },
+      "projectManagement": {
+        "title": "Construction Management",
+        "description": "Complete coordination of construction works with technical management, quality control and supervision during all construction phases.",
+        "features": [
+          "Safety coordination on construction sites",
+          "Quality control and work progress monitoring",
+          "Management of interferences and technical issues"
+        ],
+        "cardTitle": "Project Management",
+        "cardDescription": "Professional control and coordination"
+      }
+    },
+    "cta": {
+      "title": "Do you have a project in mind?",
+      "description": "Contact us for personalized consultation and discover how we can turn your ideas into reality.",
+      "button": "Request Quote"
+    }
+  },
+  "faq": {
+    "title": "FAQ",
+    "description": "Answers to the most frequently asked questions about our civil and environmental engineering services.",
+    "cta": {
+      "title": "Didn't find the answer you were looking for?",
+      "description": "Contact us directly to receive personalized consultation on your engineering projects.",
+      "button": "Contact Us Now"
+    },
+    "questions": [
+      {
+        "question": "What type of engineering services do you offer?",
+        "answer": "We offer complete civil and environmental engineering services: structural design, construction management, urban planning practices, energy audits, APE certifications, photovoltaic system design and technical consulting for tenders."
+      },
+      {
+        "question": "How long does building design take?",
+        "answer": "Timeframes depend on project complexity. Standard residential design takes 4-8 weeks, while more complex commercial projects may require 2-4 months. We always provide accurate estimates during initial consultation."
+      },
+      {
+        "question": "Do you work throughout the national territory?",
+        "answer": "Yes, while based in Sicily, we offer our services throughout the national territory. For out-of-region projects, we organize surveys and coordination through qualified local partnerships."
+      },
+      {
+        "question": "How much does a consultation or quote cost?",
+        "answer": "The first consultation is free and includes a preliminary project assessment. Quotes are provided free of charge within 48 hours of site inspection. Costs vary based on project type and complexity."
+      },
+      {
+        "question": "Do you also handle bureaucratic procedures?",
+        "answer": "Absolutely yes. We handle all urban planning practices, building permits, construction authorizations and public entity relations. Our service includes complete support from conception to realization."
+      },
+      {
+        "question": "Do you offer energy efficiency services?",
+        "answer": "Yes, we specialize in energy audits according to Law 10, APE certifications (Energy Performance Certificate) and photovoltaic system design. We help clients achieve the best energy classes and access state incentives."
+      }
+    ]
+  },
+  "projectsPage": {
+    "hero": {
+      "title": "Our Projects",
+      "subtitle": "A selection of our most significant projects, demonstrating the quality and innovation of our civil engineering approach."
+    },
+    "projects": [
+      {
+        "id": 1,
+        "title": "Modern Residential Villa",
+        "category": "Residential Design",
+        "description": "Complete design of single-family villa with focus on sustainability and energy efficiency. Includes structural design, systems and energy certification.",
+        "features": ["Energy class A+", "Seismic-resistant structure", "Photovoltaic system", "Sustainable design"]
+      },
+      {
+        "id": 2,
+        "title": "Urban Residential Complex",
+        "category": "Commercial Design",
+        "description": "Renovation and expansion project for residential complex with architectural integration in the existing urban context.",
+        "features": ["Complete renovation", "Energy efficiency", "Urban integration", "Innovative common spaces"]
+      },
+      {
+        "id": 3,
+        "title": "Photovoltaic System Lipari",
+        "category": "Energy Design",
+        "description": "Design and implementation of residential photovoltaic system with positioning optimization and energy efficiency maximization. Includes feasibility study and energy certification.",
+        "features": ["6 kW power", "High-efficiency panels", "Orientation optimization", "Remote monitoring", "Optimized ROI"]
+      }
+    ],
+    "projectFeatures": {
+      "title": "Main Features"
+    },
+    "viewProject": "View Project",
+    "photovoltaicSection": {
+      "title": "Photovoltaic Projects",
+      "residentialSystem": {
+        "title": "Residential Photovoltaic System",
+        "description": "Design and installation of photovoltaic system for private residence with energy optimization.",
+        "power": "Power: 6 kW",
+        "year": "Year: 2023"
+      },
+      "energyDiagnosis": {
+        "title": "Commercial Energy Diagnosis",
+        "description": "Complete energy analysis for commercial building with improvement proposals.",
+        "savings": "Savings: 40%",
+        "energyClass": "Class: A+"
+      },
+      "publicTender": {
+        "title": "Public Infrastructure Tender",
+        "description": "Technical support for participation in public tender for infrastructure works.",
+        "value": "Value: €2M",
+        "status": "Status: Awarded"
+      }
+    },
+    "cta": {
+      "title": "Want to realize your project?",
+      "description": "Contact us to discuss your project and discover how we can transform your ideas into concrete and sustainable solutions.",
+      "button": "Start Your Project"
+    }
+  },
+  "projectModal": {
+    "projectDescription": "Project Description",
+    "mainFeatures": "Main Features",
+    "technicalInfo": "Technical Information",
+    "projectNumber": "Project #",
+    "category": "Category",
+    "contactUs": "Contact Us"
+  },
+  "portfolioSection": {
+    "title": "Featured Projects",
+    "viewAllProjects": "All Projects",
+    "requestQuote": "Request Quote",
+    "featuredProjects": [
+      {
+        "id": 1,
+        "title": "Modern Residential Villa",
+        "category": "Residential Design",
+        "description": "Complete design of single-family villa with focus on sustainability and energy efficiency.",
+        "year": "2023"
+      },
+      {
+        "id": 2,
+        "title": "Contemporary Interiors",
+        "category": "Interior Design",
+        "description": "Interior space design with innovative solutions and sustainable materials.",
+        "year": "2023"
+      },
+      {
+        "id": 3,
+        "title": "Residential Complex",
+        "category": "Commercial Construction",
+        "description": "Renovation and expansion for urban residential complex.",
+        "year": "2022"
+      },
+      {
+        "id": 4,
+        "title": "Sustainable Building",
+        "category": "Energy Efficiency",
+        "description": "Project with A+ energy certification and integrated photovoltaic systems.",
+        "year": "2022"
+      }
+    ],
+    "cta": {
+      "description": "Discover all our projects and the innovative solutions we have developed",
+      "button": "View All Projects"
     }
   }
 }

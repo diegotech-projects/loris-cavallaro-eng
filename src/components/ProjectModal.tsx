@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import type { Project } from '@/data/types';
@@ -12,6 +13,7 @@ interface ProjectModalProps {
 }
 
 const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose }) => {
+  const t = useTranslations('projectModal');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const nextImage = () => {
@@ -133,14 +135,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
           {/* Project Details */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-xl font-semibold text-primary mb-3">Descrizione Progetto</h3>
+              <h3 className="text-xl font-semibold text-primary mb-3">{t('projectDescription')}</h3>
               <p className="text-themeTextSecondary leading-relaxed">{project.description}</p>
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-primary mb-3">Caratteristiche Principali</h3>
+              <h3 className="text-xl font-semibold text-primary mb-3">{t('mainFeatures')}</h3>
               <ul className="space-y-3">
-                {project.features.map((feature, index) => (
+                {project.features.map((feature: string, index: number) => (
                   <li key={index} className="flex items-start text-themeTextSecondary">
                     <span className="w-2 h-2 bg-eliteGold rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     <span>{feature}</span>
@@ -150,14 +152,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
             </div>
 
             <div className="bg-eliteLight p-4 rounded-lg">
-              <h3 className="text-lg font-semibold text-primary mb-2">Informazioni Tecniche</h3>
+              <h3 className="text-lg font-semibold text-primary mb-2">{t('technicalInfo')}</h3>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
-                  <span className="text-themeTextSecondary font-bold">Progetto #</span>
+                  <span className="text-themeTextSecondary font-bold">{t('projectNumber')}</span>
                   <p className="font-medium text-themeTextSecondary opacity-70">{project.id.toString().padStart(3, '0')}</p>
                 </div>
                 <div>
-                  <span className="text-themeTextSecondary font-bold">Categoria</span>
+                  <span className="text-themeTextSecondary font-bold">{t('category')}</span>
                   <p className="font-medium text-themeTextSecondary opacity-70">{project.category}</p>
                 </div>
               </div>
@@ -165,7 +167,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
 
             <div className="flex gap-4 pt-4">
               <button className="flex-1 border border-eliteGray text-eliteSlate px-6 py-3 rounded-lg font-medium hover:bg-whiteTwo transition-colors">
-                Contattaci
+                {t('contactUs')}
               </button>
             </div>
           </div>

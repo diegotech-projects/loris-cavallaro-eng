@@ -19,9 +19,9 @@ export default function PrivacyPage() {
               {t('dataController.content')}
             </p>
             <ul className="list-disc pl-6 mb-4">
-              <li>Nome: Loris Cavallaro</li>
-              <li>Email: loriscavallaro22@gmail.com</li>
-              <li>Telefono: +39 380 147 7121</li>
+              <li>Nome: {process.env.NEXT_PUBLIC_ENGINEER_NAME}</li>
+              <li>Email: {process.env.NEXT_PUBLIC_COMPANY_EMAIL}</li>
+              <li>Telefono: {process.env.NEXT_PUBLIC_COMPANY_PHONE}</li>
               <li>Indirizzo: Sicilia, Italia</li>
             </ul>
           </section>
@@ -125,7 +125,7 @@ export default function PrivacyPage() {
             </p>
             <div className="bg-themeSecondary/10 p-4 rounded-lg">
               <p className="font-semibold text-themeTextPrimary">
-                Email: loriscavallaro22@gmail.com
+                Email: {process.env.NEXT_PUBLIC_COMPANY_EMAIL}
               </p>
             </div>
           </section>

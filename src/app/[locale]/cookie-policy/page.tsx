@@ -141,7 +141,7 @@ export default function CookiePolicyPage() {
             </p>
             <div className="bg-themeSecondary/10 p-4 rounded-lg">
               <p className="font-semibold text-themeTextPrimary">
-                Email: loriscavallaro22@gmail.com
+                Email: {process.env.NEXT_PUBLIC_COMPANY_EMAIL}
               </p>
             </div>
           </section>

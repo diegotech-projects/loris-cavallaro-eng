@@ -6,9 +6,12 @@ import {
   BsLinkedin,
 } from 'react-icons/bs';
 import { MdCopyright, MdEmail, MdPhone, MdLocationOn } from 'react-icons/md';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
 function FooterComp() {
+  const t = useTranslations('footer');
+  const tNav = useTranslations('navigation');
   const currentYear = new Date().getFullYear();
 
   return (
@@ -22,8 +25,7 @@ function FooterComp() {
             {process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} - {process.env.NEXT_PUBLIC_SIGLA || 'Ingegneria & Costruzioni'}
           </div>
           <div className="w-[85%] text-gray-300">
-            Studio di ingegneria civile e ambientale specializzato in progettazione edile, 
-            sostenibilità e innovazione tecnica per progetti di grande valore.
+            {t('companyDescription')}
           </div>
           <div className="flex items-center gap-3 text-lg">
             <BsFacebook className="hover:text-themeAccent cursor-pointer transition-colors" />
@@ -38,43 +40,44 @@ function FooterComp() {
           
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-white">Navigazione</h3>
+            <h3 className="font-semibold text-lg mb-4 text-white">{t('navigation.title')}</h3>
             <div className="space-y-2 text-gray-300">
-              <Link href="/" className="block hover:text-themeAccent transition-colors">Home</Link>
-              <Link href="/about" className="block hover:text-themeAccent transition-colors">Chi Siamo</Link>
-              <Link href="/services" className="block hover:text-themeAccent transition-colors">Servizi</Link>
-              <Link href="/projects" className="block hover:text-themeAccent transition-colors">Progetti</Link>
-              <Link href="/contact" className="block hover:text-themeAccent transition-colors">Contatti</Link>
+              <Link href="/" className="block hover:text-themeAccent transition-colors">{tNav('home')}</Link>
+              <Link href="/about" className="block hover:text-themeAccent transition-colors">{tNav('about')}</Link>
+              <Link href="/services" className="block hover:text-themeAccent transition-colors">{tNav('services')}</Link>
+              <Link href="/projects" className="block hover:text-themeAccent transition-colors">{tNav('projects')}</Link>
+              <Link href="/faq" className="block hover:text-themeAccent transition-colors">{tNav('faq')}</Link>
+              <Link href="/contact" className="block hover:text-themeAccent transition-colors">{tNav('contact')}</Link>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-white">Servizi</h3>
+            <h3 className="font-semibold text-lg mb-4 text-white">{t('services.title')}</h3>
             <div className="space-y-2 text-gray-300">
-              <p className="hover:text-themeAccent transition-colors cursor-pointer">Progettazione Strutturale</p>
-              <p className="hover:text-themeAccent transition-colors cursor-pointer">Direzione Lavori</p>
-              <p className="hover:text-themeAccent transition-colors cursor-pointer">Pratiche Urbanistiche</p>
-              <p className="hover:text-themeAccent transition-colors cursor-pointer">Efficienza Energetica</p>
-              <p className="hover:text-themeAccent transition-colors cursor-pointer">Consulenza Tecnica</p>
+              <p className="hover:text-themeAccent transition-colors cursor-pointer">{t('services.structuralDesign')}</p>
+              <p className="hover:text-themeAccent transition-colors cursor-pointer">{t('services.projectManagement')}</p>
+              <p className="hover:text-themeAccent transition-colors cursor-pointer">{t('services.urbanPlanning')}</p>
+              <p className="hover:text-themeAccent transition-colors cursor-pointer">{t('services.energyEfficiency')}</p>
+              <p className="hover:text-themeAccent transition-colors cursor-pointer">{t('services.consulting')}</p>
             </div>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-white">Contatti</h3>
+            <h3 className="font-semibold text-lg mb-4 text-white">{t('contact.title')}</h3>
             <div className="space-y-3 text-gray-300">
               <div className="flex items-center gap-2">
                 <MdEmail className="text-themeAccent" />
-                <span className="text-sm">loriscavallaro22@gmail.com</span>
+                <span className="text-sm">{process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'loriscavallaro22@gmail.com'}</span>
               </div>
               <div className="flex items-center gap-2">
                 <MdPhone className="text-themeAccent" />
-                <span>+39 380 147 7121</span>
+                <span>+39 {process.env.NEXT_PUBLIC_COMPANY_PHONE || '380 147 7121'}</span>
               </div>
               <div className="flex items-center gap-2">
                 <MdLocationOn className="text-themeAccent" />
-                <span>Sicilia, Italia</span>
+                <span>{t('contact.location')}</span>
               </div>
             </div>
           </div>
@@ -89,17 +92,17 @@ function FooterComp() {
           <span className="mx-1">
             <MdCopyright />
           </span>{' '}
-          {currentYear} {process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} - {process.env.NEXT_PUBLIC_SIGLA || 'Ingegneria & Costruzioni'}. Tutti i diritti riservati.
+          {currentYear} {process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} - {process.env.NEXT_PUBLIC_SIGLA || 'Ingegneria & Costruzioni'}. {t('legal.copyright')}
         </div>
         <div className="text-gray-400 text-xs mt-2 md:mt-0 flex items-center gap-1">
-          <span>P.IVA: [DA INSERIRE]</span>
+          <span>{t('legal.vatNumber')}</span>
           <span>|</span>
           <Link href="/privacy" className="hover:text-themeAccent transition-colors">
-            Privacy Policy
+            {t('legal.privacy')}
           </Link>
           <span>|</span>
           <Link href="/cookie-policy" className="hover:text-themeAccent transition-colors">
-            Cookie Policy
+            {t('legal.cookies')}
           </Link>
         </div>
       </div>

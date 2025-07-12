@@ -16,10 +16,10 @@ export default async function LocaleLayout({
   children,
   params
 }: Props) {
-  const {locale} = await params;
+  const { locale } = await params;
   // Providing all messages to the client
   // side is the easiest way to get started
-  const messages = await getMessages();
+  const messages = await getMessages({ locale });
 
   return (
     <NextIntlClientProvider messages={messages}>

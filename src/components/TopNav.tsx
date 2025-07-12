@@ -33,7 +33,7 @@ const TopNav = () => {
             }`} 
             href="/"
           >
-            Home
+            {t('home')}
           </Link>
           <Link 
             className={`anchor transition-colors ${
@@ -43,7 +43,7 @@ const TopNav = () => {
             }`} 
             href="/about"
           >
-            Chi Siamo
+            {t('about')}
           </Link>
           <Link 
             className={`anchor transition-colors ${
@@ -53,7 +53,7 @@ const TopNav = () => {
             }`} 
             href="/services"
           >
-            Servizi
+            {t('services')}
           </Link>
           <Link 
             className={`anchor transition-colors ${
@@ -63,7 +63,17 @@ const TopNav = () => {
             }`} 
             href="/projects"
           >
-            Progetti
+            {t('projects')}
+          </Link>
+          <Link 
+            className={`anchor transition-colors ${
+              pathname === '/faq' 
+                ? 'underline underline-offset-4 text-themeSecondary' 
+                : 'hover:text-themeSecondary'
+            }`} 
+            href="/faq"
+          >
+            {t('faq')}
           </Link>
         </div>
         
@@ -97,13 +107,13 @@ const TopNav = () => {
         
         <div className="hidden w-[30%] items-center justify-end gap-x-5 text-sm font-semibold lg:flex 2xl:gap-x-10 2xl:text-base">
           <Link href="/contact" className="anchor hover:text-themeSecondary transition-colors">
-            Contatti
+            {t('contact')}
           </Link>
           <Link
             href="/contact#contact-form"
             className="rounded-full bg-themeAccent opacity-80 px-4 py-3 text-themeSurface hover:bg-themeSecondary transition-colors"
           >
-            Richiedi Preventivo
+            {t('requestQuote')}
           </Link>
         </div>
         <div className="lg:hidden">

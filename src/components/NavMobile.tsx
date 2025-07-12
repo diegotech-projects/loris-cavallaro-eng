@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { BsBuilding } from 'react-icons/bs';
 import { MdClose } from 'react-icons/md';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link as LocalizedLink } from '@/i18n/navigation';
 
 export interface NavMobileProps {
@@ -11,26 +11,31 @@ export interface NavMobileProps {
 
 const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
   const locale = useLocale();
+  const t = useTranslations('navigation');
 
   const list = [
     {
-      title: 'Home',
+      title: t('home'),
       href: '/',
     },
     {
-      title: 'Chi Siamo',
+      title: t('about'),
       href: '/about',
     },
     {
-      title: 'Servizi',
+      title: t('services'),
       href: '/services',
     },
     {
-      title: 'Progetti',
+      title: t('projects'),
       href: '/projects',
     },
     {
-      title: 'Contatti',
+      title: t('faq'),
+      href: '/faq',
+    },
+    {
+      title: t('contact'),
       href: '/contact',
     },
   ];
@@ -56,7 +61,7 @@ const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
         
         {/* Language Toggle Mobile */}
         <div className="flex items-center gap-2 mt-4">
-          <span className="text-sm text-themeTextSecondary">Lingua:</span>
+          <span className="text-sm text-themeTextSecondary">{t('language')}:</span>
           <LocalizedLink 
             href="/" 
             locale="it"
@@ -68,7 +73,7 @@ const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
             }`}
           >
             <span className="text-base">🇮🇹</span>
-            <span className="text-sm font-medium">Italiano</span>
+            <span className="text-sm font-medium">{t('italian')}</span>
           </LocalizedLink>
           <LocalizedLink 
             href="/" 
@@ -81,7 +86,7 @@ const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
             }`}
           >
             <span className="text-base">🇬🇧</span>
-            <span className="text-sm font-medium">English</span>
+            <span className="text-sm font-medium">{t('english')}</span>
           </LocalizedLink>
         </div>
       </div>
@@ -105,7 +110,7 @@ const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
           href="/contact#contact-form"
           className="rounded-full bg-themeSecondary px-6 py-3 text-themeSurface font-semibold hover:bg-themeAccent transition-colors"
         >
-          Richiedi Preventivo
+          {t('requestQuote')}
         </Link>
       </div>
     </div>

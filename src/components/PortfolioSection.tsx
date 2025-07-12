@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaExternalLinkAlt } from 'react-icons/fa';
@@ -9,40 +10,17 @@ import project3 from '@/_docs/data/progetti_img_2/01_esterno_giorno_notte.jpeg';
 import project4 from '@/_docs/data/progetti_img_2/02_esterno_giorno.jpeg';
 
 function ProjectShowcase() {
-  const featuredProjects = [
-    {
-      id: 1,
-      title: "Villa Residenziale Moderna",
-      category: "Progettazione Residenziale",
-      image: project1,
-      description: "Progettazione completa di villa unifamiliare con focus su sostenibilità ed efficienza energetica.",
-      year: "2023"
-    },
-    {
-      id: 2,
-      title: "Interni Contemporanei",
-      category: "Design Interno",
-      image: project2,
-      description: "Progettazione spazi interni con soluzioni innovative e materiali sostenibili.",
-      year: "2023"
-    },
-    {
-      id: 3,
-      title: "Complesso Residenziale",
-      category: "Edilizia Commerciale",
-      image: project3,
-      description: "Ristrutturazione e ampliamento per complesso residenziale urbano.",
-      year: "2022"
-    },
-    {
-      id: 4,
-      title: "Edificio Sostenibile",
-      category: "Efficienza Energetica",
-      image: project4,
-      description: "Progetto con certificazione energetica A+ e impianti fotovoltaici integrati.",
-      year: "2022"
-    }
-  ];
+  const t = useTranslations('portfolioSection');
+  
+  // Get translated project data
+  const translatedProjects = t.raw('featuredProjects');
+  
+  // Combine with images
+  const images = [project1, project2, project3, project4];
+  const featuredProjects = translatedProjects.map((project: any, index: number) => ({
+    ...project,
+    image: images[index]
+  }));
 
   return (
     <div className="container-custom">
@@ -50,14 +28,19 @@ function ProjectShowcase() {
       <div className="text-center mb-16">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
           <h2 className="text-4xl lg:text-5xl font-bold text-themeTextPrimary">
-            Progetti in<br />evidenza
+            {t('title').split(' ').map((word, index, array) => (
+              <span key={index}>
+                {word}
+                {index === array.length - 2 ? <br /> : ' '}
+              </span>
+            ))}
           </h2>
           <div className="flex gap-4">
             <Link href="/projects" className="bg-themeAccent text-themeSurface px-6 py-3 rounded-lg font-medium hover:bg-themeSecondary transition-colors">
-              Tutti i Progetti
+              {t('viewAllProjects')}
             </Link>
             <Link href="/contact#contact-form" className="bg-themeAccent opacity-65 text-themeSurface px-6 py-3 rounded-lg font-medium hover:bg-themeSecondary transition-colors">
-              Richiedi Preventivo
+              {t('requestQuote')}
             </Link>
           </div>
         </div>
@@ -65,7 +48,7 @@ function ProjectShowcase() {
 
       {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {featuredProjects.map((project) => (
+        {featuredProjects.map((project: any) => (
           <div key={project.id} className="group cursor-pointer">
             <div className="relative overflow-hidden rounded-lg bg-themeSurfaceLight aspect-square mb-4">
               <Image
@@ -98,14 +81,14 @@ function ProjectShowcase() {
       {/* Call to Action */}
       <div className="text-center mt-12">
         <p className="text-themeTextSecondary mb-6">
-          Scopri tutti i nostri progetti e le soluzioni innovative che abbiamo sviluppato
+          {t('cta.description')}
         </p>
         <Link 
           href="/projects" 
           className="inline-flex items-center gap-2 bg-themeAccent text-themeSurface px-6 py-3 rounded-lg font-medium hover:bg-themeSecondary transition-colors"
         >
           <FaExternalLinkAlt className="w-4 h-4" />
-          Visualizza Tutti i Progetti
+          {t('cta.button')}
         </Link>
       </div>
     </div>

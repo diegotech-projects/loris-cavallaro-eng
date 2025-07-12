@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
 
 // Dynamically import Leaflet components to avoid SSR issues
@@ -26,6 +27,8 @@ const Popup = dynamic(
 
 const ContactMap = () => {
   const [isClient, setIsClient] = useState(false);
+  const t = useTranslations('contact');
+  const tFooter = useTranslations('footer');
 
   useEffect(() => {
     setIsClient(true);
@@ -54,7 +57,7 @@ const ContactMap = () => {
   if (!isClient) {
     return (
       <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-        <p className="text-gray-500">Caricamento mappa...</p>
+        <p className="text-gray-500">{t('map.loading')}</p>
       </div>
     );
   }
@@ -76,9 +79,9 @@ const ContactMap = () => {
             <div className="text-center">
               <strong>{process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} - {process.env.NEXT_PUBLIC_SIGLA || 'Ingegneria & Costruzioni'}</strong>
               <br />
-              Sicilia, Italia
+              {tFooter('contact.location')}
               <br />
-              <small>Servizi su tutto il territorio nazionale</small>
+              <small>{t('map.popupText')}</small>
             </div>
           </Popup>
         </Marker>

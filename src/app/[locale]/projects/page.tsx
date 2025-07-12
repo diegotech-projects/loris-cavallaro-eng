@@ -1,8 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import ProjectModal from '@/components/ProjectModal';
+import { ProjectsData } from '@/data/content';
 import type { Project } from '@/data/types';
 
 // Import project images
@@ -18,6 +20,7 @@ import fotovoltaico2 from '@/_docs/data/fotovoltaico_lipari/05_fotovotaico.png';
 import fotovoltaico3 from '@/_docs/data/fotovoltaico_lipari/07_fotovotaico.png';
 
 const ProjectsPage = () => {
+  const t = useTranslations('projectsPage');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -31,30 +34,20 @@ const ProjectsPage = () => {
     setSelectedProject(null);
   };
 
+  // Get translation data and combine with images
+  const translatedProjects = ProjectsData();
   const projects: Project[] = [
     {
-      id: 1,
-      title: "Villa Residenziale Moderna",
-      category: "Progettazione Residenziale",
-      description: "Progettazione completa di villa unifamiliare con focus su sostenibilità e efficienza energetica. Include progettazione strutturale, impianti e certificazione energetica.",
-      images: [project1_1, project1_2, project1_3],
-      features: ["Classe energetica A+", "Struttura antisismica", "Impianto fotovoltaico", "Design sostenibile"]
+      ...translatedProjects[0],
+      images: [project1_1, project1_2, project1_3]
     },
     {
-      id: 2,
-      title: "Complesso Residenziale Urbano",
-      category: "Progettazione Commerciale",
-      description: "Progetto di ristrutturazione e ampliamento per complesso residenziale con integrazione architettonica nel contesto urbano esistente.",
-      images: [project2_1, project2_2, project2_3],
-      features: ["Ristrutturazione completa", "Efficienza energetica", "Integrazione urbana", "Spazi comuni innovativi"]
+      ...translatedProjects[1],
+      images: [project2_1, project2_2, project2_3]
     },
     {
-      id: 3,
-      title: "Impianto Fotovoltaico Lipari",
-      category: "Progettazione Energetica",
-      description: "Progettazione e realizzazione di impianto fotovoltaico residenziale con ottimizzazione del posizionamento e massimizzazione dell'efficienza energetica. Include studio di fattibilità e certificazione energetica.",
-      images: [fotovoltaico1, fotovoltaico2, fotovoltaico3],
-      features: ["Potenza 6 kW", "Pannelli ad alta efficienza", "Ottimizzazione orientamento", "Monitoraggio remoto", "ROI ottimizzato"]
+      ...translatedProjects[2],
+      images: [fotovoltaico1, fotovoltaico2, fotovoltaico3]
     },
   ];
 
@@ -64,11 +57,10 @@ const ProjectsPage = () => {
       <div className="bg-eliteNavy py-20">
         <div className="container-custom text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-whiteOne mb-6">
-            I Nostri Progetti
+            {t('hero.title')}
           </h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Una selezione dei nostri progetti più significativi, 
-            che dimostrano la qualità e l'innovazione del nostro approccio all'ingegneria civile.
+            {t('hero.subtitle')}
           </p>
         </div>
       </div>
@@ -126,9 +118,9 @@ const ProjectsPage = () => {
                   <p className="text-lg text-themeTextSecondary mb-6">{project.description}</p>
                   
                   <div className="mb-6">
-                    <h3 className="text-xl font-semibold text-primary mb-3">Caratteristiche Principali</h3>
+                    <h3 className="text-xl font-semibold text-primary mb-3">{t('projectFeatures.title')}</h3>
                     <ul className="space-y-2">
-                      {project.features.map((feature, featureIndex) => (
+                      {project.features.map((feature: string, featureIndex: number) => (
                         <li key={featureIndex} className="flex items-center text-themeTextSecondary opacity-70">
                           <span className="w-2 h-2 bg-eliteGold rounded-full mr-3"></span>
                           {feature}
@@ -142,7 +134,7 @@ const ProjectsPage = () => {
                       onClick={() => openModal(project)}
                       className="bg-themeAccent opacity-70 px-6 py-3 rounded-lg font-medium ext-themeSurface hover:bg-themeSecondary transition-colors"
                     >
-                      Visualizza Progetto
+                      {t('viewProject')}
                     </button>
                   </div>
                 </div>
@@ -156,48 +148,50 @@ const ProjectsPage = () => {
       <div className="bg-eliteLight py-20">
         <div className="container-custom">
           <h2 className="text-3xl font-bold text-center text-primary mb-12">
-            Progetti Fotovoltaici
+            {t('photovoltaicSection.title')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* We'll add photovoltaic project images here */}
+            {/* Residential Photovoltaic System */}
             <div className="bg-whiteOne rounded-lg shadow-md overflow-hidden">
               <div className="h-48 bg-gradient-to-br from-eliteNavy to-eliteGold flex items-center justify-center">
                 <span className="text-whiteOne font-semibold">Impianto Fotovoltaico Lipari</span>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-primary mb-3">Impianto Fotovoltaico Residenziale</h3>
-                <p className="text-themeTextSecondary opacity-50 mb-4">Progettazione e installazione impianto fotovoltaico per abitazione privata con ottimizzazione energetica.</p>
+                <h3 className="text-xl font-semibold text-primary mb-3">{t('photovoltaicSection.residentialSystem.title')}</h3>
+                <p className="text-themeTextSecondary opacity-50 mb-4">{t('photovoltaicSection.residentialSystem.description')}</p>
                 <div className="flex justify-between text-sm text-gray-500">
-                  <span>Potenza: 6 kW</span>
-                  <span>Anno: 2023</span>
+                  <span>{t('photovoltaicSection.residentialSystem.power')}</span>
+                  <span>{t('photovoltaicSection.residentialSystem.year')}</span>
                 </div>
               </div>
             </div>
             
+            {/* Energy Diagnosis */}
             <div className="bg-whiteOne rounded-lg shadow-md overflow-hidden">
               <div className="h-48 bg-gradient-to-br from-eliteGold to-eliteNavy flex items-center justify-center">
                 <span className="text-whiteOne font-semibold">Efficienza Energetica</span>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-primary mb-3">Diagnosi Energetica Commerciale</h3>
-                <p className="text-themeTextSecondary opacity-50 mb-4">Analisi energetica completa per edificio commerciale con proposte di miglioramento.</p>
+                <h3 className="text-xl font-semibold text-primary mb-3">{t('photovoltaicSection.energyDiagnosis.title')}</h3>
+                <p className="text-themeTextSecondary opacity-50 mb-4">{t('photovoltaicSection.energyDiagnosis.description')}</p>
                 <div className="flex justify-between text-sm text-gray-500">
-                  <span>Risparmio: 40%</span>
-                  <span>Classe: A+</span>
+                  <span>{t('photovoltaicSection.energyDiagnosis.savings')}</span>
+                  <span>{t('photovoltaicSection.energyDiagnosis.energyClass')}</span>
                 </div>
               </div>
             </div>
 
+            {/* Public Tender */}
             <div className="bg-whiteOne rounded-lg shadow-md overflow-hidden">
               <div className="h-48 bg-gradient-to-br from-eliteNavy to-eliteGold flex items-center justify-center">
                 <span className="text-whiteOne font-semibold">Consulenza Tecnica</span>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-primary mb-3">Bando Pubblico Infrastrutture</h3>
-                <p className="text-themeTextSecondary opacity-50 mb-4">Supporto tecnico per partecipazione a bando pubblico per opere infrastrutturali.</p>
+                <h3 className="text-xl font-semibold text-primary mb-3">{t('photovoltaicSection.publicTender.title')}</h3>
+                <p className="text-themeTextSecondary opacity-50 mb-4">{t('photovoltaicSection.publicTender.description')}</p>
                 <div className="flex justify-between text-sm text-gray-500">
-                  <span>Valore: €2M</span>
-                  <span>Status: Aggiudicato</span>
+                  <span>{t('photovoltaicSection.publicTender.value')}</span>
+                  <span>{t('photovoltaicSection.publicTender.status')}</span>
                 </div>
               </div>
             </div>
@@ -209,14 +203,13 @@ const ProjectsPage = () => {
       <div className="bg-eliteGray py-20">
         <div className="container-custom text-center">
           <h2 className="text-4xl font-bold text-whiteOne mb-6">
-            Vuoi realizzare il tuo progetto?
+            {t('cta.title')}
           </h2>
           <p className="text-xl text-black-100 mb-8 max-w-2xl mx-auto">
-            Contattaci per discutere del tuo progetto e scoprire come possiamo 
-            trasformare le tue idee in soluzioni concrete e sostenibili.
+            {t('cta.description')}
           </p>
           <a href="/contact#contact-form" className="bg-whiteOne text-eliteGold px-8 py-4 rounded-lg font-semibold hover:bg-eliteLight transition-colors">
-            Inizia il tuo Progetto
+            {t('cta.button')}
           </a>
         </div>
       </div>

@@ -1,23 +1,27 @@
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import { ReviewData } from '@/data/content';
 
 function Reviews() {
+  const t = useTranslations('reviews');
+  const reviewData = ReviewData();
+  
   return (
     <div className="container-custom">
       {/* Header */}
       <div className="text-center mb-20">
         <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-themeTextPrimary mb-6 tracking-tight">
-          TESTIMONIALS
+          {t('title')}
         </h2>
         <p className="text-lg text-themeTextSecondary max-w-2xl mx-auto leading-relaxed">
-          Le parole dei nostri clienti raccontano la qualità del nostro lavoro e l'impegno verso l'eccellenza.
+          {t('description')}
         </p>
       </div>
 
       {/* Reviews Grid */}
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {ReviewData.map((review) => (
+        {reviewData.map((review) => (
           <div
             key={review.name}
             className="bg-themeSurface p-8 hover:bg-themeSurfaceLight transition-colors duration-300"

@@ -8,6 +8,174 @@
     "contactUs": "Contattaci",
     "serviceRich": "Servizi di <engineering>Ingegneria</engineering> Civile"
   },
+  "home": {
+    "cta": {
+      "title": "PRONTI A REALIZZARE IL VOSTRO PROGETTO?",
+      "description": "Iniziate oggi stesso il vostro progetto di ingegneria con le nostre soluzioni innovative, sostenibili e tecnicamente avanzate.",
+      "discoverProjects": "SCOPRI PROGETTI",
+      "requestQuote": "RICHIEDI PREVENTIVO"
+    },
+    "stats": {
+      "title": "IL NOSTRO IMPATTO IN NUMERI",
+      "description": "Anni di esperienza e risultati concreti nell'ingegneria civile e ambientale, con progetti che trasformano le comunità.",
+      "completedProjects": "Progetti Completati",
+      "yearsExperience": "Anni di Esperienza", 
+      "satisfiedClients": "Clienti Soddisfatti",
+      "photovoltaicSystems": "Impianti Fotovoltaici"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Chi Siamo",
+      "subtitle": "Studio di ingegneria civile e ambientale specializzato in progetti di grande valore e sostenibilità."
+    },
+    "company": {
+      "title": "Il Nostro Studio",
+      "description1": "è uno studio di ingegneria civile e ambientale che si distingue per l'approccio professionale e innovativo nella progettazione edile, sostenibilità e sicurezza. Il nostro team è guidato dall'Ing. Loris Cavallaro, specializzato in sicurezza sui luoghi di lavoro.",
+      "description2": "Ci occupiamo di bandi di gara, gare d'appalto, progettazioni civili, pratiche urbanistiche, diagnosi energetiche secondo Legge 10, certificazioni APE e progettazione di impianti fotovoltaici. Un vero e proprio punto di riferimento per progettazione e sostenibilità.",
+      "mission": "La nostra missione è vedere ciò che creiamo sulla carta trasformarsi in realtà tangibile, costruendo non solo strutture, ma anche bellezza, funzionalità e sostenibilità per le future generazioni."
+    },
+    "team": {
+      "title": "Il Nostro Team",
+      "director": {
+        "name": "Ing. Loris Cavallaro",
+        "role": "Direttore Tecnico e Fondatore",
+        "description": "Ingegnere civile e ambientale con specializzazione in sicurezza sui luoghi di lavoro. Con anni di esperienza nel settore, guida il team tecnico dello studio con competenza e dedizione verso l'eccellenza progettuale.",
+        "qualifications": [
+          "Laurea Magistrale in Ingegneria Civile e Ambientale",
+          "Specializzazione in Sicurezza sui Luoghi di Lavoro", 
+          "Esperto in Efficienza Energetica e Sostenibilità"
+        ]
+      }
+    },
+    "competencies": {
+      "title": "Competenze",
+      "buildingDesign": {
+        "title": "Progettazione Edile",
+        "description": "Progettazione strutturale e architettonica per edifici residenziali e commerciali"
+      },
+      "sustainability": {
+        "title": "Sostenibilità",
+        "description": "Efficienza energetica, certificazioni APE e impianti fotovoltaici"
+      },
+      "safety": {
+        "title": "Sicurezza",
+        "description": "Specializzazione in sicurezza sui luoghi di lavoro"
+      },
+      "tenders": {
+        "title": "Bandi e Appalti",
+        "description": "Gestione di bandi di gara e procedure di appalto pubblico"
+      },
+      "urbanPlanning": {
+        "title": "Pratiche Urbanistiche",
+        "description": "Autorizzazioni edilizie e conformità normativa"
+      },
+      "consulting": {
+        "title": "Consulenza Tecnica",
+        "description": "Perizie, valutazioni tecniche e supporto specialistico"
+      }
+    }
+  },
+  "reviews": {
+    "title": "TESTIMONIANZE",
+    "description": "Le parole dei nostri clienti raccontano la qualità del nostro lavoro e l'impegno verso l'eccellenza.",
+    "review1": {
+      "name": "Marco Rossi",
+      "occupation": "Imprenditore Edile",
+      "review": "per la progettazione di un complesso residenziale. La loro competenza tecnica e l'attenzione ai dettagli hanno superato le nostre aspettative. Progetto completato nei tempi previsti e con risultati eccellenti."
+    },
+    "review2": {
+      "name": "Laura Bianchi", 
+      "occupation": "Architetto",
+      "review": "è stata fantastica. Hanno gestito tutti i calcoli strutturali per il nostro progetto architettonico con professionalità e precisione. Consigliatissimi per progetti complessi."
+    },
+    "review3": {
+      "name": "Giuseppe Verdi",
+      "occupation": "Proprietario Villa", 
+      "review": "Per la ristrutturazione della nostra villa hanno curato ogni aspetto: dalla progettazione alle pratiche burocratiche, fino alla certificazione energetica. Servizio completo e risultato finale straordinario. Villa ora in classe A+!"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "Chi Siamo", 
+    "services": "Servizi",
+    "projects": "Progetti",
+    "faq": "FAQ",
+    "contact": "Contatti",
+    "requestQuote": "Richiedi Preventivo",
+    "language": "Lingua",
+    "italian": "Italiano",
+    "english": "English"
+  },
+  "footer": {
+    "companyDescription": "Studio di ingegneria civile e ambientale specializzato in progettazione edile, sostenibilità e innovazione tecnica per progetti di grande valore.",
+    "navigation": {
+      "title": "Navigazione"
+    },
+    "services": {
+      "title": "Servizi",
+      "structuralDesign": "Progettazione Strutturale",
+      "projectManagement": "Direzione Lavori", 
+      "urbanPlanning": "Pratiche Urbanistiche",
+      "energyEfficiency": "Efficienza Energetica",
+      "consulting": "Consulenza Tecnica"
+    },
+    "contact": {
+      "title": "Contatti",
+      "location": "Sicilia, Italia"
+    },
+    "legal": {
+      "copyright": "Tutti i diritti riservati.",
+      "vatNumber": "P.IVA: [DA INSERIRE]",
+      "privacy": "Privacy Policy",
+      "cookies": "Cookie Policy"
+    }
+  },
+  "contact": {
+    "form": {
+      "title": "RICHIEDI UNA CONSULENZA",
+      "description": "Contattaci per discutere del tuo progetto di ingegneria civile. Il nostro team ti fornirà una consulenza professionale personalizzata.",
+      "name": "Nome Completo",
+      "email": "Email",
+      "phone": "Telefono",
+      "projectType": "Tipo di Progetto",
+      "message": "Descrizione Progetto",
+      "messagePlaceholder": "Descrivi brevemente il tuo progetto, le tue esigenze e i tuoi obiettivi...",
+      "projectTypes": {
+        "placeholder": "Seleziona tipo progetto",
+        "residential": "Progettazione Residenziale",
+        "commercial": "Progettazione Commerciale",
+        "structural": "Calcoli Strutturali",
+        "energy": "Efficienza Energetica",
+        "permits": "Pratiche Urbanistiche",
+        "consulting": "Consulenza Tecnica"
+      },
+      "gdprConsent": "Consenso al trattamento dei dati personali",
+      "gdprText": "Acconsento al trattamento dei miei dati personali per rispondere alla mia richiesta di contatto, come descritto nella Privacy Policy. I dati verranno utilizzati esclusivamente per fornire le informazioni richieste e non verranno condivisi con terze parti.",
+      "privacyPolicy": "Privacy Policy",
+      "gdprRequired": "Devi accettare il consenso al trattamento dei dati per inviare il modulo.",
+      "submit": "INVIA RICHIESTA",
+      "submitting": "INVIO IN CORSO...",
+      "success": "✅ Messaggio inviato con successo!",
+      "successDescription": "Ti risponderemo al più presto al tuo indirizzo email.",
+      "error": "❌ Errore nell'invio del messaggio",
+      "errorDescription": "Riprova o contattaci direttamente via email:",
+      "required": "*"
+    },
+    "info": {
+      "title": "INIZIA IL TUO PROGETTO OGGI",
+      "description": "Siamo pronti ad aiutarti a trasformare le tue idee in realtà con soluzioni di ingegneria innovative e sostenibili.",
+      "email": "EMAIL",
+      "phone": "TELEFONO", 
+      "location": "DOVE SIAMO",
+      "serviceArea": "La nostra zona di servizio",
+      "nationalService": "Servizi su tutto il territorio nazionale"
+    },
+    "map": {
+      "loading": "Caricamento mappa...",
+      "popupText": "Servizi su tutto il territorio nazionale"
+    }
+  },
   "services": {
     "ourServices": "I nostri Servizi",
     "comprehensiveSet": "Un insieme completo di servizi tecnici",
@@ -205,6 +373,193 @@
       "text": "Acconsento al trattamento dei miei dati personali per rispondere alla mia richiesta di contatto, come descritto nella",
       "privacyLink": "Privacy Policy",
       "continuation": ". I dati verranno utilizzati esclusivamente per fornire le informazioni richieste e non verranno condivisi con terze parti."
+    }
+  },
+  "servicesPage": {
+    "hero": {
+      "title": "I Nostri Servizi",
+      "subtitle": "Soluzioni complete di ingegneria civile e ambientale per progetti di qualità, sostenibilità e sicurezza."
+    },
+    "detailed": {
+      "structuralDesign": {
+        "title": "Progettazione Strutturale",
+        "description": "Progettazione completa di strutture edili con calcoli strutturali, verifiche statiche e dimensionamento per edifici residenziali, commerciali e industriali.",
+        "features": [
+          "Calcoli strutturali e verifiche sismiche",
+          "Progettazione fondazioni e strutture portanti",
+          "Ristrutturazioni e consolidamenti"
+        ],
+        "cardTitle": "Progetti Strutturali",
+        "cardDescription": "Soluzioni tecniche innovative per ogni tipologia di costruzione"
+      },
+      "energyEfficiency": {
+        "title": "Efficienza Energetica",
+        "description": "Specializzazione in diagnosi energetiche, certificazioni APE e progettazione di impianti fotovoltaici per la sostenibilità ambientale.",
+        "features": [
+          "Diagnosi energetiche secondo Legge 10",
+          "Certificazioni APE (Attestato Prestazione Energetica)",
+          "Progettazione impianti fotovoltaici"
+        ],
+        "cardTitle": "Sostenibilità",
+        "cardDescription": "Efficienza energetica e soluzioni eco-sostenibili"
+      },
+      "projectManagement": {
+        "title": "Direzione Lavori",
+        "description": "Coordinamento completo dei lavori edili con gestione tecnica, controllo qualità e supervisione durante tutte le fasi costruttive.",
+        "features": [
+          "Coordinamento sicurezza in cantiere",
+          "Controllo qualità e avanzamento lavori",
+          "Gestione interferenze e problematiche tecniche"
+        ],
+        "cardTitle": "Gestione Progetti",
+        "cardDescription": "Controllo e coordinamento professionale"
+      }
+    },
+    "cta": {
+      "title": "Hai un progetto in mente?",
+      "description": "Contattaci per una consulenza personalizzata e scopri come possiamo trasformare le tue idee in realtà.",
+      "button": "Richiedi Preventivo"
+    }
+  },
+  "faq": {
+    "title": "FAQ",
+    "description": "Le risposte alle domande più frequenti sui nostri servizi di ingegneria civile e ambientale.",
+    "cta": {
+      "title": "Non hai trovato la risposta che cercavi?",
+      "description": "Contattaci direttamente per ricevere una consulenza personalizzata sui tuoi progetti di ingegneria.",
+      "button": "Contattaci Ora"
+    },
+    "questions": [
+      {
+        "question": "Che tipo di servizi di ingegneria offrite?",
+        "answer": "Offriamo servizi completi di ingegneria civile e ambientale: progettazione strutturale, direzione lavori, pratiche urbanistiche, diagnosi energetiche, certificazioni APE, progettazione impianti fotovoltaici e consulenza tecnica per bandi di gara."
+      },
+      {
+        "question": "Quanto tempo richiede la progettazione di un edificio?",
+        "answer": "I tempi dipendono dalla complessità del progetto. Una progettazione residenziale standard richiede 4-8 settimane, mentre progetti commerciali più complessi possono richiedere 2-4 mesi. Forniamo sempre una stima precisa durante la consulenza iniziale."
+      },
+      {
+        "question": "Lavorate su tutto il territorio nazionale?",
+        "answer": "Sì, pur avendo sede in Sicilia, offriamo i nostri servizi su tutto il territorio nazionale. Per progetti fuori regione organizziamo sopralluoghi e coordinamento tramite partnership locali qualificate."
+      },
+      {
+        "question": "Quanto costa una consulenza o un preventivo?",
+        "answer": "La prima consulenza è gratuita e include una valutazione preliminare del progetto. I preventivi vengono forniti gratuitamente entro 48 ore dal sopralluogo. I costi variano in base alla tipologia e complessità del progetto."
+      },
+      {
+        "question": "Gestite anche le pratiche burocratiche?",
+        "answer": "Assolutamente sì. Ci occupiamo di tutte le pratiche urbanistiche, permessi di costruire, autorizzazioni edilizie e rapporti con gli enti pubblici. Il nostro servizio include il supporto completo dall'ideazione alla realizzazione."
+      },
+      {
+        "question": "Offrite servizi di efficienza energetica?",
+        "answer": "Sì, siamo specializzati in diagnosi energetiche secondo Legge 10, certificazioni APE (Attestato di Prestazione Energetica) e progettazione di impianti fotovoltaici. Aiutiamo i clienti a ottenere le migliori classi energetiche e accedere agli incentivi statali."
+      }
+    ]
+  },
+  "projectsPage": {
+    "hero": {
+      "title": "I Nostri Progetti",
+      "subtitle": "Una selezione dei nostri progetti più significativi, che dimostrano la qualità e l'innovazione del nostro approccio all'ingegneria civile."
+    },
+    "projects": [
+      {
+        "id": 1,
+        "title": "Villa Residenziale Moderna",
+        "category": "Progettazione Residenziale",
+        "description": "Progettazione completa di villa unifamiliare con focus su sostenibilità e efficienza energetica. Include progettazione strutturale, impianti e certificazione energetica.",
+        "features": ["Classe energetica A+", "Struttura antisismica", "Impianto fotovoltaico", "Design sostenibile"]
+      },
+      {
+        "id": 2,
+        "title": "Complesso Residenziale Urbano",
+        "category": "Progettazione Commerciale",
+        "description": "Progetto di ristrutturazione e ampliamento per complesso residenziale con integrazione architettonica nel contesto urbano esistente.",
+        "features": ["Ristrutturazione completa", "Efficienza energetica", "Integrazione urbana", "Spazi comuni innovativi"]
+      },
+      {
+        "id": 3,
+        "title": "Impianto Fotovoltaico Lipari",
+        "category": "Progettazione Energetica",
+        "description": "Progettazione e realizzazione di impianto fotovoltaico residenziale con ottimizzazione del posizionamento e massimizzazione dell'efficienza energetica. Include studio di fattibilità e certificazione energetica.",
+        "features": ["Potenza 6 kW", "Pannelli ad alta efficienza", "Ottimizzazione orientamento", "Monitoraggio remoto", "ROI ottimizzato"]
+      }
+    ],
+    "projectFeatures": {
+      "title": "Caratteristiche Principali"
+    },
+    "viewProject": "Visualizza Progetto",
+    "photovoltaicSection": {
+      "title": "Progetti Fotovoltaici",
+      "residentialSystem": {
+        "title": "Impianto Fotovoltaico Residenziale",
+        "description": "Progettazione e installazione impianto fotovoltaico per abitazione privata con ottimizzazione energetica.",
+        "power": "Potenza: 6 kW",
+        "year": "Anno: 2023"
+      },
+      "energyDiagnosis": {
+        "title": "Diagnosi Energetica Commerciale",
+        "description": "Analisi energetica completa per edificio commerciale con proposte di miglioramento.",
+        "savings": "Risparmio: 40%",
+        "energyClass": "Classe: A+"
+      },
+      "publicTender": {
+        "title": "Bando Pubblico Infrastrutture",
+        "description": "Supporto tecnico per partecipazione a bando pubblico per opere infrastrutturali.",
+        "value": "Valore: €2M",
+        "status": "Status: Aggiudicato"
+      }
+    },
+    "cta": {
+      "title": "Vuoi realizzare il tuo progetto?",
+      "description": "Contattaci per discutere del tuo progetto e scoprire come possiamo trasformare le tue idee in soluzioni concrete e sostenibili.",
+      "button": "Inizia il tuo Progetto"
+    }
+  },
+  "projectModal": {
+    "projectDescription": "Descrizione Progetto",
+    "mainFeatures": "Caratteristiche Principali",
+    "technicalInfo": "Informazioni Tecniche",
+    "projectNumber": "Progetto #",
+    "category": "Categoria",
+    "contactUs": "Contattaci"
+  },
+  "portfolioSection": {
+    "title": "Progetti in evidenza",
+    "viewAllProjects": "Tutti i Progetti",
+    "requestQuote": "Richiedi Preventivo",
+    "featuredProjects": [
+      {
+        "id": 1,
+        "title": "Villa Residenziale Moderna",
+        "category": "Progettazione Residenziale",
+        "description": "Progettazione completa di villa unifamiliare con focus su sostenibilità ed efficienza energetica.",
+        "year": "2023"
+      },
+      {
+        "id": 2,
+        "title": "Interni Contemporanei",
+        "category": "Design Interno",
+        "description": "Progettazione spazi interni con soluzioni innovative e materiali sostenibili.",
+        "year": "2023"
+      },
+      {
+        "id": 3,
+        "title": "Complesso Residenziale",
+        "category": "Edilizia Commerciale",
+        "description": "Ristrutturazione e ampliamento per complesso residenziale urbano.",
+        "year": "2022"
+      },
+      {
+        "id": 4,
+        "title": "Edificio Sostenibile",
+        "category": "Efficienza Energetica",
+        "description": "Progetto con certificazione energetica A+ e impianti fotovoltaici integrati.",
+        "year": "2022"
+      }
+    ],
+    "cta": {
+      "description": "Scopri tutti i nostri progetti e le soluzioni innovative che abbiamo sviluppato",
+      "button": "Visualizza Tutti i Progetti"
     }
   }
 }
