@@ -40,7 +40,10 @@ const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
       <div className="px-5 py-2">
         <div className="flex items-center gap-2 font-bold text-themeTextPrimary text-lg">
           <BsBuilding className="text-themeSecondary" />
-          XYZENGINEERING_mob
+            <div className="flex flex-col ml-1">
+              <span className="font-bold text-themeTextPrimary leading-none">{process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'}</span>
+              <span className="text-xs text-themeTextSecondary font-medium uppercase tracking-wide">{process.env.NEXT_PUBLIC_SIGLA || 'Ing. Civile'}</span>
+            </div>
         </div>
         <button
           type="button"

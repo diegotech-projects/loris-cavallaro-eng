@@ -122,7 +122,7 @@ export const ReviewData = [
       'https://img.freepik.com/free-photo/young-male-posing-isolated-against-blank-studio-wall_273609-12356.jpg?size=626&ext=jpg&ga=GA1.2.1638277978.1690639805&semt=ais',
     occupation: 'Imprenditore Edile',
     review:
-      'Abbiamo collaborato con XYZENGINEERING per la progettazione di un complesso residenziale. La loro competenza tecnica e l\'attenzione ai dettagli hanno superato le nostre aspettative. Progetto completato nei tempi previsti e con risultati eccellenti.',
+      `Abbiamo collaborato con ${process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} - Ingegneria & Costruzioni per la progettazione di un complesso residenziale. La loro competenza tecnica e l'attenzione ai dettagli hanno superato le nostre aspettative. Progetto completato nei tempi previsti e con risultati eccellenti.`,
   },
   {
     name: 'Laura Bianchi',
@@ -130,7 +130,7 @@ export const ReviewData = [
       'https://img.freepik.com/free-photo/confident-african-businesswoman-smiling-closeup-portrait-jobs-career-campaign_53876-129412.jpg?size=626&ext=jpg&ga=GA1.1.1638277978.1690639805&semt=ais',
     occupation: 'Architetto',
     review:
-      'La collaborazione con il team di XYZENGINEERING è stata fantastica. Hanno gestito tutti i calcoli strutturali per il nostro progetto architettonico con professionalità e precisione. Consigliatissimi per progetti complessi.',
+      `La collaborazione con il team di ${process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} - Ingegneria & Costruzioni è stata fantastica. Hanno gestito tutti i calcoli strutturali per il nostro progetto architettonico con professionalità e precisione. Consigliatissimi per progetti complessi.`,
   },
   {
     name: 'Giuseppe Verdi',

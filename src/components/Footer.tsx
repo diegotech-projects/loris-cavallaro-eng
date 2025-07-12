@@ -19,7 +19,7 @@ function FooterComp() {
         <div className="flex flex-col gap-5 lg:w-[35%]">
           <div className="flex items-center gap-2 font-bold text-xl 2xl:text-2xl">
             <BsBuilding className="text-themeAccent" />
-            XYZENGINEERING
+            {process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} - Ingegneria & Costruzioni
           </div>
           <div className="w-[85%] text-gray-300">
             Studio di ingegneria civile e ambientale specializzato in progettazione edile, 
@@ -89,7 +89,7 @@ function FooterComp() {
           <span className="mx-1">
             <MdCopyright />
           </span>{' '}
-          {currentYear} XYZENGINEERING. Tutti i diritti riservati.
+          {currentYear} {process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} - Ingegneria & Costruzioni. Tutti i diritti riservati.
         </div>
         <div className="text-gray-400 text-xs mt-2 md:mt-0 flex items-center gap-1">
           <span>P.IVA: [DA INSERIRE]</span>

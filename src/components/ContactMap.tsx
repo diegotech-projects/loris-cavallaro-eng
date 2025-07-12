@@ -74,7 +74,7 @@ const ContactMap = () => {
         <Marker position={position}>
           <Popup>
             <div className="text-center">
-              <strong>XYZENGINEERING</strong>
+              <strong>{process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} - Ingegneria & Costruzioni</strong>
               <br />
               Sicilia, Italia
               <br />

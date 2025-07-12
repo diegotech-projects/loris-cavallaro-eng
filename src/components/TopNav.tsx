@@ -16,9 +16,13 @@ const TopNav = () => {
     <div className="container-custom text-themeTextPrimary">
       <div className="wrapper flex w-full items-center justify-between">
         <div className="flex w-[25%] items-center gap-1 font-bold 2xl:text-2xl">
-          <Link href="/" className="flex items-center gap-2">
-            XYZENGINEERING <BsBuilding className="text-themeSecondary" />
-          </Link>
+            <Link href="/" className="flex items-center gap-2">
+            <div className="flex flex-col">
+              <span className="font-bold text-themeTextPrimary leading-none">{process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'}</span>
+              <span className="text-xs text-themeTextSecondary font-medium uppercase tracking-wide">{process.env.NEXT_PUBLIC_SIGLA || 'Ing. Civile'}</span>
+            </div>
+            <BsBuilding className="text-themeSecondary" />
+            </Link>
         </div>
         <div className="hidden w-[40%] items-center justify-center gap-x-5 text-sm font-semibold lg:flex 2xl:gap-x-10 2xl:text-base">
           <Link 
