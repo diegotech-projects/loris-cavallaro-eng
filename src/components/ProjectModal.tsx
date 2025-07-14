@@ -57,17 +57,28 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
     setCurrentImageIndex(index);
   };
 
+  const handleBackdropClick = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
-      onClick={onClose}
-      role="dialog"
+      // force as interactive element
+      role="button"
       aria-modal="true"
       tabIndex={-1}
+      onKeyDown={(e) => {
+        if (e.key === 'Escape') {
+          onClose();
+        }
+      }}
+      onClick={handleBackdropClick}
     >
       <div
         className="max-h-[90vh] w-full max-w-6xl overflow-y-auto rounded-lg bg-whiteOne"
-        onClick={(e) => e.stopPropagation()}
         role="document"
       >
         {/* Header */}

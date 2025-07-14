@@ -20,7 +20,7 @@
       "description": "Years of experience and concrete results in civil and environmental engineering, with projects that transform communities.",
       "completedProjects": "Completed Projects",
       "yearsExperience": "Years of Experience",
-      "satisfiedClients": "Satisfied Clients", 
+      "satisfiedClients": "Satisfied Clients",
       "photovoltaicSystems": "Photovoltaic Systems"
     }
   },
@@ -97,7 +97,7 @@
   },
   "navigation": {
     "home": "Home",
-    "about": "About Us", 
+    "about": "About Us",
     "services": "Services",
     "projects": "Projects",
     "faq": "FAQ",
@@ -115,7 +115,7 @@
     "services": {
       "title": "Services",
       "structuralDesign": "Structural Design",
-      "projectManagement": "Project Management", 
+      "projectManagement": "Project Management",
       "urbanPlanning": "Urban Planning",
       "energyEfficiency": "Energy Efficiency",
       "consulting": "Technical Consulting"
@@ -466,21 +466,37 @@
         "title": "Modern Residential Villa",
         "category": "Residential Design",
         "description": "Complete design of single-family villa with focus on sustainability and energy efficiency. Includes structural design, systems and energy certification.",
-        "features": ["Energy class A+", "Seismic-resistant structure", "Photovoltaic system", "Sustainable design"]
+        "features": [
+          "Energy class A+",
+          "Seismic-resistant structure",
+          "Photovoltaic system",
+          "Sustainable design"
+        ]
       },
       {
         "id": 2,
         "title": "Urban Residential Complex",
         "category": "Commercial Design",
         "description": "Renovation and expansion project for residential complex with architectural integration in the existing urban context.",
-        "features": ["Complete renovation", "Energy efficiency", "Urban integration", "Innovative common spaces"]
+        "features": [
+          "Complete renovation",
+          "Energy efficiency",
+          "Urban integration",
+          "Innovative common spaces"
+        ]
       },
       {
         "id": 3,
         "title": "Photovoltaic System Lipari",
         "category": "Energy Design",
         "description": "Design and implementation of residential photovoltaic system with positioning optimization and energy efficiency maximization. Includes feasibility study and energy certification.",
-        "features": ["6 kW power", "High-efficiency panels", "Orientation optimization", "Remote monitoring", "Optimized ROI"]
+        "features": [
+          "6 kW power",
+          "High-efficiency panels",
+          "Orientation optimization",
+          "Remote monitoring",
+          "Optimized ROI"
+        ]
       }
     ],
     "projectFeatures": {

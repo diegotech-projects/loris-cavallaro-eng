@@ -19,7 +19,7 @@
       "title": "IL NOSTRO IMPATTO IN NUMERI",
       "description": "Anni di esperienza e risultati concreti nell'ingegneria civile e ambientale, con progetti che trasformano le comunità.",
       "completedProjects": "Progetti Completati",
-      "yearsExperience": "Anni di Esperienza", 
+      "yearsExperience": "Anni di Esperienza",
       "satisfiedClients": "Clienti Soddisfatti",
       "photovoltaicSystems": "Impianti Fotovoltaici"
     }
@@ -43,7 +43,7 @@
         "description": "Ingegnere civile e ambientale con specializzazione in sicurezza sui luoghi di lavoro. Con anni di esperienza nel settore, guida il team tecnico dello studio con competenza e dedizione verso l'eccellenza progettuale.",
         "qualifications": [
           "Laurea Magistrale in Ingegneria Civile e Ambientale",
-          "Specializzazione in Sicurezza sui Luoghi di Lavoro", 
+          "Specializzazione in Sicurezza sui Luoghi di Lavoro",
           "Esperto in Efficienza Energetica e Sostenibilità"
         ]
       }
@@ -85,19 +85,19 @@
       "review": "per la progettazione di un complesso residenziale. La loro competenza tecnica e l'attenzione ai dettagli hanno superato le nostre aspettative. Progetto completato nei tempi previsti e con risultati eccellenti."
     },
     "review2": {
-      "name": "Laura Bianchi", 
+      "name": "Laura Bianchi",
       "occupation": "Architetto",
       "review": "è stata fantastica. Hanno gestito tutti i calcoli strutturali per il nostro progetto architettonico con professionalità e precisione. Consigliatissimi per progetti complessi."
     },
     "review3": {
       "name": "Giuseppe Verdi",
-      "occupation": "Proprietario Villa", 
+      "occupation": "Proprietario Villa",
       "review": "Per la ristrutturazione della nostra villa hanno curato ogni aspetto: dalla progettazione alle pratiche burocratiche, fino alla certificazione energetica. Servizio completo e risultato finale straordinario. Villa ora in classe A+!"
     }
   },
   "navigation": {
     "home": "Home",
-    "about": "Chi Siamo", 
+    "about": "Chi Siamo",
     "services": "Servizi",
     "projects": "Progetti",
     "faq": "FAQ",
@@ -115,7 +115,7 @@
     "services": {
       "title": "Servizi",
       "structuralDesign": "Progettazione Strutturale",
-      "projectManagement": "Direzione Lavori", 
+      "projectManagement": "Direzione Lavori",
       "urbanPlanning": "Pratiche Urbanistiche",
       "energyEfficiency": "Efficienza Energetica",
       "consulting": "Consulenza Tecnica"
@@ -166,7 +166,7 @@
       "title": "INIZIA IL TUO PROGETTO OGGI",
       "description": "Siamo pronti ad aiutarti a trasformare le tue idee in realtà con soluzioni di ingegneria innovative e sostenibili.",
       "email": "EMAIL",
-      "phone": "TELEFONO", 
+      "phone": "TELEFONO",
       "location": "DOVE SIAMO",
       "serviceArea": "La nostra zona di servizio",
       "nationalService": "Servizi su tutto il territorio nazionale"
@@ -467,21 +467,37 @@
         "title": "Villa Residenziale Moderna",
         "category": "Progettazione Residenziale",
         "description": "Progettazione completa di villa unifamiliare con focus su sostenibilità e efficienza energetica. Include progettazione strutturale, impianti e certificazione energetica.",
-        "features": ["Classe energetica A+", "Struttura antisismica", "Impianto fotovoltaico", "Design sostenibile"]
+        "features": [
+          "Classe energetica A+",
+          "Struttura antisismica",
+          "Impianto fotovoltaico",
+          "Design sostenibile"
+        ]
       },
       {
         "id": 2,
         "title": "Complesso Residenziale Urbano",
         "category": "Progettazione Commerciale",
         "description": "Progetto di ristrutturazione e ampliamento per complesso residenziale con integrazione architettonica nel contesto urbano esistente.",
-        "features": ["Ristrutturazione completa", "Efficienza energetica", "Integrazione urbana", "Spazi comuni innovativi"]
+        "features": [
+          "Ristrutturazione completa",
+          "Efficienza energetica",
+          "Integrazione urbana",
+          "Spazi comuni innovativi"
+        ]
       },
       {
         "id": 3,
         "title": "Impianto Fotovoltaico Lipari",
         "category": "Progettazione Energetica",
         "description": "Progettazione e realizzazione di impianto fotovoltaico residenziale con ottimizzazione del posizionamento e massimizzazione dell'efficienza energetica. Include studio di fattibilità e certificazione energetica.",
-        "features": ["Potenza 6 kW", "Pannelli ad alta efficienza", "Ottimizzazione orientamento", "Monitoraggio remoto", "ROI ottimizzato"]
+        "features": [
+          "Potenza 6 kW",
+          "Pannelli ad alta efficienza",
+          "Ottimizzazione orientamento",
+          "Monitoraggio remoto",
+          "ROI ottimizzato"
+        ]
       }
     ],
     "projectFeatures": {
@@ -563,4 +579,3 @@
     }
   }
 }
-
