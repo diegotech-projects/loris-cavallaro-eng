@@ -11,8 +11,8 @@ function Heading() {
           {/* Left Content */}
           <div className="space-y-8">
             <div className="xl:text-7xl text-5xl font-bold leading-tight tracking-tight text-themeTextPrimary lg:text-6xl">
-              <p className="mb-2">ENGINEERING</p>
-              <p>SOLUTIONS</p>
+              <p className="mb-2">{t('engineering').toUpperCase()}</p>
+              <p>{t('solutions').toUpperCase()}</p>
             </div>
             <div className="max-w-lg text-lg leading-relaxed text-themeTextSecondary">
               <p>{t('description')}</p>

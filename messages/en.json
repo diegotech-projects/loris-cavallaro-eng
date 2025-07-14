@@ -2,6 +2,7 @@
   "heading": {
     "premiumQuality": "Premium Quality",
     "engineering": "Engineering",
+    "solutions": "Solutions",
     "civilServices": "Civil Engineering Services",
     "description": "Professional civil and environmental engineering firm specialized in structural design, sustainability and safety. Our qualified team provides innovative technical solutions for high-value projects.",
     "getProducts": "View Projects",
@@ -177,6 +178,9 @@
     }
   },
   "services": {
+    "title": "SERVICES",
+    "description": "Complete civil and environmental engineering solutions for every type of project",
+    "viewAllServices": "VIEW ALL SERVICES",
     "ourServices": "Our Services",
     "comprehensiveSet": "A comprehensive set of technical services",
     "viewMore": "View More",

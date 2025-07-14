@@ -1,7 +1,8 @@
 {
   "heading": {
     "premiumQuality": "Qualità Premium",
-    "engineering": "Ingegneria",
+    "engineering": "Soluzioni",
+    "solutions": "Ingegneristiche",
     "civilServices": "Servizi di Ingegneria",
     "description": "Studio di ingegneria civile e ambientale specializzato in progettazione edile, sostenibilità e sicurezza. Il nostro team di professionisti qualificati offre soluzioni tecniche innovative per progetti di grande valore.",
     "getProducts": "Scopri Progetti",
@@ -177,11 +178,13 @@
     }
   },
   "services": {
+    "title": "SERVIZI",
+    "description": "Soluzioni complete di ingegneria civile e ambientale per ogni tipologia di progetto",
+    "viewAllServices": "VISUALIZZA TUTTI I SERVIZI",
     "ourServices": "I nostri Servizi",
     "comprehensiveSet": "Un insieme completo di servizi tecnici",
     "viewMore": "Scopri di Più",
     "contactUs": "Contattaci",
-
     "structuralDesign": {
       "title": "Progettazione Strutturale",
       "content": "Progettazione di strutture edili, calcoli strutturali e verifiche statiche per edifici residenziali e commerciali"

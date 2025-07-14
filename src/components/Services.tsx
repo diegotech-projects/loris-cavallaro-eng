@@ -58,11 +58,10 @@ function Services() {
       {/* Header Section */}
       <div className="mb-20 text-center">
         <h2 className="mb-6 text-4xl font-bold tracking-tight text-themeTextPrimary lg:text-5xl xl:text-6xl">
-          SERVICES
+          {t('title')}
         </h2>
         <p className="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-themeTextSecondary">
-          Soluzioni complete di ingegneria civile e ambientale per ogni
-          tipologia di progetto
+          {t('description')}
         </p>
       </div>
 
@@ -122,7 +121,7 @@ function Services() {
           type="button"
           className="border-2 border-themeTextPrimary px-8 py-4 font-medium tracking-wide text-themeTextPrimary transition-colors duration-300 hover:bg-themeTextPrimary hover:text-themeBackground"
         >
-          VIEW ALL SERVICES
+          {t('viewAllServices')}
         </button>
       </div>
     </div>
