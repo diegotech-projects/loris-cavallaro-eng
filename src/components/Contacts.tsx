@@ -1,11 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { FaBuilding, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { useState } from 'react';
+import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
+
 import ContactMap from './ContactMap';
-import emailjs from '@emailjs/browser';
 
 function Appointment() {
   const t = useTranslations('contact');
@@ -16,15 +17,17 @@ function Appointment() {
     phone: '',
     projectType: '',
     message: '',
-    gdprConsent: false
+    gdprConsent: false,
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    'idle' | 'success' | 'error'
+  >('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.gdprConsent) {
       alert(t('form.gdprRequired'));
       return;
@@ -35,9 +38,12 @@ function Appointment() {
 
     try {
       // EmailJS configuration - Replace with your actual IDs
-      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'your_service_id';
-      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'your_template_id';
-      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'your_public_key';
+      const serviceId =
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'your_service_id';
+      const templateId =
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'your_template_id';
+      const publicKey =
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'your_public_key';
 
       // Template parameters for EmailJS
       const templateParams = {
@@ -46,11 +52,12 @@ function Appointment() {
         phone: formData.phone,
         project_type: formData.projectType,
         message: formData.message,
-        to_email: process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'loriscavallaro22@gmail.com', // Loris's email
+        to_email:
+          process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'loriscavallaro22@gmail.com', // Loris's email
       };
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
-      
+
       setSubmitStatus('success');
       // Reset form
       setFormData({
@@ -59,7 +66,7 @@ function Appointment() {
         phone: '',
         projectType: '',
         message: '',
-        gdprConsent: false
+        gdprConsent: false,
       });
     } catch (error) {
       console.error('Email send failed:', error);
@@ -69,33 +76,42 @@ function Appointment() {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const target = e.target;
-    const value = target.type === 'checkbox' ? (target as HTMLInputElement).checked : target.value;
-    
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
+    const { target } = e;
+    const value =
+      target.type === 'checkbox'
+        ? (target as HTMLInputElement).checked
+        : target.value;
+
     setFormData({
       ...formData,
-      [target.name]: value
+      [target.name]: value,
     });
   };
 
   return (
     <div className="container-custom bg-surfaceLight" id="contact-form">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        
+      <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
         {/* Contact Form */}
-        <div className="bg-opacity-45 bg-surfaceLight p-8 shadow-lg shadow-black/100 hover:shadow-2xl hover:shadow-black/100 transition-all duration-300 rounded-lg">
-          <h2 className="text-4xl lg:text-5xl font-bold text-themeTextPrimary mb-6 tracking-tight">
+        <div className="bg-surfaceLight rounded-lg bg-opacity-45 p-8 shadow-lg shadow-black/100 transition-all duration-300 hover:shadow-2xl hover:shadow-black/100">
+          <h2 className="mb-6 text-4xl font-bold tracking-tight text-themeTextPrimary lg:text-5xl">
             {t('form.title')}
           </h2>
-          <p className="text-themeTextSecondary mb-8 leading-relaxed">
+          <p className="mb-8 leading-relaxed text-themeTextSecondary">
             {t('form.description')}
           </p>
-          
+
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-themeTextPrimary mb-2">
+                <label
+                  htmlFor="name"
+                  className="mb-2 block text-sm font-medium text-themeTextPrimary"
+                >
                   {t('form.name')} {t('form.required')}
                 </label>
                 <input
@@ -105,11 +121,14 @@ function Appointment() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-themeTextSecondary border-opacity-30 bg-themeBackground text-themeTextPrimary focus:ring-2 focus:ring-themeTextPrimary focus:border-transparent"
+                  className="w-full border border-themeTextSecondary border-opacity-30 bg-themeBackground px-4 py-3 text-themeTextPrimary focus:border-transparent focus:ring-2 focus:ring-themeTextPrimary"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-themeTextPrimary mb-2">
+                <label
+                  htmlFor="email"
+                  className="mb-2 block text-sm font-medium text-themeTextPrimary"
+                >
                   {t('form.email')} {t('form.required')}
                 </label>
                 <input
@@ -119,14 +138,17 @@ function Appointment() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-themeTextSecondary border-opacity-30 bg-themeBackground text-themeTextPrimary focus:ring-2 focus:ring-themeTextPrimary focus:border-transparent"
+                  className="w-full border border-themeTextSecondary border-opacity-30 bg-themeBackground px-4 py-3 text-themeTextPrimary focus:border-transparent focus:ring-2 focus:ring-themeTextPrimary"
                 />
               </div>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-themeTextPrimary mb-2">
+                <label
+                  htmlFor="phone"
+                  className="mb-2 block text-sm font-medium text-themeTextPrimary"
+                >
                   {t('form.phone')}
                 </label>
                 <input
@@ -135,11 +157,14 @@ function Appointment() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-themeTextSecondary border-opacity-30 bg-themeBackground text-themeTextPrimary focus:ring-2 focus:ring-themeTextPrimary focus:border-transparent"
+                  className="w-full border border-themeTextSecondary border-opacity-30 bg-themeBackground px-4 py-3 text-themeTextPrimary focus:border-transparent focus:ring-2 focus:ring-themeTextPrimary"
                 />
               </div>
               <div>
-                <label htmlFor="projectType" className="block text-sm font-medium text-themeTextPrimary mb-2">
+                <label
+                  htmlFor="projectType"
+                  className="mb-2 block text-sm font-medium text-themeTextPrimary"
+                >
                   {t('form.projectType')}
                 </label>
                 <select
@@ -147,21 +172,36 @@ function Appointment() {
                   name="projectType"
                   value={formData.projectType}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-themeTextSecondary border-opacity-30 bg-themeBackground text-themeTextPrimary focus:ring-2 focus:ring-themeTextPrimary focus:border-transparent"
+                  className="w-full border border-themeTextSecondary border-opacity-30 bg-themeBackground px-4 py-3 text-themeTextPrimary focus:border-transparent focus:ring-2 focus:ring-themeTextPrimary"
                 >
                   <option value="">{t('form.projectTypes.placeholder')}</option>
-                  <option value="residential">{t('form.projectTypes.residential')}</option>
-                  <option value="commercial">{t('form.projectTypes.commercial')}</option>
-                  <option value="structural">{t('form.projectTypes.structural')}</option>
-                  <option value="energy">{t('form.projectTypes.energy')}</option>
-                  <option value="permits">{t('form.projectTypes.permits')}</option>
-                  <option value="consulting">{t('form.projectTypes.consulting')}</option>
+                  <option value="residential">
+                    {t('form.projectTypes.residential')}
+                  </option>
+                  <option value="commercial">
+                    {t('form.projectTypes.commercial')}
+                  </option>
+                  <option value="structural">
+                    {t('form.projectTypes.structural')}
+                  </option>
+                  <option value="energy">
+                    {t('form.projectTypes.energy')}
+                  </option>
+                  <option value="permits">
+                    {t('form.projectTypes.permits')}
+                  </option>
+                  <option value="consulting">
+                    {t('form.projectTypes.consulting')}
+                  </option>
                 </select>
               </div>
             </div>
-            
+
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-themeTextPrimary mb-2">
+              <label
+                htmlFor="message"
+                className="mb-2 block text-sm font-medium text-themeTextPrimary"
+              >
                 {t('form.message')} {t('form.required')}
               </label>
               <textarea
@@ -172,10 +212,10 @@ function Appointment() {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder={t('form.messagePlaceholder')}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-themeAccent focus:border-transparent"
+                className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-transparent focus:ring-2 focus:ring-themeAccent"
               />
             </div>
-            
+
             {/* GDPR Consent Checkbox */}
             <div className="border-t border-gray-200 pt-6">
               <div className="flex items-start gap-3">
@@ -186,43 +226,55 @@ function Appointment() {
                   required
                   checked={formData.gdprConsent}
                   onChange={handleChange}
-                  className="mt-1 w-4 h-4 text-themeSecondary bg-gray-100 border-gray-300 rounded focus:ring-themeAccent focus:ring-2"
+                  className="mt-1 size-4 rounded border-gray-300 bg-gray-100 text-themeSecondary focus:ring-2 focus:ring-themeAccent"
                 />
-                <label htmlFor="gdprConsent" className="text-sm text-themeTextSecondary">
-                  <span className="font-medium text-themeTextPrimary">{t('form.gdprConsent')} {t('form.required')}</span>
+                <label
+                  htmlFor="gdprConsent"
+                  className="text-sm text-themeTextSecondary"
+                >
+                  <span className="font-medium text-themeTextPrimary">
+                    {t('form.gdprConsent')} {t('form.required')}
+                  </span>
                   <br />
                   {t('form.gdprText')}{' '}
-                  <Link href="/privacy" className="text-themeSecondary hover:text-themeAccent underline">
+                  <Link
+                    href="/privacy"
+                    className="text-themeSecondary underline hover:text-themeAccent"
+                  >
                     {t('form.privacyPolicy')}
                   </Link>
                   .
                 </label>
               </div>
             </div>
-            
+
             {/* Success/Error Messages */}
             {submitStatus === 'success' && (
-              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                <p className="text-green-800 font-medium">{t('form.success')}</p>
-                <p className="text-green-600 text-sm mt-1">
+              <div className="rounded-lg border border-green-200 bg-green-50 p-4">
+                <p className="font-medium text-green-800">
+                  {t('form.success')}
+                </p>
+                <p className="mt-1 text-sm text-green-600">
                   {t('form.successDescription')}
                 </p>
               </div>
             )}
-            
+
             {submitStatus === 'error' && (
-              <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                <p className="text-red-800 font-medium">{t('form.error')}</p>
-                <p className="text-red-600 text-sm mt-1">
-                  {t('form.errorDescription')} {process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'loriscavallaro22@gmail.com'}
+              <div className="rounded-lg border border-red-200 bg-red-50 p-4">
+                <p className="font-medium text-red-800">{t('form.error')}</p>
+                <p className="mt-1 text-sm text-red-600">
+                  {t('form.errorDescription')}{' '}
+                  {process.env.NEXT_PUBLIC_COMPANY_EMAIL ||
+                    'loriscavallaro22@gmail.com'}
                 </p>
               </div>
             )}
-            
+
             <button
               type="submit"
               disabled={!formData.gdprConsent || isSubmitting}
-              className="w-full border-2 border-themeTextPrimary text-themeTextPrimary px-8 py-4 font-bold tracking-wide hover:bg-themeTextPrimary hover:text-themeBackground transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full border-2 border-themeTextPrimary px-8 py-4 font-bold tracking-wide text-themeTextPrimary transition-colors hover:bg-themeTextPrimary hover:text-themeBackground disabled:cursor-not-allowed disabled:opacity-50"
             >
               {isSubmitting ? t('form.submitting') : t('form.submit')}
             </button>
@@ -231,51 +283,71 @@ function Appointment() {
 
         {/* Contact Information */}
         <div className="text-themeTextPrimary">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 tracking-tight">
+          <h2 className="mb-6 text-4xl font-bold tracking-tight lg:text-5xl">
             {t('info.title')}
           </h2>
-          <p className="text-lg text-themeTextSecondary mb-8 leading-relaxed">
+          <p className="mb-8 text-lg leading-relaxed text-themeTextSecondary">
             {t('info.description')}
           </p>
-          
+
           {/* Contact Details */}
-          <div className="space-y-6 mb-8">
+          <div className="mb-8 space-y-6">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-themeTextSecondary flex items-center justify-center">
-                <FaEnvelope className="w-5 h-5 text-themeBackground" />
+              <div className="flex size-12 items-center justify-center bg-themeTextSecondary">
+                <FaEnvelope className="size-5 text-themeBackground" />
               </div>
               <div>
-                <p className="text-themeTextPrimary font-bold tracking-wide">{t('info.email')}</p>
-                <p className="text-themeTextSecondary">{process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'loriscavallaro22@gmail.com'}</p>
-                <p className="text-themeTextSecondary">{process.env.NEXT_PUBLIC_COMPANY_EMAIL_SECONDARY || 'Ingegnerelorising@gmail.com'}</p>
+                <p className="font-bold tracking-wide text-themeTextPrimary">
+                  {t('info.email')}
+                </p>
+                <p className="text-themeTextSecondary">
+                  {process.env.NEXT_PUBLIC_COMPANY_EMAIL ||
+                    'loriscavallaro22@gmail.com'}
+                </p>
+                <p className="text-themeTextSecondary">
+                  {process.env.NEXT_PUBLIC_COMPANY_EMAIL_SECONDARY ||
+                    'Ingegnerelorising@gmail.com'}
+                </p>
               </div>
             </div>
-            
+
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-themeTextSecondary flex items-center justify-center">
-                <FaPhone className="w-5 h-5 text-themeBackground" />
+              <div className="flex size-12 items-center justify-center bg-themeTextSecondary">
+                <FaPhone className="size-5 text-themeBackground" />
               </div>
               <div>
-                <p className="text-themeTextPrimary font-bold tracking-wide">{t('info.phone')}</p>
-                <p className="text-themeTextSecondary">+39 {process.env.NEXT_PUBLIC_COMPANY_PHONE || '380 147 7121'}</p>
+                <p className="font-bold tracking-wide text-themeTextPrimary">
+                  {t('info.phone')}
+                </p>
+                <p className="text-themeTextSecondary">
+                  +39 {process.env.NEXT_PUBLIC_COMPANY_PHONE || '380 147 7121'}
+                </p>
               </div>
             </div>
-            
+
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-themeTextSecondary flex items-center justify-center">
-                <FaMapMarkerAlt className="w-5 h-5 text-themeBackground" />
+              <div className="flex size-12 items-center justify-center bg-themeTextSecondary">
+                <FaMapMarkerAlt className="size-5 text-themeBackground" />
               </div>
               <div>
-                <p className="text-themeTextPrimary font-bold tracking-wide">{t('info.location')}</p>
-                <p className="text-themeTextSecondary">{tFooter('contact.location')}</p>
-                <p className="text-themeTextSecondary text-sm">{t('info.nationalService')}</p>
+                <p className="font-bold tracking-wide text-themeTextPrimary">
+                  {t('info.location')}
+                </p>
+                <p className="text-themeTextSecondary">
+                  {tFooter('contact.location')}
+                </p>
+                <p className="text-sm text-themeTextSecondary">
+                  {t('info.nationalService')}
+                </p>
               </div>
             </div>
           </div>
 
           {/* Map Section */}
           <div className="mb-8">
-            <h3 className="font-semibold text-lg mb-4 text-white">{t('info.serviceArea')}</h3>
+            <h3 className="mb-4 text-lg font-semibold text-white">
+              {t('info.serviceArea')}
+            </h3>
             <ContactMap />
           </div>
         </div>

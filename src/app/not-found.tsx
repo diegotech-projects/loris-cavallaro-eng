@@ -1,46 +1,45 @@
 import Link from 'next/link';
-import { MdHome, MdConstruction, MdArrowBack } from 'react-icons/md';
+import { MdArrowBack, MdConstruction, MdHome } from 'react-icons/md';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-themeSurface to-themeSurfaceLight relative overflow-hidden">
+    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-themeSurface to-themeSurfaceLight">
       {/* Background Engineering Image */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center opacity-10"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
+          backgroundImage: `url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`,
         }}
       />
-      
+
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-2xl mx-auto">
+      <div className="relative z-10 mx-auto max-w-2xl px-4 text-center">
         <div className="mb-8">
-          <MdConstruction className="mx-auto text-6xl text-themeSecondary mb-4" />
-          <h1 className="text-6xl font-bold text-themeTextPrimary mb-4">
-            404
-          </h1>
-          <h2 className="text-2xl font-semibold text-themeTextPrimary mb-4">
+          <MdConstruction className="mx-auto mb-4 text-6xl text-themeSecondary" />
+          <h1 className="mb-4 text-6xl font-bold text-themeTextPrimary">404</h1>
+          <h2 className="mb-4 text-2xl font-semibold text-themeTextPrimary">
             Pagina in Costruzione
           </h2>
-          <p className="text-lg text-themeTextSecondary mb-8">
-            La pagina che stai cercando non esiste o è stata spostata. 
-            Come un cantiere in corso, stiamo sempre migliorando la nostra struttura digitale.
+          <p className="mb-8 text-lg text-themeTextSecondary">
+            La pagina che stai cercando non esiste o è stata spostata. Come un
+            cantiere in corso, stiamo sempre migliorando la nostra struttura
+            digitale.
           </p>
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
+        <div className="flex flex-col justify-center gap-4 sm:flex-row">
+          <Link
             href="/"
-            className="flex items-center gap-2 px-6 py-3 bg-themeSecondary text-themeSurface rounded-lg hover:bg-themeAccent transition-colors font-semibold"
+            className="flex items-center gap-2 rounded-lg bg-themeSecondary px-6 py-3 font-semibold text-themeSurface transition-colors hover:bg-themeAccent"
           >
             <MdHome className="text-xl" />
             Torna alla Home
           </Link>
-          
-          <Link 
+
+          <Link
             href="/contact"
-            className="flex items-center gap-2 px-6 py-3 border-2 border-themeSecondary text-themeSecondary rounded-lg hover:bg-themeSecondary hover:text-themeSurface transition-colors font-semibold"
+            className="flex items-center gap-2 rounded-lg border-2 border-themeSecondary px-6 py-3 font-semibold text-themeSecondary transition-colors hover:bg-themeSecondary hover:text-themeSurface"
           >
             <MdArrowBack className="text-xl" />
             Contattaci
@@ -48,14 +47,15 @@ export default function NotFound() {
         </div>
 
         {/* Additional Info */}
-        <div className="mt-12 p-6 bg-themeSurface/80 backdrop-blur-sm rounded-lg border border-themeSurfaceLight">
-          <h3 className="text-lg font-semibold text-themeTextPrimary mb-3">
+        <div className="mt-12 rounded-lg border border-themeSurfaceLight bg-themeSurface/80 p-6 backdrop-blur-sm">
+          <h3 className="mb-3 text-lg font-semibold text-themeTextPrimary">
             Hai bisogno di aiuto?
           </h3>
-          <p className="text-themeTextSecondary mb-4">
-            Il nostro team di ingegneri è sempre disponibile per assistenza tecnica e consulenza.
+          <p className="mb-4 text-themeTextSecondary">
+            Il nostro team di ingegneri è sempre disponibile per assistenza
+            tecnica e consulenza.
           </p>
-          <div className="flex flex-col sm:flex-row gap-2 text-sm text-themeTextSecondary">
+          <div className="flex flex-col gap-2 text-sm text-themeTextSecondary sm:flex-row">
             <span>📧 loriscavallaro22@gmail.com</span>
             <span className="hidden sm:inline">|</span>
             <span>📞 +39 380 147 7121</span>
@@ -64,17 +64,23 @@ export default function NotFound() {
 
         {/* Engineering Stats */}
         <div className="mt-8 grid grid-cols-3 gap-4 text-center">
-          <div className="p-4 bg-themeSecondary/10 rounded-lg">
+          <div className="rounded-lg bg-themeSecondary/10 p-4">
             <div className="text-2xl font-bold text-themeSecondary">50+</div>
-            <div className="text-sm text-themeTextSecondary">Progetti Completati</div>
+            <div className="text-sm text-themeTextSecondary">
+              Progetti Completati
+            </div>
           </div>
-          <div className="p-4 bg-themeSecondary/10 rounded-lg">
+          <div className="rounded-lg bg-themeSecondary/10 p-4">
             <div className="text-2xl font-bold text-themeSecondary">95%</div>
-            <div className="text-sm text-themeTextSecondary">Clienti Soddisfatti</div>
+            <div className="text-sm text-themeTextSecondary">
+              Clienti Soddisfatti
+            </div>
           </div>
-          <div className="p-4 bg-themeSecondary/10 rounded-lg">
+          <div className="rounded-lg bg-themeSecondary/10 p-4">
             <div className="text-2xl font-bold text-themeSecondary">24/7</div>
-            <div className="text-sm text-themeTextSecondary">Supporto Tecnico</div>
+            <div className="text-sm text-themeTextSecondary">
+              Supporto Tecnico
+            </div>
           </div>
         </div>
       </div>

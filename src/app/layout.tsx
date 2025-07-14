@@ -3,9 +3,6 @@ import '@/styles/global.css';
 import type { Metadata } from 'next';
 import React from 'react';
 
-import Header from '@/components/Header/Header';
-import Footer from '@/shared/Footer/Footer';
-
 export const metadata: Metadata = {
   icons: [
     {
@@ -40,9 +37,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-themeBackground min-h-screen">
-        {children}
-      </body>
+      <body className="min-h-screen bg-themeBackground">{children}</body>
     </html>
   );
 }

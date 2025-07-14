@@ -29,7 +29,7 @@ module.exports = {
         'theme-surface-light': 'var(--color-surface-light)',
         'theme-text-primary': 'var(--color-text-primary)',
         'theme-text-secondary': 'var(--color-text-secondary)',
-        
+
         // Static theme colors from your current setup
         themeBackground: '#f1f5f9',
         themeSurface: '#ffffff',
@@ -39,7 +39,7 @@ module.exports = {
         themeAccent: '#d97706',
         themeTextPrimary: '#0f172a',
         themeTextSecondary: '#475569',
-        
+
         // Legacy colors (keep for backward compatibility)
         primary: '#111111',
         whiteOne: '#ffffff',
@@ -48,7 +48,7 @@ module.exports = {
         customBlue: '#287fff',
         customWhite: '#fafafa',
         customBlack: '#454545',
-        
+
         // Elite Professional Palette (static - for specific use)
         eliteNavy: '#1e3a8a',
         eliteSlate: '#475569',

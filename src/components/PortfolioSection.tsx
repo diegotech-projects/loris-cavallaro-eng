@@ -1,46 +1,56 @@
-import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
 // Define project images
 
 function ProjectShowcase() {
   const t = useTranslations('portfolioSection');
-  
+
   // Get translated project data
   const translatedProjects = t.raw('featuredProjects');
-  
+
   // Combine with images
   const images = [
     '/images/portfolio/projects/01_3D_esterno casa.jpeg',
     '/images/portfolio/projects/01_3D_interno_casa_salone.jpeg',
     '/images/portfolio/projects/01_esterno_giorno_notte.jpeg',
-    '/images/portfolio/projects/02_esterno_giorno.jpeg'
+    '/images/portfolio/projects/02_esterno_giorno.jpeg',
   ];
-  const featuredProjects = translatedProjects.map((project: any, index: number) => ({
-    ...project,
-    image: images[index]
-  }));
+  const featuredProjects = translatedProjects.map(
+    (project: any, index: number) => ({
+      ...project,
+      image: images[index],
+    }),
+  );
 
   return (
     <div className="container-custom">
       {/* Header Section */}
-      <div className="text-center mb-16">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-          <h2 className="text-4xl lg:text-5xl font-bold text-themeTextPrimary">
-            {t('title').split(' ').map((word, index, array) => (
-              <span key={index}>
-                {word}
-                {index === array.length - 2 ? <br /> : ' '}
-              </span>
-            ))}
+      <div className="mb-16 text-center">
+        <div className="flex flex-col items-center justify-between gap-6 lg:flex-row">
+          <h2 className="text-4xl font-bold text-themeTextPrimary lg:text-5xl">
+            {t('title')
+              .split(' ')
+              .map((word, index, array) => (
+                <span key={index}>
+                  {word}
+                  {index === array.length - 2 ? <br /> : ' '}
+                </span>
+              ))}
           </h2>
           <div className="flex gap-4">
-            <Link href="/projects" className="bg-themeAccent text-themeSurface px-6 py-3 rounded-lg font-medium hover:bg-themeSecondary transition-colors">
+            <Link
+              href="/projects"
+              className="rounded-lg bg-themeAccent px-6 py-3 font-medium text-themeSurface transition-colors hover:bg-themeSecondary"
+            >
               {t('viewAllProjects')}
             </Link>
-            <Link href="/contact#contact-form" className="bg-themeAccent opacity-65 text-themeSurface px-6 py-3 rounded-lg font-medium hover:bg-themeSecondary transition-colors">
+            <Link
+              href="/contact#contact-form"
+              className="rounded-lg bg-themeAccent px-6 py-3 font-medium text-themeSurface opacity-65 transition-colors hover:bg-themeSecondary"
+            >
               {t('requestQuote')}
             </Link>
           </div>
@@ -48,32 +58,32 @@ function ProjectShowcase() {
       </div>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
         {featuredProjects.map((project: any) => (
           <div key={project.id} className="group cursor-pointer">
-            <div className="relative overflow-hidden rounded-lg bg-themeSurfaceLight aspect-square mb-4">
+            <div className="relative mb-4 aspect-square overflow-hidden rounded-lg bg-themeSurfaceLight">
               <Image
                 src={project.image}
                 alt={project.title}
                 width={400}
                 height={400}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                className="size-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-themeSecondary bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
-              <div className="absolute top-3 right-3">
-                <span className="bg-themeAccent text-themeSurface px-2 py-1 rounded text-xs font-medium">
+              <div className="absolute inset-0 bg-themeSecondary bg-opacity-0 transition-all duration-300 group-hover:bg-opacity-20" />
+              <div className="absolute right-3 top-3">
+                <span className="rounded bg-themeAccent px-2 py-1 text-xs font-medium text-themeSurface">
                   {project.year}
                 </span>
               </div>
             </div>
             <div className="text-center">
-              <span className="text-themeAccent text-xs font-medium uppercase tracking-wide">
+              <span className="text-xs font-medium uppercase tracking-wide text-themeAccent">
                 {project.category}
               </span>
-              <h3 className="font-semibold text-lg text-themeTextPrimary mb-2 mt-1">
+              <h3 className="mb-2 mt-1 text-lg font-semibold text-themeTextPrimary">
                 {project.title}
               </h3>
-              <p className="text-themeTextSecondary text-sm leading-relaxed">
+              <p className="text-sm leading-relaxed text-themeTextSecondary">
                 {project.description}
               </p>
             </div>
@@ -82,15 +92,13 @@ function ProjectShowcase() {
       </div>
 
       {/* Call to Action */}
-      <div className="text-center mt-12">
-        <p className="text-themeTextSecondary mb-6">
-          {t('cta.description')}
-        </p>
-        <Link 
-          href="/projects" 
-          className="inline-flex items-center gap-2 bg-themeAccent text-themeSurface px-6 py-3 rounded-lg font-medium hover:bg-themeSecondary transition-colors"
+      <div className="mt-12 text-center">
+        <p className="mb-6 text-themeTextSecondary">{t('cta.description')}</p>
+        <Link
+          href="/projects"
+          className="inline-flex items-center gap-2 rounded-lg bg-themeAccent px-6 py-3 font-medium text-themeSurface transition-colors hover:bg-themeSecondary"
         >
-          <FaExternalLinkAlt className="w-4 h-4" />
+          <FaExternalLinkAlt className="size-4" />
           {t('cta.button')}
         </Link>
       </div>

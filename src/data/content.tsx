@@ -1,14 +1,13 @@
-import {useTranslations} from 'next-intl';
+import { useTranslations } from 'next-intl';
 import phone from 'public/images/services/phone.png';
 import prescription from 'public/images/services/prescription.png';
 import records from 'public/images/services/records.png';
 import remote from 'public/images/services/remote.png';
 import booking from 'public/images/services/success.png';
 
-
 export const userServiceData = () => {
   const t = useTranslations('services');
-  
+
   return [
     {
       id: 1,
@@ -45,10 +44,10 @@ export const userServiceData = () => {
 
 export const StatsData = () => {
   const t = useTranslations('home');
-  
+
   return {
     content: t('stats.description'),
-    
+
     stats: [
       {
         title: '50',
@@ -70,31 +69,25 @@ export const StatsData = () => {
   };
 };
 
-
 export const ReviewData = () => {
   const t = useTranslations('reviews');
-  
+
   return [
     {
       name: t('review1.name'),
-      profile:
-        '/images/testimonials/testimonial-1.jpg',
+      profile: '/images/testimonials/testimonial-1.jpg',
       occupation: t('review1.occupation'),
-      review:
-        `Abbiamo collaborato con ${process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} - ${process.env.NEXT_PUBLIC_SIGLA || 'Ingegneria & Costruzioni'} ${t('review1.review')}`,
+      review: `Abbiamo collaborato con ${process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} - ${process.env.NEXT_PUBLIC_SIGLA || 'Ingegneria & Costruzioni'} ${t('review1.review')}`,
     },
     {
       name: t('review2.name'),
-      profile:
-        '/images/testimonials/testimonial-2.jpg',
+      profile: '/images/testimonials/testimonial-2.jpg',
       occupation: t('review2.occupation'),
-      review:
-        `La collaborazione con il team di ${process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} - ${process.env.NEXT_PUBLIC_SIGLA || 'Ingegneria & Costruzioni'} ${t('review2.review')}`,
+      review: `La collaborazione con il team di ${process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} - ${process.env.NEXT_PUBLIC_SIGLA || 'Ingegneria & Costruzioni'} ${t('review2.review')}`,
     },
     {
       name: t('review3.name'),
-      profile:
-        '/images/testimonials/testimonial-3.jpg',
+      profile: '/images/testimonials/testimonial-3.jpg',
       occupation: t('review3.occupation'),
       review: t('review3.review'),
     },

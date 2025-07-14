@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+
 import FAQS from '@/components/FAQS';
 
 export default function FAQPage() {
@@ -9,10 +10,10 @@ export default function FAQPage() {
       {/* Hero Section */}
       <div className="bg-eliteNavy py-20">
         <div className="container-custom text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-whiteOne mb-6">
+          <h1 className="mb-6 text-4xl font-bold text-whiteOne lg:text-5xl">
             {t('title')}
           </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="mx-auto max-w-3xl text-xl text-blue-100">
             {t('description')}
           </p>
         </div>
@@ -26,13 +27,16 @@ export default function FAQPage() {
       {/* CTA Section */}
       <div className="bg-eliteGold py-20">
         <div className="container-custom text-center">
-          <h2 className="text-4xl font-bold text-whiteOne mb-6">
+          <h2 className="mb-6 text-4xl font-bold text-whiteOne">
             {t('cta.title')}
           </h2>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+          <p className="mx-auto mb-8 max-w-2xl text-xl text-orange-100">
             {t('cta.description')}
           </p>
-          <a href="/contact#contact-form" className="bg-whiteOne text-eliteGold px-8 py-4 rounded-lg font-semibold hover:bg-eliteLight transition-colors">
+          <a
+            href="/contact#contact-form"
+            className="rounded-lg bg-whiteOne px-8 py-4 font-semibold text-eliteGold transition-colors hover:bg-eliteLight"
+          >
             {t('cta.button')}
           </a>
         </div>

@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import React, { useEffect, useState } from 'react';
 import { MdClose, MdCookie, MdSettings } from 'react-icons/md';
 
 interface CookieConsent {
@@ -33,7 +33,7 @@ const CookieConsent: React.FC = () => {
     saveConsent({
       necessary: true,
       preferences: true,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     });
   };
 
@@ -41,44 +41,44 @@ const CookieConsent: React.FC = () => {
     saveConsent({
       necessary: true,
       preferences: false,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     });
   };
 
   const handleSavePreferences = () => {
     saveConsent({
       necessary: true,
-      preferences: preferences,
-      timestamp: Date.now()
+      preferences,
+      timestamp: Date.now(),
     });
   };
 
   const CookieBanner = () => (
-    <div className="fixed bottom-0 left-0 right-0 bg-themeSurface border-t-2 border-themeSecondary shadow-lg z-50 p-4 lg:p-6">
+    <div className="fixed inset-x-0 bottom-0 z-50 border-t-2 border-themeSecondary bg-themeSurface p-4 shadow-lg lg:p-6">
       <div className="container-custom">
-        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
-          <div className="flex items-start gap-3 flex-1">
-            <MdCookie className="text-themeSecondary text-2xl mt-1 flex-shrink-0" />
+        <div className="flex flex-col items-start justify-between gap-4 lg:flex-row lg:items-center">
+          <div className="flex flex-1 items-start gap-3">
+            <MdCookie className="mt-1 shrink-0 text-2xl text-themeSecondary" />
             <div className="flex-1">
-              <h3 className="font-semibold text-themeTextPrimary text-lg mb-2">
+              <h3 className="mb-2 text-lg font-semibold text-themeTextPrimary">
                 {t('notice.title')}
               </h3>
-              <p className="text-themeTextSecondary text-sm lg:text-base">
+              <p className="text-sm text-themeTextSecondary lg:text-base">
                 {t('notice.message')}
               </p>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-2 w-full lg:w-auto">
+          <div className="flex w-full flex-col gap-2 sm:flex-row lg:w-auto">
             <button
               onClick={() => setShowSettings(true)}
-              className="flex items-center gap-2 px-4 py-2 text-themeTextPrimary border border-themeSecondary rounded-lg hover:bg-themeSurfaceLight transition-colors"
+              className="flex items-center gap-2 rounded-lg border border-themeSecondary px-4 py-2 text-themeTextPrimary transition-colors hover:bg-themeSurfaceLight"
             >
               <MdSettings className="text-lg" />
               {t('notice.settings')}
             </button>
             <button
               onClick={handleAccept}
-              className="px-6 py-2 bg-themeSecondary text-themeSurface rounded-lg hover:bg-themeAccent transition-colors font-medium"
+              className="rounded-lg bg-themeSecondary px-6 py-2 font-medium text-themeSurface transition-colors hover:bg-themeAccent"
             >
               {t('notice.accept')}
             </button>
@@ -89,10 +89,10 @@ const CookieConsent: React.FC = () => {
   );
 
   const CookieSettings = () => (
-    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-      <div className="bg-themeSurface rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+      <div className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-lg bg-themeSurface">
         <div className="p-6">
-          <div className="flex items-center justify-between mb-6">
+          <div className="mb-6 flex items-center justify-between">
             <h2 className="text-xl font-bold text-themeTextPrimary">
               {t('settings.title')}
             </h2>
@@ -103,19 +103,19 @@ const CookieConsent: React.FC = () => {
               <MdClose className="text-xl" />
             </button>
           </div>
-          
-          <p className="text-themeTextSecondary mb-6">
+
+          <p className="mb-6 text-themeTextSecondary">
             {t('settings.description')}
           </p>
 
           <div className="space-y-6">
             {/* Essential Cookies */}
-            <div className="border border-themeSurfaceLight rounded-lg p-4">
-              <div className="flex items-center justify-between mb-3">
+            <div className="rounded-lg border border-themeSurfaceLight p-4">
+              <div className="mb-3 flex items-center justify-between">
                 <h3 className="font-semibold text-themeTextPrimary">
                   {t('settings.necessary.title')}
                 </h3>
-                <span className="text-sm text-themeTextSecondary bg-themeSurfaceLight px-2 py-1 rounded">
+                <span className="rounded bg-themeSurfaceLight px-2 py-1 text-sm text-themeTextSecondary">
                   {t('settings.necessary.always')}
                 </span>
               </div>
@@ -125,24 +125,28 @@ const CookieConsent: React.FC = () => {
             </div>
 
             {/* Preference Cookies */}
-            <div className="border border-themeSurfaceLight rounded-lg p-4">
-              <div className="flex items-center justify-between mb-3">
+            <div className="rounded-lg border border-themeSurfaceLight p-4">
+              <div className="mb-3 flex items-center justify-between">
                 <h3 className="font-semibold text-themeTextPrimary">
                   {t('settings.preferences.title')}
                 </h3>
-                <label className="relative inline-flex items-center cursor-pointer">
+                <label className="relative inline-flex cursor-pointer items-center">
                   <input
                     type="checkbox"
                     className="sr-only"
                     checked={preferences}
                     onChange={(e) => setPreferences(e.target.checked)}
                   />
-                  <div className={`w-11 h-6 rounded-full transition-colors ${
-                    preferences ? 'bg-themeSecondary' : 'bg-gray-300'
-                  }`}>
-                    <div className={`w-5 h-5 bg-white rounded-full shadow transition-transform ${
-                      preferences ? 'translate-x-5' : 'translate-x-0'
-                    } mt-0.5 ml-0.5`}></div>
+                  <div
+                    className={`h-6 w-11 rounded-full transition-colors ${
+                      preferences ? 'bg-themeSecondary' : 'bg-gray-300'
+                    }`}
+                  >
+                    <div
+                      className={`size-5 rounded-full bg-white shadow transition-transform ${
+                        preferences ? 'translate-x-5' : 'translate-x-0'
+                      } ml-0.5 mt-0.5`}
+                    />
                   </div>
                 </label>
               </div>
@@ -152,22 +156,22 @@ const CookieConsent: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 mt-8">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <button
               onClick={handleReject}
-              className="px-4 py-2 text-themeTextPrimary border border-themeSecondary rounded-lg hover:bg-themeSurfaceLight transition-colors"
+              className="rounded-lg border border-themeSecondary px-4 py-2 text-themeTextPrimary transition-colors hover:bg-themeSurfaceLight"
             >
               {t('settings.rejectAll')}
             </button>
             <button
               onClick={handleSavePreferences}
-              className="px-4 py-2 bg-themeSecondary text-themeSurface rounded-lg hover:bg-themeAccent transition-colors font-medium"
+              className="rounded-lg bg-themeSecondary px-4 py-2 font-medium text-themeSurface transition-colors hover:bg-themeAccent"
             >
               {t('settings.save')}
             </button>
             <button
               onClick={handleAccept}
-              className="px-4 py-2 bg-themeAccent text-themeSurface rounded-lg hover:bg-themeAccent/80 transition-colors font-medium"
+              className="rounded-lg bg-themeAccent px-4 py-2 font-medium text-themeSurface transition-colors hover:bg-themeAccent/80"
             >
               {t('settings.acceptAll')}
             </button>

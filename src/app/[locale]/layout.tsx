@@ -1,21 +1,19 @@
-import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
-import type {ReactNode} from 'react';
+import '@/styles/leaflet.css';
 
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import type { ReactNode } from 'react';
+
+import CookieConsent from '@/components/CookieConsent';
 import Header from '@/components/Header/Header';
 import Footer from '@/shared/Footer/Footer';
-import CookieConsent from '@/components/CookieConsent';
-import '@/styles/leaflet.css';
 
 type Props = {
   children: ReactNode;
-  params: Promise<{locale: string}>;
+  params: Promise<{ locale: string }>;
 };
 
-export default async function LocaleLayout({
-  children,
-  params
-}: Props) {
+export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
   // Providing all messages to the client
   // side is the easiest way to get started
