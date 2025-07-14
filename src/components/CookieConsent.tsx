@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import React, { useEffect, useState } from 'react';
 import { MdClose, MdCookie, MdSettings } from 'react-icons/md';
 
-interface CookieConsent {
+interface CookieConsentInterface {
   necessary: boolean;
   preferences: boolean;
   timestamp: number;
@@ -23,7 +23,7 @@ const CookieConsent: React.FC = () => {
     }
   }, []);
 
-  const saveConsent = (consent: CookieConsent) => {
+  const saveConsent = (consent: CookieConsentInterface) => {
     localStorage.setItem('cookieConsent', JSON.stringify(consent));
     setShowBanner(false);
     setShowSettings(false);
@@ -97,6 +97,7 @@ const CookieConsent: React.FC = () => {
               {t('settings.title')}
             </h2>
             <button
+              type="button"
               onClick={() => setShowSettings(false)}
               className="text-themeTextSecondary hover:text-themeTextPrimary"
             >
@@ -158,18 +159,21 @@ const CookieConsent: React.FC = () => {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <button
+              type="button"
               onClick={handleReject}
               className="rounded-lg border border-themeSecondary px-4 py-2 text-themeTextPrimary transition-colors hover:bg-themeSurfaceLight"
             >
               {t('settings.rejectAll')}
             </button>
             <button
+              type="button"
               onClick={handleSavePreferences}
               className="rounded-lg bg-themeSecondary px-4 py-2 font-medium text-themeSurface transition-colors hover:bg-themeAccent"
             >
               {t('settings.save')}
             </button>
             <button
+              type="button"
               onClick={handleAccept}
               className="rounded-lg bg-themeAccent px-4 py-2 font-medium text-themeSurface transition-colors hover:bg-themeAccent/80"
             >

@@ -118,7 +118,10 @@ function Services() {
 
       {/* CTA Section */}
       <div className="mt-20 text-center">
-        <button className="border-2 border-themeTextPrimary px-8 py-4 font-medium tracking-wide text-themeTextPrimary transition-colors duration-300 hover:bg-themeTextPrimary hover:text-themeBackground">
+        <button
+          type="button"
+          className="border-2 border-themeTextPrimary px-8 py-4 font-medium tracking-wide text-themeTextPrimary transition-colors duration-300 hover:bg-themeTextPrimary hover:text-themeBackground"
+        >
           VIEW ALL SERVICES
         </button>
       </div>

@@ -77,6 +77,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             </h2>
           </div>
           <button
+            type="button"
             onClick={onClose}
             className="text-gray-500 transition-colors hover:text-gray-700"
           >
@@ -104,10 +105,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                   <button
                     onClick={prevImage}
                     className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black bg-opacity-50 p-2 text-white transition-colors hover:bg-opacity-70"
+                    type="button"
                   >
                     <ChevronLeft size={20} />
                   </button>
                   <button
+                    type="button"
                     onClick={nextImage}
                     className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black bg-opacity-50 p-2 text-white transition-colors hover:bg-opacity-70"
                   >
@@ -122,7 +125,8 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
               <div className="flex justify-center gap-2">
                 {project.images.map((image, index) => (
                   <button
-                    key={index}
+                    type="button"
+                    key={`thumbnail-${index}`}
                     onClick={() => goToImage(index)}
                     className={`size-16 overflow-hidden rounded-lg border-2 transition-colors ${
                       index === currentImageIndex
@@ -161,7 +165,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
               <ul className="space-y-3">
                 {project.features.map((feature: string, index: number) => (
                   <li
-                    key={index}
+                    key={`feature-${index}`}
                     className="flex items-start text-themeTextSecondary"
                   >
                     <span className="mr-3 mt-2 size-2 shrink-0 rounded-full bg-eliteGold" />
@@ -196,7 +200,10 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             </div>
 
             <div className="flex gap-4 pt-4">
-              <button className="flex-1 rounded-lg border border-eliteGray px-6 py-3 font-medium text-eliteSlate transition-colors hover:bg-whiteTwo">
+              <button
+                type="button"
+                className="flex-1 rounded-lg border border-eliteGray px-6 py-3 font-medium text-eliteSlate transition-colors hover:bg-whiteTwo"
+              >
                 {t('contactUs')}
               </button>
             </div>

@@ -51,7 +51,7 @@ const AboutPage = () => {
               </p>
               <div className="mt-8 rounded-lg border-l-4 border-eliteGold bg-eliteLight p-6 lg:p-8">
                 <p className="text-center text-lg font-medium italic text-eliteNavy lg:text-xl">
-                  "{t('company.mission')}"
+                  &ldquo;{t('company.mission')}&rdquo;
                 </p>
               </div>
             </div>
@@ -89,7 +89,10 @@ const AboutPage = () => {
                   {t
                     .raw('team.director.qualifications')
                     .map((qualification: string, index: number) => (
-                      <div key={index} className="flex items-start">
+                      <div
+                        key={`qualification-${index}`}
+                        className="flex items-start"
+                      >
                         <span className="mr-2 mt-1 text-eliteGold">•</span>
                         <span className="text-themeTextSecondary">
                           {qualification}

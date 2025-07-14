@@ -38,7 +38,7 @@ function Stats() {
           {/* Stats Grid */}
           <div className="grid grid-cols-2 gap-12">
             {statsData.stats.map((item, index) => (
-              <div key={index} className="space-y-2">
+              <div key={`stat-${index}`} className="space-y-2">
                 <h3 className="text-5xl font-bold tracking-tight text-themeTextPrimary lg:text-6xl">
                   {item.title}+
                 </h3>

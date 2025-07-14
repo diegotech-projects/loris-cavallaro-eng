@@ -34,7 +34,7 @@ function ProjectShowcase() {
             {t('title')
               .split(' ')
               .map((word, index, array) => (
-                <span key={index}>
+                <span key={`title-word-${index}`}>
                   {word}
                   {index === array.length - 2 ? <br /> : ' '}
                 </span>

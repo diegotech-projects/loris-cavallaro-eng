@@ -9,7 +9,7 @@ import Reviews from '@/components/Reviews';
 import Services from '@/components/Services';
 import Stats from '@/components/Stats';
 
-const page = () => {
+const Page = () => {
   const t = useTranslations('home');
 
   return (
@@ -44,7 +44,10 @@ const page = () => {
             {t('cta.description')}
           </p>
           <div className="flex justify-center gap-6">
-            <button className="border-2 border-themeTextPrimary px-8 py-4 font-medium tracking-wide text-themeTextPrimary transition-colors duration-300 hover:bg-themeTextPrimary hover:text-themeBackground">
+            <button
+              type="button"
+              className="border-2 border-themeTextPrimary px-8 py-4 font-medium tracking-wide text-themeTextPrimary transition-colors duration-300 hover:bg-themeTextPrimary hover:text-themeBackground"
+            >
               {t('cta.discoverProjects')}
             </button>
             <a
@@ -75,4 +78,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

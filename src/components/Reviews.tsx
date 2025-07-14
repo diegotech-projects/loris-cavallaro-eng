@@ -46,7 +46,7 @@ function Reviews() {
               </div>
             </div>
             <blockquote className="leading-relaxed text-themeTextSecondary">
-              "{review.review}"
+              &ldquo;{review.review}&rdquo;
             </blockquote>
           </div>
         ))}

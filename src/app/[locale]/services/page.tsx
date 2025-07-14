@@ -42,7 +42,10 @@ const ServicesPage = () => {
                   {t
                     .raw('detailed.structuralDesign.features')
                     .map((feature: string, index: number) => (
-                      <li key={index} className="flex items-center">
+                      <li
+                        key={`feature-${index}`}
+                        className="flex items-center"
+                      >
                         <span className="mr-3 size-2 rounded-full bg-eliteGold" />
                         {feature}
                       </li>
@@ -74,7 +77,10 @@ const ServicesPage = () => {
                   {t
                     .raw('detailed.energyEfficiency.features')
                     .map((feature: string, index: number) => (
-                      <li key={index} className="flex items-center">
+                      <li
+                        key={`feature-${index}`}
+                        className="flex items-center"
+                      >
                         <span className="mr-3 size-2 rounded-full bg-eliteGold" />
                         {feature}
                       </li>
@@ -106,7 +112,10 @@ const ServicesPage = () => {
                   {t
                     .raw('detailed.projectManagement.features')
                     .map((feature: string, index: number) => (
-                      <li key={index} className="flex items-center">
+                      <li
+                        key={`feature-${index}`}
+                        className="flex items-center"
+                      >
                         <span className="mr-3 size-2 rounded-full bg-eliteGold" />
                         {feature}
                       </li>

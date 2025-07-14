@@ -34,6 +34,7 @@ const RuntimeThemeSwitcher = () => {
       </h3>
       <div className="flex flex-col gap-2">
         <button
+          type="button"
           onClick={() => handleThemeChange('default')}
           className={`rounded px-3 py-1 text-xs transition-colors ${
             currentTheme === 'default'
@@ -44,6 +45,7 @@ const RuntimeThemeSwitcher = () => {
           Default Theme
         </button>
         <button
+          type="button"
           onClick={() => handleThemeChange('professional')}
           className={`rounded px-3 py-1 text-xs transition-colors ${
             currentTheme === 'professional'
@@ -54,6 +56,7 @@ const RuntimeThemeSwitcher = () => {
           Professional Theme
         </button>
         <button
+          type="button"
           onClick={() => handleThemeChange('professional-dark')}
           className={`rounded px-3 py-1 text-xs transition-colors ${
             currentTheme === 'professional-dark'

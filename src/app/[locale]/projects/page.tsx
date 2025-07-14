@@ -136,7 +136,7 @@ const ProjectsPage = () => {
                       {project.features.map(
                         (feature: string, featureIndex: number) => (
                           <li
-                            key={featureIndex}
+                            key={`feature-${featureIndex}`}
                             className="flex items-center text-themeTextSecondary opacity-70"
                           >
                             <span className="mr-3 size-2 rounded-full bg-eliteGold" />
@@ -149,6 +149,7 @@ const ProjectsPage = () => {
 
                   <div className="flex gap-4">
                     <button
+                      type="button"
                       onClick={() => openModal(project)}
                       className="ext-themeSurface rounded-lg bg-themeAccent px-6 py-3 font-medium opacity-70 transition-colors hover:bg-themeSecondary"
                     >
