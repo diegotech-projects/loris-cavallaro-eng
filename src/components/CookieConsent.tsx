@@ -122,7 +122,9 @@ const CookieSettings: React.FC<CookieSettingsProps> = ({
                 className="relative inline-flex cursor-pointer items-center"
                 htmlFor="preferences-toggle"
               >
-                <span className="sr-only">{t('settings.preferences.title')}</span>
+                <span className="sr-only">
+                  {t('settings.preferences.title')}
+                </span>
                 <input
                   id="preferences-toggle"
                   type="checkbox"
