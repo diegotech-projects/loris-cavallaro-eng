@@ -3,7 +3,7 @@
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 import type { Project } from '@/data/types';
 
@@ -21,15 +21,15 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
   const t = useTranslations('projectModal');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const nextImage = () => {
+  const nextImage = useCallback(() => {
     setCurrentImageIndex((prev) => (prev + 1) % project.images.length);
-  };
+  }, [project.images.length]);
 
-  const prevImage = () => {
+  const prevImage = useCallback(() => {
     setCurrentImageIndex(
       (prev) => (prev - 1 + project.images.length) % project.images.length,
     );
-  };
+  }, [project.images.length]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -49,7 +49,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isOpen, onClose]);
+  }, [isOpen, onClose, nextImage, prevImage]);
 
   if (!isOpen) return null;
 
@@ -63,11 +63,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
       onClick={onClose}
       role="dialog"
       aria-modal="true"
-      onKeyDown={(e) => {
-        if (e.key === 'Escape') {
-          onClose();
-        }
-      }}
       tabIndex={-1}
     >
       <div
@@ -135,11 +130,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             {project.images.length > 1 && (
               <div className="flex justify-center gap-2">
                 {project.images.map((image, index) => {
-
+                  const imageSrc =
+                    typeof image === 'string' ? image : image.src;
                   return (
                     <button
                       type="button"
-                      key={`thumbnail-${project.id}-${image.slice(5, 55)}`}
+                      key={`thumbnail-${project.id}-${imageSrc}`}
                       onClick={() => goToImage(index)}
                       className={`size-16 overflow-hidden rounded-lg border-2 transition-colors ${
                         index === currentImageIndex

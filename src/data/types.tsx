@@ -12,6 +12,6 @@ export interface Project {
   title: string;
   category: string;
   description: string;
-  images: StaticImageData[];
+  images: (StaticImageData | string)[];
   features: string[];
 }
