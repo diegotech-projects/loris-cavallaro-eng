@@ -133,17 +133,15 @@ const ProjectsPage = () => {
                       {t('projectFeatures.title')}
                     </h3>
                     <ul className="space-y-2">
-                      {project.features.map(
-                        (feature: string, featureIndex: number) => (
-                          <li
-                            key={`feature-${featureIndex}`}
-                            className="flex items-center text-themeTextSecondary opacity-70"
-                          >
-                            <span className="mr-3 size-2 rounded-full bg-eliteGold" />
-                            {feature}
-                          </li>
-                        ),
-                      )}
+                      {project.features.map((feature: string) => (
+                        <li
+                          key={`feature-${feature.slice(0, 15)}`}
+                          className="flex items-center text-themeTextSecondary opacity-70"
+                        >
+                          <span className="mr-3 size-2 rounded-full bg-eliteGold" />
+                          {feature}
+                        </li>
+                      ))}
                     </ul>
                   </div>
 

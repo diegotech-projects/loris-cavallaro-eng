@@ -41,9 +41,9 @@ const ServicesPage = () => {
                 <ul className="space-y-3 text-themeTextSecondary opacity-50">
                   {t
                     .raw('detailed.structuralDesign.features')
-                    .map((feature: string, index: number) => (
+                    .map((feature: string) => (
                       <li
-                        key={`feature-${index}`}
+                        key={`feature-${feature.slice(0, 15)}`}
                         className="flex items-center"
                       >
                         <span className="mr-3 size-2 rounded-full bg-eliteGold" />
@@ -76,9 +76,9 @@ const ServicesPage = () => {
                 <ul className="space-y-3 text-themeTextSecondary opacity-50">
                   {t
                     .raw('detailed.energyEfficiency.features')
-                    .map((feature: string, index: number) => (
+                    .map((feature: string) => (
                       <li
-                        key={`feature-${index}`}
+                        key={`feature-${feature.slice(0, 15)}`}
                         className="flex items-center"
                       >
                         <span className="mr-3 size-2 rounded-full bg-eliteGold" />
@@ -111,9 +111,9 @@ const ServicesPage = () => {
                 <ul className="space-y-3 text-themeTextSecondary opacity-50">
                   {t
                     .raw('detailed.projectManagement.features')
-                    .map((feature: string, index: number) => (
+                    .map((feature: string) => (
                       <li
-                        key={`feature-${index}`}
+                        key={`feature-${feature.slice(0, 15)}`}
                         className="flex items-center"
                       >
                         <span className="mr-3 size-2 rounded-full bg-eliteGold" />

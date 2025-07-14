@@ -58,6 +58,7 @@ const MenuBar: React.FC<MenuBarProps> = () => {
         type="button"
         onClick={handleOpenMenu}
         className="flex items-center justify-center rounded-lg p-2.5 focus:outline-none"
+        aria-label="Open menu"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

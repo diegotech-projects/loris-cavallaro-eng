@@ -37,6 +37,7 @@ const ContactMap = () => {
       const L = await import('leaflet');
 
       // Delete existing icon URL method
+      // eslint-disable-next-line no-underscore-dangle
       delete (L.Icon.Default.prototype as any)._getIconUrl;
 
       // Set custom icon URLs

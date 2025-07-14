@@ -88,9 +88,9 @@ const AboutPage = () => {
                 <div className="space-y-2">
                   {t
                     .raw('team.director.qualifications')
-                    .map((qualification: string, index: number) => (
+                    .map((qualification: string) => (
                       <div
-                        key={`qualification-${qualification.slice(0, 10)}-${index}`}
+                        key={`qualification-${qualification.slice(0, 10)}`}
                         className="flex items-start"
                       >
                         <span className="mr-2 mt-1 text-eliteGold">•</span>

@@ -59,12 +59,21 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
       onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      onKeyDown={(e) => {
+        if (e.key === 'Escape') {
+          onClose();
+        }
+      }}
+      tabIndex={-1}
     >
       <div
         className="max-h-[90vh] w-full max-w-6xl overflow-y-auto rounded-lg bg-whiteOne"
         onClick={(e) => e.stopPropagation()}
+        role="document"
       >
         {/* Header */}
         <div className="flex items-center justify-between border-b p-6">
@@ -104,15 +113,17 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 <>
                   <button
                     onClick={prevImage}
-                    className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black bg-opacity-50 p-2 text-white transition-colors hover:bg-opacity-70"
+                    className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white transition-colors hover:bg-black/70"
                     type="button"
+                    aria-label="Previous image"
                   >
                     <ChevronLeft size={20} />
                   </button>
                   <button
                     type="button"
                     onClick={nextImage}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black bg-opacity-50 p-2 text-white transition-colors hover:bg-opacity-70"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white transition-colors hover:bg-black/70"
+                    aria-label="Next image"
                   >
                     <ChevronRight size={20} />
                   </button>
@@ -126,7 +137,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 {project.images.map((image, index) => (
                   <button
                     type="button"
-                    key={`thumbnail-${index}`}
+                    key={`thumbnail-img-${index}`}
                     onClick={() => goToImage(index)}
                     className={`size-16 overflow-hidden rounded-lg border-2 transition-colors ${
                       index === currentImageIndex
@@ -163,9 +174,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 {t('mainFeatures')}
               </h3>
               <ul className="space-y-3">
-                {project.features.map((feature: string, index: number) => (
+                {project.features.map((feature: string) => (
                   <li
-                    key={`feature-${index}`}
+                    key={`feature-${feature.slice(0, 20)}`}
                     className="flex items-start text-themeTextSecondary"
                   >
                     <span className="mr-3 mt-2 size-2 shrink-0 rounded-full bg-eliteGold" />
