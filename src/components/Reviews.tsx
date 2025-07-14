@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
-import { ReviewData } from '@/data/content';
+import { useReviewData } from '@/data/content';
 
 function Reviews() {
   const t = useTranslations('reviews');
-  const reviewData = ReviewData();
+  const reviewData = useReviewData();
 
   return (
     <div className="container-custom">

@@ -5,7 +5,7 @@ import records from 'public/images/services/records.png';
 import remote from 'public/images/services/remote.png';
 import booking from 'public/images/services/success.png';
 
-export const userServiceData = () => {
+export const useUserServiceData = () => {
   const t = useTranslations('services');
 
   return [
@@ -42,7 +42,7 @@ export const userServiceData = () => {
   ];
 };
 
-export const StatsData = () => {
+export const useStatsData = () => {
   const t = useTranslations('home');
 
   return {
@@ -50,18 +50,22 @@ export const StatsData = () => {
 
     stats: [
       {
+        id: 'completed-projects',
         title: '50',
         stat: t('stats.completedProjects'),
       },
       {
+        id: 'years-experience',
         title: '10',
         stat: t('stats.yearsExperience'),
       },
       {
+        id: 'satisfied-clients',
         title: '95%',
         stat: t('stats.satisfiedClients'),
       },
       {
+        id: 'photovoltaic-systems',
         title: '25',
         stat: t('stats.photovoltaicSystems'),
       },
@@ -69,7 +73,7 @@ export const StatsData = () => {
   };
 };
 
-export const ReviewData = () => {
+export const useReviewData = () => {
   const t = useTranslations('reviews');
 
   return [

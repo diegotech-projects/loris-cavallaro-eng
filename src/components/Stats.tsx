@@ -2,11 +2,11 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import PiantinaEsternoCasa from 'public/images/portfolio/projects/01_3D_piantina_mappa_esterno.jpeg';
 
-import { StatsData } from '@/data/content';
+import { useStatsData } from '@/data/content';
 
 function Stats() {
   const t = useTranslations('home');
-  const statsData = StatsData();
+  const statsData = useStatsData();
 
   return (
     <div className="container-custom">
@@ -37,8 +37,8 @@ function Stats() {
 
           {/* Stats Grid */}
           <div className="grid grid-cols-2 gap-12">
-            {statsData.stats.map((item, index) => (
-              <div key={`stat-${index}`} className="space-y-2">
+            {statsData.stats.map((item) => (
+              <div key={item.id} className="space-y-2">
                 <h3 className="text-5xl font-bold tracking-tight text-themeTextPrimary lg:text-6xl">
                   {item.title}+
                 </h3>
