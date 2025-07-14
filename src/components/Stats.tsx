@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { StatsData } from '@/data/content';
-import PiantinaEsternoCasa from '@/_docs/data/progetti_img/01_3D_piantina_mappa_esterno.jpeg';
+import PiantinaEsternoCasa from 'public/images/portfolio/projects/01_3D_piantina_mappa_esterno.jpeg';
 
 function Stats() {
   const t = useTranslations('home');
@@ -16,7 +16,7 @@ function Stats() {
             <Image
               height={700}
               width={600}
-              src={PiantinaEsternoCasa} 
+              src={PiantinaEsternoCasa}
               alt="Piantina Esterno Casa" 
               className="w-full h-full object-cover opacity-80 hover:grayscale-0 transition-all duration-500"
             />

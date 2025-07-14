@@ -1,24 +1,10 @@
 import {useTranslations} from 'next-intl';
-import exodus from '@/images/companies/exodus.png';
-import firstbase from '@/images/companies/firstbase.png';
-import omada from '@/images/companies/omada.png';
-import robinhood from '@/images/companies/robinhood.png';
-import samsara from '@/images/companies/samsara.png';
-import doctor1 from '@/images/doctors/doctor1.png';
-import doctor2 from '@/images/doctors/doctor2.png';
-import doctor3 from '@/images/doctors/doctor3.png';
-import doctor4 from '@/images/doctors/doctor4.png';
-import doctor5 from '@/images/doctors/doctor5.png';
-import doctor6 from '@/images/doctors/doctor6.png';
-import phone from '@/images/services/phone.png';
-import prescription from '@/images/services/prescription.png';
-import records from '@/images/services/records.png';
-import remote from '@/images/services/remote.png';
-import booking from '@/images/services/success.png';
+import phone from 'public/images/services/phone.png';
+import prescription from 'public/images/services/prescription.png';
+import records from 'public/images/services/records.png';
+import remote from 'public/images/services/remote.png';
+import booking from 'public/images/services/success.png';
 
-import type { Service } from './types';
-
-export const companyLogos = [omada, robinhood, samsara, firstbase, exodus];
 
 export const userServiceData = () => {
   const t = useTranslations('services');
@@ -84,38 +70,6 @@ export const StatsData = () => {
   };
 };
 
-export const Doctors: any = {
-  '1': {
-    image: doctor1,
-    name: 'Jacob Jones',
-    occupation: 'Physiotherapist',
-  },
-  '2': {
-    image: doctor2,
-    name: 'Jerome Bell',
-    occupation: 'Cardiologist',
-  },
-  '3': {
-    image: doctor3,
-    name: 'Theresa Webb',
-    occupation: 'Neurologist',
-  },
-  '4': {
-    image: doctor4,
-    name: 'Ronald Richards',
-    occupation: 'Endocrinologist',
-  },
-  '5': {
-    image: doctor5,
-    name: 'Floyyd Miles',
-    occupation: 'Hermatologist',
-  },
-  '6': {
-    image: doctor6,
-    name: 'Dernale Robertson',
-    occupation: 'Gynacologist',
-  },
-};
 
 export const ReviewData = () => {
   const t = useTranslations('reviews');
@@ -124,7 +78,7 @@ export const ReviewData = () => {
     {
       name: t('review1.name'),
       profile:
-        'https://img.freepik.com/free-photo/young-male-posing-isolated-against-blank-studio-wall_273609-12356.jpg?size=626&ext=jpg&ga=GA1.2.1638277978.1690639805&semt=ais',
+        '/images/testimonials/testimonial-1.jpg',
       occupation: t('review1.occupation'),
       review:
         `Abbiamo collaborato con ${process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} - ${process.env.NEXT_PUBLIC_SIGLA || 'Ingegneria & Costruzioni'} ${t('review1.review')}`,
@@ -132,7 +86,7 @@ export const ReviewData = () => {
     {
       name: t('review2.name'),
       profile:
-        'https://img.freepik.com/free-photo/confident-african-businesswoman-smiling-closeup-portrait-jobs-career-campaign_53876-129412.jpg?size=626&ext=jpg&ga=GA1.1.1638277978.1690639805&semt=ais',
+        '/images/testimonials/testimonial-2.jpg',
       occupation: t('review2.occupation'),
       review:
         `La collaborazione con il team di ${process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} - ${process.env.NEXT_PUBLIC_SIGLA || 'Ingegneria & Costruzioni'} ${t('review2.review')}`,
@@ -140,7 +94,7 @@ export const ReviewData = () => {
     {
       name: t('review3.name'),
       profile:
-        'https://img.freepik.com/free-photo/happy-african-american-young-man-colorful-shirt-wearing-glasses-looking-camera-smiling-cheerfully_141793-108881.jpg?size=626&ext=jpg&ga=GA1.1.1638277978.1690639805&semt=ais',
+        '/images/testimonials/testimonial-3.jpg',
       occupation: t('review3.occupation'),
       review: t('review3.review'),
     },

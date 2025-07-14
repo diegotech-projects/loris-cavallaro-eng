@@ -3,11 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
-// Import project images
-import project1 from '@/_docs/data/progetti_img/01_3D_esterno casa.jpeg';
-import project2 from '@/_docs/data/progetti_img/01_3D_interno_casa_salone.jpeg';
-import project3 from '@/_docs/data/progetti_img_2/01_esterno_giorno_notte.jpeg';
-import project4 from '@/_docs/data/progetti_img_2/02_esterno_giorno.jpeg';
+// Define project images
 
 function ProjectShowcase() {
   const t = useTranslations('portfolioSection');
@@ -16,7 +12,12 @@ function ProjectShowcase() {
   const translatedProjects = t.raw('featuredProjects');
   
   // Combine with images
-  const images = [project1, project2, project3, project4];
+  const images = [
+    '/images/portfolio/projects/01_3D_esterno casa.jpeg',
+    '/images/portfolio/projects/01_3D_interno_casa_salone.jpeg',
+    '/images/portfolio/projects/01_esterno_giorno_notte.jpeg',
+    '/images/portfolio/projects/02_esterno_giorno.jpeg'
+  ];
   const featuredProjects = translatedProjects.map((project: any, index: number) => ({
     ...project,
     image: images[index]
@@ -54,6 +55,8 @@ function ProjectShowcase() {
               <Image
                 src={project.image}
                 alt={project.title}
+                width={400}
+                height={400}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-themeSecondary bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>

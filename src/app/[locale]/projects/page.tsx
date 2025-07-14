@@ -7,17 +7,7 @@ import ProjectModal from '@/components/ProjectModal';
 import { ProjectsData } from '@/data/content';
 import type { Project } from '@/data/types';
 
-// Import project images
-import project1_1 from '@/_docs/data/progetti_img/01_3D_esterno casa.jpeg';
-import project1_2 from '@/_docs/data/progetti_img/01_3D_interno_casa_salone.jpeg';
-import project1_3 from '@/_docs/data/progetti_img/01_3D_piantina_mappa_esterno.jpeg';
-import project2_1 from '@/_docs/data/progetti_img_2/01_esterno_giorno_notte.jpeg';
-import project2_2 from '@/_docs/data/progetti_img_2/02_esterno_giorno.jpeg';
-import project2_3 from '@/_docs/data/progetti_img_2/03_interno salone.jpeg';
-// Import photovoltaic project images
-import fotovoltaico1 from '@/_docs/data/fotovoltaico_lipari/02_fotovotaico.png';
-import fotovoltaico2 from '@/_docs/data/fotovoltaico_lipari/05_fotovotaico.png';
-import fotovoltaico3 from '@/_docs/data/fotovoltaico_lipari/07_fotovotaico.png';
+// Define project images
 
 const ProjectsPage = () => {
   const t = useTranslations('projectsPage');
@@ -39,15 +29,27 @@ const ProjectsPage = () => {
   const projects: Project[] = [
     {
       ...translatedProjects[0],
-      images: [project1_1, project1_2, project1_3]
+      images: [
+        '/images/portfolio/projects/01_3D_esterno casa.jpeg',
+        '/images/portfolio/projects/01_3D_interno_casa_salone.jpeg',
+        '/images/portfolio/projects/01_3D_piantina_mappa_esterno.jpeg'
+      ]
     },
     {
       ...translatedProjects[1],
-      images: [project2_1, project2_2, project2_3]
+      images: [
+        '/images/portfolio/projects/01_esterno_giorno_notte.jpeg',
+        '/images/portfolio/projects/02_esterno_giorno.jpeg',
+        '/images/portfolio/projects/03_interno salone.jpeg'
+      ]
     },
     {
       ...translatedProjects[2],
-      images: [fotovoltaico1, fotovoltaico2, fotovoltaico3]
+      images: [
+        '/images/portfolio/photovoltaic/02_fotovotaico.png',
+        '/images/portfolio/photovoltaic/05_fotovotaico.png',
+        '/images/portfolio/photovoltaic/07_fotovotaico.png'
+      ]
     },
   ];
 
