@@ -134,26 +134,29 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             {/* Thumbnail navigation */}
             {project.images.length > 1 && (
               <div className="flex justify-center gap-2">
-                {project.images.map((image, index) => (
-                  <button
-                    type="button"
-                    key={`thumbnail-img-${index}`}
-                    onClick={() => goToImage(index)}
-                    className={`size-16 overflow-hidden rounded-lg border-2 transition-colors ${
-                      index === currentImageIndex
-                        ? 'border-eliteGold'
-                        : 'border-gray-300'
-                    }`}
-                  >
-                    <Image
-                      src={image}
-                      alt={`${project.title} thumbnail ${index + 1}`}
-                      width={64}
-                      height={64}
-                      className="size-full object-cover"
-                    />
-                  </button>
-                ))}
+                {project.images.map((image, index) => {
+
+                  return (
+                    <button
+                      type="button"
+                      key={`thumbnail-${project.id}-${image.slice(5, 55)}`}
+                      onClick={() => goToImage(index)}
+                      className={`size-16 overflow-hidden rounded-lg border-2 transition-colors ${
+                        index === currentImageIndex
+                          ? 'border-eliteGold'
+                          : 'border-gray-300'
+                      }`}
+                    >
+                      <Image
+                        src={image}
+                        alt={`${project.title} thumbnail ${index + 1}`}
+                        width={64}
+                        height={64}
+                        className="size-full object-cover"
+                      />
+                    </button>
+                  );
+                })}
               </div>
             )}
           </div>
