@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import PiantinaEsternoCasa from 'public/images/portfolio/projects/01_3D_piantina_mappa_esterno.jpeg';
+import Modello3dPiscina from 'public/images/portfolio/projects/03_3D_model_pool.jpeg';
 
 import { useStatsData } from '@/data/content';
 
@@ -17,7 +17,7 @@ function Stats() {
             <Image
               height={700}
               width={600}
-              src={PiantinaEsternoCasa}
+              src={Modello3dPiscina}
               alt="Piantina Esterno Casa"
               className="size-full object-cover opacity-80 transition-all duration-500 hover:grayscale-0"
             />

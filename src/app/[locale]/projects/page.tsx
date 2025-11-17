@@ -33,7 +33,7 @@ const ProjectsPage = () => {
       images: [
         '/images/portfolio/projects/01_3D_esterno casa.jpeg',
         '/images/portfolio/projects/01_3D_interno_casa_salone.jpeg',
-        '/images/portfolio/projects/01_3D_piantina_mappa_esterno.jpeg',
+        '/images/portfolio/projects/03_3D_model_pool.jpeg',
       ],
     },
     {
