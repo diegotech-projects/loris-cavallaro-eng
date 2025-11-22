@@ -21,8 +21,6 @@ export const Env = createEnv({
     NEXT_PUBLIC_VAT_NUMBER: z.string().nonempty(),
   },
   runtimeEnv: {
-    DATABASE_URL: process.env.DATABASE_URL,
-    DATABASE_AUTH_TOKEN: process.env.DATABASE_AUTH_TOKEN,
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
     NEXT_PUBLIC_NOME_COGNOME: process.env.NEXT_PUBLIC_NOME_COGNOME,
     NEXT_PUBLIC_SIGLA: process.env.NEXT_PUBLIC_SIGLA,
