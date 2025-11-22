@@ -31,8 +31,8 @@ const ProjectsPage = () => {
     {
       ...translatedProjects[0],
       images: [
-        '/images/portfolio/projects/01_3D_esterno casa.jpeg',
-        '/images/portfolio/projects/01_3D_interno_casa_salone.jpeg',
+        '/images/portfolio/projects/01_3D_esterno casa_2.jpeg',
+        '/images/portfolio/projects/01_3D_interno_casa_bagno.jpeg',
         '/images/portfolio/projects/03_3D_model_pool.jpeg',
       ],
     },

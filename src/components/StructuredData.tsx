@@ -6,7 +6,8 @@ import React from 'react';
 export default function StructuredData() {
   const t = useTranslations('seo.structuredData');
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://www.ingloriscavallarocostruzioni.com';;
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    'https://www.ingloriscavallarocostruzioni.com';
 
   // Get values from environment variables
   const engineerName =
