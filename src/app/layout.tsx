@@ -6,6 +6,10 @@ import React from 'react';
 import { AppConfig } from '@/utils/AppConfig';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ||
+      'https://www.ingloriscavallarocostruzioni.com',
+  ),
   title: {
     default: AppConfig.title,
     template: `%s | ${AppConfig.site_name}`,
@@ -38,7 +42,9 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'it_IT',
     alternateLocale: ['en_US'],
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.ingloriscavallarocostruzioni.com',
+    url:
+      process.env.NEXT_PUBLIC_SITE_URL ||
+      'https://www.ingloriscavallarocostruzioni.com',
     siteName: AppConfig.site_name,
     title: AppConfig.title,
     description: AppConfig.description,
