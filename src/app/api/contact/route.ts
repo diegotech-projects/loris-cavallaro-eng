@@ -27,7 +27,13 @@ export async function POST(request: NextRequest) {
 
     // Check if Resend is configured
     if (!resend) {
-      console.log('Email would be sent:', { name, email, phone, projectType, message });
+      console.log('Email would be sent:', {
+        name,
+        email,
+        phone,
+        projectType,
+        message,
+      });
       return NextResponse.json(
         {
           success: true,

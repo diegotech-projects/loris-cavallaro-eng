@@ -4,8 +4,7 @@ import { z } from 'zod';
 
 // Don't add NODE_ENV into T3 Env, it changes the tree-shaking behavior
 export const Env = createEnv({
-  server: {
-  },
+  server: {},
   client: {
     NEXT_PUBLIC_SITE_URL: z.string().url(),
     NEXT_PUBLIC_NOME_COGNOME: z.string().nonempty(),
@@ -28,7 +27,8 @@ export const Env = createEnv({
     NEXT_PUBLIC_LONGITUDINE: process.env.NEXT_PUBLIC_LONGITUDINE,
     NEXT_PUBLIC_ZOOM: process.env.NEXT_PUBLIC_ZOOM,
     NEXT_PUBLIC_COMPANY_EMAIL: process.env.NEXT_PUBLIC_COMPANY_EMAIL,
-    NEXT_PUBLIC_COMPANY_EMAIL_SECONDARY: process.env.NEXT_PUBLIC_COMPANY_EMAIL_SECONDARY,
+    NEXT_PUBLIC_COMPANY_EMAIL_SECONDARY:
+      process.env.NEXT_PUBLIC_COMPANY_EMAIL_SECONDARY,
     NEXT_PUBLIC_COMPANY_PHONE: process.env.NEXT_PUBLIC_COMPANY_PHONE,
     NEXT_PUBLIC_COMPANY_NAME: process.env.NEXT_PUBLIC_COMPANY_NAME,
     NEXT_PUBLIC_ENGINEER_NAME: process.env.NEXT_PUBLIC_ENGINEER_NAME,
