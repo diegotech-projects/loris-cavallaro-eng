@@ -542,6 +542,35 @@
     "category": "Category",
     "contactUs": "Contact Us"
   },
+  "seo": {
+    "structuredData": {
+      "professionalService": {
+        "name": "Civil and Environmental Engineering Firm",
+        "description": "Professional civil and environmental engineering firm specialized in structural design, sustainability and safety. We provide professional design services, tenders and technical consulting."
+      },
+      "person": {
+        "jobTitle": "Civil and Environmental Engineer",
+        "description": "Civil and environmental engineer specialized in design, sustainability and safety in the construction sector."
+      },
+      "serviceTypes": [
+        "Civil Engineering",
+        "Environmental Engineering",
+        "Structural Design",
+        "Sustainability",
+        "Construction Safety",
+        "Technical Consulting",
+        "Public Tenders"
+      ],
+      "knowsAbout": [
+        "Civil Engineering",
+        "Environmental Engineering",
+        "Structural Design",
+        "Sustainability",
+        "Construction Safety",
+        "Project Management"
+      ]
+    }
+  },
   "portfolioSection": {
     "title": "Featured Projects",
     "viewAllProjects": "All Projects",

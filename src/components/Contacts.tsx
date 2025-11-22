@@ -1,6 +1,5 @@
 'use client';
 
-import emailjs from '@emailjs/browser';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
@@ -37,26 +36,23 @@ function Appointment() {
     setSubmitStatus('idle');
 
     try {
-      // EmailJS configuration - Replace with your actual IDs
-      const serviceId =
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'your_service_id';
-      const templateId =
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'your_template_id';
-      const publicKey =
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'your_public_key';
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          projectType: formData.projectType,
+          message: formData.message,
+        }),
+      });
 
-      // Template parameters for EmailJS
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        phone: formData.phone,
-        project_type: formData.projectType,
-        message: formData.message,
-        to_email:
-          process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'loriscavallaro22@gmail.com', // Loris's email
-      };
-
-      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
 
       setSubmitStatus('success');
       // Reset form

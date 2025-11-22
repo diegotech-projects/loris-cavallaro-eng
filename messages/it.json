@@ -542,6 +542,35 @@
     "category": "Categoria",
     "contactUs": "Contattaci"
   },
+  "seo": {
+    "structuredData": {
+      "professionalService": {
+        "name": "Studio di Ingegneria Civile e Ambientale",
+        "description": "Studio di ingegneria civile e ambientale specializzato in progettazione edile, sostenibilità e sicurezza. Servizi professionali di progettazione, bandi di gara e consulenza tecnica."
+      },
+      "person": {
+        "jobTitle": "Ingegnere Civile e Ambientale",
+        "description": "Ingegnere civile e ambientale specializzato in progettazione, sostenibilità e sicurezza nel settore edile."
+      },
+      "serviceTypes": [
+        "Ingegneria Civile",
+        "Ingegneria Ambientale",
+        "Progettazione Edile",
+        "Sostenibilità",
+        "Sicurezza Cantieri",
+        "Consulenza Tecnica",
+        "Bandi di Gara"
+      ],
+      "knowsAbout": [
+        "Ingegneria Civile",
+        "Ingegneria Ambientale",
+        "Progettazione Edile",
+        "Sostenibilità",
+        "Sicurezza Cantieri",
+        "Gestione Progetti"
+      ]
+    }
+  },
   "portfolioSection": {
     "title": "Progetti in evidenza",
     "viewAllProjects": "Tutti i Progetti",

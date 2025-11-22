@@ -6,6 +6,7 @@ import type { ReactNode } from 'react';
 
 import CookieConsent from '@/components/CookieConsent';
 import Header from '@/components/Header/Header';
+import StructuredData from '@/components/StructuredData';
 import Footer from '@/shared/Footer/Footer';
 
 type Props = {
@@ -21,6 +22,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <NextIntlClientProvider messages={messages}>
+      <StructuredData />
       <Header />
       {children}
       <Footer />
