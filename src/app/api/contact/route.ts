@@ -44,11 +44,14 @@ export async function POST(request: NextRequest) {
     }
 
     // Send email using Resend
+    const recipientEmail =
+      process.env.CONTACT_FORM_RECIPIENT ||
+      process.env.NEXT_PUBLIC_COMPANY_EMAIL_SECONDARY ||
+      'Ingegnerelorising@gmail.com';
+
     const data = await resend.emails.send({
       from: 'Sito Web <onboarding@resend.dev>', // Use your verified domain later
-      to: [
-        process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'loriscavallaro22@gmail.com',
-      ],
+      to: [recipientEmail],
       subject: `Nuovo messaggio dal sito web - ${projectType || 'Richiesta generale'}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
