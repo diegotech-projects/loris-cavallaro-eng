@@ -44,14 +44,28 @@ export async function POST(request: NextRequest) {
     }
 
     // Send email using Resend
-    const recipientEmail =
-      process.env.CONTACT_FORM_RECIPIENT ||
-      process.env.NEXT_PUBLIC_COMPANY_EMAIL_SECONDARY ||
-      'Ingegnerelorising@gmail.com';
+    // Build recipients list from env variables
+    const recipients: string[] = [];
+    
+    // Primary recipient (client email)
+    const primaryRecipient = process.env.CONTACT_FORM_RECIPIENT || 'loriscavallaro22@gmail.com';
+    recipients.push(primaryRecipient);
+    
+    // Secondary recipient (for testing/backup)
+    if (process.env.CONTACT_FORM_RECIPIENT_CC) {
+      recipients.push(process.env.CONTACT_FORM_RECIPIENT_CC);
+    }
+
+    // Log for debugging
+    console.log('Attempting to send email to:', recipients);
+    console.log('Resend configured:', !!resend);
+
+    // Sender email - use verified domain or fallback to Resend test domain
+    const senderEmail = process.env.RESEND_FROM_EMAIL || 'Sito Web <onboarding@resend.dev>';
 
     const data = await resend.emails.send({
-      from: 'Sito Web <onboarding@resend.dev>', // Use your verified domain later
-      to: [recipientEmail],
+      from: senderEmail,
+      to: recipients,
       subject: `Nuovo messaggio dal sito web - ${projectType || 'Richiesta generale'}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
