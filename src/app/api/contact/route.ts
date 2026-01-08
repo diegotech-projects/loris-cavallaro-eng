@@ -46,22 +46,27 @@ export async function POST(request: NextRequest) {
     // Send email using Resend
     // Build recipients list from env variables
     const recipients: string[] = [];
-    
+
     // Primary recipient (client email)
-    const primaryRecipient = process.env.CONTACT_FORM_RECIPIENT || 'loriscavallaro22@gmail.com';
+    const primaryRecipient =
+      process.env.CONTACT_FORM_RECIPIENT || 'loriscavallaro22@gmail.com';
     recipients.push(primaryRecipient);
-    
+
     // Secondary recipient (for testing/backup)
     if (process.env.CONTACT_FORM_RECIPIENT_CC) {
       recipients.push(process.env.CONTACT_FORM_RECIPIENT_CC);
     }
 
-    // Log for debugging
+    // Debug logging - check Vercel Function logs
+    // eslint-disable-next-line no-console
     console.log('Attempting to send email to:', recipients);
-    console.log('Resend configured:', !!resend);
 
     // Sender email - use verified domain or fallback to Resend test domain
-    const senderEmail = process.env.RESEND_FROM_EMAIL || 'Sito Web <onboarding@resend.dev>';
+    const senderEmail =
+      process.env.RESEND_FROM_EMAIL || 'Sito Web <onboarding@resend.dev>';
+
+    // eslint-disable-next-line no-console
+    console.log('Sending from:', senderEmail);
 
     const data = await resend.emails.send({
       from: senderEmail,
