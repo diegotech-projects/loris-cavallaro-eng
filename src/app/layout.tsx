@@ -1,6 +1,7 @@
 import '@/styles/global.css';
 
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import React from 'react';
 
 import { AppConfig } from '@/utils/AppConfig';
@@ -110,7 +111,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-themeBackground">{children}</body>
+      <body className="min-h-screen bg-themeBackground">
+        {children}
+        {/* Google Ads / Google Tag */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17610258605"
+          strategy="afterInteractive"
+        />
+        <Script id="google-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17610258605');
+          `}
+        </Script>
+      </body>
     </html>
   );
 }
