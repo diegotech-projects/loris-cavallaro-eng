@@ -1,19 +1,23 @@
+import { useTranslations } from 'next-intl';
 import React from 'react';
 
 import Appointment from '@/components/Contacts';
 
 const ContactPage = () => {
+  const t = useTranslations('contactPage');
+  const tContact = useTranslations('contact');
+  const tFooter = useTranslations('footer');
+
   return (
     <div className="relative bg-eliteLight">
       {/* Hero Section */}
       <div className="bg-eliteNavy py-20">
         <div className="container-custom text-center">
           <h1 className="mb-6 text-4xl font-bold text-whiteOne lg:text-5xl">
-            Contattaci
+            {t('hero.title')}
           </h1>
           <p className="mx-auto max-w-3xl text-xl text-blue-100">
-            Siamo qui per aiutarti a realizzare i tuoi progetti. Contattaci per
-            una consulenza personalizzata e gratuita.
+            {t('hero.subtitle')}
           </p>
         </div>
       </div>
@@ -39,13 +43,22 @@ const ContactPage = () => {
                   />
                 </svg>
               </div>
-              <h3 className="mb-2 text-xl font-semibold text-primary">Email</h3>
+              <h3 className="mb-2 text-xl font-semibold text-primary">
+                {tContact('info.email')}
+              </h3>
               <p className="mb-2 text-themeTextSecondary">
-                loriscavallaro22@gmail.com
+                {process.env.NEXT_PUBLIC_COMPANY_EMAIL ||
+                  'loriscavallaro22@gmail.com'}
               </p>
               <p className="text-themeTextSecondary">
-                Ingegnerelorising@gmail.com
+                {process.env.NEXT_PUBLIC_COMPANY_EMAIL_SECONDARY ||
+                  'Ingegnerelorising@gmail.com'}
               </p>
+              {process.env.NEXT_PUBLIC_COMPANY_PEC && (
+                <p className="text-sm text-themeTextSecondary">
+                  PEC: {process.env.NEXT_PUBLIC_COMPANY_PEC}
+                </p>
+              )}
             </div>
 
             {/* Phone */}
@@ -66,9 +79,11 @@ const ContactPage = () => {
                 </svg>
               </div>
               <h3 className="mb-2 text-xl font-semibold text-primary">
-                Telefono
+                {tContact('info.phone')}
               </h3>
-              <p className="text-themeTextSecondary">+39 380 147 7121</p>
+              <p className="text-themeTextSecondary">
+                +39 {process.env.NEXT_PUBLIC_COMPANY_PHONE || '380 147 7121'}
+              </p>
             </div>
 
             {/* Location */}
@@ -95,11 +110,13 @@ const ContactPage = () => {
                 </svg>
               </div>
               <h3 className="mb-2 text-xl font-semibold text-primary">
-                Dove siamo
+                {tContact('info.location')}
               </h3>
-              <p className="text-themeTextSecondary">Sicilia, Italia</p>
+              <p className="text-themeTextSecondary">
+                {tFooter('contact.location')}
+              </p>
               <p className="text-sm text-themeTextSecondary opacity-50">
-                Servizi su tutto il territorio nazionale
+                {tContact('info.nationalService')}
               </p>
             </div>
           </div>
@@ -116,29 +133,29 @@ const ContactPage = () => {
         <div className="container-custom">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="mb-8 text-3xl font-bold text-primary">
-              Informazioni Professionali
+              {t('professionalInfo.title')}
             </h2>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <div className="rounded-lg bg-eliteLight p-6">
                 <h3 className="mb-3 text-xl font-semibold text-primary">
-                  Qualifiche
+                  {t('professionalInfo.qualifications.title')}
                 </h3>
                 <ul className="space-y-2 text-themeTextSecondary opacity-50">
-                  <li>• Laurea Magistrale in Ingegneria Civile e Ambientale</li>
-                  <li>• Specializzazione in Sicurezza sui Luoghi di Lavoro</li>
-                  <li>• Abilitazione Professionale Ingegneri</li>
-                  <li>• Certificazione Efficienza Energetica</li>
+                  <li>• {t('professionalInfo.qualifications.item1')}</li>
+                  <li>• {t('professionalInfo.qualifications.item2')}</li>
+                  <li>• {t('professionalInfo.qualifications.item3')}</li>
+                  <li>• {t('professionalInfo.qualifications.item4')}</li>
                 </ul>
               </div>
               <div className="rounded-lg bg-eliteLight p-6">
                 <h3 className="mb-3 text-xl font-semibold text-primary">
-                  Aree di Competenza
+                  {t('professionalInfo.competencies.title')}
                 </h3>
                 <ul className="space-y-2 text-themeTextSecondary opacity-50">
-                  <li>• Progettazione Strutturale</li>
-                  <li>• Bandi di Gara e Appalti Pubblici</li>
-                  <li>• Diagnosi Energetiche e APE</li>
-                  <li>• Impianti Fotovoltaici</li>
+                  <li>• {t('professionalInfo.competencies.item1')}</li>
+                  <li>• {t('professionalInfo.competencies.item2')}</li>
+                  <li>• {t('professionalInfo.competencies.item3')}</li>
+                  <li>• {t('professionalInfo.competencies.item4')}</li>
                 </ul>
               </div>
             </div>
@@ -149,10 +166,11 @@ const ContactPage = () => {
       {/* Documents Section */}
       <div className="bg-eliteLight py-20">
         <div className="container-custom text-center">
-          <h2 className="mb-8 text-3xl font-bold text-primary">Documenti</h2>
+          <h2 className="mb-8 text-3xl font-bold text-primary">
+            {t('documents.title')}
+          </h2>
           <p className="mb-8 text-lg text-themeTextSecondary">
-            Scarica il curriculum vitae e scopri di più sul nostro background
-            professionale.
+            {t('documents.description')}
           </p>
           <a
             href="/images/portfolio/profile/cv_ing_loris_cavallaro.pdf"
@@ -172,7 +190,7 @@ const ContactPage = () => {
                 d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
               />
             </svg>
-            Scarica CV (PDF)
+            {t('documents.downloadCV')}
           </a>
         </div>
       </div>

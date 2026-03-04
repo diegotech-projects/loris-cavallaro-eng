@@ -571,6 +571,34 @@
       ]
     }
   },
+  "contactPage": {
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "We're here to help you realize your projects. Contact us for a personalized and free consultation."
+    },
+    "professionalInfo": {
+      "title": "Professional Information",
+      "qualifications": {
+        "title": "Qualifications",
+        "item1": "Master's Degree in Civil and Environmental Engineering",
+        "item2": "Specialization in Workplace Safety",
+        "item3": "Professional Engineering License",
+        "item4": "Energy Efficiency Certification"
+      },
+      "competencies": {
+        "title": "Areas of Competence",
+        "item1": "Structural Design",
+        "item2": "Tenders and Public Contracts",
+        "item3": "Energy Diagnostics and APE",
+        "item4": "Photovoltaic Systems"
+      }
+    },
+    "documents": {
+      "title": "Documents",
+      "description": "Download the curriculum vitae and learn more about our professional background.",
+      "downloadCV": "Download CV (PDF)"
+    }
+  },
   "portfolioSection": {
     "title": "Featured Projects",
     "viewAllProjects": "All Projects",

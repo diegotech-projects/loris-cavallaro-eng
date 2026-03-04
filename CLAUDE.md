@@ -60,7 +60,7 @@ This is a **Next.js 13+ App Router** project with internationalization (i18n) su
 - Migrations in `migrations/` directory
 
 ### Current Content Focus
-The template is currently configured as a **medical landing page** but contains engineering project assets in `src/_docs/data/` ready for adaptation to a civil engineering portfolio.
+This is a **civil engineering portfolio** for Loris Cavallaro - Ingegneria & Costruzioni. Assets in `src/_docs/data/` (images, CV PDF).
 
 ### Landing Page Sections
 1. **Heading.tsx** - Hero section with diagonal background
@@ -69,7 +69,7 @@ The template is currently configured as a **medical landing page** but contains 
 4. **BookDoctor.tsx** - Professional profiles
 5. **Reviews.tsx** - Client testimonials
 6. **FAQS.tsx** - FAQ accordion
-7. **Appointment.tsx** - Contact form
+7. **Contacts.tsx** - Contact form (also used in `/contact` page)
 
 ### Theme Configuration
 - Currently using `professional` theme (navy/slate/gold palette)
@@ -89,10 +89,11 @@ Required environment variables:
 - `DATABASE_AUTH_TOKEN` - Database auth (Turso)
 
 ### Development Workflow
-1. Always run `npm run lint` and `npm run check-types` before committing
-2. Use `npm run commit` for properly formatted commit messages
-3. Database changes require running `npm run db:generate` then `npm run db:migrate`
-4. Test theme changes by restarting dev server after config updates
+1. **Always run `npm run lint` after every code edit** to catch import sort, prettier, and ESLint errors before they accumulate
+2. Always run `npm run check-types` before committing
+3. Use `npm run commit` for properly formatted commit messages
+4. Database changes require running `npm run db:generate` then `npm run db:migrate`
+5. Test theme changes by restarting dev server after config updates
 
 ### Testing Strategy
 - Unit tests colocated with components

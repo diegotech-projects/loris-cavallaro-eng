@@ -571,6 +571,34 @@
       ]
     }
   },
+  "contactPage": {
+    "hero": {
+      "title": "Contattaci",
+      "subtitle": "Siamo qui per aiutarti a realizzare i tuoi progetti. Contattaci per una consulenza personalizzata e gratuita."
+    },
+    "professionalInfo": {
+      "title": "Informazioni Professionali",
+      "qualifications": {
+        "title": "Qualifiche",
+        "item1": "Laurea Magistrale in Ingegneria Civile e Ambientale",
+        "item2": "Specializzazione in Sicurezza sui Luoghi di Lavoro",
+        "item3": "Abilitazione Professionale Ingegneri",
+        "item4": "Certificazione Efficienza Energetica"
+      },
+      "competencies": {
+        "title": "Aree di Competenza",
+        "item1": "Progettazione Strutturale",
+        "item2": "Bandi di Gara e Appalti Pubblici",
+        "item3": "Diagnosi Energetiche e APE",
+        "item4": "Impianti Fotovoltaici"
+      }
+    },
+    "documents": {
+      "title": "Documenti",
+      "description": "Scarica il curriculum vitae e scopri di più sul nostro background professionale.",
+      "downloadCV": "Scarica CV (PDF)"
+    }
+  },
   "portfolioSection": {
     "title": "Progetti in evidenza",
     "viewAllProjects": "Tutti i Progetti",
