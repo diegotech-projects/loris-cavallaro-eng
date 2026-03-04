@@ -1,12 +1,6 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import {
-  BsBuilding,
-  BsFacebook,
-  BsInstagram,
-  BsLinkedin,
-  BsTwitter,
-} from 'react-icons/bs';
+import { BsBuilding, BsFacebook, BsLinkedin } from 'react-icons/bs';
 import { MdCopyright, MdEmail, MdLocationOn, MdPhone } from 'react-icons/md';
 
 function FooterComp() {
@@ -26,10 +20,22 @@ function FooterComp() {
           </div>
           <div className="w-[85%] text-gray-300">{t('companyDescription')}</div>
           <div className="flex items-center gap-3 text-lg">
-            <BsFacebook className="cursor-pointer transition-colors hover:text-themeAccent" />
-            <BsLinkedin className="cursor-pointer transition-colors hover:text-themeAccent" />
-            <BsTwitter className="cursor-pointer transition-colors hover:text-themeAccent" />
-            <BsInstagram className="cursor-pointer transition-colors hover:text-themeAccent" />
+            <a
+              href="https://www.facebook.com/share/1AYBqQq7Hm/?mibextid=wwXIfr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-themeAccent"
+            >
+              <BsFacebook />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ing-loris-cavallaro-a70417277?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-themeAccent"
+            >
+              <BsLinkedin />
+            </a>
           </div>
         </div>
 
