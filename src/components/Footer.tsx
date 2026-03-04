@@ -117,6 +117,14 @@ function FooterComp() {
                     'loriscavallaro22@gmail.com'}
                 </span>
               </div>
+              {process.env.NEXT_PUBLIC_COMPANY_PEC && (
+                <div className="flex items-center gap-2">
+                  <MdEmail className="text-themeAccent" />
+                  <span className="text-sm">
+                    PEC: {process.env.NEXT_PUBLIC_COMPANY_PEC}
+                  </span>
+                </div>
+              )}
               <div className="flex items-center gap-2">
                 <MdPhone className="text-themeAccent" />
                 <span>
@@ -133,6 +141,23 @@ function FooterComp() {
       </div>
 
       <hr className="mb-5 mt-10 h-px border-0 bg-whiteTwo/50 md:mt-20" />
+
+      {/* Partner Badge */}
+      <div className="mb-6 flex justify-center">
+        <a
+          href="https://www.edilnet.it/aziendeedili/loris-cavallaro-ingegneria-e-costruzioni-593344/"
+          title="Profilo Edilnet.it di LORIS CAVALLARO INGEGNERIA E COSTRUZIONI"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            style={{ width: '200px' }}
+            src="https://www.edilnet.it/images/banner_partner.jpg"
+            alt="Riconoscimento per LORIS CAVALLARO INGEGNERIA E COSTRUZIONI"
+            title="Azienda iscritta ad Edilnet.it"
+          />
+        </a>
+      </div>
 
       <div className="flex flex-col items-center justify-between pb-5 text-xs md:flex-row md:text-sm lg:text-base">
         <div className="flex items-center text-gray-300">

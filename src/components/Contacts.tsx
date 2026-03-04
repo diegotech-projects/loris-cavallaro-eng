@@ -304,6 +304,11 @@ function Appointment() {
                   {process.env.NEXT_PUBLIC_COMPANY_EMAIL_SECONDARY ||
                     'Ingegnerelorising@gmail.com'}
                 </p>
+                {process.env.NEXT_PUBLIC_COMPANY_PEC && (
+                  <p className="text-sm text-themeTextSecondary">
+                    PEC: {process.env.NEXT_PUBLIC_COMPANY_PEC}
+                  </p>
+                )}
               </div>
             </div>
 

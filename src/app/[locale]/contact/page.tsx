@@ -155,7 +155,7 @@ const ContactPage = () => {
             professionale.
           </p>
           <a
-            href="/src/_docs/data/profilo/cv_ing_loris_cavallaro.pdf"
+            href="/images/portfolio/profile/cv_ing_loris_cavallaro.pdf"
             download
             className="inline-flex items-center rounded-lg bg-eliteNavy px-8 py-4 font-semibold text-whiteOne transition-colors hover:bg-eliteDark"
           >
