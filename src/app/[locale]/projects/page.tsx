@@ -1,9 +1,10 @@
 'use client';
 
+import { AnimatePresence } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 
 import { Reveal } from '@/components/landing/motion';
 import {
@@ -57,18 +58,8 @@ const energyCards = [
 const ProjectsPage = () => {
   const t = useTranslations('projectsPage');
   const tSheet = useTranslations('landing.sheet');
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = (project: Project) => {
-    setSelectedProject(project);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedProject(null);
-  };
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const closeModal = useCallback(() => setOpenIndex(null), []);
 
   const projectsText = ProjectsData() as Omit<Project, 'images'>[];
   const projects: Project[] = projectsText
@@ -141,7 +132,7 @@ const ProjectsPage = () => {
                 <NumberedList items={project.features} prefix={code} />
                 <button
                   type="button"
-                  onClick={() => openModal(project)}
+                  onClick={() => setOpenIndex(index)}
                   className="group mt-10 inline-flex items-center gap-3 rounded-full border border-bone/30 px-6 py-3 text-sm font-medium transition-colors hover:border-bone hover:bg-bone hover:text-ink"
                 >
                   {t('viewProject')}
@@ -204,13 +195,16 @@ const ProjectsPage = () => {
         button={t('cta.button')}
       />
 
-      {selectedProject && (
-        <ProjectModal
-          project={selectedProject}
-          isOpen={isModalOpen}
-          onClose={closeModal}
-        />
-      )}
+      <AnimatePresence>
+        {openIndex !== null && projects[openIndex] && (
+          <ProjectModal
+            key={projects[openIndex]!.id}
+            project={projects[openIndex]!}
+            code={`P.${String(openIndex + 1).padStart(2, '0')}`}
+            onClose={closeModal}
+          />
+        )}
+      </AnimatePresence>
     </main>
   );
 };

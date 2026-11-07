@@ -75,6 +75,13 @@
         "title": "Consulenza Tecnica",
         "description": "Perizie, valutazioni tecniche e supporto specialistico"
       }
+    },
+    "meta": {
+      "name": "Nome",
+      "role": "Ruolo",
+      "location": "Sede",
+      "mission": "La nostra missione",
+      "qualifications": "Formazione e specializzazioni"
     }
   },
   "reviews": {

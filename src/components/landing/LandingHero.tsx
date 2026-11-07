@@ -64,7 +64,7 @@ const LandingHero = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative isolate flex h-[calc(100svh-61px)] min-h-[640px] items-end overflow-hidden bg-ink text-bone lg:h-[calc(100svh-69px)]"
+      className="relative isolate flex min-h-[calc(100svh-61px)] items-end overflow-hidden bg-ink pt-20 text-bone lg:h-[calc(100svh-69px)] lg:min-h-[640px] lg:pt-0"
     >
       {/* Background: plain crossfade, slow push-in */}
       <motion.div
@@ -110,12 +110,12 @@ const LandingHero = () => {
       ))}
 
       <motion.div
-        className="container-custom w-full pb-14 md:pb-20"
+        className="container-custom w-full pb-10 md:pb-20"
         style={{ y: contentY, opacity: contentOpacity }}
       >
         <motion.p
           {...enter(0.3)}
-          className="mb-8 text-xs font-medium uppercase tracking-[0.3em] text-bone/60 md:text-sm"
+          className="mb-6 text-xs font-medium uppercase tracking-[0.3em] text-bone/60 md:mb-8 md:text-sm"
         >
           {t('eyebrow')}
         </motion.p>
@@ -149,12 +149,12 @@ const LandingHero = () => {
           ))}
         </h1>
 
-        <div className="mt-12 flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+        <div className="mt-8 flex flex-col gap-8 md:mt-12 md:gap-10 lg:flex-row lg:items-end lg:justify-between">
           <motion.div {...enter(0.9)}>
             <p className="max-w-md text-lg text-bone/70 md:text-xl">
               {t('subtitle')}
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap gap-3 md:mt-8">
               <a
                 href="#linee"
                 className="rounded-full bg-bone px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-brick hover:text-bone"
@@ -182,10 +182,10 @@ const LandingHero = () => {
               <dd className="border-b border-bone/25 px-4 py-3 tabular-nums">
                 {line.number} / 0{commercialLines.length}
               </dd>
-              <dt className="border-b border-r border-bone/25 px-4 py-3 text-bone/50">
+              <dt className="border-r border-bone/25 px-4 py-3 text-bone/50 sm:border-b">
                 {tSheet('subject')}
               </dt>
-              <dd className="relative h-[42px] overflow-hidden border-b border-bone/25">
+              <dd className="relative h-[42px] overflow-hidden border-bone/25 sm:border-b">
                 <AnimatePresence mode="wait" initial={false}>
                   <motion.span
                     key={line.key}
@@ -199,10 +199,10 @@ const LandingHero = () => {
                   </motion.span>
                 </AnimatePresence>
               </dd>
-              <dt className="border-r border-bone/25 px-4 py-3 text-bone/50">
+              <dt className="hidden border-r border-bone/25 px-4 py-3 text-bone/50 sm:block">
                 {tSheet('scale')}
               </dt>
-              <dd className="flex justify-between px-4 py-3 tabular-nums">
+              <dd className="hidden justify-between px-4 py-3 tabular-nums sm:flex">
                 <span>1:100</span>
                 <span className="text-bone/50">
                   {tSheet('date')} {new Date().getFullYear()}

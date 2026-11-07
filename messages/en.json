@@ -75,6 +75,13 @@
         "title": "Technical Consulting",
         "description": "Expertise, technical evaluations and specialized support"
       }
+    },
+    "meta": {
+      "name": "Name",
+      "role": "Role",
+      "location": "Based in",
+      "mission": "Our mission",
+      "qualifications": "Education and specialisations"
     }
   },
   "reviews": {
