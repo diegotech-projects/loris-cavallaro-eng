@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import React, { useCallback, useEffect, useState } from 'react';
 
 import type { Project } from '@/data/types';
+import { Link as LocalizedLink } from '@/i18n/navigation';
 
 interface ProjectModalProps {
   project: Project;
@@ -59,7 +60,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-ink/80 p-4 backdrop-blur-sm"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
@@ -70,24 +71,24 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
       tabIndex={-1}
     >
       <div
-        className="max-h-[90vh] w-full max-w-6xl overflow-y-auto rounded-lg bg-whiteOne"
+        className="max-h-[90vh] w-full max-w-6xl overflow-y-auto border border-bone/15 bg-ink text-bone"
         role="dialog"
         aria-modal="true"
       >
         {/* Header */}
-        <div className="flex items-center justify-between border-b p-6">
+        <div className="flex items-center justify-between border-b border-bone/15 p-6">
           <div>
-            <span className="rounded-full bg-eliteGold px-3 py-1 text-sm font-medium text-whiteOne">
+            <span className="font-display text-xs uppercase tracking-[0.25em] text-brick">
               {project.category}
             </span>
-            <h2 className="mt-2 text-2xl font-bold text-primary">
+            <h2 className="mt-2 font-display text-3xl font-semibold tracking-[-0.03em] text-bone">
               {project.title}
             </h2>
           </div>
           <button
             type="button"
             onClick={onClose}
-            className="text-gray-500 transition-colors hover:text-gray-700"
+            className="text-bone/60 transition-colors hover:text-bone"
           >
             <X size={24} />
           </button>
@@ -103,7 +104,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                   alt={`${project.title} - ${currentImageIndex + 1}`}
                   width={600}
                   height={400}
-                  className="h-80 w-full rounded-lg object-cover"
+                  className="h-80 w-full object-cover"
                 />
               )}
 
@@ -141,10 +142,10 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                       type="button"
                       key={`thumbnail-${project.id}-${imageSrc}`}
                       onClick={() => goToImage(index)}
-                      className={`size-16 overflow-hidden rounded-lg border-2 transition-colors ${
+                      className={`size-16 overflow-hidden border transition-colors ${
                         index === currentImageIndex
-                          ? 'border-eliteGold'
-                          : 'border-gray-300'
+                          ? 'border-bone'
+                          : 'border-bone/20'
                       }`}
                     >
                       <Image
@@ -164,7 +165,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           {/* Project Details */}
           <div className="space-y-6">
             <div>
-              <h3 className="mb-3 text-xl font-semibold text-primary">
+              <h3 className="mb-3 font-display text-xl font-semibold text-bone">
                 {t('projectDescription')}
               </h3>
               <p className="leading-relaxed text-themeTextSecondary">
@@ -173,7 +174,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             </div>
 
             <div>
-              <h3 className="mb-3 text-xl font-semibold text-primary">
+              <h3 className="mb-3 font-display text-xl font-semibold text-bone">
                 {t('mainFeatures')}
               </h3>
               <ul className="space-y-3">
@@ -182,15 +183,15 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                     key={`feature-${feature.slice(0, 20)}`}
                     className="flex items-start text-themeTextSecondary"
                   >
-                    <span className="mr-3 mt-2 size-2 shrink-0 rounded-full bg-eliteGold" />
+                    <span className="mr-3 mt-2 size-2 shrink-0 rounded-full bg-brick" />
                     <span>{feature}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="rounded-lg bg-eliteLight p-4">
-              <h3 className="mb-2 text-lg font-semibold text-primary">
+            <div className="border border-bone/15 p-4">
+              <h3 className="mb-2 font-display text-lg font-semibold text-bone">
                 {t('technicalInfo')}
               </h3>
               <div className="grid grid-cols-2 gap-4 text-sm">
@@ -214,12 +215,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             </div>
 
             <div className="flex gap-4 pt-4">
-              <button
-                type="button"
-                className="flex-1 rounded-lg border border-eliteGray px-6 py-3 font-medium text-eliteSlate transition-colors hover:bg-whiteTwo"
+              <LocalizedLink
+                href="/contact#contact-form"
+                className="flex-1 rounded-full bg-bone px-6 py-3 text-center text-sm font-semibold text-ink transition-colors hover:bg-brick hover:text-bone"
               >
                 {t('contactUs')}
-              </button>
+              </LocalizedLink>
             </div>
           </div>
         </div>
