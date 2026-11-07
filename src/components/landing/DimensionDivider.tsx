@@ -37,7 +37,7 @@ const DimensionDivider = ({ label }: DimensionDividerProps) => (
       <span className="absolute left-0 h-px w-3 -translate-x-1/2 -rotate-45 bg-bone/60" />
       <span className="absolute right-0 h-px w-3 translate-x-1/2 -rotate-45 bg-bone/60" />
       <motion.span
-        className="absolute left-1/2 -translate-x-1/2 bg-ink px-4 font-display text-[11px] uppercase tracking-[0.25em] text-bone/50"
+        className="absolute left-1/2 -translate-x-1/2 whitespace-nowrap bg-ink px-3 font-display text-[10px] uppercase tracking-[0.16em] text-bone/50 md:px-4 md:text-[11px] md:tracking-[0.25em]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}

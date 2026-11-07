@@ -28,6 +28,7 @@ type SolutionsPlateProps = {
 const SolutionsPlate = ({ line, items }: SolutionsPlateProps) => {
   const t = useTranslations(`lines.${line.key}`);
   const tSheet = useTranslations('landing.sheet');
+  const tShowcase = useTranslations('landing.showcase');
   const plate = plates[line.key];
   const sheetRef = useRef<HTMLDivElement>(null);
   const inView = useInView(sheetRef, { once: true, margin: '-15% 0px' });
@@ -42,11 +43,12 @@ const SolutionsPlate = ({ line, items }: SolutionsPlateProps) => {
     <div className="container-custom mt-24 md:mt-40">
       <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
         {/* Drawing */}
-        <div className="lg:col-span-7">
+        <div className="min-w-0 lg:col-span-7">
           <div className="lg:sticky lg:top-28">
             <div
               ref={sheetRef}
-              className="relative border border-bone/15 p-3 md:p-6"
+              data-lenis-prevent-horizontal
+              className="relative overflow-x-auto border border-bone/15 p-3 md:overflow-visible md:p-6"
               style={{
                 backgroundImage:
                   'linear-gradient(rgba(238,233,224,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(238,233,224,0.04) 1px, transparent 1px)',
@@ -55,7 +57,7 @@ const SolutionsPlate = ({ line, items }: SolutionsPlateProps) => {
             >
               <svg
                 viewBox="0 0 1000 560"
-                className="w-full"
+                className="w-full min-w-[640px] md:min-w-0"
                 role="img"
                 aria-label={t('plate.title')}
               >
@@ -176,17 +178,22 @@ const SolutionsPlate = ({ line, items }: SolutionsPlateProps) => {
                 })}
               </svg>
             </div>
-            <div className="flex justify-between border-x border-b border-bone/15 px-4 py-3 font-display text-[11px] uppercase tracking-[0.18em] text-bone/50">
+            <div className="flex flex-wrap justify-between gap-x-6 gap-y-1 border-x border-b border-bone/15 px-4 py-3 font-display text-[11px] uppercase tracking-[0.18em] text-bone/50">
               <span>
                 {tSheet('short')} {line.number}.2 — {t('plate.title')}
               </span>
-              <span>{tSheet('scale')} 1:100</span>
+              <span>
+                {tSheet('scale')} 1:100
+                <span className="ml-3 text-bone/30 md:hidden">
+                  ← {tShowcase('dragShort')} →
+                </span>
+              </span>
             </div>
           </div>
         </div>
 
         {/* Legend */}
-        <div className="lg:col-span-5">
+        <div className="min-w-0 lg:col-span-5">
           <p className="mb-5 text-xs font-medium uppercase tracking-[0.3em] text-bone/50 md:text-sm">
             {t('plate.legend')}
           </p>

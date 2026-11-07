@@ -305,12 +305,12 @@ const LineShowcase = ({ line }: LineProps) => {
         <SplitText
           as="h2"
           text={t('title')}
-          className="block font-display text-6xl font-semibold leading-[0.92] tracking-[-0.045em] md:text-8xl xl:text-[9rem]"
+          className="block font-display text-[11vw] font-semibold leading-[0.92] tracking-[-0.045em] sm:text-6xl md:text-8xl xl:text-[9rem]"
         />
         <SplitText
           text={`${tShowcase('turnkey')}.`}
           delay={0.15}
-          className="block font-display text-6xl font-semibold leading-[0.92] tracking-[-0.045em] text-bone/25 md:text-8xl xl:text-[9rem]"
+          className="block font-display text-[11vw] font-semibold leading-[0.92] tracking-[-0.045em] text-bone/25 sm:text-6xl md:text-8xl xl:text-[9rem]"
         />
         <Reveal delay={0.2}>
           <p className="mt-10 max-w-xl text-xl text-bone/70 md:text-2xl">

@@ -124,11 +124,43 @@ function Appointment() {
         </p>
       </div>
 
-      <div className="grid gap-px border border-bone/15 bg-bone/15 lg:grid-cols-12">
+      <div className="grid gap-px border border-bone/15 bg-bone/15">
+        {/* Contact details: same two columns as the form below */}
+        <div className="order-2 grid gap-px bg-bone/15 md:order-none md:grid-cols-2">
+          <div className={cell}>
+            <p className={labelClass}>
+              <span>{t('info.email')}</span>
+              <span>E</span>
+            </p>
+            <p className="font-display text-bone">
+              {process.env.NEXT_PUBLIC_COMPANY_EMAIL ||
+                'loriscavallaro22@gmail.com'}
+            </p>
+            <p className="font-display text-bone/60">
+              {process.env.NEXT_PUBLIC_COMPANY_EMAIL_SECONDARY ||
+                'Ingegnerelorising@gmail.com'}
+            </p>
+            {process.env.NEXT_PUBLIC_COMPANY_PEC && (
+              <p className="mt-1 text-sm text-bone/50">
+                PEC: {process.env.NEXT_PUBLIC_COMPANY_PEC}
+              </p>
+            )}
+          </div>
+          <div className={cell}>
+            <p className={labelClass}>
+              <span>{t('info.phone')}</span>
+              <span>T</span>
+            </p>
+            <p className="font-display text-bone">
+              +39 {process.env.NEXT_PUBLIC_COMPANY_PHONE || '380 147 7121'}
+            </p>
+          </div>
+        </div>
+
         {/* Request form */}
         <form
           onSubmit={handleSubmit}
-          className="grid gap-px bg-bone/15 md:grid-cols-2 lg:col-span-8"
+          className="order-1 grid gap-px bg-bone/15 md:order-none md:grid-cols-2"
         >
           <div className={cell}>
             {focusBar}
@@ -309,54 +341,20 @@ function Appointment() {
           </button>
         </form>
 
-        {/* Contact details */}
-        <div className="grid content-start gap-px bg-bone/15 lg:col-span-4">
-          <div className={cell}>
-            <p className={labelClass}>
-              <span>{t('info.email')}</span>
-              <span>E</span>
-            </p>
-            <p className="font-display text-bone">
-              {process.env.NEXT_PUBLIC_COMPANY_EMAIL ||
-                'loriscavallaro22@gmail.com'}
-            </p>
-            <p className="font-display text-bone/60">
-              {process.env.NEXT_PUBLIC_COMPANY_EMAIL_SECONDARY ||
-                'Ingegnerelorising@gmail.com'}
-            </p>
-            {process.env.NEXT_PUBLIC_COMPANY_PEC && (
-              <p className="mt-1 text-sm text-bone/50">
-                PEC: {process.env.NEXT_PUBLIC_COMPANY_PEC}
-              </p>
-            )}
-          </div>
-          <div className={cell}>
-            <p className={labelClass}>
-              <span>{t('info.phone')}</span>
-              <span>T</span>
-            </p>
-            <p className="font-display text-bone">
-              +39 {process.env.NEXT_PUBLIC_COMPANY_PHONE || '380 147 7121'}
-            </p>
-          </div>
-          <div className={cell}>
-            <p className={labelClass}>
-              <span>{t('info.location')}</span>
-              <span>L</span>
-            </p>
-            <p className="font-display text-bone">
-              {tFooter('contact.location')}
-            </p>
-            <p className="text-sm text-bone/50">{t('info.nationalService')}</p>
-          </div>
-          <div className={cell}>
-            <p className={labelClass}>
-              <span>{t('info.serviceArea')}</span>
-              <span>1:500.000</span>
-            </p>
-            <div className="mt-2 grayscale-[0.6]">
-              <ContactMap />
-            </div>
+        {/* Service area map, full width */}
+        <div className="order-3 bg-ink md:order-none">
+          <p
+            className={`${labelClass} mb-0 border-b border-bone/15 px-5 py-4 md:px-6`}
+          >
+            <span>
+              {t('info.location')} — {tFooter('contact.location')}
+            </span>
+            <span className="hidden sm:inline">
+              {t('info.nationalService')}
+            </span>
+          </p>
+          <div className="h-64 grayscale-[0.6] md:h-80">
+            <ContactMap />
           </div>
         </div>
       </div>
