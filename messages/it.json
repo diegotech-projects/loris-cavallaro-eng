@@ -137,7 +137,12 @@
       "vatNumber": "P.IVA: [DA INSERIRE]",
       "privacy": "Privacy Policy",
       "cookies": "Cookie Policy"
-    }
+    },
+    "lines": {
+      "title": "Linee chiavi in mano"
+    },
+    "backToTop": "Torna su",
+    "partner": "Partner Edilnet.it"
   },
   "contact": {
     "form": {
@@ -223,7 +228,8 @@
       "message": "Questo sito utilizza cookie tecnici necessari per il corretto funzionamento del sito e per salvare le tue preferenze. Non utilizziamo cookie di tracciamento o pubblicitari.",
       "accept": "Accetta",
       "learnMore": "Scopri di più",
-      "settings": "Impostazioni Cookie"
+      "settings": "Impostazioni Cookie",
+      "reject": "Rifiuta"
     },
     "settings": {
       "title": "Impostazioni Cookie",

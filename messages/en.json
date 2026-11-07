@@ -137,7 +137,12 @@
       "vatNumber": "VAT: [TO BE INSERTED]",
       "privacy": "Privacy Policy",
       "cookies": "Cookie Policy"
-    }
+    },
+    "lines": {
+      "title": "Turnkey lines"
+    },
+    "backToTop": "Back to top",
+    "partner": "Edilnet.it partner"
   },
   "contact": {
     "form": {
@@ -223,7 +228,8 @@
       "message": "This website uses technical cookies necessary for the proper functioning of the site and to save your preferences. We do not use tracking or advertising cookies.",
       "accept": "Accept",
       "learnMore": "Learn More",
-      "settings": "Cookie Settings"
+      "settings": "Cookie Settings",
+      "reject": "Reject"
     },
     "settings": {
       "title": "Cookie Settings",

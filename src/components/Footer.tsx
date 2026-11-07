@@ -1,210 +1,201 @@
-import Link from 'next/link';
+'use client';
+
+import { motion } from 'framer-motion';
+import { ArrowUp, ArrowUpRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { BsBuilding, BsFacebook, BsLinkedin } from 'react-icons/bs';
-import { MdCopyright, MdEmail, MdLocationOn, MdPhone } from 'react-icons/md';
+
+import { commercialLines } from '@/data/lines';
+import { Link as LocalizedLink } from '@/i18n/navigation';
+
+const navItems = [
+  { key: 'home', href: '/' },
+  { key: 'about', href: '/about' },
+  { key: 'services', href: '/services' },
+  { key: 'projects', href: '/projects' },
+  { key: 'faq', href: '/faq' },
+  { key: 'contact', href: '/contact' },
+] as const;
+
+const socials = [
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/ing-loris-cavallaro-a70417277',
+  },
+  {
+    label: 'Facebook',
+    href: 'https://www.facebook.com/share/1AYBqQq7Hm/',
+  },
+];
+
+const wordmark = 'CAVALLARO'.split('');
+
+const columnTitle =
+  'mb-5 font-display text-[11px] uppercase tracking-[0.25em] text-bone/45';
+const linkClass =
+  'group flex items-baseline gap-3 py-1.5 text-bone/75 transition-colors hover:text-bone';
 
 function FooterComp() {
   const t = useTranslations('footer');
   const tNav = useTranslations('navigation');
+  const tLines = useTranslations('lines');
   const currentYear = new Date().getFullYear();
+  const name = process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro';
+  const brand = process.env.NEXT_PUBLIC_SIGLA || 'Ingegneria & Costruzioni';
+  const email = process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'loriscavallaro22@gmail.com';
+  const phone = process.env.NEXT_PUBLIC_COMPANY_PHONE || '380 147 7121';
+  const vat = t('legal.vatNumber')
+    .replace('[DA INSERIRE]', process.env.NEXT_PUBLIC_VAT_NUMBER || '[DA INSERIRE]')
+    .replace(
+      '[TO BE INSERTED]',
+      process.env.NEXT_PUBLIC_VAT_NUMBER || '[TO BE INSERTED]',
+    );
 
   return (
-    <div className="container-custom pt-10 text-sm text-bone md:pt-20 md:text-base">
-      <div className="flex flex-col items-start justify-between gap-8 lg:flex-row">
-        {/* Company Info */}
-        <div className="flex flex-col gap-5 lg:w-[35%]">
-          <div className="flex items-center gap-2 text-xl font-bold 2xl:text-2xl">
-            <BsBuilding className="text-themeAccent" />
-            {process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} -{' '}
-            {process.env.NEXT_PUBLIC_SIGLA || 'Ingegneria & Costruzioni'}
-          </div>
-          <div className="w-[85%] text-gray-300">{t('companyDescription')}</div>
-          <div className="flex items-center gap-3 text-lg">
-            <a
-              href="https://www.facebook.com/share/1AYBqQq7Hm/?mibextid=wwXIfr"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-colors hover:text-themeAccent"
-            >
-              <BsFacebook />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/ing-loris-cavallaro-a70417277?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-colors hover:text-themeAccent"
-            >
-              <BsLinkedin />
-            </a>
+    <footer className="container-custom pt-20 text-bone md:pt-28">
+      <div className="grid gap-14 pb-16 lg:grid-cols-12 lg:gap-16 md:pb-24">
+        {/* Studio */}
+        <div className="lg:col-span-4">
+          <p className="font-display text-lg font-semibold tracking-[0.18em]">
+            CAVALLARO
+          </p>
+          <p className="mt-1 text-[10px] uppercase tracking-[0.28em] text-bone/45">
+            Ingegneria e Costruzioni
+          </p>
+          <p className="mt-8 max-w-sm leading-relaxed text-bone/60">
+            {t('companyDescription')}
+          </p>
+          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
+            {socials.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-1.5 font-display text-sm text-bone/75 transition-colors hover:text-bone"
+              >
+                {social.label}
+                <ArrowUpRight className="size-3.5 transition-transform group-hover:rotate-45" />
+              </a>
+            ))}
           </div>
         </div>
 
-        {/* Footer Links Grid */}
-        <div className="grid w-full grid-cols-2 gap-8 lg:w-3/5 lg:grid-cols-3">
-          {/* Quick Links */}
-          <div>
-            <h3 className="mb-4 text-lg font-semibold text-white">
-              {t('navigation.title')}
-            </h3>
-            <div className="space-y-2 text-gray-300">
-              <Link
-                href="/"
-                className="block transition-colors hover:text-themeAccent"
-              >
-                {tNav('home')}
-              </Link>
-              <Link
-                href="/about"
-                className="block transition-colors hover:text-themeAccent"
-              >
-                {tNav('about')}
-              </Link>
-              <Link
-                href="/services"
-                className="block transition-colors hover:text-themeAccent"
-              >
-                {tNav('services')}
-              </Link>
-              <Link
-                href="/projects"
-                className="block transition-colors hover:text-themeAccent"
-              >
-                {tNav('projects')}
-              </Link>
-              <Link
-                href="/faq"
-                className="block transition-colors hover:text-themeAccent"
-              >
-                {tNav('faq')}
-              </Link>
-              <Link
-                href="/contact"
-                className="block transition-colors hover:text-themeAccent"
-              >
-                {tNav('contact')}
-              </Link>
-            </div>
-          </div>
+        <div className="grid gap-10 sm:grid-cols-3 lg:col-span-8">
+          {/* Navigation */}
+          <nav aria-label={t('navigation.title')}>
+            <p className={columnTitle}>{t('navigation.title')}</p>
+            {navItems.map((item, index) => (
+              <LocalizedLink key={item.key} href={item.href} className={linkClass}>
+                <span className="w-5 font-display text-[10px] tabular-nums text-bone/35 transition-colors group-hover:text-brick">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                {tNav(item.key)}
+              </LocalizedLink>
+            ))}
+          </nav>
 
-          {/* Services */}
+          {/* Turnkey lines */}
           <div>
-            <h3 className="mb-4 text-lg font-semibold text-white">
+            <p className={columnTitle}>{t('lines.title')}</p>
+            {commercialLines.map((line) => (
+              <LocalizedLink
+                key={line.key}
+                href={`/#${line.slug}`}
+                className={linkClass}
+              >
+                <span
+                  className={`inline-block size-1.5 shrink-0 translate-y-[-2px] rounded-full ${line.accentBg}`}
+                />
+                {tLines(`${line.key}.title`)}
+              </LocalizedLink>
+            ))}
+            <LocalizedLink href="/services" className={`${linkClass} mt-3`}>
+              <ArrowUpRight className="size-3.5 shrink-0 text-bone/35 transition-all group-hover:rotate-45 group-hover:text-brick" />
               {t('services.title')}
-            </h3>
-            <div className="space-y-2 text-gray-300">
-              <p className="cursor-pointer transition-colors hover:text-themeAccent">
-                {t('services.structuralDesign')}
-              </p>
-              <p className="cursor-pointer transition-colors hover:text-themeAccent">
-                {t('services.projectManagement')}
-              </p>
-              <p className="cursor-pointer transition-colors hover:text-themeAccent">
-                {t('services.urbanPlanning')}
-              </p>
-              <p className="cursor-pointer transition-colors hover:text-themeAccent">
-                {t('services.energyEfficiency')}
-              </p>
-              <p className="cursor-pointer transition-colors hover:text-themeAccent">
-                {t('services.consulting')}
-              </p>
-            </div>
+            </LocalizedLink>
           </div>
 
-          {/* Contact Info */}
+          {/* Contacts */}
           <div>
-            <h3 className="mb-4 text-lg font-semibold text-white">
-              {t('contact.title')}
-            </h3>
-            <div className="space-y-3 text-gray-300">
-              <div className="flex items-center gap-2">
-                <MdEmail className="text-themeAccent" />
-                <span className="text-sm">
-                  {process.env.NEXT_PUBLIC_COMPANY_EMAIL ||
-                    'loriscavallaro22@gmail.com'}
-                </span>
-              </div>
-              {process.env.NEXT_PUBLIC_COMPANY_PEC && (
-                <div className="flex items-center gap-2">
-                  <MdEmail className="text-themeAccent" />
-                  <span className="text-sm">
-                    PEC: {process.env.NEXT_PUBLIC_COMPANY_PEC}
-                  </span>
-                </div>
-              )}
-              <div className="flex items-center gap-2">
-                <MdPhone className="text-themeAccent" />
-                <span>
-                  +39 {process.env.NEXT_PUBLIC_COMPANY_PHONE || '380 147 7121'}
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MdLocationOn className="text-themeAccent" />
-                <span>{t('contact.location')}</span>
-              </div>
-            </div>
+            <p className={columnTitle}>{t('contact.title')}</p>
+            <a href={`mailto:${email}`} className={`${linkClass} break-all`}>
+              {email}
+            </a>
+            {process.env.NEXT_PUBLIC_COMPANY_PEC && (
+              <p className="py-1.5 text-sm text-bone/50">
+                PEC: {process.env.NEXT_PUBLIC_COMPANY_PEC}
+              </p>
+            )}
+            <a href={`tel:+39${phone.replace(/\s/g, '')}`} className={linkClass}>
+              +39 {phone}
+            </a>
+            <p className="py-1.5 text-bone/50">{t('contact.location')}</p>
+            <LocalizedLink
+              href="/contact#contact-form"
+              className="group mt-5 inline-flex items-center gap-2 rounded-full bg-bone px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-brick hover:text-bone"
+            >
+              {tNav('requestQuote')}
+              <ArrowUpRight className="size-4 transition-transform group-hover:rotate-45" />
+            </LocalizedLink>
           </div>
         </div>
       </div>
 
-      <hr className="mb-5 mt-10 h-px border-0 bg-whiteTwo/50 md:mt-20" />
-
-      {/* Partner Badge */}
-      <div className="mb-6 flex justify-center">
-        <a
-          href="https://www.edilnet.it/aziendeedili/loris-cavallaro-ingegneria-e-costruzioni-593344/"
-          title="Profilo Edilnet.it di LORIS CAVALLARO INGEGNERIA E COSTRUZIONI"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            style={{ width: '200px' }}
-            src="https://www.edilnet.it/images/banner_partner.jpg"
-            alt="Riconoscimento per LORIS CAVALLARO INGEGNERIA E COSTRUZIONI"
-            title="Azienda iscritta ad Edilnet.it"
-          />
-        </a>
+      {/* Oversized outlined wordmark */}
+      <div
+        aria-hidden
+        className="flex select-none justify-between overflow-hidden border-t border-bone/10 pt-6"
+      >
+        {wordmark.map((letter, index) => (
+          <motion.span
+            // eslint-disable-next-line react/no-array-index-key
+            key={`${letter}-${index}`}
+            className="font-display text-[12.5vw] font-semibold leading-[0.8] tracking-[-0.04em] text-transparent [-webkit-text-stroke:1px_rgba(238,233,224,0.28)] 2xl:text-[11.5rem]"
+            initial={{ y: '100%' }}
+            whileInView={{ y: '0%' }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1], delay: index * 0.05 }}
+          >
+            {letter}
+          </motion.span>
+        ))}
       </div>
 
-      <div className="flex flex-col items-center justify-between pb-5 text-xs md:flex-row md:text-sm lg:text-base">
-        <div className="flex items-center text-gray-300">
-          Copyright{' '}
-          <span className="mx-1">
-            <MdCopyright />
-          </span>{' '}
-          {currentYear}{' '}
-          {process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'} -{' '}
-          {process.env.NEXT_PUBLIC_SIGLA || 'Ingegneria & Costruzioni'}.{' '}
-          {t('legal.copyright')}
-        </div>
-        <div className="mt-2 flex items-center gap-1 text-xs text-gray-400 md:mt-0">
-          <span>
-            {t('legal.vatNumber')
-              .replace(
-                '[DA INSERIRE]',
-                process.env.NEXT_PUBLIC_VAT_NUMBER || '[DA INSERIRE]',
-              )
-              .replace(
-                '[TO BE INSERTED]',
-                process.env.NEXT_PUBLIC_VAT_NUMBER || '[TO BE INSERTED]',
-              )}
-          </span>
-          <span>|</span>
-          <Link
-            href="/privacy"
-            className="transition-colors hover:text-themeAccent"
-          >
+      {/* Title-block bar */}
+      <div className="mt-6 grid border border-bone/15 font-display text-[11px] uppercase tracking-[0.16em] text-bone/50 md:grid-cols-[1fr_auto_auto]">
+        <p className="px-4 py-3 normal-case tracking-normal md:border-r md:border-bone/15">
+          © {currentYear} {name} – {brand}. {t('legal.copyright')}{' '}
+          <span className="ml-2 tabular-nums text-bone/35">{vat}</span>
+        </p>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-1 border-t border-bone/15 px-4 py-3 md:border-r md:border-t-0">
+          <LocalizedLink href="/privacy" className="hover:text-bone">
             {t('legal.privacy')}
-          </Link>
-          <span>|</span>
-          <Link
-            href="/cookie-policy"
-            className="transition-colors hover:text-themeAccent"
-          >
+          </LocalizedLink>
+          <LocalizedLink href="/cookie-policy" className="hover:text-bone">
             {t('legal.cookies')}
-          </Link>
+          </LocalizedLink>
+          <a
+            href="https://www.edilnet.it/aziendeedili/loris-cavallaro-ingegneria-e-costruzioni-593344/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Profilo Edilnet.it di LORIS CAVALLARO INGEGNERIA E COSTRUZIONI"
+            className="inline-flex items-center gap-1 hover:text-bone"
+          >
+            {t('partner')}
+            <ArrowUpRight className="size-3" />
+          </a>
         </div>
+        <button
+          type="button"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="group flex items-center justify-between gap-3 border-t border-bone/15 px-4 py-3 uppercase transition-colors hover:bg-bone hover:text-ink md:border-t-0"
+        >
+          {t('backToTop')}
+          <ArrowUp className="size-3.5 transition-transform group-hover:-translate-y-0.5" />
+        </button>
       </div>
-    </div>
+      <div className="h-6" />
+    </footer>
   );
 }
 
