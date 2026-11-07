@@ -9,7 +9,7 @@ function FooterComp() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="container-custom pt-10 text-sm text-whiteOne md:pt-20 md:text-base">
+    <div className="container-custom pt-10 text-sm text-bone md:pt-20 md:text-base">
       <div className="flex flex-col items-start justify-between gap-8 lg:flex-row">
         {/* Company Info */}
         <div className="flex flex-col gap-5 lg:w-[35%]">

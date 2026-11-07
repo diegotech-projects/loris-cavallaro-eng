@@ -1,10 +1,23 @@
 import '@/styles/global.css';
 
 import type { Metadata } from 'next';
+import { Inter, Inter_Tight } from 'next/font/google';
 import Script from 'next/script';
 import React from 'react';
 
 import { AppConfig } from '@/utils/AppConfig';
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
+const interTight = Inter_Tight({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter-tight',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -110,7 +123,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="it" className={`${inter.variable} ${interTight.variable}`}>
       <body className="min-h-screen bg-themeBackground">
         {children}
         {/* Google Ads / Google Tag */}

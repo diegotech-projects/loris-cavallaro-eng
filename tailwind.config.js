@@ -52,14 +52,40 @@ const themes = {
     textPrimary: '#ffffff', // White text for contrast on dark
     textSecondary: '#b8c2d1', // Light grey for secondary text (gray-300)
   },
+  noir: {
+    primary: '#f2efe9', // Bone white for primary elements
+    secondary: '#c6ff3d', // Acid lime for buttons and links
+    accent: '#c6ff3d', // Acid lime highlights
+    background: '#0a0a0b', // Graphite black page background
+    surface: '#141416', // Raised cards
+    surfaceLight: '#1c1c1f', // Subtle alternate sections
+    textPrimary: '#f2efe9', // Bone white text
+    textSecondary: '#9a9a9f', // Muted grey text
+  },
 };
 
 // Choose your active theme here
-const activeTheme = themes.minimalDark; // Switched to minimal theme
+const activeTheme = themes.noir;
 
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    fontFamily: {
+      sans: [
+        'var(--font-inter)',
+        'ui-sans-serif',
+        'system-ui',
+        '-apple-system',
+        'sans-serif',
+      ],
+      display: [
+        'var(--font-inter-tight)',
+        'var(--font-inter)',
+        'ui-sans-serif',
+        'system-ui',
+        'sans-serif',
+      ],
+    },
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',
@@ -71,9 +97,18 @@ module.exports = {
       '4xl': '2.25rem',
       '5xl': '3rem',
       '6xl': '4rem',
+      '7xl': '5rem',
+      '8xl': '6.5rem',
     },
     extend: {
       colors: {
+        // Noir palette: one bold accent per commercial line
+        ink: '#0a0a0b',
+        bone: '#f2efe9',
+        volt: '#c6ff3d',
+        lilac: '#a99bff',
+        ember: '#ff6a3d',
+
         // Theme-based semantic colors (changes based on activeTheme)
         themeBackground: activeTheme.background,
         themeSurface: activeTheme.surface,

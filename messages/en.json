@@ -144,6 +144,9 @@
       "messagePlaceholder": "Briefly describe your project, your needs and your objectives...",
       "projectTypes": {
         "placeholder": "Select project type",
+        "solar": "Solar system",
+        "prefab": "Prefabricated home",
+        "renovation": "Renovation",
         "residential": "Residential Design",
         "commercial": "Commercial Design",
         "structural": "Structural Calculations",
@@ -636,6 +639,148 @@
     "cta": {
       "description": "Discover all our projects and the innovative solutions we have developed",
       "button": "View All Projects"
+    }
+  },
+  "landing": {
+    "hero": {
+      "eyebrow": "Cavallaro Engineering & Construction",
+      "line1": "We design.",
+      "line2": "We build.",
+      "line3": "We transform.",
+      "subtitle": "One partner to build your future.",
+      "primaryCta": "Explore our solutions",
+      "secondaryCta": "Request a quote"
+    },
+    "intro": {
+      "statement": "Integrated solutions for engineering, construction and energy efficiency.",
+      "body": "From design to delivery, we guide our clients through every phase of the project with technical expertise, attention to detail and tailored solutions."
+    },
+    "overview": {
+      "eyebrow": "Three lines. One partner.",
+      "title": "Choose where to start.",
+      "from": "Starting from",
+      "onRequest": "Tailored",
+      "discover": "Discover",
+      "scrollHint": "Scroll"
+    },
+    "showcase": {
+      "turnkey": "Turnkey",
+      "from": "Starting from",
+      "onRequest": "Tailored",
+      "sqm": "/m²",
+      "drag": "Drag to explore"
+    },
+    "why": {
+      "eyebrow": "Why choose us",
+      "title": "One point of contact. From first idea to handover.",
+      "items": {
+        "engineering": "Engineering expertise and a technical approach.",
+        "tailored": "Solutions tailored to each client's needs.",
+        "singleContact": "A single point of contact for the whole project.",
+        "quality": "Care for the quality of materials and workmanship.",
+        "transparency": "Transparent pricing.",
+        "integration": "Construction, technology and energy efficiency, integrated."
+      }
+    },
+    "closing": {
+      "title": "Your project deserves a concrete solution.",
+      "text": "Tell us what you want to build. We will analyse your needs and guide you to the best-fitting solution.",
+      "cta": "Tell us about your project",
+      "signature": "Design. Energy. Construction. Future."
+    }
+  },
+  "lines": {
+    "solar": {
+      "label": "Energy line",
+      "title": "Solar systems",
+      "tagline": "Your energy. Your future.",
+      "summary": "Solar systems, battery storage and complete energy solutions.",
+      "lead": "Make your home more efficient, more sustainable and energy independent.",
+      "body": "We deliver turnkey solar systems designed around the building and its energy consumption. From the initial assessment to design, component supply, installation and commissioning, we manage the whole process.",
+      "solutionsTitle": "Our solutions",
+      "solutions": {
+        "s1": "Residential solar systems",
+        "s2": "Battery storage systems",
+        "s3": "Latest-generation inverters",
+        "s4": "Production monitoring",
+        "s5": "Integrated self-consumption solutions",
+        "s6": "EV charging readiness"
+      },
+      "pricingTitle": "Transparent pricing",
+      "pricingText": "Packages configured by system power, storage capacity and building characteristics.",
+      "tiers": {
+        "from": {
+          "name": "Turnkey system",
+          "description": "Every proposal comes with a technical assessment to find the right configuration."
+        }
+      },
+      "closingLine": "From assessment to commissioning, we take care of everything.",
+      "cta": "Request your free quote"
+    },
+    "prefab": {
+      "label": "Living line",
+      "title": "Prefabricated homes",
+      "tagline": "The home you imagine. We build it together.",
+      "summary": "Customisable, efficient prefabricated homes designed around you.",
+      "lead": "Prefabricated homes combining contemporary architecture, functionality, comfort and energy efficiency.",
+      "body": "Every home is designed to be modern, customisable and built around the people who will live in it. We offer standard solutions and fully bespoke projects, with optional solar systems and high-efficiency technology.",
+      "solutionsTitle": "Our solutions",
+      "solutions": {
+        "s1": "Prefabricated homes in several sizes",
+        "s2": "Modern, customisable homes",
+        "s3": "Residential solutions for private clients",
+        "s4": "Bespoke projects",
+        "s5": "Integrated solar and storage",
+        "s6": "Technical consulting and design",
+        "s7": "Coordination of every build phase"
+      },
+      "pricingTitle": "Choose your solution",
+      "pricingText": "Two paths, the same design care.",
+      "tiers": {
+        "standard": {
+          "name": "Standard line",
+          "description": "Defined layouts designed for functionality, comfort and cost efficiency."
+        },
+        "custom": {
+          "name": "Bespoke line",
+          "description": "We design your home around your needs, from room layout to finishes and technology."
+        }
+      },
+      "closingLine": "Your new home starts with a project.",
+      "cta": "Contact us to build it"
+    },
+    "renovation": {
+      "label": "Construction line",
+      "title": "Renovations",
+      "tagline": "We give your spaces a new shape.",
+      "summary": "Complete renovations, from design to handover, in Economy and Luxury.",
+      "lead": "Renovating adds value to a property, improving its function, look, comfort and energy performance.",
+      "body": "One partner follows the work from the first phase to handover: design, building permits, coordination of trades and technical management.",
+      "solutionsTitle": "Our services",
+      "solutions": {
+        "s1": "Complete renovation of apartments and houses",
+        "s2": "Bathroom and kitchen remodelling",
+        "s3": "Electrical and plumbing upgrades",
+        "s4": "Flooring and wall finishes",
+        "s5": "False ceilings and drywall",
+        "s6": "Energy efficiency upgrades",
+        "s7": "Design and building permits",
+        "s8": "Site coordination and works management"
+      },
+      "pricingTitle": "Choose your renovation level",
+      "pricingText": "Two finish levels, one standard of execution.",
+      "tiers": {
+        "economy": {
+          "name": "Economy line",
+          "description": "Targeted work, selected materials and great value, without compromising on workmanship."
+        },
+        "luxury": {
+          "name": "Luxury line",
+          "description": "Fine materials, premium finishes and a high level of customisation for elegant, bespoke spaces."
+        }
+      },
+      "closingLine": "From first idea to handing over the keys. We take care of everything.",
+      "cta": "Request a free consultation"
     }
   }
 }

@@ -144,6 +144,9 @@
       "messagePlaceholder": "Descrivi brevemente il tuo progetto, le tue esigenze e i tuoi obiettivi...",
       "projectTypes": {
         "placeholder": "Seleziona tipo progetto",
+        "solar": "Impianto fotovoltaico",
+        "prefab": "Casa prefabbricata",
+        "renovation": "Ristrutturazione",
         "residential": "Progettazione Residenziale",
         "commercial": "Progettazione Commerciale",
         "structural": "Calcoli Strutturali",
@@ -636,6 +639,148 @@
     "cta": {
       "description": "Scopri tutti i nostri progetti e le soluzioni innovative che abbiamo sviluppato",
       "button": "Visualizza Tutti i Progetti"
+    }
+  },
+  "landing": {
+    "hero": {
+      "eyebrow": "Cavallaro Ingegneria e Costruzioni",
+      "line1": "Progettiamo.",
+      "line2": "Realizziamo.",
+      "line3": "Trasformiamo.",
+      "subtitle": "Un unico interlocutore per costruire il tuo futuro.",
+      "primaryCta": "Scopri le soluzioni",
+      "secondaryCta": "Richiedi un preventivo"
+    },
+    "intro": {
+      "statement": "Soluzioni integrate per l'ingegneria, l'edilizia e l'efficienza energetica.",
+      "body": "Dalla progettazione alla realizzazione, accompagniamo il cliente in ogni fase del progetto, mettendo a disposizione competenze tecniche, attenzione ai dettagli e soluzioni personalizzate."
+    },
+    "overview": {
+      "eyebrow": "Tre linee. Un solo interlocutore.",
+      "title": "Scegli da dove iniziare.",
+      "from": "A partire da",
+      "onRequest": "Su misura",
+      "discover": "Scopri",
+      "scrollHint": "Scorri"
+    },
+    "showcase": {
+      "turnkey": "Chiavi in mano",
+      "from": "A partire da",
+      "onRequest": "Su misura",
+      "sqm": "/m²",
+      "drag": "Trascina per esplorare"
+    },
+    "why": {
+      "eyebrow": "Perché sceglierci",
+      "title": "Un unico referente. Dalla prima idea alla consegna.",
+      "items": {
+        "engineering": "Competenza ingegneristica e approccio tecnico.",
+        "tailored": "Soluzioni personalizzate in base alle esigenze del cliente.",
+        "singleContact": "Un unico referente per il progetto.",
+        "quality": "Attenzione alla qualità dei materiali e delle lavorazioni.",
+        "transparency": "Trasparenza nelle proposte economiche.",
+        "integration": "Integrazione tra edilizia, tecnologia ed efficienza energetica."
+      }
+    },
+    "closing": {
+      "title": "Il tuo progetto merita una soluzione concreta.",
+      "text": "Raccontaci cosa desideri realizzare. Analizzeremo le tue esigenze e ti accompagneremo verso la soluzione più adatta.",
+      "cta": "Raccontaci il tuo progetto",
+      "signature": "Progettazione. Energia. Edilizia. Futuro."
+    }
+  },
+  "lines": {
+    "solar": {
+      "label": "Linea energia",
+      "title": "Impianti fotovoltaici",
+      "tagline": "La tua energia. Il tuo futuro.",
+      "summary": "Impianti fotovoltaici, sistemi di accumulo e soluzioni energetiche complete.",
+      "lead": "Trasforma la tua abitazione in uno spazio più efficiente, sostenibile e indipendente dal punto di vista energetico.",
+      "body": "Realizziamo impianti fotovoltaici chiavi in mano, progettati in funzione delle caratteristiche dell'immobile e dei consumi energetici del cliente. Dalla valutazione iniziale alla progettazione, dalla fornitura dei componenti all'installazione e alla messa in servizio, gestiamo il percorso per offrirti una soluzione completa.",
+      "solutionsTitle": "Le nostre soluzioni",
+      "solutions": {
+        "s1": "Impianti fotovoltaici residenziali",
+        "s2": "Sistemi di accumulo con batterie",
+        "s3": "Inverter di ultima generazione",
+        "s4": "Monitoraggio della produzione",
+        "s5": "Soluzioni integrate per l'autoconsumo",
+        "s6": "Predisposizione per la ricarica di veicoli elettrici"
+      },
+      "pricingTitle": "Prezzi trasparenti",
+      "pricingText": "Pacchetti configurati in base alla potenza dell'impianto, alla capacità di accumulo e alle caratteristiche dell'edificio.",
+      "tiers": {
+        "from": {
+          "name": "Impianto chiavi in mano",
+          "description": "Ogni proposta viene accompagnata da una valutazione tecnica per individuare la configurazione più adatta."
+        }
+      },
+      "closingLine": "Dalla valutazione alla messa in servizio, pensiamo a tutto noi.",
+      "cta": "Richiedi il tuo preventivo gratuito"
+    },
+    "prefab": {
+      "label": "Linea abitare",
+      "title": "Case prefabbricate",
+      "tagline": "La casa che immagini. La realizziamo insieme.",
+      "summary": "Abitazioni prefabbricate personalizzabili, efficienti e progettate su misura.",
+      "lead": "Soluzioni abitative prefabbricate che uniscono architettura contemporanea, funzionalità, comfort ed efficienza energetica.",
+      "body": "Ogni abitazione nasce dall'esigenza di creare uno spazio moderno, personalizzabile e progettato intorno alle necessità di chi lo vivrà. Offriamo soluzioni standard e progetti completamente su misura, con possibilità di integrare impianti fotovoltaici e sistemi tecnologici ad alta efficienza.",
+      "solutionsTitle": "Le nostre soluzioni",
+      "solutions": {
+        "s1": "Case prefabbricate di diverse metrature",
+        "s2": "Abitazioni moderne e personalizzabili",
+        "s3": "Soluzioni residenziali per privati",
+        "s4": "Progetti su misura",
+        "s5": "Integrazione di fotovoltaico e accumulo",
+        "s6": "Consulenza tecnica e progettazione",
+        "s7": "Coordinamento delle fasi di realizzazione"
+      },
+      "pricingTitle": "Scegli la tua soluzione",
+      "pricingText": "Due percorsi, la stessa cura progettuale.",
+      "tiers": {
+        "standard": {
+          "name": "Linea Standard",
+          "description": "Configurazioni definite, progettate per offrire funzionalità, comfort e ottimizzazione dei costi."
+        },
+        "custom": {
+          "name": "Linea Personalizzata",
+          "description": "Progettiamo la tua abitazione partendo dalle tue esigenze, dalla distribuzione degli ambienti fino alle finiture e alle dotazioni tecnologiche."
+        }
+      },
+      "closingLine": "La tua nuova casa parte da un progetto.",
+      "cta": "Contattaci per realizzarlo"
+    },
+    "renovation": {
+      "label": "Linea costruzioni",
+      "title": "Ristrutturazioni",
+      "tagline": "Diamo nuova forma ai tuoi spazi.",
+      "summary": "Ristrutturazioni complete, dalla progettazione alla consegna, con soluzioni Economy e Luxury.",
+      "lead": "Ristrutturare significa dare valore a un immobile, migliorandone funzionalità, estetica, comfort e prestazioni energetiche.",
+      "body": "Un unico interlocutore segue l'intervento dalla fase iniziale fino alla consegna dei lavori: progettazione, pratiche edilizie, coordinamento delle lavorazioni e gestione tecnica del progetto.",
+      "solutionsTitle": "I nostri servizi",
+      "solutions": {
+        "s1": "Ristrutturazioni complete di appartamenti e abitazioni",
+        "s2": "Rifacimento di bagni e cucine",
+        "s3": "Rinnovamento di impianti elettrici e idraulici",
+        "s4": "Pavimentazioni e rivestimenti",
+        "s5": "Controsoffitti e opere in cartongesso",
+        "s6": "Efficientamento energetico",
+        "s7": "Progettazione e pratiche edilizie",
+        "s8": "Coordinamento e direzione dei lavori"
+      },
+      "pricingTitle": "Scegli il tuo livello di ristrutturazione",
+      "pricingText": "Due livelli di finitura, un unico standard di esecuzione.",
+      "tiers": {
+        "economy": {
+          "name": "Linea Economy",
+          "description": "Interventi mirati, materiali selezionati e attenzione al rapporto qualità-prezzo, senza rinunciare alla cura delle lavorazioni."
+        },
+        "luxury": {
+          "name": "Linea Luxury",
+          "description": "Materiali ricercati, finiture di pregio e un elevato livello di personalizzazione per spazi eleganti e su misura."
+        }
+      },
+      "closingLine": "Dalla prima idea alla consegna delle chiavi. Pensiamo a tutto noi.",
+      "cta": "Richiedi una consulenza gratuita"
     }
   }
 }

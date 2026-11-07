@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 
 import ContactMap from './ContactMap';
@@ -18,6 +18,14 @@ function Appointment() {
     message: '',
     gdprConsent: false,
   });
+
+  // Preselect the line when coming from a "request a quote" button (?linea=solar)
+  useEffect(() => {
+    const line = new URLSearchParams(window.location.search).get('linea');
+    if (line && ['solar', 'prefab', 'renovation'].includes(line)) {
+      setFormData((prev) => ({ ...prev, projectType: line }));
+    }
+  }, []);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
@@ -171,6 +179,13 @@ function Appointment() {
                   className="w-full border border-themeTextSecondary border-opacity-30 bg-themeBackground px-4 py-3 text-themeTextPrimary focus:border-transparent focus:ring-2 focus:ring-themeTextPrimary"
                 >
                   <option value="">{t('form.projectTypes.placeholder')}</option>
+                  <option value="solar">{t('form.projectTypes.solar')}</option>
+                  <option value="prefab">
+                    {t('form.projectTypes.prefab')}
+                  </option>
+                  <option value="renovation">
+                    {t('form.projectTypes.renovation')}
+                  </option>
                   <option value="residential">
                     {t('form.projectTypes.residential')}
                   </option>

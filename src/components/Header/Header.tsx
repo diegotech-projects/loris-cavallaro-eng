@@ -7,7 +7,7 @@ export interface HeaderProps {}
 
 const Header: FC<HeaderProps> = () => {
   return (
-    <div className="nc-Header sticky inset-x-0 top-0 z-40 w-full bg-themeBackground py-4 shadow-2xl backdrop-blur-lg lg:py-7">
+    <div className="nc-Header sticky inset-x-0 top-0 z-40 w-full border-b border-bone/10 bg-ink/70 py-3 backdrop-blur-xl backdrop-saturate-150 lg:py-4">
       <TopNav />
     </div>
   );

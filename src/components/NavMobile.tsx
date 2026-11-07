@@ -1,9 +1,10 @@
 import { useLocale, useTranslations } from 'next-intl';
 import React from 'react';
-import { BsBuilding } from 'react-icons/bs';
 import { MdClose } from 'react-icons/md';
 
 import { Link as LocalizedLink, usePathname } from '@/i18n/navigation';
+
+import BrandMark from './BrandMark';
 
 export interface NavMobileProps {
   onClickClose?: () => void;
@@ -44,17 +45,7 @@ const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
   return (
     <div className="h-screen w-full divide-y-2 divide-neutral-100 overflow-y-auto bg-themeSurface py-2 shadow-lg ring-1 transition">
       <div className="px-5 py-2">
-        <div className="flex items-center gap-2 text-lg font-bold text-themeTextPrimary">
-          <BsBuilding className="text-themeSecondary" />
-          <div className="ml-1 flex flex-col">
-            <span className="font-bold leading-none text-themeTextPrimary">
-              {process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'}
-            </span>
-            <span className="text-xs font-medium uppercase tracking-wide text-themeTextSecondary">
-              {process.env.NEXT_PUBLIC_SIGLA || 'Ing. Civile'}
-            </span>
-          </div>
-        </div>
+        <BrandMark />
         <button
           type="button"
           className="absolute right-2 top-2 p-1 text-themeTextPrimary"
