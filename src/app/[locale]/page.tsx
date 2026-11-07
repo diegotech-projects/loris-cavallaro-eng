@@ -25,7 +25,7 @@ const Page = () => {
         <WhyUs />
         <ClosingCta />
 
-        <div className="scroll-mt-16 bg-themeSurface py-24" id="contatti">
+        <div className="scroll-mt-16 bg-ink py-24 md:py-40" id="contatti">
           <Appointment />
         </div>
       </main>

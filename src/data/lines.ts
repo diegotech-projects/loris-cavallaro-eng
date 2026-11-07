@@ -28,9 +28,8 @@ export type CommercialLine = {
   tiers: LineTier[];
 };
 
-// TODO: confirm every price with Loris before going live.
-// The brief and the flyer disagree (e.g. solar 3.999 vs 6.900, prefab
-// standard 4.980 vs 89.000, luxury 1.350 vs 1.200 €/m²).
+// Prices follow Loris's written brief (not the older flyer). Some were still
+// marked as placeholders there, so double-check them before going live.
 export const commercialLines: CommercialLine[] = [
   {
     key: 'solar',
@@ -67,7 +66,7 @@ export const commercialLines: CommercialLine[] = [
     ],
     solutionCount: 7,
     tiers: [
-      { key: 'standard', price: 89000 },
+      { key: 'standard', price: 4980 },
       { key: 'custom', price: null, highlighted: true },
     ],
   },

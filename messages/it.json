@@ -134,7 +134,7 @@
   },
   "contact": {
     "form": {
-      "title": "RICHIEDI UNA CONSULENZA",
+      "title": "Richiedi una consulenza",
       "description": "Contattaci per discutere del tuo progetto di ingegneria civile. Il nostro team ti fornirà una consulenza professionale personalizzata.",
       "name": "Nome Completo",
       "email": "Email",
@@ -158,16 +158,17 @@
       "gdprText": "Acconsento al trattamento dei miei dati personali per rispondere alla mia richiesta di contatto, come descritto nella Privacy Policy. I dati verranno utilizzati esclusivamente per fornire le informazioni richieste e non verranno condivisi con terze parti.",
       "privacyPolicy": "Privacy Policy",
       "gdprRequired": "Devi accettare il consenso al trattamento dei dati per inviare il modulo.",
-      "submit": "INVIA RICHIESTA",
-      "submitting": "INVIO IN CORSO...",
+      "submit": "Invia richiesta",
+      "submitting": "Invio in corso…",
       "success": "✅ Messaggio inviato con successo!",
       "successDescription": "Ti risponderemo al più presto al tuo indirizzo email.",
       "error": "❌ Errore nell'invio del messaggio",
       "errorDescription": "Riprova o contattaci direttamente via email:",
-      "required": "*"
+      "required": "*",
+      "sheet": "Tav. 00 — Modulo di richiesta"
     },
     "info": {
-      "title": "INIZIA IL TUO PROGETTO OGGI",
+      "title": "Inizia il tuo progetto oggi",
       "description": "Siamo pronti ad aiutarti a trasformare le tue idee in realtà con soluzioni di ingegneria innovative e sostenibili.",
       "email": "EMAIL",
       "phone": "TELEFONO",

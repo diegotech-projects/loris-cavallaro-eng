@@ -134,7 +134,7 @@
   },
   "contact": {
     "form": {
-      "title": "REQUEST A CONSULTATION",
+      "title": "Request a consultation",
       "description": "Contact us to discuss your civil engineering project. Our team will provide you with personalized professional consulting.",
       "name": "Full Name",
       "email": "Email",
@@ -158,16 +158,17 @@
       "gdprText": "I consent to the processing of my personal data to respond to my contact request, as described in the Privacy Policy. The data will be used exclusively to provide the requested information and will not be shared with third parties.",
       "privacyPolicy": "Privacy Policy",
       "gdprRequired": "You must accept data processing consent to send the form.",
-      "submit": "SEND REQUEST",
-      "submitting": "SENDING...",
+      "submit": "Send request",
+      "submitting": "Sending…",
       "success": "✅ Message sent successfully!",
       "successDescription": "We will reply to your email address as soon as possible.",
       "error": "❌ Error sending message",
       "errorDescription": "Try again or contact us directly via email:",
-      "required": "*"
+      "required": "*",
+      "sheet": "Sheet 00 — Request form"
     },
     "info": {
-      "title": "START YOUR PROJECT TODAY",
+      "title": "Start your project today",
       "description": "We are ready to help you transform your ideas into reality with innovative and sustainable engineering solutions.",
       "email": "EMAIL",
       "phone": "PHONE",
