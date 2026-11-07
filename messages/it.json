@@ -668,7 +668,8 @@
       "from": "A partire da",
       "onRequest": "Su misura",
       "sqm": "/m²",
-      "drag": "Trascina per esplorare"
+      "drag": "Trascina per esplorare",
+      "dragShort": "Trascina"
     },
     "why": {
       "eyebrow": "Perché sceglierci",
@@ -687,6 +688,27 @@
       "text": "Raccontaci cosa desideri realizzare. Analizzeremo le tue esigenze e ti accompagneremo verso la soluzione più adatta.",
       "cta": "Raccontaci il tuo progetto",
       "signature": "Progettazione. Energia. Edilizia. Futuro."
+    },
+    "drawing": {
+      "eyebrow": "Il metodo",
+      "title": "Ogni progetto nasce da un disegno.",
+      "text": "Prima delle opere, le misure. Rileviamo, progettiamo e calcoliamo ogni elemento, poi lo realizziamo esattamente come disegnato.",
+      "steps": {
+        "survey": "Rilievo",
+        "design": "Progetto",
+        "calculation": "Calcolo",
+        "build": "Realizzazione"
+      },
+      "sheet": "Prospetto sud",
+      "scale": "Scala 1:100",
+      "progress": "Avanzamento tavola"
+    },
+    "sheet": {
+      "sheet": "Tavola",
+      "subject": "Oggetto",
+      "scale": "Scala",
+      "date": "Data",
+      "short": "Tav."
     }
   },
   "lines": {

@@ -668,7 +668,8 @@
       "from": "Starting from",
       "onRequest": "Tailored",
       "sqm": "/m²",
-      "drag": "Drag to explore"
+      "drag": "Drag to explore",
+      "dragShort": "Drag"
     },
     "why": {
       "eyebrow": "Why choose us",
@@ -687,6 +688,27 @@
       "text": "Tell us what you want to build. We will analyse your needs and guide you to the best-fitting solution.",
       "cta": "Tell us about your project",
       "signature": "Design. Energy. Construction. Future."
+    },
+    "drawing": {
+      "eyebrow": "Our method",
+      "title": "Every project starts with a drawing.",
+      "text": "Measurements before construction. We survey, design and calculate every element, then build it exactly as drawn.",
+      "steps": {
+        "survey": "Survey",
+        "design": "Design",
+        "calculation": "Engineering",
+        "build": "Construction"
+      },
+      "sheet": "South elevation",
+      "scale": "Scale 1:100",
+      "progress": "Sheet progress"
+    },
+    "sheet": {
+      "sheet": "Sheet",
+      "subject": "Subject",
+      "scale": "Scale",
+      "date": "Date",
+      "short": "Sheet"
     }
   },
   "lines": {

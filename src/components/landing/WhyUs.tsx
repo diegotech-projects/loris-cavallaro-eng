@@ -35,7 +35,7 @@ const Reason = ({ index, text }: ReasonProps) => {
     >
       <motion.span
         className="pt-2 font-display text-sm font-medium tabular-nums"
-        animate={{ color: active ? accent : 'rgba(242,239,233,0.25)' }}
+        animate={{ color: active ? accent : 'rgba(238,233,224,0.25)' }}
         transition={{ duration: 0.5 }}
       >
         {String(index + 1).padStart(2, '0')}
@@ -43,7 +43,7 @@ const Reason = ({ index, text }: ReasonProps) => {
       <motion.p
         className="font-display text-3xl font-semibold leading-[1.1] tracking-[-0.03em] md:text-5xl"
         animate={{
-          color: active ? '#f2efe9' : 'rgba(242,239,233,0.18)',
+          color: active ? '#eee9e0' : 'rgba(238,233,224,0.18)',
           x: active ? 0 : -8,
         }}
         transition={{ duration: 0.5, ease: 'easeOut' }}

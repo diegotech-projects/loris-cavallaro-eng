@@ -12,7 +12,6 @@ import {
 import { ArrowRight, MoveHorizontal } from 'lucide-react';
 import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
-import type { MouseEvent } from 'react';
 import { useEffect, useRef } from 'react';
 
 import type { CommercialLine } from '@/data/lines';
@@ -20,6 +19,7 @@ import { formatPrice, lowestTier } from '@/data/lines';
 import { Link as LocalizedLink } from '@/i18n/navigation';
 
 import { Reveal, SplitText } from './motion';
+import SolutionsList from './SolutionsList';
 
 type LineProps = {
   line: CommercialLine;
@@ -64,9 +64,7 @@ const ScrollCover = ({ line }: LineProps) => {
             <p className="text-[10px] uppercase tracking-[0.25em] text-bone/60">
               {tShowcase('from')}
             </p>
-            <p
-              className={`font-display text-3xl font-semibold tracking-tight md:text-5xl ${line.accentText}`}
-            >
+            <p className="font-display text-3xl font-semibold tracking-tight text-bone md:text-5xl">
               {formatPrice(startingTier.price!, locale)}
               {startingTier.unit === 'sqm' && (
                 <span className="text-lg font-normal text-bone/60">
@@ -92,7 +90,11 @@ const DragGallery = ({ line }: LineProps) => {
         <MoveHorizontal className={`size-4 ${line.accentText}`} aria-hidden />
         {tShowcase('drag')}
       </div>
-      <div ref={constraintsRef} className="overflow-hidden">
+      <div
+        ref={constraintsRef}
+        className="overflow-hidden"
+        data-cursor={tShowcase('dragShort')}
+      >
         <motion.div
           drag="x"
           dragConstraints={constraintsRef}
@@ -126,58 +128,6 @@ const DragGallery = ({ line }: LineProps) => {
         </motion.div>
       </div>
     </div>
-  );
-};
-
-type SpotlightCardProps = {
-  index: number;
-  text: string;
-  accent: string;
-  className?: string;
-};
-
-// Card with a coloured glow that follows the pointer
-const SpotlightCard = ({
-  index,
-  text,
-  accent,
-  className,
-}: SpotlightCardProps) => {
-  const handleMove = (event: MouseEvent<HTMLDivElement>) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    event.currentTarget.style.setProperty(
-      '--x',
-      `${event.clientX - rect.left}px`,
-    );
-    event.currentTarget.style.setProperty(
-      '--y',
-      `${event.clientY - rect.top}px`,
-    );
-  };
-
-  return (
-    <Reveal delay={(index % 4) * 0.07} className={className}>
-      <div
-        onMouseMove={handleMove}
-        className="group relative flex h-full min-h-[170px] flex-col justify-between gap-10 overflow-hidden rounded-[24px] border border-bone/10 bg-bone/[0.03] p-6 transition-colors duration-500 hover:border-bone/25 md:min-h-[210px] md:p-8"
-      >
-        <div
-          className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-          style={{
-            background: `radial-gradient(320px circle at var(--x) var(--y), ${accent}33, transparent 70%)`,
-          }}
-        />
-        <span
-          className="relative font-display text-sm font-medium tabular-nums"
-          style={{ color: accent }}
-        >
-          {String(index + 1).padStart(2, '0')}
-        </span>
-        <p className="relative font-display text-xl font-medium leading-snug tracking-tight text-bone md:text-2xl">
-          {text}
-        </p>
-      </div>
-    </Reveal>
   );
 };
 
@@ -216,15 +166,13 @@ const CountUp = ({ value, locale }: CountUpProps) => {
 
 const LineShowcase = ({ line }: LineProps) => {
   const t = useTranslations(`lines.${line.key}`);
+  const tSheet = useTranslations('landing.sheet');
   const tShowcase = useTranslations('landing.showcase');
   const locale = useLocale();
   const solutionKeys = Array.from(
     { length: line.solutionCount },
     (_, index) => `s${index + 1}`,
   );
-  // Keep the cards grid free of orphans: 6 → 3×2, 7 → wide first card + 6, 8 → 4×2
-  const useThreeColumns = line.solutionCount % 3 === 0;
-  const spanFirstCard = !useThreeColumns && line.solutionCount % 2 === 1;
 
   return (
     <section
@@ -234,13 +182,11 @@ const LineShowcase = ({ line }: LineProps) => {
       {/* Title */}
       <div className="container-custom mb-16 md:mb-24">
         <Reveal>
-          <p
-            className={`mb-6 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.3em] md:text-sm ${line.accentText}`}
-          >
+          <p className="mb-6 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.3em] text-bone/70 md:text-sm">
             <span
               className={`inline-block size-2 rounded-full ${line.accentBg}`}
             />
-            {line.number} — {t('label')}
+            {tSheet('short')} {line.number} — {t('label')}
           </p>
         </Reveal>
         <SplitText
@@ -277,31 +223,11 @@ const LineShowcase = ({ line }: LineProps) => {
 
       <DragGallery line={line} />
 
-      {/* Solutions */}
-      <div className="container-custom mt-24 md:mt-40">
-        <SplitText
-          as="h3"
-          text={t('solutionsTitle')}
-          className="mb-12 block font-display text-4xl font-semibold tracking-[-0.03em] md:text-6xl"
-        />
-        <div
-          className={`grid gap-4 sm:grid-cols-2 ${
-            useThreeColumns ? 'lg:grid-cols-3' : 'lg:grid-cols-4'
-          }`}
-        >
-          {solutionKeys.map((key, index) => (
-            <SpotlightCard
-              key={key}
-              index={index}
-              text={t(`solutions.${key}`)}
-              accent={line.accent}
-              className={
-                spanFirstCard && index === 0 ? 'sm:col-span-2' : undefined
-              }
-            />
-          ))}
-        </div>
-      </div>
+      <SolutionsList
+        line={line}
+        title={t('solutionsTitle')}
+        items={solutionKeys.map((key) => t(`solutions.${key}`))}
+      />
 
       {/* Pricing */}
       <div className="container-custom mt-24 md:mt-40">
@@ -329,23 +255,25 @@ const LineShowcase = ({ line }: LineProps) => {
                   tier.highlighted
                     ? {
                         borderColor: `${line.accent}66`,
-                        background: `radial-gradient(120% 80% at 100% 0%, ${line.accent}2e, transparent 60%), #111113`,
+                        background: `radial-gradient(120% 80% at 100% 0%, ${line.accent}2e, transparent 60%), #161513`,
                         boxShadow: `0 40px 120px -40px ${line.accent}55`,
                       }
                     : {
-                        borderColor: 'rgba(242, 239, 233, 0.1)',
-                        background: 'rgba(242, 239, 233, 0.03)',
+                        borderColor: 'rgba(238,233,224, 0.1)',
+                        background: 'rgba(238,233,224, 0.03)',
                       }
                 }
               >
                 <p
-                  className="text-xs font-medium uppercase tracking-[0.3em]"
-                  style={{
-                    color: tier.highlighted
-                      ? line.accent
-                      : 'rgba(242,239,233,0.6)',
-                  }}
+                  className={`flex items-center gap-3 text-xs font-medium uppercase tracking-[0.3em] ${
+                    tier.highlighted ? 'text-bone' : 'text-bone/60'
+                  }`}
                 >
+                  {tier.highlighted && (
+                    <span
+                      className={`inline-block size-2 rounded-full ${line.accentBg}`}
+                    />
+                  )}
                   {t(`tiers.${tier.key}.name`)}
                 </p>
                 <p className="mt-10 text-[10px] uppercase tracking-[0.25em] text-bone/50">
@@ -378,7 +306,8 @@ const LineShowcase = ({ line }: LineProps) => {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
             <LocalizedLink
               href={`/contact?linea=${line.key}#contact-form`}
-              className={`group inline-flex items-center gap-3 rounded-full px-8 py-4 text-sm font-semibold text-ink ${line.accentBg}`}
+              className={`group inline-flex items-center gap-3 rounded-full px-8 py-4 text-sm font-semibold ${line.accentBg}`}
+              style={{ color: line.onAccent }}
             >
               {t('cta')}
               <ArrowRight

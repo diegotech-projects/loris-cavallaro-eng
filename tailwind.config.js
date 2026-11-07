@@ -53,13 +53,13 @@ const themes = {
     textSecondary: '#b8c2d1', // Light grey for secondary text (gray-300)
   },
   noir: {
-    primary: '#f2efe9', // Bone white for primary elements
-    secondary: '#4f7cff', // Cobalt blue for buttons and links
-    accent: '#4f7cff', // Cobalt blue highlights
-    background: '#0a0a0b', // Graphite black page background
+    primary: '#eee9e0', // Paper white for primary elements
+    secondary: '#b4452b', // Brick for buttons and links
+    accent: '#b4452b', // Brick highlights
+    background: '#0e0d0c', // Warm graphite page background
     surface: '#141416', // Raised cards
     surfaceLight: '#1c1c1f', // Subtle alternate sections
-    textPrimary: '#f2efe9', // Bone white text
+    textPrimary: '#eee9e0', // Paper white text
     textSecondary: '#9a9a9f', // Muted grey text
   },
 };
@@ -102,12 +102,13 @@ module.exports = {
     },
     extend: {
       colors: {
-        // Noir palette: one accent per commercial line (blue / brick complementary)
-        ink: '#0a0a0b',
-        bone: '#f2efe9',
-        cobalt: '#4f7cff',
-        ice: '#a9c7e8',
-        brick: '#d0603f',
+        // Earth palette: graphite and paper with three clay tones, one per line
+        ink: '#0e0d0c',
+        bone: '#eee9e0',
+        concrete: '#8c8781',
+        terracotta: '#c8643c',
+        plaster: '#d8b49a',
+        brick: '#b4452b',
 
         // Theme-based semantic colors (changes based on activeTheme)
         themeBackground: activeTheme.background,

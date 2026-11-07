@@ -86,6 +86,7 @@ const LinesOverview = () => {
               <a
                 key={line.key}
                 href={`#${line.slug}`}
+                data-cursor={t('discover')}
                 className="group relative flex h-[68vh] w-[82vw] shrink-0 flex-col justify-between overflow-hidden rounded-[32px] p-7 md:w-[52vw] md:p-10 lg:w-[44vw]"
               >
                 <Image
@@ -109,8 +110,11 @@ const LinesOverview = () => {
                     {line.number}
                   </span>
                   <span
-                    className="flex size-12 items-center justify-center rounded-full text-ink transition-transform duration-500 group-hover:rotate-45 md:size-14"
-                    style={{ backgroundColor: line.accent }}
+                    className="flex size-12 items-center justify-center rounded-full transition-transform duration-500 group-hover:rotate-45 md:size-14"
+                    style={{
+                      backgroundColor: line.accent,
+                      color: line.onAccent,
+                    }}
                   >
                     <ArrowUpRight className="size-6" aria-hidden />
                     <span className="sr-only">{t('discover')}</span>
@@ -118,9 +122,7 @@ const LinesOverview = () => {
                 </div>
 
                 <div className="relative">
-                  <p
-                    className={`mb-3 text-xs font-medium uppercase tracking-[0.3em] ${line.accentText}`}
-                  >
+                  <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-bone/80">
                     {tLines(`${line.key}.label`)}
                   </p>
                   <h3 className="font-display text-4xl font-semibold leading-[0.95] tracking-[-0.03em] text-bone md:text-6xl">

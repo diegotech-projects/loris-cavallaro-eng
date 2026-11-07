@@ -4,29 +4,32 @@ import Appointment from '@/components/Contacts';
 import ClosingCta from '@/components/landing/ClosingCta';
 import IntroStatement from '@/components/landing/IntroStatement';
 import LandingHero from '@/components/landing/LandingHero';
+import LandingShell from '@/components/landing/LandingShell';
 import LineShowcase from '@/components/landing/LineShowcase';
 import LinesOverview from '@/components/landing/LinesOverview';
-import VelocityMarquee from '@/components/landing/VelocityMarquee';
+import TechnicalDrawing from '@/components/landing/TechnicalDrawing';
 import WhyUs from '@/components/landing/WhyUs';
 import { commercialLines } from '@/data/lines';
 
 const Page = () => {
   return (
-    <main className="relative bg-ink">
-      <LandingHero />
-      <VelocityMarquee />
-      <IntroStatement />
-      <LinesOverview />
-      {commercialLines.map((line) => (
-        <LineShowcase key={line.key} line={line} />
-      ))}
-      <WhyUs />
-      <ClosingCta />
+    <LandingShell>
+      <main className="relative bg-ink">
+        <LandingHero />
+        <IntroStatement />
+        <TechnicalDrawing />
+        <LinesOverview />
+        {commercialLines.map((line) => (
+          <LineShowcase key={line.key} line={line} />
+        ))}
+        <WhyUs />
+        <ClosingCta />
 
-      <div className="scroll-mt-16 bg-themeSurface py-24" id="contatti">
-        <Appointment />
-      </div>
-    </main>
+        <div className="scroll-mt-16 bg-themeSurface py-24" id="contatti">
+          <Appointment />
+        </div>
+      </main>
+    </LandingShell>
   );
 };
 

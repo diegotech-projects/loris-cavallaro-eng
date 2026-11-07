@@ -18,6 +18,8 @@ export type CommercialLine = {
   // Hex used for inline styles (gradients, glows) and full class names so
   // Tailwind keeps them in the build
   accent: string;
+  // Text colour that stays readable on top of the accent
+  onAccent: string;
   accentText: string;
   accentBg: string;
   cover: string;
@@ -34,9 +36,10 @@ export const commercialLines: CommercialLine[] = [
     key: 'solar',
     slug: 'fotovoltaico',
     number: '01',
-    accent: '#4f7cff',
-    accentText: 'text-cobalt',
-    accentBg: 'bg-cobalt',
+    accent: '#c8643c',
+    onAccent: '#0e0d0c',
+    accentText: 'text-terracotta',
+    accentBg: 'bg-terracotta',
     cover: '/images/lines/solar-hero.jpg',
     gallery: [
       '/images/lines/solar-pergola.jpg',
@@ -51,9 +54,10 @@ export const commercialLines: CommercialLine[] = [
     key: 'prefab',
     slug: 'case-prefabbricate',
     number: '02',
-    accent: '#a9c7e8',
-    accentText: 'text-ice',
-    accentBg: 'bg-ice',
+    accent: '#d8b49a',
+    onAccent: '#0e0d0c',
+    accentText: 'text-plaster',
+    accentBg: 'bg-plaster',
     cover: '/images/lines/prefab-hero.jpg',
     gallery: [
       '/images/lines/prefab-cube.jpg',
@@ -71,7 +75,8 @@ export const commercialLines: CommercialLine[] = [
     key: 'renovation',
     slug: 'ristrutturazioni',
     number: '03',
-    accent: '#d0603f',
+    accent: '#b4452b',
+    onAccent: '#eee9e0',
     accentText: 'text-brick',
     accentBg: 'bg-brick',
     cover: '/images/lines/reno-hero.jpg',

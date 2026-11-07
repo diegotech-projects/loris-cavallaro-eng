@@ -33,13 +33,22 @@ const TopNav = () => {
             <LocalizedLink
               key={item.key}
               href={item.href}
-              className={`transition-colors ${
+              className={`group relative block overflow-hidden ${
                 pathname === item.href
                   ? 'text-themeTextPrimary'
-                  : 'text-themeTextSecondary hover:text-themeTextPrimary'
+                  : 'text-themeTextSecondary'
               }`}
             >
-              {t(item.key)}
+              {/* Label rolls up on hover, replaced by a bright copy from below */}
+              <span className="block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-full">
+                {t(item.key)}
+              </span>
+              <span
+                aria-hidden
+                className="absolute inset-0 block translate-y-full text-themeTextPrimary transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-y-0"
+              >
+                {t(item.key)}
+              </span>
             </LocalizedLink>
           ))}
         </nav>
@@ -63,7 +72,7 @@ const TopNav = () => {
           </div>
           <LocalizedLink
             href="/contact#contact-form"
-            className="rounded-full bg-bone px-4 py-2 text-[13px] font-semibold text-ink transition-colors hover:bg-cobalt hover:text-bone"
+            className="rounded-full bg-bone px-4 py-2 text-[13px] font-semibold text-ink transition-colors hover:bg-brick hover:text-bone"
           >
             {t('requestQuote')}
           </LocalizedLink>
