@@ -49,11 +49,6 @@ const SolutionsPlate = ({ line, items }: SolutionsPlateProps) => {
               ref={sheetRef}
               data-lenis-prevent-horizontal
               className="relative overflow-x-auto border border-bone/15 p-3 md:overflow-visible md:p-6"
-              style={{
-                backgroundImage:
-                  'linear-gradient(rgba(238,233,224,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(238,233,224,0.04) 1px, transparent 1px)',
-                backgroundSize: '32px 32px',
-              }}
             >
               <svg
                 viewBox="0 0 1000 560"

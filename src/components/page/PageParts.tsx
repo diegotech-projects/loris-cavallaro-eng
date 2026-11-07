@@ -9,12 +9,6 @@ import { Link as LocalizedLink } from '@/i18n/navigation';
 // Shared building blocks for the inner pages, in the same "drawing sheet"
 // language as the home page: hairline grids, registration marks, sheet codes.
 
-const GRID_BACKGROUND = {
-  backgroundImage:
-    'linear-gradient(rgba(238,233,224,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(238,233,224,0.045) 1px, transparent 1px)',
-  backgroundSize: '80px 80px',
-};
-
 const CORNERS = [
   'left-0 top-0 border-l border-t',
   'right-0 top-0 border-r border-t',
@@ -86,10 +80,7 @@ export const PageHero = ({
   imageAlt = '',
   imageClassName,
 }: PageHeroProps) => (
-  <section
-    className="relative overflow-hidden border-b border-bone/10 bg-ink pb-16 pt-14 text-bone md:py-24"
-    style={GRID_BACKGROUND}
-  >
+  <section className="relative overflow-hidden border-b border-bone/10 bg-ink pb-16 pt-14 text-bone md:py-24">
     <div
       className={`container-custom grid gap-12 ${
         image ? 'lg:grid-cols-12 lg:items-end' : ''

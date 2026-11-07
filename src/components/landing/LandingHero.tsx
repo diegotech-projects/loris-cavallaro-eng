@@ -95,16 +95,7 @@ const LandingHero = () => {
       <div className="absolute inset-0 -z-10 bg-ink/45" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
 
-      {/* Drawing-sheet overlay: fine grid and registration marks */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 opacity-60"
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(238,233,224,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(238,233,224,0.06) 1px, transparent 1px)',
-          backgroundSize: '120px 120px',
-        }}
-      />
+      {/* Registration marks */}
       {CORNERS.map((position) => (
         <motion.span
           key={position}

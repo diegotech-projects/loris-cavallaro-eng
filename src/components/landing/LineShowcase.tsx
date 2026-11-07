@@ -175,7 +175,7 @@ type PriceSheetProps = {
 };
 
 // One column of the price schedule: title-block header, price, a dimension
-// line that draws under it, description; drawing grid appears on hover
+// line that draws under it, description
 const PriceSheet = ({
   tier,
   index,
@@ -193,16 +193,6 @@ const PriceSheet = ({
         index > 0 ? 'border-t border-bone/15 md:border-l md:border-t-0' : ''
       }`}
     >
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(238,233,224,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(238,233,224,0.05) 1px, transparent 1px)',
-          backgroundSize: '24px 24px',
-        }}
-      />
-
       {/* Header row */}
       <div className="relative flex items-center gap-4 border-b border-bone/15 px-6 py-4 md:px-10">
         <span

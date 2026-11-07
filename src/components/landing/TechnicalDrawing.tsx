@@ -208,12 +208,7 @@ const TechnicalDrawing = () => {
             <motion.div
               aria-hidden
               className="absolute inset-0 rounded-sm border border-bone/10"
-              style={{
-                opacity: gridOpacity,
-                backgroundImage:
-                  'linear-gradient(rgba(238,233,224,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(238,233,224,0.05) 1px, transparent 1px)',
-                backgroundSize: '40px 40px',
-              }}
+              style={{ opacity: gridOpacity }}
             />
             <svg
               viewBox="0 0 1000 620"
