@@ -10,6 +10,15 @@ import { commercialLines, formatPrice, lowestTier } from '@/data/lines';
 
 import { SplitText } from './motion';
 
+const CARD_MARKS = [
+  'left-4 top-4 size-6 border-l border-t',
+  'right-4 top-4 size-6 border-r border-t',
+  'bottom-4 left-4 size-6 border-b border-l',
+  'bottom-4 right-4 size-6 border-b border-r',
+  'inset-x-10 top-1/2 h-px bg-bone/30',
+  'inset-y-10 left-1/2 w-px bg-bone/30',
+];
+
 // Vertical scroll drives a horizontal track of the three lines while the
 // section stays pinned to the viewport
 const LinesOverview = () => {
@@ -97,6 +106,14 @@ const LinesOverview = () => {
                   className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/10 to-ink/90" />
+                {/* Registration marks and axes appear on hover */}
+                {CARD_MARKS.map((mark) => (
+                  <span
+                    key={mark}
+                    aria-hidden
+                    className={`absolute scale-150 border-bone/80 opacity-0 transition-all duration-500 group-hover:scale-100 group-hover:opacity-100 ${mark}`}
+                  />
+                ))}
                 <div
                   className="absolute inset-0 opacity-0 mix-blend-color transition-opacity duration-700 group-hover:opacity-40"
                   style={{ backgroundColor: line.accent }}

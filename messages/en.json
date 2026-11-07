@@ -737,7 +737,14 @@
         }
       },
       "closingLine": "From assessment to commissioning, we take care of everything.",
-      "cta": "Request your free quote"
+      "cta": "Request your free quote",
+      "plate": {
+        "title": "Single-line diagram",
+        "legend": "Legend",
+        "labels": {
+          "title": "System single-line diagram"
+        }
+      }
     },
     "prefab": {
       "label": "Living line",
@@ -769,7 +776,18 @@
         }
       },
       "closingLine": "Your new home starts with a project.",
-      "cta": "Contact us to build it"
+      "cta": "Contact us to build it",
+      "plate": {
+        "title": "Ground-floor plan",
+        "legend": "Legend",
+        "labels": {
+          "title": "Ground-floor plan",
+          "living": "Living",
+          "bedroom": "Bedroom",
+          "bath": "Bath",
+          "study": "Study"
+        }
+      }
     },
     "renovation": {
       "label": "Construction line",
@@ -802,7 +820,19 @@
         }
       },
       "closingLine": "From first idea to handing over the keys. We take care of everything.",
-      "cta": "Request a free consultation"
+      "cta": "Request a free consultation",
+      "plate": {
+        "title": "Proposed layout",
+        "legend": "Legend",
+        "labels": {
+          "title": "Proposed layout",
+          "demolition": "Demolition",
+          "newWorks": "New works",
+          "insulation": "Insulation",
+          "kitchen": "Kitchen",
+          "bath": "Bath"
+        }
+      }
     }
   }
 }

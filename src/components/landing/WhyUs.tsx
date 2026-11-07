@@ -6,6 +6,7 @@ import { useRef } from 'react';
 
 import { commercialLines } from '@/data/lines';
 
+import DimensionDivider from './DimensionDivider';
 import { Reveal, SplitText } from './motion';
 
 const reasons = [
@@ -58,8 +59,9 @@ const WhyUs = () => {
   const t = useTranslations('landing.why');
 
   return (
-    <section className="bg-ink py-24 text-bone md:py-40">
-      <div className="container-custom grid gap-12 lg:grid-cols-12">
+    <section className="bg-ink pb-24 pt-10 text-bone md:pb-40 md:pt-16">
+      <DimensionDivider label={t('eyebrow')} />
+      <div className="container-custom mt-16 grid gap-12 md:mt-24 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <div className="lg:sticky lg:top-40">
             <Reveal>

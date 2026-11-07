@@ -71,25 +71,26 @@ const LandingHero = () => {
         className="absolute inset-0 -z-10"
         style={{ scale: imageScale }}
       >
-        <AnimatePresence initial={false}>
+        {/* All covers stay mounted (and preloaded) so a change only fades
+            opacity; mounting a not-yet-loaded image flashed black */}
+        {commercialLines.map((item, index) => (
           <motion.div
-            key={line.key}
+            key={item.key}
             className="absolute inset-0"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={false}
+            animate={{ opacity: index === active ? 1 : 0 }}
             transition={{ duration: 1.6, ease: 'easeInOut' }}
           >
             <Image
-              src={line.cover}
-              alt={tLines(`${line.key}.title`)}
+              src={item.cover}
+              alt={index === active ? tLines(`${item.key}.title`) : ''}
               fill
-              priority={active === 0}
+              priority
               sizes="100vw"
               className="object-cover"
             />
           </motion.div>
-        </AnimatePresence>
+        ))}
       </motion.div>
       <div className="absolute inset-0 -z-10 bg-ink/45" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/30 to-transparent" />

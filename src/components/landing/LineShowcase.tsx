@@ -14,12 +14,13 @@ import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useRef } from 'react';
 
-import type { CommercialLine } from '@/data/lines';
+import type { CommercialLine, LineTier } from '@/data/lines';
 import { formatPrice, lowestTier } from '@/data/lines';
 import { Link as LocalizedLink } from '@/i18n/navigation';
 
+import DimensionDivider from './DimensionDivider';
 import { Reveal, SplitText } from './motion';
-import SolutionsList from './SolutionsList';
+import SolutionsPlate from './SolutionsPlate';
 
 type LineProps = {
   line: CommercialLine;
@@ -164,6 +165,114 @@ const CountUp = ({ value, locale }: CountUpProps) => {
   return <motion.span ref={ref}>{text}</motion.span>;
 };
 
+type PriceSheetProps = {
+  tier: LineTier;
+  index: number;
+  line: CommercialLine;
+  name: string;
+  description: string;
+  locale: string;
+};
+
+// One column of the price schedule: title-block header, price, a dimension
+// line that draws under it, description; drawing grid appears on hover
+const PriceSheet = ({
+  tier,
+  index,
+  line,
+  name,
+  description,
+  locale,
+}: PriceSheetProps) => {
+  const tShowcase = useTranslations('landing.showcase');
+  const letter = String.fromCharCode(65 + index);
+
+  return (
+    <div
+      className={`group relative flex flex-col ${
+        index > 0 ? 'border-t border-bone/15 md:border-l md:border-t-0' : ''
+      }`}
+    >
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(238,233,224,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(238,233,224,0.05) 1px, transparent 1px)',
+          backgroundSize: '24px 24px',
+        }}
+      />
+
+      {/* Header row */}
+      <div className="relative flex items-center gap-4 border-b border-bone/15 px-6 py-4 md:px-10">
+        <span
+          className="flex size-8 shrink-0 items-center justify-center rounded-full border font-display text-xs font-semibold"
+          style={{
+            borderColor: tier.highlighted
+              ? line.accent
+              : 'rgba(238,233,224,0.4)',
+            color: tier.highlighted ? line.accent : 'rgba(238,233,224,0.7)',
+          }}
+        >
+          {letter}
+        </span>
+        <span className="flex-1 font-display text-xs font-medium uppercase tracking-[0.3em] text-bone">
+          {name}
+        </span>
+        <span className="font-display text-[11px] tabular-nums tracking-[0.15em] text-bone/40">
+          {line.number}.P{index + 1}
+        </span>
+      </div>
+
+      <div className="relative flex flex-1 flex-col px-6 py-10 md:px-10 md:py-14">
+        <p className="text-[10px] uppercase tracking-[0.25em] text-bone/50">
+          {tier.price === null ? '\u00A0' : tShowcase('from')}
+        </p>
+        <p className="mt-2 font-display text-6xl font-semibold tracking-[-0.045em] md:text-8xl">
+          {tier.price === null ? (
+            tShowcase('onRequest')
+          ) : (
+            <CountUp value={tier.price} locale={locale} />
+          )}
+          {tier.unit === 'sqm' && (
+            <span className="ml-2 text-xl font-normal tracking-normal text-bone/50 md:text-2xl">
+              {tShowcase('sqm')}
+            </span>
+          )}
+        </p>
+
+        {/* Dimension line */}
+        <div aria-hidden className="relative mt-8 h-4">
+          <span className="absolute left-0 top-0 h-4 w-px bg-bone/40" />
+          <span className="absolute right-0 top-0 h-4 w-px bg-bone/40" />
+          <motion.span
+            className="absolute inset-x-0 top-1/2 h-px origin-left"
+            style={{
+              backgroundColor: tier.highlighted
+                ? line.accent
+                : 'rgba(238,233,224,0.35)',
+            }}
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 1.4,
+              ease: [0.16, 1, 0.3, 1],
+              delay: 0.2 + index * 0.15,
+            }}
+          />
+          <span className="absolute left-0 top-1/2 h-px w-3 -translate-x-1/2 -rotate-45 bg-bone/60" />
+          <span className="absolute right-0 top-1/2 h-px w-3 translate-x-1/2 -rotate-45 bg-bone/60" />
+        </div>
+
+        <p className="mt-8 max-w-md leading-relaxed text-bone/65">
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+};
+
 const LineShowcase = ({ line }: LineProps) => {
   const t = useTranslations(`lines.${line.key}`);
   const tSheet = useTranslations('landing.sheet');
@@ -177,8 +286,12 @@ const LineShowcase = ({ line }: LineProps) => {
   return (
     <section
       id={line.slug}
-      className="relative bg-ink py-24 text-bone md:py-40"
+      className="relative bg-ink pb-24 pt-10 text-bone md:pb-40 md:pt-16"
     >
+      <DimensionDivider
+        label={`${tSheet('short')} ${line.number} — ${t('title')}`}
+      />
+
       {/* Title */}
       <div className="container-custom mb-16 md:mb-24">
         <Reveal>
@@ -223,79 +336,40 @@ const LineShowcase = ({ line }: LineProps) => {
 
       <DragGallery line={line} />
 
-      <SolutionsList
+      <SolutionsPlate
         line={line}
-        title={t('solutionsTitle')}
         items={solutionKeys.map((key) => t(`solutions.${key}`))}
       />
 
       {/* Pricing */}
       <div className="container-custom mt-24 md:mt-40">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="grid gap-6 border-b border-bone/15 pb-8 lg:grid-cols-12 lg:items-end">
           <SplitText
             as="h3"
             text={t('pricingTitle')}
-            className="block font-display text-4xl font-semibold tracking-[-0.03em] md:text-6xl"
+            className="block font-display text-4xl font-semibold leading-[1.02] tracking-[-0.03em] md:text-6xl lg:col-span-8"
           />
-          <Reveal delay={0.1}>
-            <p className="mt-5 text-lg text-bone/60">{t('pricingText')}</p>
+          <Reveal delay={0.1} className="lg:col-span-4">
+            <p className="text-lg text-bone/60">{t('pricingText')}</p>
           </Reveal>
         </div>
 
+        {/* Price schedule drawn as a specification sheet */}
         <div
-          className={`mx-auto mt-14 grid gap-5 ${
-            line.tiers.length > 1 ? 'max-w-5xl md:grid-cols-2' : 'max-w-2xl'
+          className={`grid border-x border-b border-bone/15 ${
+            line.tiers.length > 1 ? 'md:grid-cols-2' : ''
           }`}
         >
           {line.tiers.map((tier, index) => (
-            <Reveal key={tier.key} delay={index * 0.12}>
-              <div
-                className="relative flex h-full flex-col overflow-hidden rounded-[32px] border p-8 md:p-12"
-                style={
-                  tier.highlighted
-                    ? {
-                        borderColor: `${line.accent}66`,
-                        background: `radial-gradient(120% 80% at 100% 0%, ${line.accent}2e, transparent 60%), #161513`,
-                        boxShadow: `0 40px 120px -40px ${line.accent}55`,
-                      }
-                    : {
-                        borderColor: 'rgba(238,233,224, 0.1)',
-                        background: 'rgba(238,233,224, 0.03)',
-                      }
-                }
-              >
-                <p
-                  className={`flex items-center gap-3 text-xs font-medium uppercase tracking-[0.3em] ${
-                    tier.highlighted ? 'text-bone' : 'text-bone/60'
-                  }`}
-                >
-                  {tier.highlighted && (
-                    <span
-                      className={`inline-block size-2 rounded-full ${line.accentBg}`}
-                    />
-                  )}
-                  {t(`tiers.${tier.key}.name`)}
-                </p>
-                <p className="mt-10 text-[10px] uppercase tracking-[0.25em] text-bone/50">
-                  {tier.price === null ? ' ' : tShowcase('from')}
-                </p>
-                <p className="mt-1 font-display text-6xl font-semibold tracking-[-0.04em] md:text-7xl">
-                  {tier.price === null ? (
-                    tShowcase('onRequest')
-                  ) : (
-                    <CountUp value={tier.price} locale={locale} />
-                  )}
-                  {tier.unit === 'sqm' && (
-                    <span className="text-2xl font-normal text-bone/50">
-                      {tShowcase('sqm')}
-                    </span>
-                  )}
-                </p>
-                <p className="mt-8 leading-relaxed text-bone/65">
-                  {t(`tiers.${tier.key}.description`)}
-                </p>
-              </div>
-            </Reveal>
+            <PriceSheet
+              key={tier.key}
+              tier={tier}
+              index={index}
+              line={line}
+              name={t(`tiers.${tier.key}.name`)}
+              description={t(`tiers.${tier.key}.description`)}
+              locale={locale}
+            />
           ))}
         </div>
 

@@ -737,7 +737,14 @@
         }
       },
       "closingLine": "Dalla valutazione alla messa in servizio, pensiamo a tutto noi.",
-      "cta": "Richiedi il tuo preventivo gratuito"
+      "cta": "Richiedi il tuo preventivo gratuito",
+      "plate": {
+        "title": "Schema unifilare",
+        "legend": "Legenda",
+        "labels": {
+          "title": "Schema unifilare impianto"
+        }
+      }
     },
     "prefab": {
       "label": "Linea abitare",
@@ -769,7 +776,18 @@
         }
       },
       "closingLine": "La tua nuova casa parte da un progetto.",
-      "cta": "Contattaci per realizzarlo"
+      "cta": "Contattaci per realizzarlo",
+      "plate": {
+        "title": "Pianta piano terra",
+        "legend": "Legenda",
+        "labels": {
+          "title": "Pianta piano terra",
+          "living": "Soggiorno",
+          "bedroom": "Camera",
+          "bath": "Bagno",
+          "study": "Studio"
+        }
+      }
     },
     "renovation": {
       "label": "Linea costruzioni",
@@ -802,7 +820,19 @@
         }
       },
       "closingLine": "Dalla prima idea alla consegna delle chiavi. Pensiamo a tutto noi.",
-      "cta": "Richiedi una consulenza gratuita"
+      "cta": "Richiedi una consulenza gratuita",
+      "plate": {
+        "title": "Stato di progetto",
+        "legend": "Legenda",
+        "labels": {
+          "title": "Stato di progetto",
+          "demolition": "Demolizioni",
+          "newWorks": "Nuove opere",
+          "insulation": "Isolamento",
+          "kitchen": "Cucina",
+          "bath": "Bagno"
+        }
+      }
     }
   }
 }
