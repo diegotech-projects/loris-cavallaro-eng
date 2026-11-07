@@ -63,7 +63,7 @@ const TopNav = () => {
           </div>
           <LocalizedLink
             href="/contact#contact-form"
-            className="rounded-full bg-bone px-4 py-2 text-[13px] font-semibold text-ink transition-colors hover:bg-volt"
+            className="rounded-full bg-bone px-4 py-2 text-[13px] font-semibold text-ink transition-colors hover:bg-cobalt hover:text-bone"
           >
             {t('requestQuote')}
           </LocalizedLink>

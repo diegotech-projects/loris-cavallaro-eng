@@ -54,8 +54,8 @@ const themes = {
   },
   noir: {
     primary: '#f2efe9', // Bone white for primary elements
-    secondary: '#c6ff3d', // Acid lime for buttons and links
-    accent: '#c6ff3d', // Acid lime highlights
+    secondary: '#4f7cff', // Cobalt blue for buttons and links
+    accent: '#4f7cff', // Cobalt blue highlights
     background: '#0a0a0b', // Graphite black page background
     surface: '#141416', // Raised cards
     surfaceLight: '#1c1c1f', // Subtle alternate sections
@@ -102,12 +102,12 @@ module.exports = {
     },
     extend: {
       colors: {
-        // Noir palette: one bold accent per commercial line
+        // Noir palette: one accent per commercial line (blue / brick complementary)
         ink: '#0a0a0b',
         bone: '#f2efe9',
-        volt: '#c6ff3d',
-        lilac: '#a99bff',
-        ember: '#ff6a3d',
+        cobalt: '#4f7cff',
+        ice: '#a9c7e8',
+        brick: '#d0603f',
 
         // Theme-based semantic colors (changes based on activeTheme)
         themeBackground: activeTheme.background,
