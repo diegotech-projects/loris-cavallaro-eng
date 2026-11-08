@@ -586,6 +586,52 @@
         "Sicurezza Cantieri",
         "Gestione Progetti"
       ]
+    },
+    "pages": {
+      "home": {
+        "title": "Cavallaro Ingegneria e Costruzioni | Fotovoltaico, case prefabbricate e ristrutturazioni chiavi in mano a Messina",
+        "description": "Studio di ingegneria e impresa a Messina: impianti fotovoltaici, case prefabbricate e ristrutturazioni chiavi in mano in Sicilia e in tutta Italia. Un unico referente, prezzi trasparenti, preventivo gratuito."
+      },
+      "about": {
+        "title": "Chi siamo | Ing. Loris Cavallaro, ingegnere civile e ambientale a Messina",
+        "description": "Ing. Loris Cavallaro, ingegnere civile e ambientale: progettazione edile, sicurezza, efficienza energetica e direzione lavori. Studio a Messina, operativo in Sicilia e in tutta Italia."
+      },
+      "services": {
+        "title": "Servizi di ingegneria e costruzioni a Messina e in Sicilia | Cavallaro",
+        "description": "Fotovoltaico, case prefabbricate e ristrutturazioni chiavi in mano, più progettazione strutturale, direzione lavori, pratiche edilizie, APE e Legge 10. Messina, Sicilia e tutta Italia."
+      },
+      "projects": {
+        "title": "Progetti realizzati | Ville, residenze e impianti fotovoltaici | Cavallaro",
+        "description": "Una selezione di progetti: ville moderne, complessi residenziali e impianti fotovoltaici alle Isole Eolie e in Sicilia. Render, foto e caratteristiche tecniche."
+      },
+      "faq": {
+        "title": "Domande frequenti su progettazione, fotovoltaico e ristrutturazioni | Cavallaro",
+        "description": "Tempi, costi, pratiche burocratiche, zone servite ed efficienza energetica: le risposte dell'Ing. Loris Cavallaro alle domande più frequenti."
+      },
+      "contact": {
+        "title": "Contatti e preventivo gratuito | Cavallaro Ingegneria e Costruzioni, Messina",
+        "description": "Richiedi un preventivo gratuito per fotovoltaico, casa prefabbricata o ristrutturazione. Email, telefono e modulo di contatto: rispondiamo in tutta la Sicilia e in Italia."
+      },
+      "privacy": {
+        "title": "Privacy policy | Cavallaro Ingegneria e Costruzioni",
+        "description": "Informativa sul trattamento dei dati personali raccolti tramite il sito e il modulo di contatto."
+      },
+      "cookies": {
+        "title": "Cookie policy | Cavallaro Ingegneria e Costruzioni",
+        "description": "Quali cookie usa il sito, a cosa servono e come gestire le preferenze."
+      },
+      "solar": {
+        "title": "Impianti fotovoltaici chiavi in mano a Messina e in Sicilia | da € 3.999",
+        "description": "Impianti fotovoltaici residenziali con accumulo, inverter di ultima generazione e monitoraggio. Progetto, installazione e messa in servizio chiavi in mano a Messina, Isole Eolie e in tutta la Sicilia."
+      },
+      "prefab": {
+        "title": "Case prefabbricate chiavi in mano in Sicilia | Standard e su misura | Cavallaro",
+        "description": "Case prefabbricate moderne ed efficienti, standard o progettate su misura, con fotovoltaico integrato. Progettazione e realizzazione chiavi in mano a Messina, in Sicilia e in Italia."
+      },
+      "renovation": {
+        "title": "Ristrutturazioni chiavi in mano a Messina | Economy da 450 €/m², Luxury | Cavallaro",
+        "description": "Ristrutturazioni complete di case e appartamenti: bagni, cucine, impianti, pavimenti, efficientamento, pratiche edilizie e direzione lavori. Linea Economy e Luxury, un unico referente."
+      }
     }
   },
   "contactPage": {
@@ -723,6 +769,26 @@
       "scale": "Scala",
       "date": "Data",
       "short": "Tav."
+    },
+    "areas": {
+      "eyebrow": "Dove operiamo",
+      "title": "Da Messina a tutta la Sicilia.",
+      "text": "Lo studio segue progetti a Messina e provincia, nelle Isole Eolie e in tutta la Sicilia. Su richiesta interveniamo anche nel resto d'Italia, con lo stesso unico referente dal progetto alla consegna.",
+      "items": [
+        "Messina",
+        "Provincia di Messina",
+        "Isole Eolie",
+        "Milazzo",
+        "Catania",
+        "Palermo",
+        "Sicilia",
+        "Italia su richiesta"
+      ]
+    },
+    "linePage": {
+      "faqTitle": "Domande frequenti",
+      "breadcrumbHome": "Home",
+      "turnkeySuffix": "chiavi in mano"
     }
   },
   "lines": {
@@ -758,7 +824,25 @@
         "labels": {
           "title": "Schema unifilare impianto"
         }
-      }
+      },
+      "faq": [
+        {
+          "q": "Quanto costa un impianto fotovoltaico chiavi in mano?",
+          "a": "Le soluzioni partono da {price}. Il prezzo finale dipende dalla potenza dell'impianto, dalla capacità di accumulo e dalle caratteristiche dell'edificio. Ogni proposta è accompagnata da una valutazione tecnica e il preventivo è gratuito."
+        },
+        {
+          "q": "Cosa comprende il servizio chiavi in mano?",
+          "a": "Valutazione iniziale, progettazione in base ai consumi, fornitura dei componenti, installazione e messa in servizio. Un unico referente segue tutto il percorso."
+        },
+        {
+          "q": "Si possono aggiungere le batterie di accumulo?",
+          "a": "Sì. Progettiamo impianti con sistemi di accumulo, inverter di ultima generazione e monitoraggio della produzione, con possibilità di predisporre la ricarica per veicoli elettrici."
+        },
+        {
+          "q": "In quali zone installate impianti fotovoltaici?",
+          "a": "Operiamo a Messina e provincia, nelle Isole Eolie e in tutta la Sicilia. Su richiesta seguiamo progetti anche nel resto d'Italia."
+        }
+      ]
     },
     "prefab": {
       "label": "Linea abitare",
@@ -801,7 +885,25 @@
           "bath": "Bagno",
           "study": "Studio"
         }
-      }
+      },
+      "faq": [
+        {
+          "q": "Quanto costa una casa prefabbricata chiavi in mano?",
+          "a": "La Linea Standard parte da {price}, con configurazioni definite. La Linea Personalizzata ha un prezzo su misura, calcolato in base al progetto."
+        },
+        {
+          "q": "Che differenza c'è tra Linea Standard e Linea Personalizzata?",
+          "a": "La Standard offre configurazioni già definite per ottimizzare tempi e costi. La Personalizzata parte dalle tue esigenze: distribuzione degli ambienti, finiture e dotazioni tecnologiche."
+        },
+        {
+          "q": "Si può integrare un impianto fotovoltaico?",
+          "a": "Sì. Le abitazioni possono integrare impianti fotovoltaici, sistemi di accumulo e soluzioni tecnologiche ad alta efficienza."
+        },
+        {
+          "q": "Chi segue progettazione e realizzazione?",
+          "a": "Un unico referente: consulenza tecnica, progettazione e coordinamento di tutte le fasi di realizzazione."
+        }
+      ]
     },
     "renovation": {
       "label": "Linea costruzioni",
@@ -846,7 +948,25 @@
           "kitchen": "Cucina",
           "bath": "Bagno"
         }
-      }
+      },
+      "faq": [
+        {
+          "q": "Quanto costa una ristrutturazione chiavi in mano al metro quadro?",
+          "a": "La Linea Economy parte da {economy}/m², la Linea Luxury da {luxury}/m². Il costo finale dipende dagli interventi richiesti, dai materiali e dallo stato dell'immobile."
+        },
+        {
+          "q": "Cosa comprende una ristrutturazione completa?",
+          "a": "Bagni e cucine, impianti elettrici e idraulici, pavimenti e rivestimenti, controsoffitti e cartongesso, efficientamento energetico, progettazione e pratiche edilizie."
+        },
+        {
+          "q": "Vi occupate anche delle pratiche edilizie e della direzione lavori?",
+          "a": "Sì. Gestiamo progettazione, pratiche edilizie, coordinamento delle lavorazioni e direzione dei lavori fino alla consegna."
+        },
+        {
+          "q": "Che differenza c'è tra Economy e Luxury?",
+          "a": "Economy punta su interventi mirati e un ottimo rapporto qualità-prezzo. Luxury prevede materiali ricercati, finiture di pregio e un elevato livello di personalizzazione."
+        }
+      ]
     }
   }
 }

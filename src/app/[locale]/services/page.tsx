@@ -14,6 +14,7 @@ import {
 } from '@/components/page/PageParts';
 import { commercialLines, formatPrice, lowestTier } from '@/data/lines';
 import { Link as LocalizedLink } from '@/i18n/navigation';
+import { metadataFor } from '@/utils/pageMetadata';
 
 const engineeringServices = [
   'structuralDesign',
@@ -28,6 +29,9 @@ const detailedServices = [
   'energyEfficiency',
   'projectManagement',
 ] as const;
+
+
+export const generateMetadata = metadataFor('services', '/services');
 
 const ServicesPage = () => {
   const t = useTranslations('servicesPage');
@@ -60,7 +64,7 @@ const ServicesPage = () => {
               return (
                 <LocalizedLink
                   key={line.key}
-                  href={`/#${line.slug}`}
+                  href={`/${line.slug}`}
                   className="group flex flex-col bg-ink"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">

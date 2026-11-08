@@ -1,6 +1,10 @@
 import { useTranslations } from 'next-intl';
 
 import { PageHero } from '@/components/page/PageParts';
+import { metadataFor } from '@/utils/pageMetadata';
+
+
+export const generateMetadata = metadataFor('cookies', '/cookie-policy');
 
 export default function CookiePolicyPage() {
   const t = useTranslations('cookiePolicy');

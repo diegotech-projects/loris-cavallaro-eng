@@ -12,6 +12,7 @@ import {
 } from '@/components/about/AboutSections';
 import { Reveal } from '@/components/landing/motion';
 import { PageCta, SectionHeader } from '@/components/page/PageParts';
+import { metadataFor } from '@/utils/pageMetadata';
 
 const competencies = [
   'buildingDesign',
@@ -21,6 +22,9 @@ const competencies = [
   'urbanPlanning',
   'consulting',
 ] as const;
+
+
+export const generateMetadata = metadataFor('about', '/about');
 
 const AboutPage = () => {
   const t = useTranslations('about');

@@ -102,7 +102,7 @@ const ProjectsPage = () => {
                     >
                       <Image
                         src={src}
-                        alt=""
+                        alt={project.title}
                         fill
                         sizes="(min-width: 1024px) 27vw, 50vw"
                         className="object-cover"

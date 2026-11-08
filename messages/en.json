@@ -586,6 +586,52 @@
         "Construction Safety",
         "Project Management"
       ]
+    },
+    "pages": {
+      "home": {
+        "title": "Cavallaro Engineering & Construction | Turnkey solar, prefabricated homes and renovations in Sicily",
+        "description": "Engineering and construction studio in Messina, Sicily: turnkey solar systems, prefabricated homes and renovations across Sicily and Italy. One point of contact, transparent prices, free quote."
+      },
+      "about": {
+        "title": "About | Eng. Loris Cavallaro, civil and environmental engineer in Messina",
+        "description": "Eng. Loris Cavallaro, civil and environmental engineer: building design, safety, energy efficiency and works management. Based in Messina, working across Sicily and Italy."
+      },
+      "services": {
+        "title": "Engineering and construction services in Messina and Sicily | Cavallaro",
+        "description": "Turnkey solar, prefabricated homes and renovations, plus structural design, works management, building permits and energy certificates. Messina, Sicily and all of Italy."
+      },
+      "projects": {
+        "title": "Projects | Villas, residences and solar systems | Cavallaro",
+        "description": "Selected projects: modern villas, residential complexes and solar systems in the Aeolian Islands and Sicily. Renders, photos and technical features."
+      },
+      "faq": {
+        "title": "FAQ on design, solar and renovations | Cavallaro",
+        "description": "Timing, costs, permits, areas served and energy efficiency: answers from Eng. Loris Cavallaro to the most common questions."
+      },
+      "contact": {
+        "title": "Contact and free quote | Cavallaro Engineering & Construction, Messina",
+        "description": "Request a free quote for a solar system, a prefabricated home or a renovation. Email, phone and contact form; we work across Sicily and Italy."
+      },
+      "privacy": {
+        "title": "Privacy policy | Cavallaro Engineering & Construction",
+        "description": "How personal data collected through the website and contact form is processed."
+      },
+      "cookies": {
+        "title": "Cookie policy | Cavallaro Engineering & Construction",
+        "description": "Which cookies the website uses, what they are for and how to manage your preferences."
+      },
+      "solar": {
+        "title": "Turnkey solar systems in Messina and Sicily | from €3,999",
+        "description": "Residential solar systems with battery storage, latest-generation inverters and monitoring. Design, installation and commissioning, turnkey, in Messina, the Aeolian Islands and across Sicily."
+      },
+      "prefab": {
+        "title": "Turnkey prefabricated homes in Sicily | Standard and bespoke | Cavallaro",
+        "description": "Modern, efficient prefabricated homes, standard or fully bespoke, with integrated solar. Turnkey design and construction in Messina, Sicily and Italy."
+      },
+      "renovation": {
+        "title": "Turnkey renovations in Messina | Economy from €450/m², Luxury | Cavallaro",
+        "description": "Complete renovations of houses and apartments: bathrooms, kitchens, systems, flooring, energy upgrades, permits and works management. Economy and Luxury lines, one point of contact."
+      }
     }
   },
   "contactPage": {
@@ -723,6 +769,26 @@
       "scale": "Scale",
       "date": "Date",
       "short": "Sheet"
+    },
+    "areas": {
+      "eyebrow": "Where we work",
+      "title": "From Messina across Sicily.",
+      "text": "The studio follows projects in Messina and its province, the Aeolian Islands and across Sicily. On request we also work elsewhere in Italy, with the same single point of contact from design to handover.",
+      "items": [
+        "Messina",
+        "Province of Messina",
+        "Aeolian Islands",
+        "Milazzo",
+        "Catania",
+        "Palermo",
+        "Sicily",
+        "Italy on request"
+      ]
+    },
+    "linePage": {
+      "faqTitle": "Frequently asked questions",
+      "breadcrumbHome": "Home",
+      "turnkeySuffix": "turnkey"
     }
   },
   "lines": {
@@ -758,7 +824,25 @@
         "labels": {
           "title": "System single-line diagram"
         }
-      }
+      },
+      "faq": [
+        {
+          "q": "How much does a turnkey solar system cost?",
+          "a": "Solutions start from {price}. The final price depends on system power, storage capacity and the building. Every proposal includes a technical assessment and the quote is free."
+        },
+        {
+          "q": "What does the turnkey service include?",
+          "a": "Initial assessment, design based on your consumption, component supply, installation and commissioning. One point of contact follows the whole process."
+        },
+        {
+          "q": "Can battery storage be added?",
+          "a": "Yes. We design systems with battery storage, latest-generation inverters and production monitoring, and can prepare for EV charging."
+        },
+        {
+          "q": "Where do you install solar systems?",
+          "a": "We work in Messina and its province, the Aeolian Islands and across Sicily. On request we also follow projects elsewhere in Italy."
+        }
+      ]
     },
     "prefab": {
       "label": "Living line",
@@ -801,7 +885,25 @@
           "bath": "Bath",
           "study": "Study"
         }
-      }
+      },
+      "faq": [
+        {
+          "q": "How much does a turnkey prefabricated home cost?",
+          "a": "The Standard line starts from {price} with defined layouts. The Bespoke line is priced on the project."
+        },
+        {
+          "q": "What is the difference between Standard and Bespoke?",
+          "a": "Standard offers defined layouts to optimise time and cost. Bespoke starts from your needs: room layout, finishes and technology."
+        },
+        {
+          "q": "Can a solar system be integrated?",
+          "a": "Yes. Homes can integrate solar systems, battery storage and high-efficiency technology."
+        },
+        {
+          "q": "Who manages design and construction?",
+          "a": "A single point of contact: technical consulting, design and coordination of every build phase."
+        }
+      ]
     },
     "renovation": {
       "label": "Construction line",
@@ -846,7 +948,25 @@
           "kitchen": "Kitchen",
           "bath": "Bath"
         }
-      }
+      },
+      "faq": [
+        {
+          "q": "How much does a turnkey renovation cost per square metre?",
+          "a": "The Economy line starts from {economy}/m², the Luxury line from {luxury}/m². The final cost depends on the works, materials and condition of the property."
+        },
+        {
+          "q": "What does a complete renovation include?",
+          "a": "Bathrooms and kitchens, electrical and plumbing systems, flooring and wall finishes, false ceilings and drywall, energy upgrades, design and building permits."
+        },
+        {
+          "q": "Do you also handle permits and works management?",
+          "a": "Yes. We manage design, building permits, coordination of trades and works management through to handover."
+        },
+        {
+          "q": "What is the difference between Economy and Luxury?",
+          "a": "Economy focuses on targeted work and great value. Luxury uses fine materials, premium finishes and a high level of customisation."
+        }
+      ]
     }
   }
 }

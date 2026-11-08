@@ -10,6 +10,10 @@ import LinesOverview from '@/components/landing/LinesOverview';
 import TechnicalDrawing from '@/components/landing/TechnicalDrawing';
 import WhyUs from '@/components/landing/WhyUs';
 import { commercialLines } from '@/data/lines';
+import { metadataFor } from '@/utils/pageMetadata';
+
+
+export const generateMetadata = metadataFor('home', '');
 
 const Page = () => {
   return (

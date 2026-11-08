@@ -84,6 +84,7 @@ const ScrollCover = ({ line }: LineProps) => {
 const DragGallery = ({ line }: LineProps) => {
   const constraintsRef = useRef<HTMLDivElement>(null);
   const tShowcase = useTranslations('landing.showcase');
+  const tLines = useTranslations('lines');
 
   return (
     <div className="mt-20 md:mt-32">
@@ -118,7 +119,7 @@ const DragGallery = ({ line }: LineProps) => {
             >
               <Image
                 src={src}
-                alt=""
+                alt={`${tLines(`${line.key}.title`)} — ${index + 1}`}
                 fill
                 draggable={false}
                 sizes="(min-width: 1024px) 28vw, (min-width: 768px) 34vw, 72vw"
@@ -263,7 +264,13 @@ const PriceSheet = ({
   );
 };
 
-const LineShowcase = ({ line }: LineProps) => {
+type LineShowcaseProps = LineProps & {
+  // On the line's own page the title is the page <h1> and the divider is
+  // replaced by the breadcrumb
+  asPage?: boolean;
+};
+
+const LineShowcase = ({ line, asPage = false }: LineShowcaseProps) => {
   const t = useTranslations(`lines.${line.key}`);
   const tSheet = useTranslations('landing.sheet');
   const tShowcase = useTranslations('landing.showcase');
@@ -278,9 +285,11 @@ const LineShowcase = ({ line }: LineProps) => {
       id={line.slug}
       className="relative bg-ink pb-24 pt-10 text-bone md:pb-40 md:pt-16"
     >
-      <DimensionDivider
-        label={`${tSheet('short')} ${line.number} — ${t('title')}`}
-      />
+      {!asPage && (
+        <DimensionDivider
+          label={`${tSheet('short')} ${line.number} — ${t('title')}`}
+        />
+      )}
 
       {/* Title */}
       <div className="container-custom mb-16 md:mb-24">
@@ -293,7 +302,8 @@ const LineShowcase = ({ line }: LineProps) => {
           </p>
         </Reveal>
         <SplitText
-          as="h2"
+          as={asPage ? 'h1' : 'h2'}
+          immediate={asPage}
           text={t('title')}
           className="block font-display text-[11vw] font-semibold leading-[0.92] tracking-[-0.045em] sm:text-6xl md:text-8xl xl:text-[9rem]"
         />

@@ -100,7 +100,7 @@ function FooterComp() {
             {commercialLines.map((line) => (
               <LocalizedLink
                 key={line.key}
-                href={`/#${line.slug}`}
+                href={`/${line.slug}`}
                 className={linkClass}
               >
                 <span

@@ -10,6 +10,10 @@ import {
   SheetCell,
   SheetGrid,
 } from '@/components/page/PageParts';
+import { metadataFor } from '@/utils/pageMetadata';
+
+
+export const generateMetadata = metadataFor('contact', '/contact');
 
 const ContactPage = () => {
   const t = useTranslations('contactPage');
