@@ -41,10 +41,11 @@ export const commercialLines: CommercialLine[] = [
     accentBg: 'bg-terracotta',
     cover: '/images/lines/solar-hero.jpg',
     gallery: [
+      '/images/lines/solar-render-roof.jpg',
+      '/images/lines/solar-render-ev.jpg',
       '/images/lines/solar-pergola.jpg',
       '/images/lines/solar-storage.jpg',
       '/images/lines/solar-sea.jpg',
-      '/images/lines/solar-vineyard.jpg',
     ],
     solutionCount: 6,
     tiers: [{ key: 'from', price: 3999, highlighted: true }],
