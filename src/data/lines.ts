@@ -57,12 +57,12 @@ export const commercialLines: CommercialLine[] = [
     onAccent: '#0e0d0c',
     accentText: 'text-plaster',
     accentBg: 'bg-plaster',
-    cover: '/images/lines/prefab-hero.jpg',
+    cover: '/images/lines/prefab-render-modern.jpg',
     gallery: [
+      '/images/lines/prefab-render-gabled.jpg',
+      '/images/lines/prefab-render-build.jpg',
+      '/images/lines/prefab-hero.jpg',
       '/images/lines/prefab-cube.jpg',
-      '/images/lines/prefab-day-night.jpg',
-      '/images/lines/prefab-terraces.jpg',
-      '/images/lines/prefab-hillside.jpg',
     ],
     solutionCount: 7,
     tiers: [

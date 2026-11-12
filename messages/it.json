@@ -177,7 +177,7 @@
       "error": "❌ Errore nell'invio del messaggio",
       "errorDescription": "Riprova o contattaci direttamente via email:",
       "required": "*",
-      "sheet": "Tav. 00 — Modulo di richiesta"
+      "sheet": "Tav. 00 · Modulo di richiesta"
     },
     "info": {
       "title": "Inizia il tuo progetto oggi",
@@ -631,6 +631,10 @@
       "renovation": {
         "title": "Ristrutturazioni chiavi in mano a Messina | Economy da 450 €/m², Luxury | Cavallaro",
         "description": "Ristrutturazioni complete di case e appartamenti: bagni, cucine, impianti, pavimenti, efficientamento, pratiche edilizie e direzione lavori. Linea Economy e Luxury, un unico referente."
+      },
+      "practices": {
+        "title": "Pratiche tecniche a Messina: APE da 149 €, CILA, SCIA, DOCFA | Cavallaro",
+        "description": "Listino pratiche tecniche: APE da 149 €, DOCFA da 349 €, CILA da 599 €, SCIA da 1.399 €, permesso di costruire da 3.000 €. Seguite direttamente dall'ing. Loris Cavallaro a Messina e in Sicilia."
       }
     }
   },
@@ -968,5 +972,61 @@
         }
       ]
     }
+  },
+  "practices": {
+    "eyebrow": "Pratiche tecniche",
+    "title": "Listino pratiche tecniche",
+    "description": "Certificazioni, pratiche catastali e titoli edilizi seguiti direttamente dall'ingegnere, con prezzi di partenza chiari.",
+    "from": "da",
+    "note": "Prezzi di partenza indicativi. Il preventivo definitivo dipende dall'immobile, dalla complessità della pratica e da eventuali diritti e oneri dovuti agli enti.",
+    "more": "Altre pratiche su richiesta",
+    "moreText": "Hai bisogno di una pratica che non trovi in elenco? Scrivici e ti diciamo tempi e costi.",
+    "cta": "Richiedi un preventivo",
+    "items": {
+      "ape": {
+        "name": "APE",
+        "full": "Attestato di Prestazione Energetica",
+        "description": "Certifica la classe energetica dell'immobile. È obbligatorio per vendere o affittare casa."
+      },
+      "docfa": {
+        "name": "DOCFA",
+        "full": "Documenti Catasto Fabbricati",
+        "description": "Aggiornamento catastale dell'immobile: nuove planimetrie, variazioni e accatastamenti."
+      },
+      "cila": {
+        "name": "CILA",
+        "full": "Comunicazione Inizio Lavori Asseverata",
+        "description": "Per lavori di manutenzione straordinaria che non toccano le strutture, come rifacimento di bagni, impianti o tramezzi."
+      },
+      "scia": {
+        "name": "SCIA",
+        "full": "Segnalazione Certificata di Inizio Attività",
+        "description": "Per interventi più consistenti, come le ristrutturazioni che riguardano le parti strutturali dell'edificio."
+      },
+      "permit": {
+        "name": "Permesso di costruire",
+        "full": "Titolo edilizio",
+        "description": "Necessario per nuove costruzioni, ampliamenti e ristrutturazioni edilizie importanti."
+      }
+    },
+    "faq": [
+      {
+        "q": "Quanto costa un APE?",
+        "a": "L'Attestato di Prestazione Energetica parte da {ape}. Il prezzo finale dipende da dimensioni e caratteristiche dell'immobile e comprende il sopralluogo."
+      },
+      {
+        "q": "Quando serve la CILA e quando la SCIA?",
+        "a": "La CILA basta per la manutenzione straordinaria che non tocca le strutture, per esempio bagni, impianti e tramezzi. La SCIA serve quando l'intervento è più consistente e riguarda le parti strutturali. Dopo il sopralluogo indichiamo la pratica corretta."
+      },
+      {
+        "q": "Quanto costano le pratiche edilizie?",
+        "a": "La CILA parte da {cila}, la SCIA da {scia} e il permesso di costruire da {permit}. Il costo definitivo dipende dall'intervento e da eventuali diritti e oneri dovuti agli enti."
+      },
+      {
+        "q": "Seguite la pratica anche durante una ristrutturazione?",
+        "a": "Sì. Possiamo occuparci solo della pratica oppure dell'intervento completo, dalla progettazione alla direzione dei lavori, con un unico referente."
+      }
+    ],
+    "pageLink": "Dettagli e domande frequenti"
   }
 }

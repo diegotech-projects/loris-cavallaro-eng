@@ -69,7 +69,7 @@ const ProjectsPage = () => {
   return (
     <main className="relative bg-ink text-bone">
       <PageHero
-        sheet={`${tSheet('short')} P — ${t('hero.title')}`}
+        sheet={`${tSheet('short')} P · ${t('hero.title')}`}
         title={t('hero.title')}
         subtitle={t('hero.subtitle')}
       />
@@ -90,7 +90,7 @@ const ProjectsPage = () => {
                 <FramedImage
                   src={project.images[0]!}
                   alt={project.title}
-                  caption={`${code} — ${project.title}`}
+                  caption={`${code} · ${project.title}`}
                   className="aspect-[16/10]"
                   sizes="(min-width: 1024px) 55vw, 100vw"
                 />

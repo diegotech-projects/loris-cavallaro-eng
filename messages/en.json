@@ -177,7 +177,7 @@
       "error": "❌ Error sending message",
       "errorDescription": "Try again or contact us directly via email:",
       "required": "*",
-      "sheet": "Sheet 00 — Request form"
+      "sheet": "Sheet 00 · Request form"
     },
     "info": {
       "title": "Start your project today",
@@ -631,6 +631,10 @@
       "renovation": {
         "title": "Turnkey renovations in Messina | Economy from €450/m², Luxury | Cavallaro",
         "description": "Complete renovations of houses and apartments: bathrooms, kitchens, systems, flooring, energy upgrades, permits and works management. Economy and Luxury lines, one point of contact."
+      },
+      "practices": {
+        "title": "Technical practices in Messina: APE from €149, CILA, SCIA, DOCFA | Cavallaro",
+        "description": "Price list: energy certificate (APE) from €149, DOCFA from €349, CILA from €599, SCIA from €1,399, building permit from €3,000. Handled directly by Eng. Loris Cavallaro in Messina and Sicily."
       }
     }
   },
@@ -968,5 +972,61 @@
         }
       ]
     }
+  },
+  "practices": {
+    "eyebrow": "Technical practices",
+    "title": "Technical practices price list",
+    "description": "Energy certificates, cadastral filings and building permits handled directly by the engineer, with clear starting prices.",
+    "from": "from",
+    "note": "Indicative starting prices. The final quote depends on the property, the complexity of the practice and any fees due to public offices.",
+    "more": "Other practices on request",
+    "moreText": "Need a practice that is not listed? Write to us and we will tell you timing and cost.",
+    "cta": "Request a quote",
+    "items": {
+      "ape": {
+        "name": "APE",
+        "full": "Energy Performance Certificate",
+        "description": "Certifies the energy class of the property. It is mandatory to sell or rent a home."
+      },
+      "docfa": {
+        "name": "DOCFA",
+        "full": "Cadastral update",
+        "description": "Updates the property at the land registry: new floor plans, changes and registrations."
+      },
+      "cila": {
+        "name": "CILA",
+        "full": "Certified notice of works",
+        "description": "For non-structural extraordinary maintenance, such as new bathrooms, systems or internal partitions."
+      },
+      "scia": {
+        "name": "SCIA",
+        "full": "Certified notice of start of activity",
+        "description": "For larger works, such as renovations that affect the structural parts of the building."
+      },
+      "permit": {
+        "name": "Building permit",
+        "full": "Permesso di costruire",
+        "description": "Required for new buildings, extensions and major renovations."
+      }
+    },
+    "faq": [
+      {
+        "q": "How much does an APE cost?",
+        "a": "The Energy Performance Certificate starts from {ape}. The final price depends on the size and features of the property and includes the site visit."
+      },
+      {
+        "q": "When do I need a CILA and when a SCIA?",
+        "a": "A CILA is enough for non-structural extraordinary maintenance, such as bathrooms, systems and partitions. A SCIA is needed for larger works affecting structural parts. After the site visit we tell you which one applies."
+      },
+      {
+        "q": "How much do building permits cost?",
+        "a": "A CILA starts from {cila}, a SCIA from {scia} and a building permit from {permit}. The final cost depends on the works and any fees due to public offices."
+      },
+      {
+        "q": "Do you handle the paperwork during a renovation too?",
+        "a": "Yes. We can take care of the practice alone or of the whole job, from design to works management, with a single point of contact."
+      }
+    ],
+    "pageLink": "Details and FAQ"
   }
 }

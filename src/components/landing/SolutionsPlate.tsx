@@ -175,7 +175,7 @@ const SolutionsPlate = ({ line, items }: SolutionsPlateProps) => {
             </div>
             <div className="flex flex-wrap justify-between gap-x-6 gap-y-1 border-x border-b border-bone/15 px-4 py-3 font-display text-[11px] uppercase tracking-[0.18em] text-bone/50">
               <span>
-                {tSheet('short')} {line.number}.2 — {t('plate.title')}
+                {tSheet('short')} {line.number}.2 · {t('plate.title')}
               </span>
               <span>
                 {tSheet('scale')} 1:100

@@ -119,7 +119,7 @@ const DragGallery = ({ line }: LineProps) => {
             >
               <Image
                 src={src}
-                alt={`${tLines(`${line.key}.title`)} — ${index + 1}`}
+                alt={`${tLines(`${line.key}.title`)} ${index + 1}`}
                 fill
                 draggable={false}
                 sizes="(min-width: 1024px) 28vw, (min-width: 768px) 34vw, 72vw"
@@ -287,7 +287,7 @@ const LineShowcase = ({ line, asPage = false }: LineShowcaseProps) => {
     >
       {!asPage && (
         <DimensionDivider
-          label={`${tSheet('short')} ${line.number} — ${t('title')}`}
+          label={`${tSheet('short')} ${line.number} · ${t('title')}`}
         />
       )}
 
@@ -298,7 +298,7 @@ const LineShowcase = ({ line, asPage = false }: LineShowcaseProps) => {
             <span
               className={`inline-block size-2 rounded-full ${line.accentBg}`}
             />
-            {tSheet('short')} {line.number} — {t('label')}
+            {tSheet('short')} {line.number} · {t('label')}
           </p>
         </Reveal>
         <SplitText

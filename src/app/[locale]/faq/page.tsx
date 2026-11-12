@@ -23,7 +23,7 @@ export default function FAQPage() {
         )}
       />
       <PageHero
-        sheet={`${tSheet('short')} F — FAQ`}
+        sheet={`${tSheet('short')} F · FAQ`}
         title={t('title')}
         subtitle={t('description')}
       />

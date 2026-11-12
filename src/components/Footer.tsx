@@ -5,6 +5,7 @@ import { ArrowUp, ArrowUpRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 import { commercialLines } from '@/data/lines';
+import { PRACTICES_SLUG } from '@/data/practices';
 import { Link as LocalizedLink } from '@/i18n/navigation';
 
 const navItems = [
@@ -38,6 +39,7 @@ function FooterComp() {
   const t = useTranslations('footer');
   const tNav = useTranslations('navigation');
   const tLines = useTranslations('lines');
+  const tPractices = useTranslations('practices');
   const currentYear = new Date().getFullYear();
   const name = process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro';
   const brand = process.env.NEXT_PUBLIC_SIGLA || 'Ingegneria & Costruzioni';
@@ -109,7 +111,11 @@ function FooterComp() {
                 {tLines(`${line.key}.title`)}
               </LocalizedLink>
             ))}
-            <LocalizedLink href="/services" className={`${linkClass} mt-3`}>
+            <LocalizedLink href={`/${PRACTICES_SLUG}`} className={`${linkClass} mt-3`}>
+              <span className="inline-block size-1.5 shrink-0 translate-y-[-2px] rounded-full bg-bone/40" />
+              {tPractices('eyebrow')}
+            </LocalizedLink>
+            <LocalizedLink href="/services" className={linkClass}>
               <ArrowUpRight className="size-3.5 shrink-0 text-bone/35 transition-all group-hover:rotate-45 group-hover:text-brick" />
               {t('services.title')}
             </LocalizedLink>
@@ -164,7 +170,7 @@ function FooterComp() {
       {/* Title-block bar */}
       <div className="mt-6 grid border border-bone/15 font-display text-[11px] uppercase tracking-[0.16em] text-bone/50 md:grid-cols-[1fr_auto_auto]">
         <p className="px-4 py-3 normal-case tracking-normal md:border-r md:border-bone/15">
-          © {currentYear} {name} – {brand}. {t('legal.copyright')}{' '}
+          © {currentYear} {name} {brand}. {t('legal.copyright')}{' '}
           <span className="ml-2 tabular-nums text-bone/35">{vat}</span>
         </p>
         <div className="flex flex-wrap items-center gap-x-5 gap-y-1 border-t border-bone/15 px-4 py-3 md:border-r md:border-t-0">

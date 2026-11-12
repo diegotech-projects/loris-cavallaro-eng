@@ -13,7 +13,7 @@ export default function CookiePolicyPage() {
   return (
     <main className="bg-ink text-bone">
       <PageHero
-        sheet={`${tSheet('short')} L.02 — ${t('title')}`}
+        sheet={`${tSheet('short')} L.02 · ${t('title')}`}
         title={t('title')}
       />
       <div className="container-custom py-16 md:py-24">

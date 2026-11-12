@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 import { commercialLines } from '@/data/lines';
+import { PRACTICES_SLUG } from '@/data/practices';
 import { LOCALES, localizedUrl } from '@/utils/seo';
 
 type Route = {
@@ -18,6 +19,7 @@ const routes: Route[] = [
     priority: 0.9,
     changeFrequency: 'monthly' as const,
   })),
+  { path: `/${PRACTICES_SLUG}`, priority: 0.9, changeFrequency: 'monthly' },
   { path: '/services', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/projects', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/contact', priority: 0.8, changeFrequency: 'yearly' },

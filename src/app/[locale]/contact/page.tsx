@@ -25,7 +25,7 @@ const ContactPage = () => {
   return (
     <main className="relative bg-ink text-bone">
       <PageHero
-        sheet={`${tSheet('short')} C — ${t('hero.title')}`}
+        sheet={`${tSheet('short')} C · ${t('hero.title')}`}
         title={t('hero.title')}
         subtitle={t('hero.subtitle')}
       />

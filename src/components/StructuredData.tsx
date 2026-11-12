@@ -2,6 +2,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import React from 'react';
 
 import { commercialLines } from '@/data/lines';
+import { PRACTICES_SLUG } from '@/data/practices';
 import { organizationGraph } from '@/utils/schema';
 import { localizedUrl } from '@/utils/seo';
 
@@ -14,6 +15,7 @@ export default function StructuredData() {
   const t = useTranslations('seo.structuredData');
   const tPages = useTranslations('seo.pages');
   const tLines = useTranslations('lines');
+  const tPractices = useTranslations('practices');
 
   return (
     <JsonLd
@@ -26,10 +28,16 @@ export default function StructuredData() {
           ...commercialLines.map((line) => tLines(`${line.key}.title`)),
           ...(t.raw('knowsAbout') as string[]),
         ],
-        services: commercialLines.map((line) => ({
-          name: tLines(`${line.key}.title`),
-          url: localizedUrl(locale, `/${line.slug}`),
-        })),
+        services: [
+          ...commercialLines.map((line) => ({
+            name: tLines(`${line.key}.title`),
+            url: localizedUrl(locale, `/${line.slug}`),
+          })),
+          {
+            name: tPractices('title'),
+            url: localizedUrl(locale, `/${PRACTICES_SLUG}`),
+          },
+        ],
       })}
     />
   );

@@ -122,7 +122,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
               >
                 <Image
                   src={current}
-                  alt={`${project.title} — ${index + 1}`}
+                  alt={`${project.title} ${index + 1}`}
                   fill
                   draggable={false}
                   sizes="(min-width: 1024px) 66vw, 100vw"
@@ -233,7 +233,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                       ? 'border-brick'
                       : 'border-transparent opacity-50 hover:opacity-100'
                   }`}
-                  aria-label={`${project.title} — ${i + 1}`}
+                  aria-label={`${project.title} ${i + 1}`}
                 >
                   <Image
                     src={image}

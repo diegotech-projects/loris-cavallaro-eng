@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import React from 'react';
 
 import { Reveal } from '@/components/landing/motion';
+import PracticesPriceList from '@/components/page/PracticesPriceList';
 import {
   NumberedList,
   PageCta,
@@ -13,6 +14,7 @@ import {
   SheetGrid,
 } from '@/components/page/PageParts';
 import { commercialLines, formatPrice, lowestTier } from '@/data/lines';
+import { PRACTICES_SLUG } from '@/data/practices';
 import { Link as LocalizedLink } from '@/i18n/navigation';
 import { metadataFor } from '@/utils/pageMetadata';
 
@@ -35,6 +37,7 @@ export const generateMetadata = metadataFor('services', '/services');
 
 const ServicesPage = () => {
   const t = useTranslations('servicesPage');
+  const tPractices = useTranslations('practices');
   const tServices = useTranslations('services');
   const tSheet = useTranslations('landing.sheet');
   const tOverview = useTranslations('landing.overview');
@@ -45,7 +48,7 @@ const ServicesPage = () => {
   return (
     <main className="relative bg-ink text-bone">
       <PageHero
-        sheet={`${tSheet('short')} S — ${t('hero.title')}`}
+        sheet={`${tSheet('short')} S · ${t('hero.title')}`}
         title={t('hero.title')}
         subtitle={t('hero.subtitle')}
       />
@@ -82,7 +85,7 @@ const ServicesPage = () => {
                         <span
                           className={`inline-block size-2 rounded-full ${line.accentBg}`}
                         />
-                        {tSheet('short')} {line.number} —{' '}
+                        {tSheet('short')} {line.number} ·{' '}
                         {tLines(`${line.key}.label`)}
                       </p>
                       <h3 className="font-display text-3xl font-semibold tracking-[-0.03em]">
@@ -121,11 +124,33 @@ const ServicesPage = () => {
         </div>
       </section>
 
+      {/* Technical practices price list */}
+      <section
+        id="pratiche"
+        className="scroll-mt-20 border-t border-bone/10 py-24 md:py-36"
+      >
+        <div className="container-custom">
+          <SectionHeader
+            index="S.02"
+            title={tPractices('title')}
+            description={tPractices('description')}
+          />
+          <PracticesPriceList />
+          <LocalizedLink
+            href={`/${PRACTICES_SLUG}`}
+            className="group mt-10 inline-flex items-center gap-2 font-display text-sm text-bone/70 transition-colors hover:text-bone"
+          >
+            {tPractices('pageLink')}
+            <ArrowUpRight className="size-4 transition-transform group-hover:rotate-45" />
+          </LocalizedLink>
+        </div>
+      </section>
+
       {/* Engineering services */}
       <section className="border-t border-bone/10 py-24 md:py-36">
         <div className="container-custom">
           <SectionHeader
-            index="S.02"
+            index="S.03"
             title={tServices('ourServices')}
             description={tServices('description')}
           />
@@ -136,7 +161,7 @@ const ServicesPage = () => {
                 className="flex min-h-[240px] flex-col justify-between gap-10 transition-colors hover:bg-[#151412]"
               >
                 <span className="font-display text-xs tabular-nums tracking-[0.2em] text-brick">
-                  S.02.{String(index + 1).padStart(2, '0')}
+                  S.03.{String(index + 1).padStart(2, '0')}
                 </span>
                 <div>
                   <h3 className="font-display text-2xl font-semibold tracking-[-0.02em]">
@@ -170,7 +195,7 @@ const ServicesPage = () => {
           <div className="container-custom grid gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5">
               <p className="mb-4 font-display text-xs tabular-nums tracking-[0.3em] text-bone/45">
-                S.03.{String(index + 1).padStart(2, '0')}
+                S.04.{String(index + 1).padStart(2, '0')}
               </p>
               <h2 className="font-display text-4xl font-semibold leading-[1.02] tracking-[-0.035em] md:text-5xl">
                 {t(`detailed.${key}.title`)}
@@ -185,7 +210,7 @@ const ServicesPage = () => {
               <div className="border border-bone/15">
                 <div className="flex items-center justify-between border-b border-bone/15 px-6 py-4 font-display text-[11px] uppercase tracking-[0.2em] text-bone/50">
                   <span>{t(`detailed.${key}.cardTitle`)}</span>
-                  <span>S.03.{String(index + 1).padStart(2, '0')}</span>
+                  <span>S.04.{String(index + 1).padStart(2, '0')}</span>
                 </div>
                 <p className="px-6 py-8 font-display text-2xl font-medium leading-snug tracking-[-0.02em] md:text-3xl">
                   {t(`detailed.${key}.cardDescription`)}

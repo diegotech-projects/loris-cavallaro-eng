@@ -168,3 +168,49 @@ export const breadcrumbSchema = (
     item: item.url,
   })),
 });
+
+type PracticesInput = {
+  locale: string;
+  path: string;
+  name: string;
+  description: string;
+  items: { name: string; description: string; price: number }[];
+};
+
+// Price list of technical practices as a Service with an OfferCatalog
+export const practicesSchema = ({
+  locale,
+  path,
+  name,
+  description,
+  items,
+}: PracticesInput): JsonLdObject => ({
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': localizedUrl(locale, `${path}#service`),
+  name,
+  description,
+  serviceType: name,
+  url: localizedUrl(locale, path),
+  provider: { '@id': ORG_ID },
+  areaServed: areaServed(),
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name,
+    itemListElement: items.map((item) => ({
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: item.name,
+        description: item.description,
+      },
+      priceCurrency: 'EUR',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        price: item.price,
+        minPrice: item.price,
+        priceCurrency: 'EUR',
+      },
+    })),
+  },
+});

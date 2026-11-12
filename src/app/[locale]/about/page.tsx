@@ -37,7 +37,7 @@ const AboutPage = () => {
   return (
     <main className="relative bg-ink text-bone">
       <AboutHero
-        sheet={`${tSheet('short')} A — ${t('hero.title')}`}
+        sheet={`${tSheet('short')} A · ${t('hero.title')}`}
         title={t('hero.title')}
         subtitle={t('hero.subtitle')}
         portrait={lorisImg2}
@@ -67,7 +67,7 @@ const AboutPage = () => {
           <div className="lg:col-span-8">
             <Reveal>
               <p className="font-display text-2xl font-medium leading-snug tracking-[-0.02em] text-bone md:text-4xl">
-                {name} – {brand} {t('company.description1')}
+                {name} {brand} {t('company.description1')}
               </p>
             </Reveal>
             <Reveal delay={0.1}>

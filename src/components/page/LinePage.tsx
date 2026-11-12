@@ -3,6 +3,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import JsonLd from '@/components/JsonLd';
 import LineShowcase from '@/components/landing/LineShowcase';
 import { Reveal, SplitText } from '@/components/landing/motion';
+import FaqAccordion from '@/components/page/FaqAccordion';
 import { PageCta } from '@/components/page/PageParts';
 import type { LineKey } from '@/data/lines';
 import { commercialLines, formatPrice } from '@/data/lines';
@@ -79,7 +80,7 @@ const LinePage = ({ lineKey }: LinePageProps) => {
           </li>
           <li aria-hidden>/</li>
           <li aria-current="page" className="text-bone/80">
-            {tSheet('short')} {line.number} — {t('title')}
+            {tSheet('short')} {line.number} · {t('title')}
           </li>
         </ol>
       </nav>
@@ -119,39 +120,11 @@ const LinePage = ({ lineKey }: LinePageProps) => {
 
       {/* FAQ */}
       <section className="border-t border-bone/10 py-24 md:py-32">
-        <div className="container-custom">
-          <SplitText
-            as="h2"
-            text={tPage('faqTitle')}
-            className="mb-12 block font-display text-4xl font-semibold tracking-[-0.035em] md:text-6xl"
-          />
-          <ol className="border-b border-bone/15">
-            {faq.map((item, index) => (
-              <li key={item.q} className="border-t border-bone/15">
-                <details className="group" open={index === 0}>
-                  <summary className="flex cursor-pointer list-none items-baseline gap-5 py-7 md:gap-10 [&::-webkit-details-marker]:hidden">
-                    <span className="w-12 shrink-0 font-display text-xs tabular-nums tracking-[0.2em] text-brick">
-                      {line.number}.F{index + 1}
-                    </span>
-                    <h3 className="flex-1 font-display text-xl font-semibold leading-snug tracking-[-0.02em] text-bone/80 transition-colors group-open:text-bone md:text-2xl">
-                      {item.q}
-                    </h3>
-                    <span
-                      aria-hidden
-                      className="relative mt-2 size-5 shrink-0 self-start"
-                    >
-                      <span className="absolute inset-x-0 top-1/2 h-px bg-bone/60" />
-                      <span className="absolute inset-y-0 left-1/2 w-px bg-bone/60 transition-transform duration-300 group-open:scale-y-0" />
-                    </span>
-                  </summary>
-                  <p className="max-w-3xl pb-8 text-lg leading-relaxed text-bone/65 md:pl-[5.5rem]">
-                    {item.a}
-                  </p>
-                </details>
-              </li>
-            ))}
-          </ol>
-        </div>
+        <FaqAccordion
+          title={tPage('faqTitle')}
+          codePrefix={`${line.number}.F`}
+          items={faq}
+        />
       </section>
 
       <PageCta

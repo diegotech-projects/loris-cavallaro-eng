@@ -22,7 +22,7 @@ function Appointment() {
   // Preselect the line when coming from a "request a quote" button (?linea=solar)
   useEffect(() => {
     const line = new URLSearchParams(window.location.search).get('linea');
-    if (line && ['solar', 'prefab', 'renovation'].includes(line)) {
+    if (line && ['solar', 'prefab', 'renovation', 'permits'].includes(line)) {
       setFormData((prev) => ({ ...prev, projectType: line }));
     }
   }, []);
@@ -347,7 +347,7 @@ function Appointment() {
             className={`${labelClass} mb-0 border-b border-bone/15 px-5 py-4 md:px-6`}
           >
             <span>
-              {t('info.location')} — {tFooter('contact.location')}
+              {t('info.location')}: {tFooter('contact.location')}
             </span>
             <span className="hidden sm:inline">
               {t('info.nationalService')}

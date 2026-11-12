@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 
 import { commercialLines, formatPrice } from '@/data/lines';
+import { practices, PRACTICES_SLUG } from '@/data/practices';
 import { BUSINESS, localizedUrl } from '@/utils/seo';
 
 // llms.txt (https://llmstxt.org): a plain-text fact sheet that AI answer
@@ -13,6 +14,14 @@ export async function GET() {
   const tAreas = await getTranslations({ locale, namespace: 'landing.areas' });
   const tWhy = await getTranslations({ locale, namespace: 'landing.why' });
   const tAbout = await getTranslations({ locale, namespace: 'about' });
+  const tPractices = await getTranslations({ locale, namespace: 'practices' });
+
+  const practiceLines = practices
+    .map(
+      (p) =>
+        `- ${tPractices(`items.${p.key}.name`)} (${tPractices(`items.${p.key}.full`)}): da ${formatPrice(p.price, locale)}. ${tPractices(`items.${p.key}.description`)}`,
+    )
+    .join('\n');
 
   const priceLine = (key: (typeof commercialLines)[number]['key']) => {
     const line = commercialLines.find((item) => item.key === key)!;
@@ -57,6 +66,13 @@ Studio di ingegneria e impresa di costruzioni guidato dall'Ing. ${BUSINESS.found
 
 ${lines}
 
+## Listino pratiche tecniche
+
+${practiceLines}
+
+${tPractices('note')}
+Pagina: ${localizedUrl(locale, `/${PRACTICES_SLUG}`)}
+
 ## Altri servizi di ingegneria
 
 - Progettazione strutturale, calcoli e verifiche sismiche
@@ -85,6 +101,7 @@ ${BUSINESS.phone ? `- Telefono: +39 ${BUSINESS.phone}\n` : ''}- Preventivo gratu
 - [Impianti fotovoltaici chiavi in mano](${localizedUrl(locale, '/fotovoltaico')})
 - [Case prefabbricate chiavi in mano](${localizedUrl(locale, '/case-prefabbricate')})
 - [Ristrutturazioni chiavi in mano](${localizedUrl(locale, '/ristrutturazioni')})
+- [Listino pratiche tecniche](${localizedUrl(locale, `/${PRACTICES_SLUG}`)})
 - [Servizi](${localizedUrl(locale, '/services')})
 - [Progetti realizzati](${localizedUrl(locale, '/projects')})
 - [Chi siamo](${localizedUrl(locale, '/about')})
