@@ -57,9 +57,9 @@ export const commercialLines: CommercialLine[] = [
     onAccent: '#0e0d0c',
     accentText: 'text-plaster',
     accentBg: 'bg-plaster',
-    cover: '/images/lines/prefab-render-modern.jpg',
+    cover: '/images/lines/prefab-render-gabled.jpg',
     gallery: [
-      '/images/lines/prefab-render-gabled.jpg',
+      '/images/lines/prefab-render-modern.jpg',
       '/images/lines/prefab-render-build.jpg',
       '/images/lines/prefab-hero.jpg',
       '/images/lines/prefab-cube.jpg',
