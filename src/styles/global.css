@@ -108,3 +108,7 @@ html.custom-cursor * {
 .anchor {
     @apply cursor-pointer hover:border-b-2 hover:border-customBlue 
 }
+/* Returning visitors skip the intro (class set by an inline script in LandingShell) */
+html.intro-seen #preloader {
+    display: none;
+}

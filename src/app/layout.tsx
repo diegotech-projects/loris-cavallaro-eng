@@ -74,7 +74,13 @@ export default async function RootLayout({
   const locale = await getLocale();
 
   return (
-    <html lang={locale} className={`${inter.variable} ${interTight.variable}`}>
+    // suppressHydrationWarning: an inline script may add "intro-seen" to <html>
+    // before React hydrates (see LandingShell)
+    <html
+      lang={locale}
+      className={`${inter.variable} ${interTight.variable}`}
+      suppressHydrationWarning
+    >
       <body className="min-h-screen bg-themeBackground">
         {children}
         {/* Google Ads / Google Tag */}

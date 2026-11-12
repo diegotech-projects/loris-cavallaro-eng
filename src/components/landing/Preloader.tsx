@@ -8,8 +8,6 @@ import { commercialLines } from '@/data/lines';
 import { easeOutExpo } from './motion';
 
 type PreloaderProps = {
-  // Repeat visits in the same session get a short version; null until known
-  quick: boolean | null;
   onComplete: () => void;
 };
 
@@ -19,22 +17,29 @@ const progressGradient = `linear-gradient(90deg, ${commercialLines
   .join(', ')})`;
 
 // Counter 0 → 100 with the wordmark, then the curtain lifts off the page
-const Preloader = ({ quick, onComplete }: PreloaderProps) => {
+const Preloader = ({ onComplete }: PreloaderProps) => {
   const progress = useMotionValue(0);
   const counter = useTransform(progress, (value) =>
     String(Math.round(value)).padStart(3, '0'),
   );
   const barScale = useTransform(progress, [0, 100], [0, 1]);
 
+  // Start on the next frame: React's mount/unmount/remount check in
+  // development would otherwise stop the animation and leave it stuck at 000
   useEffect(() => {
-    if (quick === null) return undefined;
-    const controls = animate(progress, 100, {
-      duration: quick ? 0.5 : 2.2,
-      ease: [0.65, 0, 0.35, 1],
-      onComplete,
+    let controls: ReturnType<typeof animate> | undefined;
+    const frame = requestAnimationFrame(() => {
+      controls = animate(progress, 100, {
+        duration: 2.2,
+        ease: [0.65, 0, 0.35, 1],
+        onComplete,
+      });
     });
-    return () => controls.stop();
-  }, [onComplete, progress, quick]);
+    return () => {
+      cancelAnimationFrame(frame);
+      controls?.stop();
+    };
+  }, [onComplete, progress]);
 
   return (
     <motion.div
@@ -60,11 +65,11 @@ const Preloader = ({ quick, onComplete }: PreloaderProps) => {
             key={`${letter}-${index}`}
             className="font-display text-[15vw] font-semibold leading-none tracking-[-0.04em] md:text-[11vw]"
             initial={{ y: '110%' }}
-            animate={{ y: quick === null ? '110%' : '0%' }}
+            animate={{ y: '0%' }}
             transition={{
-              duration: quick ? 0.4 : 1,
+              duration: 1,
               ease: easeOutExpo,
-              delay: quick ? 0 : 0.1 + index * 0.05,
+              delay: 0.1 + index * 0.05,
             }}
           >
             {letter}

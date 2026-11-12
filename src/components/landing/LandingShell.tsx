@@ -186,27 +186,49 @@ type LandingShellProps = {
 };
 
 // Home-page wrapper: preloader, smooth scroll, cursor, film grain, progress bar
+// The intro plays once per browser, and only when the home is the first page
+// loaded. The inline script runs on a real page load only: it marks the load
+// as direct and hides an already-seen intro before the first paint. Arriving
+// on the home through client-side navigation never shows the intro.
+const DIRECT_LOAD_FLAG = '__cavallaroDirectLoad' as const;
+const hideSeenIntroScript = `window.${DIRECT_LOAD_FLAG}=true;try{if(localStorage.getItem('${INTRO_SEEN_KEY}')==='1'){document.documentElement.classList.add('intro-seen')}}catch(e){}`;
+
+type IntroWindow = Window & { [DIRECT_LOAD_FLAG]?: boolean };
+
+const isDirectLoad = () =>
+  typeof window === 'undefined' ||
+  Boolean((window as IntroWindow)[DIRECT_LOAD_FLAG]);
+
 const LandingShell = ({ children }: LandingShellProps) => {
-  const [showPreloader, setShowPreloader] = useState(true);
-  const [quickIntro, setQuickIntro] = useState<boolean | null>(null);
-  const [introDone, setIntroDone] = useState(false);
+  // Server render and hydration of a direct load start with the preloader
+  // (matching HTML); client-side navigation starts without it
+  const [showPreloader, setShowPreloader] = useState(isDirectLoad);
+  const [introDone, setIntroDone] = useState(() => !isDirectLoad());
 
   useSmoothScroll(showPreloader);
 
   useEffect(() => {
+    let seen = false;
     try {
-      setQuickIntro(window.sessionStorage.getItem(INTRO_SEEN_KEY) === '1');
+      seen = window.localStorage.getItem(INTRO_SEEN_KEY) === '1';
     } catch {
-      setQuickIntro(false);
+      // Storage blocked: treat as a first visit
     }
+    if (seen || document.documentElement.classList.contains('intro-seen')) {
+      setShowPreloader(false);
+      setIntroDone(true);
+    }
+    // Later client-side visits to the home must not replay it
+    (window as IntroWindow)[DIRECT_LOAD_FLAG] = false;
   }, []);
 
   const handleIntroComplete = useCallback(() => {
     try {
-      window.sessionStorage.setItem(INTRO_SEEN_KEY, '1');
+      window.localStorage.setItem(INTRO_SEEN_KEY, '1');
     } catch {
       // Storage can be blocked; the intro just plays again next time
     }
+    document.documentElement.classList.add('intro-seen');
     window.scrollTo(0, 0);
     setShowPreloader(false);
     setIntroDone(true);
@@ -214,13 +236,13 @@ const LandingShell = ({ children }: LandingShellProps) => {
 
   return (
     <IntroContext.Provider value={introDone}>
+      <script
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: hideSeenIntroScript }}
+      />
       <AnimatePresence>
         {showPreloader && (
-          <Preloader
-            key="preloader"
-            quick={quickIntro}
-            onComplete={handleIntroComplete}
-          />
+          <Preloader key="preloader" onComplete={handleIntroComplete} />
         )}
       </AnimatePresence>
       <ScrollProgress />
