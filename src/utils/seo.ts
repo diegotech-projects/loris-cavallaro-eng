@@ -4,7 +4,8 @@ import type { Metadata } from 'next';
 // metadata, sitemap, robots, structured data and llms.txt.
 
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.ingloriscavallarocostruzioni.com'
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  'https://www.ingloriscavallarocostruzioni.com'
 ).replace(/\/$/, '');
 
 export const LOCALES = ['it', 'en'] as const;
@@ -22,7 +23,7 @@ export const BUSINESS = {
     'Loris Cavallaro - Ingegneria & Costruzioni',
   founder: process.env.NEXT_PUBLIC_ENGINEER_NAME || 'Loris Cavallaro',
   email: process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'loriscavallaro22@gmail.com',
-  phone: process.env.NEXT_PUBLIC_COMPANY_PHONE || '',
+  phone: process.env.NEXT_PUBLIC_COMPANY_PHONE || '380 147 7121',
   vat: process.env.NEXT_PUBLIC_VAT_NUMBER || '',
   city: process.env.NEXT_PUBLIC_CITY || 'Messina',
   province: 'ME',
@@ -94,7 +95,9 @@ export const pageMetadata = ({
       description,
       locale: ogLocale,
       alternateLocale: Object.values(OG_LOCALE).filter((l) => l !== ogLocale),
-      images: [{ url: absoluteUrl(image), width: 1200, height: 630, alt: title }],
+      images: [
+        { url: absoluteUrl(image), width: 1200, height: 630, alt: title },
+      ],
     },
     twitter: {
       card: 'summary_large_image',

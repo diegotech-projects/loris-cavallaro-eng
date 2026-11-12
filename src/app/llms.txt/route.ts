@@ -52,7 +52,14 @@ export async function GET() {
     })
     .join('\n\n');
 
-  const reasons = ['engineering', 'tailored', 'singleContact', 'quality', 'transparency', 'integration']
+  const reasons = [
+    'engineering',
+    'tailored',
+    'singleContact',
+    'quality',
+    'transparency',
+    'integration',
+  ]
     .map((key) => `- ${tWhy(`items.${key}`)}`)
     .join('\n');
 

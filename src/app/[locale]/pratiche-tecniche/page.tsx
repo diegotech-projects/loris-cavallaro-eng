@@ -27,7 +27,10 @@ export default function PracticesPage() {
   );
   const faq = (t.raw('faq') as { q: string; a: string }[]).map((item) => ({
     q: item.q,
-    a: item.a.replace(/\{(\w+)\}/g, (match, key: string) => prices[key] ?? match),
+    a: item.a.replace(
+      /\{(\w+)\}/g,
+      (match, key: string) => prices[key] ?? match,
+    ),
   }));
 
   return (
@@ -66,11 +69,7 @@ export default function PracticesPage() {
       </section>
 
       <section className="border-t border-bone/10 py-24 md:py-32">
-        <FaqAccordion
-          title={tPage('faqTitle')}
-          codePrefix="S.F"
-          items={faq}
-        />
+        <FaqAccordion title={tPage('faqTitle')} codePrefix="S.F" items={faq} />
       </section>
 
       <PageCta

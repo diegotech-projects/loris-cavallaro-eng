@@ -6,12 +6,16 @@ import { useTranslations } from 'next-intl';
 import React, { useEffect, useState } from 'react';
 
 import { Link as LocalizedLink } from '@/i18n/navigation';
+import { OPEN_SETTINGS_EVENT, readConsent, saveConsent } from '@/utils/consent';
 
-interface CookieConsentInterface {
-  necessary: boolean;
-  preferences: boolean;
-  timestamp: number;
-}
+type OptionalCategory = 'preferences' | 'analytics' | 'marketing';
+const OPTIONAL_CATEGORIES: OptionalCategory[] = [
+  'preferences',
+  'analytics',
+  'marketing',
+];
+const NONE = { preferences: false, analytics: false, marketing: false };
+const ALL = { preferences: true, analytics: true, marketing: true };
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -47,33 +51,33 @@ const Switch = ({ checked, onChange, label }: SwitchProps) => (
 const CookieConsent: React.FC = () => {
   const [showBanner, setShowBanner] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-  const [preferences, setPreferences] = useState(false);
+  const [choice, setChoice] = useState(NONE);
   const t = useTranslations('cookies');
 
   useEffect(() => {
-    try {
-      if (!localStorage.getItem('cookieConsent')) setShowBanner(true);
-    } catch {
+    // No (current-version) choice yet: ask. Otherwise pre-fill the toggles.
+    const stored = readConsent();
+    if (stored) {
+      setChoice({
+        preferences: stored.preferences,
+        analytics: stored.analytics,
+        marketing: stored.marketing,
+      });
+    } else {
       setShowBanner(true);
     }
+    // "Cookie settings" link in the footer reopens the panel at any time
+    const open = () => setShowSettings(true);
+    window.addEventListener(OPEN_SETTINGS_EVENT, open);
+    return () => window.removeEventListener(OPEN_SETTINGS_EVENT, open);
   }, []);
 
-  const saveConsent = (consent: CookieConsentInterface) => {
-    try {
-      localStorage.setItem('cookieConsent', JSON.stringify(consent));
-    } catch {
-      // Storage blocked: the choice simply is not remembered
-    }
+  const save = (next: typeof NONE) => {
+    saveConsent(next);
+    setChoice(next);
     setShowBanner(false);
     setShowSettings(false);
   };
-
-  const save = (withPreferences: boolean) =>
-    saveConsent({
-      necessary: true,
-      preferences: withPreferences,
-      timestamp: Date.now(),
-    });
 
   return (
     <>
@@ -110,7 +114,7 @@ const CookieConsent: React.FC = () => {
             <div className="flex border-t border-bone/15">
               <button
                 type="button"
-                onClick={() => save(false)}
+                onClick={() => save(NONE)}
                 className={`${buttonBase} border-r border-bone/15 text-bone/80 hover:bg-bone/5 hover:text-bone`}
               >
                 {t('notice.reject')}
@@ -124,7 +128,7 @@ const CookieConsent: React.FC = () => {
               </button>
               <button
                 type="button"
-                onClick={() => save(true)}
+                onClick={() => save(ALL)}
                 className={`${buttonBase} bg-bone text-ink hover:bg-brick hover:text-bone`}
               >
                 {t('notice.accept')}
@@ -188,41 +192,45 @@ const CookieConsent: React.FC = () => {
                     {t('settings.necessary.description')}
                   </p>
                 </div>
-                <div className="bg-ink px-6 py-5">
-                  <div className="mb-2 flex items-center justify-between gap-4">
-                    <h3 className="font-display font-semibold">
-                      {t('settings.preferences.title')}
-                    </h3>
-                    <Switch
-                      checked={preferences}
-                      onChange={setPreferences}
-                      label={t('settings.preferences.title')}
-                    />
+                {OPTIONAL_CATEGORIES.map((category) => (
+                  <div key={category} className="bg-ink px-6 py-5">
+                    <div className="mb-2 flex items-center justify-between gap-4">
+                      <h3 className="font-display font-semibold">
+                        {t(`settings.${category}.title`)}
+                      </h3>
+                      <Switch
+                        checked={choice[category]}
+                        onChange={(value) =>
+                          setChoice((prev) => ({ ...prev, [category]: value }))
+                        }
+                        label={t(`settings.${category}.title`)}
+                      />
+                    </div>
+                    <p className="text-sm leading-relaxed text-bone/55">
+                      {t(`settings.${category}.description`)}
+                    </p>
                   </div>
-                  <p className="text-sm leading-relaxed text-bone/55">
-                    {t('settings.preferences.description')}
-                  </p>
-                </div>
+                ))}
               </div>
 
               <div className="flex flex-col sm:flex-row">
                 <button
                   type="button"
-                  onClick={() => save(false)}
+                  onClick={() => save(NONE)}
                   className={`${buttonBase} border-b border-bone/15 text-bone/80 hover:bg-bone/5 hover:text-bone sm:border-b-0 sm:border-r`}
                 >
                   {t('settings.rejectAll')}
                 </button>
                 <button
                   type="button"
-                  onClick={() => save(preferences)}
+                  onClick={() => save(choice)}
                   className={`${buttonBase} border-b border-bone/15 text-bone/80 hover:bg-bone/5 hover:text-bone sm:border-b-0 sm:border-r`}
                 >
                   {t('settings.save')}
                 </button>
                 <button
                   type="button"
-                  onClick={() => save(true)}
+                  onClick={() => save(ALL)}
                   className={`${buttonBase} bg-bone text-ink hover:bg-brick hover:text-bone`}
                 >
                   {t('settings.acceptAll')}

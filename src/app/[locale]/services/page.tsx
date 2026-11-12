@@ -4,7 +4,6 @@ import { useLocale, useTranslations } from 'next-intl';
 import React from 'react';
 
 import { Reveal } from '@/components/landing/motion';
-import PracticesPriceList from '@/components/page/PracticesPriceList';
 import {
   NumberedList,
   PageCta,
@@ -13,6 +12,7 @@ import {
   SheetCell,
   SheetGrid,
 } from '@/components/page/PageParts';
+import PracticesPriceList from '@/components/page/PracticesPriceList';
 import { commercialLines, formatPrice, lowestTier } from '@/data/lines';
 import { PRACTICES_SLUG } from '@/data/practices';
 import { Link as LocalizedLink } from '@/i18n/navigation';
@@ -31,7 +31,6 @@ const detailedServices = [
   'energyEfficiency',
   'projectManagement',
 ] as const;
-
 
 export const generateMetadata = metadataFor('services', '/services');
 

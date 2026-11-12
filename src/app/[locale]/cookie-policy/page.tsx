@@ -3,6 +3,18 @@ import { useTranslations } from 'next-intl';
 import { PageHero } from '@/components/page/PageParts';
 import { metadataFor } from '@/utils/pageMetadata';
 
+// Real storage keys and Google cookie names; texts live in messages
+const COOKIE_ROWS = [
+  { key: 'consent', name: 'cookieConsent' },
+  { key: 'intro', name: 'cavallaro-intro-seen' },
+  { key: 'locale', name: 'NEXT_LOCALE' },
+  { key: 'ga', name: '_ga' },
+  { key: 'gaSession', name: '_ga_<ID>' },
+  { key: 'gclau', name: '_gcl_au' },
+] as const;
+
+// Update when the policy content changes
+const LAST_UPDATE = '12/11/2026';
 
 export const generateMetadata = metadataFor('cookies', '/cookie-policy');
 
@@ -56,6 +68,20 @@ export default function CookiePolicyPage() {
                     <strong>{t('cookieTypes.preferences.consent')}</strong>
                   </p>
                 </div>
+
+                {(['analytics', 'marketing'] as const).map((type) => (
+                  <div key={type} className="border border-bone/15 p-5">
+                    <h3 className="mb-2 font-semibold text-bone">
+                      {t(`cookieTypes.${type}.title`)}
+                    </h3>
+                    <p className="mb-2 text-bone/65">
+                      {t(`cookieTypes.${type}.content`)}
+                    </p>
+                    <p className="text-sm text-bone/80">
+                      <strong>{t(`cookieTypes.${type}.consent`)}</strong>
+                    </p>
+                  </div>
+                ))}
               </div>
             </section>
 
@@ -84,35 +110,26 @@ export default function CookiePolicyPage() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-t border-bone/15">
-                      <td className="font-mono px-4 py-2 text-sm">
-                        cookieConsent
-                      </td>
-                      <td className="px-4 py-2">
-                        {t('cookiesUsed.table.rows.consent.purpose')}
-                      </td>
-                      <td className="px-4 py-2">
-                        {t('cookiesUsed.table.rows.consent.duration')}
-                      </td>
-                      <td className="px-4 py-2 text-bone/80">
-                        {t('cookiesUsed.table.rows.consent.type')}
-                      </td>
-                    </tr>
-                    <tr className="border-t border-bone/15">
-                      <td className="font-mono px-4 py-2 text-sm">theme</td>
-                      <td className="px-4 py-2">
-                        {t('cookiesUsed.table.rows.theme.purpose')}
-                      </td>
-                      <td className="px-4 py-2">
-                        {t('cookiesUsed.table.rows.theme.duration')}
-                      </td>
-                      <td className="px-4 py-2 text-bone/80">
-                        {t('cookiesUsed.table.rows.theme.type')}
-                      </td>
-                    </tr>
+                    {COOKIE_ROWS.map((row) => (
+                      <tr key={row.key} className="border-t border-bone/15">
+                        <td className="font-mono px-4 py-2 text-sm">
+                          {row.name}
+                        </td>
+                        <td className="px-4 py-2">
+                          {t(`cookiesUsed.table.rows.${row.key}.purpose`)}
+                        </td>
+                        <td className="px-4 py-2">
+                          {t(`cookiesUsed.table.rows.${row.key}.duration`)}
+                        </td>
+                        <td className="px-4 py-2 text-bone/80">
+                          {t(`cookiesUsed.table.rows.${row.key}.type`)}
+                        </td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
+              <p className="mt-6 text-base text-bone/55">{t('thirdParty')}</p>
             </section>
 
             <section className="border-t border-bone/15 py-10">
@@ -171,8 +188,7 @@ export default function CookiePolicyPage() {
               </h2>
               <p className="mb-4">{t('updates.content')}</p>
               <p className="text-sm text-bone/45">
-                {t('updates.lastUpdate')}:{' '}
-                {new Date().toLocaleDateString('it-IT')}
+                {t('updates.lastUpdate')}: {LAST_UPDATE}
               </p>
             </section>
           </div>

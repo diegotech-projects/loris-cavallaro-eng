@@ -12,7 +12,6 @@ import {
 } from '@/components/page/PageParts';
 import { metadataFor } from '@/utils/pageMetadata';
 
-
 export const generateMetadata = metadataFor('contact', '/contact');
 
 const ContactPage = () => {

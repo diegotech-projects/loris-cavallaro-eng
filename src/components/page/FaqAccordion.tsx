@@ -27,7 +27,10 @@ const FaqAccordion = ({ title, codePrefix, items }: FaqAccordionProps) => (
               <h3 className="flex-1 font-display text-xl font-semibold leading-snug tracking-[-0.02em] text-bone/80 transition-colors group-open:text-bone md:text-2xl">
                 {item.q}
               </h3>
-              <span aria-hidden className="relative mt-2 size-5 shrink-0 self-start">
+              <span
+                aria-hidden
+                className="relative mt-2 size-5 shrink-0 self-start"
+              >
                 <span className="absolute inset-x-0 top-1/2 h-px bg-bone/60" />
                 <span className="absolute inset-y-0 left-1/2 w-px bg-bone/60 transition-transform duration-300 group-open:scale-y-0" />
               </span>

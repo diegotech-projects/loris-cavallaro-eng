@@ -2,7 +2,10 @@ import { useTranslations } from 'next-intl';
 
 import { PageHero } from '@/components/page/PageParts';
 import { metadataFor } from '@/utils/pageMetadata';
+import { BUSINESS } from '@/utils/seo';
 
+// Update when the policy content changes
+const LAST_UPDATE = '12/11/2026';
 
 export const generateMetadata = metadataFor('privacy', '/privacy');
 
@@ -27,7 +30,7 @@ export default function PrivacyPage() {
               <ul className="mb-4 list-disc pl-6 marker:text-brick">
                 <li>Nome: {process.env.NEXT_PUBLIC_ENGINEER_NAME}</li>
                 <li>Email: {process.env.NEXT_PUBLIC_COMPANY_EMAIL}</li>
-                <li>Telefono: {process.env.NEXT_PUBLIC_COMPANY_PHONE}</li>
+                <li>Telefono: +39 {BUSINESS.phone}</li>
                 <li>Indirizzo: Sicilia, Italia</li>
               </ul>
             </section>
@@ -126,8 +129,7 @@ export default function PrivacyPage() {
               </h2>
               <p className="mb-4">{t('updates.content')}</p>
               <p className="text-sm text-bone/45">
-                {t('updates.lastUpdate')}:{' '}
-                {new Date().toLocaleDateString('it-IT')}
+                {t('updates.lastUpdate')}: {LAST_UPDATE}
               </p>
             </section>
           </div>

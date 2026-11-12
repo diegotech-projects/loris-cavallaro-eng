@@ -1,9 +1,11 @@
 'use client';
 
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
+
+import { Link as LocalizedLink } from '@/i18n/navigation';
+import { trackLead } from '@/utils/analytics';
 
 import ContactMap from './ContactMap';
 
@@ -63,6 +65,7 @@ function Appointment() {
       }
 
       setSubmitStatus('success');
+      trackLead(formData.projectType);
       // Reset form
       setFormData({
         name: '',
@@ -96,6 +99,13 @@ function Appointment() {
       [target.name]: value,
     });
   };
+
+  const primaryEmail =
+    process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'loriscavallaro22@gmail.com';
+  const secondaryEmail =
+    process.env.NEXT_PUBLIC_COMPANY_EMAIL_SECONDARY ||
+    'Ingegnerelorising@gmail.com';
+  const phone = process.env.NEXT_PUBLIC_COMPANY_PHONE || '380 147 7121';
 
   const cell =
     'group relative bg-ink px-5 py-4 transition-colors focus-within:bg-[#151412] md:px-6 md:py-5';
@@ -132,14 +142,18 @@ function Appointment() {
               <span>{t('info.email')}</span>
               <span>E</span>
             </p>
-            <p className="font-display text-bone">
-              {process.env.NEXT_PUBLIC_COMPANY_EMAIL ||
-                'loriscavallaro22@gmail.com'}
-            </p>
-            <p className="font-display text-bone/60">
-              {process.env.NEXT_PUBLIC_COMPANY_EMAIL_SECONDARY ||
-                'Ingegnerelorising@gmail.com'}
-            </p>
+            <a
+              href={`mailto:${primaryEmail}`}
+              className="block break-all font-display text-bone hover:text-brick"
+            >
+              {primaryEmail}
+            </a>
+            <a
+              href={`mailto:${secondaryEmail}`}
+              className="block break-all font-display text-bone/60 hover:text-bone"
+            >
+              {secondaryEmail}
+            </a>
             {process.env.NEXT_PUBLIC_COMPANY_PEC && (
               <p className="mt-1 text-sm text-bone/50">
                 PEC: {process.env.NEXT_PUBLIC_COMPANY_PEC}
@@ -151,9 +165,12 @@ function Appointment() {
               <span>{t('info.phone')}</span>
               <span>T</span>
             </p>
-            <p className="font-display text-bone">
-              +39 {process.env.NEXT_PUBLIC_COMPANY_PHONE || '380 147 7121'}
-            </p>
+            <a
+              href={`tel:+39${phone.replace(/\s/g, '')}`}
+              className="font-display text-bone hover:text-brick"
+            >
+              +39 {phone}
+            </a>
           </div>
         </div>
 
@@ -296,12 +313,12 @@ function Appointment() {
                 </span>
                 <br />
                 {t('form.gdprText')}{' '}
-                <Link
+                <LocalizedLink
                   href="/privacy"
                   className="text-bone underline underline-offset-4 hover:text-brick"
                 >
                   {t('form.privacyPolicy')}
-                </Link>
+                </LocalizedLink>
                 .
               </label>
             </div>

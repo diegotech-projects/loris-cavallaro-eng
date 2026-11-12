@@ -71,7 +71,11 @@ export const organizationGraph = ({
       sameAs: BUSINESS.sameAs,
       makesOffer: services.map((service) => ({
         '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: service.name, url: service.url },
+        itemOffered: {
+          '@type': 'Service',
+          name: service.name,
+          url: service.url,
+        },
       })),
     },
     {
@@ -136,7 +140,8 @@ export const serviceSchema = ({
     url: localizedUrl(locale, `/${line.slug}`),
     ...(tier.price !== null && {
       priceSpecification: {
-        '@type': tier.unit === 'sqm' ? 'UnitPriceSpecification' : 'PriceSpecification',
+        '@type':
+          tier.unit === 'sqm' ? 'UnitPriceSpecification' : 'PriceSpecification',
         price: tier.price,
         minPrice: tier.price,
         priceCurrency: 'EUR',

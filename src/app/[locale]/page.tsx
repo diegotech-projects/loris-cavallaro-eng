@@ -12,7 +12,6 @@ import WhyUs from '@/components/landing/WhyUs';
 import { commercialLines } from '@/data/lines';
 import { metadataFor } from '@/utils/pageMetadata';
 
-
 export const generateMetadata = metadataFor('home', '');
 
 const Page = () => {

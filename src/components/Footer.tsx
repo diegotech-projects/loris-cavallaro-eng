@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import { commercialLines } from '@/data/lines';
 import { PRACTICES_SLUG } from '@/data/practices';
 import { Link as LocalizedLink } from '@/i18n/navigation';
+import { openCookieSettings } from '@/utils/consent';
 
 const navItems = [
   { key: 'home', href: '/' },
@@ -171,6 +172,13 @@ function FooterComp() {
           <LocalizedLink href="/cookie-policy" className="hover:text-bone">
             {t('legal.cookies')}
           </LocalizedLink>
+          <button
+            type="button"
+            onClick={openCookieSettings}
+            className="uppercase tracking-[0.16em] hover:text-bone"
+          >
+            {t('legal.cookieSettings')}
+          </button>
           <a
             href="https://www.edilnet.it/aziendeedili/loris-cavallaro-ingegneria-e-costruzioni-593344/"
             target="_blank"

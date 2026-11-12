@@ -23,7 +23,6 @@ const competencies = [
   'consulting',
 ] as const;
 
-
 export const generateMetadata = metadataFor('about', '/about');
 
 const AboutPage = () => {

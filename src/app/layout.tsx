@@ -2,10 +2,10 @@ import '@/styles/global.css';
 
 import type { Metadata, Viewport } from 'next';
 import { Inter, Inter_Tight } from 'next/font/google';
-import Script from 'next/script';
 import { getLocale } from 'next-intl/server';
 import React from 'react';
 
+import GoogleTags from '@/components/GoogleTags';
 import { AppConfig } from '@/utils/AppConfig';
 import { BUSINESS, SITE_URL } from '@/utils/seo';
 
@@ -83,19 +83,8 @@ export default async function RootLayout({
     >
       <body className="min-h-screen bg-themeBackground">
         {children}
-        {/* Google Ads / Google Tag */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17610258605"
-          strategy="afterInteractive"
-        />
-        <Script id="google-tag" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-17610258605');
-          `}
-        </Script>
+        {/* Google Analytics / Ads: loaded only after cookie consent */}
+        <GoogleTags />
       </body>
     </html>
   );

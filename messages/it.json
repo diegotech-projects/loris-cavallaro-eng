@@ -136,7 +136,8 @@
       "copyright": "Tutti i diritti riservati.",
       "vatNumber": "P.IVA: [DA INSERIRE]",
       "privacy": "Privacy Policy",
-      "cookies": "Cookie Policy"
+      "cookies": "Cookie Policy",
+      "cookieSettings": "Impostazioni cookie"
     },
     "lines": {
       "title": "Linee chiavi in mano"
@@ -225,7 +226,7 @@
   "cookies": {
     "notice": {
       "title": "Uso dei Cookie",
-      "message": "Questo sito utilizza cookie tecnici necessari per il corretto funzionamento del sito e per salvare le tue preferenze. Non utilizziamo cookie di tracciamento o pubblicitari.",
+      "message": "Usiamo cookie tecnici necessari al funzionamento del sito e, solo con il tuo consenso, cookie di statistica (Google Analytics) e pubblicitari (Google Ads) per capire come viene usato il sito e misurare i nostri annunci.",
       "accept": "Accetta",
       "learnMore": "Scopri di più",
       "settings": "Impostazioni Cookie",
@@ -245,7 +246,15 @@
       },
       "save": "Salva Preferenze",
       "acceptAll": "Accetta Tutto",
-      "rejectAll": "Rifiuta Tutto"
+      "rejectAll": "Rifiuta Tutto",
+      "analytics": {
+        "title": "Cookie di statistica",
+        "description": "Google Analytics: ci aiutano a capire quali pagine vengono visitate e come arrivano i visitatori. Dati aggregati, usati solo per migliorare il sito."
+      },
+      "marketing": {
+        "title": "Cookie pubblicitari",
+        "description": "Google Ads: misurano l'efficacia dei nostri annunci, per esempio quante richieste di preventivo arrivano da una campagna."
+      }
     }
   },
   "privacy": {
@@ -297,7 +306,7 @@
     },
     "cookies": {
       "title": "Cookie",
-      "content": "Il nostro sito utilizza i seguenti tipi di cookie:",
+      "content": "Il sito utilizza cookie tecnici e, solo previo consenso, cookie di statistica (Google Analytics) e pubblicitari (Google Ads). I dettagli sono nella Cookie policy.",
       "types": {
         "technical": {
           "title": "Cookie Tecnici",
@@ -337,6 +346,16 @@
         "title": "Cookie delle Preferenze",
         "content": "Utilizzati per ricordare le tue preferenze come lingua e tema del sito.",
         "consent": "Richiedono il consenso dell'utente"
+      },
+      "analytics": {
+        "title": "Cookie di statistica",
+        "content": "Google Analytics 4 raccoglie in forma aggregata dati su pagine visitate, provenienza e dispositivo, per migliorare il sito.",
+        "consent": "Richiedono il consenso dell'utente"
+      },
+      "marketing": {
+        "title": "Cookie pubblicitari",
+        "content": "Google Ads misura le conversioni delle nostre campagne, per esempio l'invio del modulo di contatto dopo il clic su un annuncio.",
+        "consent": "Richiedono il consenso dell'utente"
       }
     },
     "cookiesUsed": {
@@ -349,14 +368,34 @@
         "type": "Tipo",
         "rows": {
           "consent": {
-            "purpose": "Memorizza le tue preferenze sui cookie",
-            "duration": "1 anno",
+            "purpose": "Memorizza le tue scelte sui cookie (archiviazione locale)",
+            "duration": "Fino alla revoca",
             "type": "Tecnico"
           },
-          "theme": {
-            "purpose": "Memorizza la tua preferenza del tema",
-            "duration": "Permanente",
-            "type": "Preferenze"
+          "intro": {
+            "purpose": "Ricorda che hai già visto l'animazione iniziale (archiviazione locale)",
+            "duration": "Fino alla cancellazione",
+            "type": "Tecnico"
+          },
+          "locale": {
+            "purpose": "Ricorda la lingua scelta",
+            "duration": "Sessione",
+            "type": "Tecnico"
+          },
+          "ga": {
+            "purpose": "Distingue i visitatori in forma anonima (Google Analytics)",
+            "duration": "2 anni",
+            "type": "Statistica"
+          },
+          "gaSession": {
+            "purpose": "Mantiene lo stato della sessione (Google Analytics)",
+            "duration": "2 anni",
+            "type": "Statistica"
+          },
+          "gclau": {
+            "purpose": "Misura le conversioni degli annunci (Google Ads)",
+            "duration": "3 mesi",
+            "type": "Pubblicitario"
           }
         }
       }
@@ -366,7 +405,7 @@
       "content": "Puoi gestire i cookie in diversi modi:",
       "website": {
         "title": "Tramite il Sito Web",
-        "content": "Puoi modificare le tue preferenze sui cookie utilizzando il banner dei cookie o accedendo alle impostazioni dei cookie."
+        "content": "Puoi modificare o revocare in qualsiasi momento il consenso con il link «Impostazioni cookie» in fondo a ogni pagina."
       },
       "browser": {
         "title": "Tramite il Browser",
@@ -385,7 +424,8 @@
       "title": "Aggiornamenti",
       "content": "Questa Cookie Policy può essere aggiornata. Controlla regolarmente per eventuali modifiche.",
       "lastUpdate": "Ultimo aggiornamento"
-    }
+    },
+    "thirdParty": "I cookie di statistica e pubblicitari sono gestiti da Google Ireland Ltd. e vengono attivati solo dopo il tuo consenso. Per saperne di più: policies.google.com/technologies/cookies."
   },
   "contactForm": {
     "gdprConsent": {

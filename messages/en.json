@@ -136,7 +136,8 @@
       "copyright": "All rights reserved.",
       "vatNumber": "VAT: [TO BE INSERTED]",
       "privacy": "Privacy Policy",
-      "cookies": "Cookie Policy"
+      "cookies": "Cookie Policy",
+      "cookieSettings": "Cookie settings"
     },
     "lines": {
       "title": "Turnkey lines"
@@ -225,7 +226,7 @@
   "cookies": {
     "notice": {
       "title": "Cookie Usage",
-      "message": "This website uses technical cookies necessary for the proper functioning of the site and to save your preferences. We do not use tracking or advertising cookies.",
+      "message": "We use technical cookies needed for the site to work and, only with your consent, statistics cookies (Google Analytics) and advertising cookies (Google Ads) to understand how the site is used and measure our ads.",
       "accept": "Accept",
       "learnMore": "Learn More",
       "settings": "Cookie Settings",
@@ -245,7 +246,15 @@
       },
       "save": "Save Preferences",
       "acceptAll": "Accept All",
-      "rejectAll": "Reject All"
+      "rejectAll": "Reject All",
+      "analytics": {
+        "title": "Statistics cookies",
+        "description": "Google Analytics: helps us understand which pages are visited and how visitors arrive. Aggregated data, used only to improve the site."
+      },
+      "marketing": {
+        "title": "Advertising cookies",
+        "description": "Google Ads: measures how well our ads work, for example how many quote requests come from a campaign."
+      }
     }
   },
   "privacy": {
@@ -297,7 +306,7 @@
     },
     "cookies": {
       "title": "Cookies",
-      "content": "Our website uses the following types of cookies:",
+      "content": "The site uses technical cookies and, only with prior consent, statistics (Google Analytics) and advertising (Google Ads) cookies. Details are in the Cookie policy.",
       "types": {
         "technical": {
           "title": "Technical Cookies",
@@ -337,6 +346,16 @@
         "title": "Preference Cookies",
         "content": "Used to remember your preferences such as language and site theme.",
         "consent": "Require user consent"
+      },
+      "analytics": {
+        "title": "Statistics cookies",
+        "content": "Google Analytics 4 collects aggregated data on pages visited, traffic sources and devices, to improve the site.",
+        "consent": "Require the user's consent"
+      },
+      "marketing": {
+        "title": "Advertising cookies",
+        "content": "Google Ads measures conversions from our campaigns, for example a contact form sent after clicking an ad.",
+        "consent": "Require the user's consent"
       }
     },
     "cookiesUsed": {
@@ -349,14 +368,34 @@
         "type": "Type",
         "rows": {
           "consent": {
-            "purpose": "Stores your cookie preferences",
-            "duration": "1 year",
+            "purpose": "Stores your cookie choices (local storage)",
+            "duration": "Until withdrawn",
             "type": "Technical"
           },
-          "theme": {
-            "purpose": "Stores your theme preference",
-            "duration": "Permanent",
-            "type": "Preferences"
+          "intro": {
+            "purpose": "Remembers you have already seen the opening animation (local storage)",
+            "duration": "Until cleared",
+            "type": "Technical"
+          },
+          "locale": {
+            "purpose": "Remembers your language",
+            "duration": "Session",
+            "type": "Technical"
+          },
+          "ga": {
+            "purpose": "Distinguishes visitors anonymously (Google Analytics)",
+            "duration": "2 years",
+            "type": "Statistics"
+          },
+          "gaSession": {
+            "purpose": "Keeps the session state (Google Analytics)",
+            "duration": "2 years",
+            "type": "Statistics"
+          },
+          "gclau": {
+            "purpose": "Measures ad conversions (Google Ads)",
+            "duration": "3 months",
+            "type": "Advertising"
           }
         }
       }
@@ -366,7 +405,7 @@
       "content": "You can manage cookies in several ways:",
       "website": {
         "title": "Through the Website",
-        "content": "You can modify your cookie preferences using the cookie banner or accessing cookie settings."
+        "content": "You can change or withdraw your consent at any time with the “Cookie settings” link at the bottom of every page."
       },
       "browser": {
         "title": "Through the Browser",
@@ -385,7 +424,8 @@
       "title": "Updates",
       "content": "This Cookie Policy may be updated. Check regularly for any changes.",
       "lastUpdate": "Last updated"
-    }
+    },
+    "thirdParty": "Statistics and advertising cookies are managed by Google Ireland Ltd. and are only activated after your consent. More information: policies.google.com/technologies/cookies."
   },
   "contactForm": {
     "gdprConsent": {

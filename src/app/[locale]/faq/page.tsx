@@ -6,7 +6,6 @@ import { PageCta, PageHero } from '@/components/page/PageParts';
 import { metadataFor } from '@/utils/pageMetadata';
 import { faqSchema } from '@/utils/schema';
 
-
 export const generateMetadata = metadataFor('faq', '/faq');
 
 export default function FAQPage() {
