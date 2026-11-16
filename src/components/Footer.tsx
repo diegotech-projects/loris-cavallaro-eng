@@ -44,15 +44,9 @@ function FooterComp() {
   const email =
     process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'loriscavallaro22@gmail.com';
   const phone = process.env.NEXT_PUBLIC_COMPANY_PHONE || '380 147 7121';
-  const vat = t('legal.vatNumber')
-    .replace(
-      '[DA INSERIRE]',
-      process.env.NEXT_PUBLIC_VAT_NUMBER || '[DA INSERIRE]',
-    )
-    .replace(
-      '[TO BE INSERTED]',
-      process.env.NEXT_PUBLIC_VAT_NUMBER || '[TO BE INSERTED]',
-    );
+  // Shown only once the real VAT number is set on the hosting
+  const vatNumber = process.env.NEXT_PUBLIC_VAT_NUMBER;
+  const vat = vatNumber ? t('legal.vatNumber', { vat: vatNumber }) : '';
 
   return (
     <footer className="container-custom pt-20 text-bone md:pt-28">
@@ -163,7 +157,7 @@ function FooterComp() {
       <div className="grid border border-bone/15 font-display text-[11px] uppercase tracking-[0.16em] text-bone/50 md:grid-cols-[1fr_auto_auto]">
         <p className="px-4 py-3 normal-case tracking-normal md:border-r md:border-bone/15">
           © {currentYear} {name} {brand}. {t('legal.copyright')}{' '}
-          <span className="ml-2 tabular-nums text-bone/35">{vat}</span>
+          {vat && <span className="ml-2 tabular-nums text-bone/35">{vat}</span>}
         </p>
         <div className="flex flex-wrap items-center gap-x-5 gap-y-1 border-t border-bone/15 px-4 py-3 md:border-r md:border-t-0">
           <LocalizedLink href="/privacy" className="hover:text-bone">
