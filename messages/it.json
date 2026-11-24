@@ -229,24 +229,24 @@
       "message": "Usiamo cookie tecnici necessari al funzionamento del sito e, solo con il tuo consenso, cookie di statistica (Google Analytics) e pubblicitari (Google Ads) per capire come viene usato il sito e misurare i nostri annunci.",
       "accept": "Accetta",
       "learnMore": "Scopri di più",
-      "settings": "Impostazioni Cookie",
+      "settings": "Preferenze",
       "reject": "Rifiuta"
     },
     "settings": {
       "title": "Impostazioni Cookie",
       "description": "Puoi gestire le tue preferenze sui cookie qui sotto. I cookie essenziali sono necessari per il funzionamento del sito.",
       "necessary": {
-        "title": "Cookie Essenziali",
+        "title": "Cookie essenziali",
         "description": "Questi cookie sono necessari per il funzionamento base del sito web e non possono essere disattivati.",
-        "always": "Sempre Attivi"
+        "always": "Sempre attivi"
       },
       "preferences": {
-        "title": "Cookie delle Preferenze",
+        "title": "Cookie delle preferenze",
         "description": "Questi cookie permettono al sito di ricordare le tue preferenze (come la lingua o il tema)."
       },
-      "save": "Salva Preferenze",
-      "acceptAll": "Accetta Tutto",
-      "rejectAll": "Rifiuta Tutto",
+      "save": "Salva le scelte",
+      "acceptAll": "Accetta tutto",
+      "rejectAll": "Rifiuta tutto",
       "analytics": {
         "title": "Cookie di statistica",
         "description": "Google Analytics: ci aiutano a capire quali pagine vengono visitate e come arrivano i visitatori. Dati aggregati, usati solo per migliorare il sito."
@@ -260,17 +260,17 @@
   "privacy": {
     "title": "Privacy Policy",
     "dataController": {
-      "title": "Titolare del Trattamento",
+      "title": "Titolare del trattamento",
       "content": "Il titolare del trattamento dei dati personali è:"
     },
     "dataCollection": {
-      "title": "Raccolta dei Dati",
+      "title": "Raccolta dei dati",
       "content": "Raccogliamo i tuoi dati personali nelle seguenti modalità:",
       "contactForm": {
-        "title": "Modulo di Contatto",
+        "title": "Modulo di contatto",
         "content": "Quando utilizzi il nostro modulo di contatto, raccogliamo i seguenti dati:",
         "data": {
-          "name": "Nome e Cognome",
+          "name": "Nome e cognome",
           "email": "Indirizzo email",
           "phone": "Numero di telefono",
           "message": "Messaggio",
@@ -279,7 +279,7 @@
       }
     },
     "dataUsage": {
-      "title": "Utilizzo dei Dati",
+      "title": "Utilizzo dei dati",
       "content": "I tuoi dati personali vengono utilizzati per:",
       "purposes": {
         "respond": "Rispondere alle tue richieste di informazioni",
@@ -289,11 +289,11 @@
       }
     },
     "dataRetention": {
-      "title": "Conservazione dei Dati",
+      "title": "Conservazione dei dati",
       "content": "I tuoi dati personali vengono conservati per il tempo necessario a fornire i servizi richiesti e per adempiere agli obblighi legali. Generalmente, i dati vengono conservati per un periodo non superiore a 3 anni dalla fine del rapporto contrattuale."
     },
     "userRights": {
-      "title": "I Tuoi Diritti",
+      "title": "I tuoi diritti",
       "content": "Hai il diritto di:",
       "rights": {
         "access": "Accedere ai tuoi dati personali",
@@ -309,11 +309,11 @@
       "content": "Il sito utilizza cookie tecnici e, solo previo consenso, cookie di statistica (Google Analytics) e pubblicitari (Google Ads). I dettagli sono nella Cookie policy.",
       "types": {
         "technical": {
-          "title": "Cookie Tecnici",
+          "title": "Cookie tecnici",
           "content": "Necessari per il funzionamento base del sito web."
         },
         "preferences": {
-          "title": "Cookie delle Preferenze",
+          "title": "Cookie delle preferenze",
           "content": "Utilizzati per ricordare le tue preferenze (lingua, tema)."
         }
       }
@@ -331,19 +331,19 @@
   "cookiePolicy": {
     "title": "Cookie Policy",
     "whatAreCookies": {
-      "title": "Cosa sono i Cookie",
+      "title": "Cosa sono i cookie",
       "content": "I cookie sono piccoli file di testo che vengono memorizzati sul tuo dispositivo quando visiti un sito web. Ci aiutano a fornire una migliore esperienza utente e a far funzionare correttamente il sito."
     },
     "cookieTypes": {
-      "title": "Tipi di Cookie",
+      "title": "Tipi di cookie",
       "content": "Utilizziamo i seguenti tipi di cookie:",
       "technical": {
-        "title": "Cookie Tecnici",
+        "title": "Cookie tecnici",
         "content": "Essenziali per il funzionamento del sito web. Senza questi cookie, il sito non può funzionare correttamente.",
         "consent": "Non richiedono il consenso dell'utente"
       },
       "preferences": {
-        "title": "Cookie delle Preferenze",
+        "title": "Cookie delle preferenze",
         "content": "Utilizzati per ricordare le tue preferenze come lingua e tema del sito.",
         "consent": "Richiedono il consenso dell'utente"
       },
@@ -359,7 +359,7 @@
       }
     },
     "cookiesUsed": {
-      "title": "Cookie Utilizzati",
+      "title": "Cookie utilizzati",
       "content": "Il nostro sito utilizza i seguenti cookie:",
       "table": {
         "name": "Nome",
@@ -401,14 +401,14 @@
       }
     },
     "cookieManagement": {
-      "title": "Gestione dei Cookie",
+      "title": "Gestione dei cookie",
       "content": "Puoi gestire i cookie in diversi modi:",
       "website": {
-        "title": "Tramite il Sito Web",
+        "title": "Tramite il sito web",
         "content": "Puoi modificare o revocare in qualsiasi momento il consenso con il link «Impostazioni cookie» in fondo a ogni pagina."
       },
       "browser": {
-        "title": "Tramite il Browser",
+        "title": "Tramite il browser",
         "content": "Puoi gestire i cookie attraverso le impostazioni del tuo browser:",
         "chrome": "Impostazioni > Privacy e sicurezza > Cookie",
         "firefox": "Impostazioni > Privacy e sicurezza > Cookie",

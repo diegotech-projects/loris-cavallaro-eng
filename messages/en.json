@@ -225,28 +225,28 @@
   },
   "cookies": {
     "notice": {
-      "title": "Cookie Usage",
+      "title": "Cookie notice",
       "message": "We use technical cookies needed for the site to work and, only with your consent, statistics cookies (Google Analytics) and advertising cookies (Google Ads) to understand how the site is used and measure our ads.",
       "accept": "Accept",
-      "learnMore": "Learn More",
-      "settings": "Cookie Settings",
+      "learnMore": "Learn more",
+      "settings": "Preferences",
       "reject": "Reject"
     },
     "settings": {
-      "title": "Cookie Settings",
+      "title": "Cookie settings",
       "description": "You can manage your cookie preferences below. Essential cookies are necessary for the site to function.",
       "necessary": {
-        "title": "Essential Cookies",
+        "title": "Essential cookies",
         "description": "These cookies are necessary for the basic functionality of the website and cannot be disabled.",
-        "always": "Always Active"
+        "always": "Always active"
       },
       "preferences": {
-        "title": "Preference Cookies",
+        "title": "Preference cookies",
         "description": "These cookies allow the website to remember your preferences (such as language or theme)."
       },
-      "save": "Save Preferences",
-      "acceptAll": "Accept All",
-      "rejectAll": "Reject All",
+      "save": "Save choices",
+      "acceptAll": "Accept all",
+      "rejectAll": "Reject all",
       "analytics": {
         "title": "Statistics cookies",
         "description": "Google Analytics: helps us understand which pages are visited and how visitors arrive. Aggregated data, used only to improve the site."
@@ -260,26 +260,26 @@
   "privacy": {
     "title": "Privacy Policy",
     "dataController": {
-      "title": "Data Controller",
+      "title": "Data controller",
       "content": "The data controller is:"
     },
     "dataCollection": {
-      "title": "Data Collection",
+      "title": "Data we collect",
       "content": "We collect your personal data in the following ways:",
       "contactForm": {
-        "title": "Contact Form",
+        "title": "Contact form",
         "content": "When you use our contact form, we collect the following data:",
         "data": {
-          "name": "Full Name",
-          "email": "Email Address",
-          "phone": "Phone Number",
+          "name": "Full name",
+          "email": "Email address",
+          "phone": "Phone number",
           "message": "Message",
-          "projectType": "Project Type"
+          "projectType": "Project type"
         }
       }
     },
     "dataUsage": {
-      "title": "Data Usage",
+      "title": "How we use data",
       "content": "Your personal data is used for:",
       "purposes": {
         "respond": "Responding to your information requests",
@@ -289,11 +289,11 @@
       }
     },
     "dataRetention": {
-      "title": "Data Retention",
+      "title": "Data retention",
       "content": "Your personal data is retained for the time necessary to provide the requested services and to fulfill legal obligations. Generally, data is retained for no more than 3 years from the end of the contractual relationship."
     },
     "userRights": {
-      "title": "Your Rights",
+      "title": "Your rights",
       "content": "You have the right to:",
       "rights": {
         "access": "Access your personal data",
@@ -309,11 +309,11 @@
       "content": "The site uses technical cookies and, only with prior consent, statistics (Google Analytics) and advertising (Google Ads) cookies. Details are in the Cookie policy.",
       "types": {
         "technical": {
-          "title": "Technical Cookies",
+          "title": "Technical cookies",
           "content": "Necessary for the basic functioning of the website."
         },
         "preferences": {
-          "title": "Preference Cookies",
+          "title": "Preference cookies",
           "content": "Used to remember your preferences (language, theme)."
         }
       }
@@ -331,19 +331,19 @@
   "cookiePolicy": {
     "title": "Cookie Policy",
     "whatAreCookies": {
-      "title": "What are Cookies",
+      "title": "What cookies are",
       "content": "Cookies are small text files that are stored on your device when you visit a website. They help us provide a better user experience and make the site function properly."
     },
     "cookieTypes": {
-      "title": "Types of Cookies",
+      "title": "Types of cookies",
       "content": "We use the following types of cookies:",
       "technical": {
-        "title": "Technical Cookies",
+        "title": "Technical cookies",
         "content": "Essential for the website to function. Without these cookies, the site cannot work properly.",
         "consent": "Do not require user consent"
       },
       "preferences": {
-        "title": "Preference Cookies",
+        "title": "Preference cookies",
         "content": "Used to remember your preferences such as language and site theme.",
         "consent": "Require user consent"
       },
@@ -359,7 +359,7 @@
       }
     },
     "cookiesUsed": {
-      "title": "Cookies Used",
+      "title": "Cookies used",
       "content": "Our website uses the following cookies:",
       "table": {
         "name": "Name",
@@ -401,14 +401,14 @@
       }
     },
     "cookieManagement": {
-      "title": "Cookie Management",
+      "title": "Managing cookies",
       "content": "You can manage cookies in several ways:",
       "website": {
-        "title": "Through the Website",
+        "title": "Through the website",
         "content": "You can change or withdraw your consent at any time with the “Cookie settings” link at the bottom of every page."
       },
       "browser": {
-        "title": "Through the Browser",
+        "title": "Through the browser",
         "content": "You can manage cookies through your browser settings:",
         "chrome": "Settings > Privacy and security > Cookies",
         "firefox": "Settings > Privacy and security > Cookies",

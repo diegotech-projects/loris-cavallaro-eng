@@ -20,7 +20,7 @@ const ALL = { preferences: true, analytics: true, marketing: true };
 const ease = [0.16, 1, 0.3, 1] as const;
 
 const buttonBase =
-  'flex-1 px-4 py-3 text-sm font-medium transition-colors whitespace-nowrap';
+  'min-w-0 flex-1 px-3 py-3 text-sm font-medium transition-colors whitespace-nowrap sm:px-4';
 
 type SwitchProps = {
   checked: boolean;

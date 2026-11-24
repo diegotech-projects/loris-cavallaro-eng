@@ -129,7 +129,9 @@ export default function CookiePolicyPage() {
                   </tbody>
                 </table>
               </div>
-              <p className="mt-6 text-base text-bone/55">{t('thirdParty')}</p>
+              <p className="mt-6 break-words text-base text-bone/55">
+                {t('thirdParty')}
+              </p>
             </section>
 
             <section className="border-t border-bone/15 py-10">
