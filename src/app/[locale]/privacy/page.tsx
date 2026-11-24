@@ -31,6 +31,7 @@ export default function PrivacyPage() {
                 <li>Nome: {process.env.NEXT_PUBLIC_ENGINEER_NAME}</li>
                 <li>Email: {process.env.NEXT_PUBLIC_COMPANY_EMAIL}</li>
                 <li>Telefono: +39 {BUSINESS.phone}</li>
+                {BUSINESS.vat && <li>P.IVA: {BUSINESS.vat}</li>}
                 <li>Indirizzo: Sicilia, Italia</li>
               </ul>
             </section>
