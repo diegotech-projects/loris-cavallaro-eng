@@ -62,14 +62,14 @@ const ContactMap = () => {
 
   if (!isClient) {
     return (
-      <div className="flex h-64 w-full items-center justify-center rounded-lg bg-gray-200">
-        <p className="text-gray-500">{t('map.loading')}</p>
+      <div className="flex size-full items-center justify-center bg-bone/5">
+        <p className="text-bone/40">{t('map.loading')}</p>
       </div>
     );
   }
 
   return (
-    <div className="h-64 w-full overflow-hidden rounded-lg shadow-lg">
+    <div className="size-full overflow-hidden">
       <MapContainer
         center={position}
         zoom={

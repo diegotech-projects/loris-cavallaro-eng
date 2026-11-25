@@ -1,69 +1,41 @@
 import '@/styles/global.css';
 
-import type { Metadata } from 'next';
-import Script from 'next/script';
+import type { Metadata, Viewport } from 'next';
+import { Inter, Inter_Tight } from 'next/font/google';
+import { getLocale } from 'next-intl/server';
 import React from 'react';
 
+import GoogleTags from '@/components/GoogleTags';
 import { AppConfig } from '@/utils/AppConfig';
+import { BUSINESS, SITE_URL } from '@/utils/seo';
 
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
+const interTight = Inter_Tight({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter-tight',
+});
+
+// Defaults only: every page sets its own title, description, canonical,
+// hreflang and Open Graph through generateMetadata (see utils/seo.ts)
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ||
-      'https://www.ingloriscavallarocostruzioni.com',
-  ),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: AppConfig.title,
-    template: `%s | ${AppConfig.site_name}`,
+    template: `%s | ${BUSINESS.name}`,
   },
   description: AppConfig.description,
-  keywords: [
-    'Loris Cavallaro',
-    'Ing. Loris Cavallaro',
-    'ingegnere loris cavallaro',
-    'studio tecnico loris cavallaro',
-    'studio tecnico ingegneria',
-    'ing Cavallaro',
-    'ingegnere loris cavallaro',
-    'ingegnere professionista',
-    'consulente tecnico',
-    'progettista edile',
-    'progettista strutturale',
-    'ingegnere civile',
-    'ingegneria ambientale',
-    'progettazione edile',
-    'sostenibilità',
-    'sicurezza cantieri',
-    'consulenza tecnica',
-    'bandi di gara',
-    'ingegneria Sicilia',
-  ],
-  authors: [{ name: 'Loris Cavallaro' }],
-  creator: 'Loris Cavallaro',
-  openGraph: {
-    type: 'website',
-    locale: 'it_IT',
-    alternateLocale: ['en_US'],
-    url:
-      process.env.NEXT_PUBLIC_SITE_URL ||
-      'https://www.ingloriscavallarocostruzioni.com',
-    siteName: AppConfig.site_name,
-    title: AppConfig.title,
-    description: AppConfig.description,
-    images: [
-      {
-        url: '/images/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: AppConfig.site_name,
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: AppConfig.title,
-    description: AppConfig.description,
-    images: ['/images/og-image.jpg'],
-  },
+  applicationName: BUSINESS.name,
+  authors: [{ name: `Ing. ${BUSINESS.founder}` }],
+  creator: `Ing. ${BUSINESS.founder}`,
+  publisher: BUSINESS.name,
+  category: 'construction',
+  formatDetection: { telephone: true, email: true, address: true },
   robots: {
     index: true,
     follow: true,
@@ -78,54 +50,41 @@ export const metadata: Metadata = {
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
-  icons: [
-    {
-      rel: 'apple-touch-icon',
-      url: '/apple-touch-icon.png',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '32x32',
-      url: '/favicon.png',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '16x16',
-      url: '/favicon.png',
-    },
-    {
-      rel: 'icon',
-      url: '/favicon.ico',
-    },
-  ],
+  other: {
+    'geo.region': 'IT-ME',
+    'geo.placename': `${BUSINESS.city}, ${BUSINESS.region}`,
+    'geo.position': `${BUSINESS.latitude};${BUSINESS.longitude}`,
+    ICBM: `${BUSINESS.latitude}, ${BUSINESS.longitude}`,
+  },
 };
 
-export default function RootLayout({
+export const viewport: Viewport = {
+  themeColor: '#0e0d0c',
+  colorScheme: 'dark',
+};
+
+export default async function RootLayout({
   // Layouts must accept a children prop.
   // This will be populated with nested layouts or pages
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // The locale comes from the next-intl middleware, so /en pages declare English
+  const locale = await getLocale();
+
   return (
-    <html lang="en">
+    // suppressHydrationWarning: an inline script may add "intro-seen" to <html>
+    // before React hydrates (see LandingShell)
+    <html
+      lang={locale}
+      className={`${inter.variable} ${interTight.variable}`}
+      suppressHydrationWarning
+    >
       <body className="min-h-screen bg-themeBackground">
         {children}
-        {/* Google Ads / Google Tag */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17610258605"
-          strategy="afterInteractive"
-        />
-        <Script id="google-tag" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-17610258605');
-          `}
-        </Script>
+        {/* Google Analytics / Ads: loaded only after cookie consent */}
+        <GoogleTags />
       </body>
     </html>
   );

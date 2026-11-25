@@ -27,54 +27,61 @@
   },
   "about": {
     "hero": {
-      "title": "Chi Siamo",
-      "subtitle": "Studio di ingegneria civile e ambientale specializzato in progetti di grande valore e sostenibilità."
+      "title": "Chi siamo",
+      "subtitle": "Uno studio di ingegneria a Messina che progetta e poi segue il cantiere fino alla consegna."
     },
     "company": {
-      "title": "Il Nostro Studio",
-      "description1": "è uno studio di ingegneria civile e ambientale che si distingue per l'approccio professionale e innovativo nella progettazione edile, sostenibilità e sicurezza. Il nostro team è guidato dall'Ing. Loris Cavallaro, specializzato in sicurezza sui luoghi di lavoro.",
-      "description2": "Ci occupiamo di bandi di gara, gare d'appalto, progettazioni civili, pratiche urbanistiche, diagnosi energetiche secondo Legge 10, certificazioni APE e progettazione di impianti fotovoltaici. Un vero e proprio punto di riferimento per progettazione e sostenibilità.",
-      "mission": "La nostra missione è vedere ciò che creiamo sulla carta trasformarsi in realtà tangibile, costruendo non solo strutture, ma anche bellezza, funzionalità e sostenibilità per le future generazioni."
+      "title": "Lo studio",
+      "description1": "è uno studio di ingegneria civile e ambientale con sede in Sicilia. Progettiamo case, impianti e ristrutturazioni e, quando serve, li realizziamo anche.",
+      "description2": "Nel lavoro di tutti i giorni seguiamo pratiche edilizie e urbanistiche, progetti strutturali, diagnosi energetiche secondo la Legge 10, APE, impianti fotovoltaici e gare d'appalto pubbliche.",
+      "mission": "Ci piace vedere un disegno diventare una casa vera, abitata, che consuma poco e dura nel tempo."
     },
     "team": {
-      "title": "Il Nostro Team",
+      "title": "Chi segue il tuo progetto",
       "director": {
         "name": "Ing. Loris Cavallaro",
-        "role": "Direttore Tecnico e Fondatore",
-        "description": "Ingegnere civile e ambientale con specializzazione in sicurezza sui luoghi di lavoro. Con anni di esperienza nel settore, guida il team tecnico dello studio con competenza e dedizione verso l'eccellenza progettuale.",
+        "role": "Fondatore e direttore tecnico",
+        "description": "Ingegnere civile e ambientale, specializzato in sicurezza sui luoghi di lavoro. Segue in prima persona i progetti dello studio, dal sopralluogo alla consegna.",
         "qualifications": [
-          "Laurea Magistrale in Ingegneria Civile e Ambientale",
-          "Specializzazione in Sicurezza sui Luoghi di Lavoro",
-          "Esperto in Efficienza Energetica e Sostenibilità"
+          "Laurea magistrale in Ingegneria civile e ambientale",
+          "Specializzazione in sicurezza sui luoghi di lavoro",
+          "Efficienza energetica e fotovoltaico"
         ]
       }
     },
     "competencies": {
-      "title": "Competenze",
+      "title": "Di cosa ci occupiamo",
       "buildingDesign": {
-        "title": "Progettazione Edile",
-        "description": "Progettazione strutturale e architettonica per edifici residenziali e commerciali"
+        "title": "Progettazione edile",
+        "description": "Progetti strutturali e architettonici per case, uffici e negozi"
       },
       "sustainability": {
-        "title": "Sostenibilità",
-        "description": "Efficienza energetica, certificazioni APE e impianti fotovoltaici"
+        "title": "Energia",
+        "description": "APE, diagnosi energetiche e impianti fotovoltaici"
       },
       "safety": {
         "title": "Sicurezza",
-        "description": "Specializzazione in sicurezza sui luoghi di lavoro"
+        "description": "Sicurezza sui luoghi di lavoro e nei cantieri"
       },
       "tenders": {
-        "title": "Bandi e Appalti",
-        "description": "Gestione di bandi di gara e procedure di appalto pubblico"
+        "title": "Gare e appalti",
+        "description": "Documentazione tecnica per le gare d'appalto pubbliche"
       },
       "urbanPlanning": {
-        "title": "Pratiche Urbanistiche",
-        "description": "Autorizzazioni edilizie e conformità normativa"
+        "title": "Pratiche urbanistiche",
+        "description": "Titoli edilizi e verifiche di conformità urbanistica"
       },
       "consulting": {
-        "title": "Consulenza Tecnica",
-        "description": "Perizie, valutazioni tecniche e supporto specialistico"
+        "title": "Consulenza tecnica",
+        "description": "Perizie e pareri tecnici su immobili e cantieri"
       }
+    },
+    "meta": {
+      "name": "Nome",
+      "role": "Ruolo",
+      "location": "Sede",
+      "mission": "Perché lo facciamo",
+      "qualifications": "Formazione"
     }
   },
   "reviews": {
@@ -98,28 +105,28 @@
   },
   "navigation": {
     "home": "Home",
-    "about": "Chi Siamo",
+    "about": "Chi siamo",
     "services": "Servizi",
     "projects": "Progetti",
     "faq": "FAQ",
     "contact": "Contatti",
-    "requestQuote": "Richiedi Preventivo",
+    "requestQuote": "Richiedi un preventivo",
     "language": "Lingua",
     "italian": "Italiano",
     "english": "English"
   },
   "footer": {
-    "companyDescription": "Studio di ingegneria civile e ambientale specializzato in progettazione edile, sostenibilità e innovazione tecnica per progetti di grande valore.",
+    "companyDescription": "Studio di ingegneria e impresa a Messina. Progettiamo e realizziamo impianti fotovoltaici, case prefabbricate e ristrutturazioni, e seguiamo le pratiche tecniche.",
     "navigation": {
       "title": "Navigazione"
     },
     "services": {
       "title": "Servizi",
-      "structuralDesign": "Progettazione Strutturale",
-      "projectManagement": "Direzione Lavori",
-      "urbanPlanning": "Pratiche Urbanistiche",
-      "energyEfficiency": "Efficienza Energetica",
-      "consulting": "Consulenza Tecnica"
+      "structuralDesign": "Progettazione strutturale",
+      "projectManagement": "Direzione lavori",
+      "urbanPlanning": "Pratiche urbanistiche",
+      "energyEfficiency": "Efficienza energetica",
+      "consulting": "Consulenza tecnica"
     },
     "contact": {
       "title": "Contatti",
@@ -127,124 +134,143 @@
     },
     "legal": {
       "copyright": "Tutti i diritti riservati.",
-      "vatNumber": "P.IVA: [DA INSERIRE]",
+      "vatNumber": "P.IVA {vat}",
       "privacy": "Privacy Policy",
-      "cookies": "Cookie Policy"
-    }
+      "cookies": "Cookie Policy",
+      "cookieSettings": "Impostazioni cookie"
+    },
+    "lines": {
+      "title": "Linee chiavi in mano"
+    },
+    "backToTop": "Torna su",
+    "partner": "Partner Edilnet.it"
   },
   "contact": {
     "form": {
-      "title": "RICHIEDI UNA CONSULENZA",
-      "description": "Contattaci per discutere del tuo progetto di ingegneria civile. Il nostro team ti fornirà una consulenza professionale personalizzata.",
-      "name": "Nome Completo",
+      "title": "Scrivici",
+      "description": "Descrivi in poche righe cosa vuoi fare: ti ricontattiamo per capire i dettagli e, se serve, fissare un sopralluogo.",
+      "name": "Nome e cognome",
       "email": "Email",
       "phone": "Telefono",
-      "projectType": "Tipo di Progetto",
-      "message": "Descrizione Progetto",
-      "messagePlaceholder": "Descrivi brevemente il tuo progetto, le tue esigenze e i tuoi obiettivi...",
+      "projectType": "Tipo di intervento",
+      "message": "Il tuo progetto",
+      "messagePlaceholder": "Es. vorrei installare un impianto fotovoltaico sul tetto di una villetta a Milazzo.",
       "projectTypes": {
-        "placeholder": "Seleziona tipo progetto",
-        "residential": "Progettazione Residenziale",
-        "commercial": "Progettazione Commerciale",
-        "structural": "Calcoli Strutturali",
-        "energy": "Efficienza Energetica",
-        "permits": "Pratiche Urbanistiche",
-        "consulting": "Consulenza Tecnica"
+        "placeholder": "Seleziona",
+        "solar": "Impianto fotovoltaico",
+        "prefab": "Casa prefabbricata",
+        "renovation": "Ristrutturazione",
+        "residential": "Progettazione residenziale",
+        "commercial": "Progettazione commerciale",
+        "structural": "Calcoli strutturali",
+        "energy": "APE ed efficienza energetica",
+        "permits": "Pratiche edilizie",
+        "consulting": "Consulenza tecnica"
       },
-      "gdprConsent": "Consenso al trattamento dei dati personali",
-      "gdprText": "Acconsento al trattamento dei miei dati personali per rispondere alla mia richiesta di contatto, come descritto nella Privacy Policy. I dati verranno utilizzati esclusivamente per fornire le informazioni richieste e non verranno condivisi con terze parti.",
+      "gdprConsent": "Consenso privacy",
+      "gdprText": "Acconsento al trattamento dei miei dati per ricevere una risposta a questa richiesta. I dati non vengono ceduti a terzi. Maggiori dettagli nella",
       "privacyPolicy": "Privacy Policy",
-      "gdprRequired": "Devi accettare il consenso al trattamento dei dati per inviare il modulo.",
-      "submit": "INVIA RICHIESTA",
-      "submitting": "INVIO IN CORSO...",
-      "success": "✅ Messaggio inviato con successo!",
-      "successDescription": "Ti risponderemo al più presto al tuo indirizzo email.",
-      "error": "❌ Errore nell'invio del messaggio",
-      "errorDescription": "Riprova o contattaci direttamente via email:",
-      "required": "*"
+      "gdprRequired": "Per inviare il modulo serve il consenso privacy.",
+      "submit": "Invia richiesta",
+      "submitting": "Invio in corso…",
+      "success": "Messaggio inviato.",
+      "successDescription": "Grazie, ti rispondiamo all'indirizzo email che hai indicato.",
+      "error": "Il messaggio non è partito.",
+      "errorDescription": "Riprova tra poco oppure scrivici direttamente:",
+      "required": "*",
+      "sheet": "Tav. 00 · Modulo di richiesta"
     },
     "info": {
-      "title": "INIZIA IL TUO PROGETTO OGGI",
-      "description": "Siamo pronti ad aiutarti a trasformare le tue idee in realtà con soluzioni di ingegneria innovative e sostenibili.",
-      "email": "EMAIL",
-      "phone": "TELEFONO",
-      "location": "DOVE SIAMO",
-      "serviceArea": "La nostra zona di servizio",
-      "nationalService": "Servizi su tutto il territorio nazionale"
+      "title": "Parliamo del tuo progetto",
+      "description": "Chiama, scrivi o compila il modulo: ti rispondiamo noi, senza intermediari.",
+      "email": "Email",
+      "phone": "Telefono",
+      "location": "Dove siamo",
+      "serviceArea": "Dove lavoriamo",
+      "nationalService": "Messina, Sicilia e resto d'Italia su richiesta"
     },
     "map": {
       "loading": "Caricamento mappa...",
-      "popupText": "Servizi su tutto il territorio nazionale"
+      "popupText": "Messina, Sicilia e resto d'Italia su richiesta"
     }
   },
   "services": {
     "title": "SERVIZI",
-    "description": "Soluzioni complete di ingegneria civile e ambientale per ogni tipologia di progetto",
+    "description": "Progettazione, direzione lavori, pratiche ed energia: i servizi tecnici dello studio.",
     "viewAllServices": "VISUALIZZA TUTTI I SERVIZI",
-    "ourServices": "I nostri Servizi",
+    "ourServices": "Servizi tecnici",
     "comprehensiveSet": "Un insieme completo di servizi tecnici",
-    "viewMore": "Scopri di Più",
+    "viewMore": "Scopri di più",
     "contactUs": "Contattaci",
     "structuralDesign": {
-      "title": "Progettazione Strutturale",
-      "content": "Progettazione di strutture edili, calcoli strutturali e verifiche statiche per edifici residenziali e commerciali"
+      "title": "Progettazione strutturale",
+      "content": "Calcoli e verifiche strutturali per edifici residenziali e commerciali, nuovi o da consolidare."
     },
     "projectManagement": {
-      "title": "Direzione Lavori",
-      "content": "Coordinamento e supervisione dei lavori edili, gestione tecnica e controllo qualità durante tutte le fasi costruttive"
+      "title": "Direzione lavori",
+      "content": "Controlliamo che il cantiere segua il progetto, nei tempi e nella qualità concordati."
     },
     "buildingPermits": {
-      "title": "Pratiche Urbanistiche",
-      "content": "Gestione completa di pratiche edilizie, permessi di costruire e conformità normativa per progetti edilizi"
+      "title": "Pratiche urbanistiche",
+      "content": "CILA, SCIA, permessi di costruire e verifiche di conformità, dalla presentazione al rilascio."
     },
     "energyEfficiency": {
-      "title": "Efficienza Energetica",
-      "content": "Diagnosi energetiche Legge 10, certificazioni APE e progettazione di impianti fotovoltaici per la sostenibilità"
+      "title": "Efficienza energetica",
+      "content": "Diagnosi energetiche secondo la Legge 10, APE e progetti di impianti fotovoltaici."
     },
     "technicalConsulting": {
-      "title": "Consulenza Tecnica",
-      "content": "Bandi di gara, gare d'appalto, verifiche tecniche e consulenza specializzata per progetti di ingegneria civile"
+      "title": "Consulenza tecnica",
+      "content": "Documentazione tecnica per gare d'appalto, perizie e pareri su progetti di ingegneria civile."
     }
   },
   "cookies": {
     "notice": {
       "title": "Uso dei Cookie",
-      "message": "Questo sito utilizza cookie tecnici necessari per il corretto funzionamento del sito e per salvare le tue preferenze. Non utilizziamo cookie di tracciamento o pubblicitari.",
+      "message": "Usiamo cookie tecnici necessari al funzionamento del sito e, solo con il tuo consenso, cookie di statistica (Google Analytics) e pubblicitari (Google Ads) per capire come viene usato il sito e misurare i nostri annunci.",
       "accept": "Accetta",
       "learnMore": "Scopri di più",
-      "settings": "Impostazioni Cookie"
+      "settings": "Preferenze",
+      "reject": "Rifiuta"
     },
     "settings": {
       "title": "Impostazioni Cookie",
       "description": "Puoi gestire le tue preferenze sui cookie qui sotto. I cookie essenziali sono necessari per il funzionamento del sito.",
       "necessary": {
-        "title": "Cookie Essenziali",
+        "title": "Cookie essenziali",
         "description": "Questi cookie sono necessari per il funzionamento base del sito web e non possono essere disattivati.",
-        "always": "Sempre Attivi"
+        "always": "Sempre attivi"
       },
       "preferences": {
-        "title": "Cookie delle Preferenze",
+        "title": "Cookie delle preferenze",
         "description": "Questi cookie permettono al sito di ricordare le tue preferenze (come la lingua o il tema)."
       },
-      "save": "Salva Preferenze",
-      "acceptAll": "Accetta Tutto",
-      "rejectAll": "Rifiuta Tutto"
+      "save": "Salva le scelte",
+      "acceptAll": "Accetta tutto",
+      "rejectAll": "Rifiuta tutto",
+      "analytics": {
+        "title": "Cookie di statistica",
+        "description": "Google Analytics: ci aiutano a capire quali pagine vengono visitate e come arrivano i visitatori. Dati aggregati, usati solo per migliorare il sito."
+      },
+      "marketing": {
+        "title": "Cookie pubblicitari",
+        "description": "Google Ads: misurano l'efficacia dei nostri annunci, per esempio quante richieste di preventivo arrivano da una campagna."
+      }
     }
   },
   "privacy": {
     "title": "Privacy Policy",
     "dataController": {
-      "title": "Titolare del Trattamento",
+      "title": "Titolare del trattamento",
       "content": "Il titolare del trattamento dei dati personali è:"
     },
     "dataCollection": {
-      "title": "Raccolta dei Dati",
+      "title": "Raccolta dei dati",
       "content": "Raccogliamo i tuoi dati personali nelle seguenti modalità:",
       "contactForm": {
-        "title": "Modulo di Contatto",
+        "title": "Modulo di contatto",
         "content": "Quando utilizzi il nostro modulo di contatto, raccogliamo i seguenti dati:",
         "data": {
-          "name": "Nome e Cognome",
+          "name": "Nome e cognome",
           "email": "Indirizzo email",
           "phone": "Numero di telefono",
           "message": "Messaggio",
@@ -253,7 +279,7 @@
       }
     },
     "dataUsage": {
-      "title": "Utilizzo dei Dati",
+      "title": "Utilizzo dei dati",
       "content": "I tuoi dati personali vengono utilizzati per:",
       "purposes": {
         "respond": "Rispondere alle tue richieste di informazioni",
@@ -263,11 +289,11 @@
       }
     },
     "dataRetention": {
-      "title": "Conservazione dei Dati",
+      "title": "Conservazione dei dati",
       "content": "I tuoi dati personali vengono conservati per il tempo necessario a fornire i servizi richiesti e per adempiere agli obblighi legali. Generalmente, i dati vengono conservati per un periodo non superiore a 3 anni dalla fine del rapporto contrattuale."
     },
     "userRights": {
-      "title": "I Tuoi Diritti",
+      "title": "I tuoi diritti",
       "content": "Hai il diritto di:",
       "rights": {
         "access": "Accedere ai tuoi dati personali",
@@ -280,14 +306,14 @@
     },
     "cookies": {
       "title": "Cookie",
-      "content": "Il nostro sito utilizza i seguenti tipi di cookie:",
+      "content": "Il sito utilizza cookie tecnici e, solo previo consenso, cookie di statistica (Google Analytics) e pubblicitari (Google Ads). I dettagli sono nella Cookie policy.",
       "types": {
         "technical": {
-          "title": "Cookie Tecnici",
+          "title": "Cookie tecnici",
           "content": "Necessari per il funzionamento base del sito web."
         },
         "preferences": {
-          "title": "Cookie delle Preferenze",
+          "title": "Cookie delle preferenze",
           "content": "Utilizzati per ricordare le tue preferenze (lingua, tema)."
         }
       }
@@ -305,25 +331,35 @@
   "cookiePolicy": {
     "title": "Cookie Policy",
     "whatAreCookies": {
-      "title": "Cosa sono i Cookie",
+      "title": "Cosa sono i cookie",
       "content": "I cookie sono piccoli file di testo che vengono memorizzati sul tuo dispositivo quando visiti un sito web. Ci aiutano a fornire una migliore esperienza utente e a far funzionare correttamente il sito."
     },
     "cookieTypes": {
-      "title": "Tipi di Cookie",
+      "title": "Tipi di cookie",
       "content": "Utilizziamo i seguenti tipi di cookie:",
       "technical": {
-        "title": "Cookie Tecnici",
+        "title": "Cookie tecnici",
         "content": "Essenziali per il funzionamento del sito web. Senza questi cookie, il sito non può funzionare correttamente.",
         "consent": "Non richiedono il consenso dell'utente"
       },
       "preferences": {
-        "title": "Cookie delle Preferenze",
+        "title": "Cookie delle preferenze",
         "content": "Utilizzati per ricordare le tue preferenze come lingua e tema del sito.",
+        "consent": "Richiedono il consenso dell'utente"
+      },
+      "analytics": {
+        "title": "Cookie di statistica",
+        "content": "Google Analytics 4 raccoglie in forma aggregata dati su pagine visitate, provenienza e dispositivo, per migliorare il sito.",
+        "consent": "Richiedono il consenso dell'utente"
+      },
+      "marketing": {
+        "title": "Cookie pubblicitari",
+        "content": "Google Ads misura le conversioni delle nostre campagne, per esempio l'invio del modulo di contatto dopo il clic su un annuncio.",
         "consent": "Richiedono il consenso dell'utente"
       }
     },
     "cookiesUsed": {
-      "title": "Cookie Utilizzati",
+      "title": "Cookie utilizzati",
       "content": "Il nostro sito utilizza i seguenti cookie:",
       "table": {
         "name": "Nome",
@@ -332,27 +368,47 @@
         "type": "Tipo",
         "rows": {
           "consent": {
-            "purpose": "Memorizza le tue preferenze sui cookie",
-            "duration": "1 anno",
+            "purpose": "Memorizza le tue scelte sui cookie (archiviazione locale)",
+            "duration": "Fino alla revoca",
             "type": "Tecnico"
           },
-          "theme": {
-            "purpose": "Memorizza la tua preferenza del tema",
-            "duration": "Permanente",
-            "type": "Preferenze"
+          "intro": {
+            "purpose": "Ricorda che hai già visto l'animazione iniziale (archiviazione locale)",
+            "duration": "Fino alla cancellazione",
+            "type": "Tecnico"
+          },
+          "locale": {
+            "purpose": "Ricorda la lingua scelta",
+            "duration": "Sessione",
+            "type": "Tecnico"
+          },
+          "ga": {
+            "purpose": "Distingue i visitatori in forma anonima (Google Analytics)",
+            "duration": "2 anni",
+            "type": "Statistica"
+          },
+          "gaSession": {
+            "purpose": "Mantiene lo stato della sessione (Google Analytics)",
+            "duration": "2 anni",
+            "type": "Statistica"
+          },
+          "gclau": {
+            "purpose": "Misura le conversioni degli annunci (Google Ads)",
+            "duration": "3 mesi",
+            "type": "Pubblicitario"
           }
         }
       }
     },
     "cookieManagement": {
-      "title": "Gestione dei Cookie",
+      "title": "Gestione dei cookie",
       "content": "Puoi gestire i cookie in diversi modi:",
       "website": {
-        "title": "Tramite il Sito Web",
-        "content": "Puoi modificare le tue preferenze sui cookie utilizzando il banner dei cookie o accedendo alle impostazioni dei cookie."
+        "title": "Tramite il sito web",
+        "content": "Puoi modificare o revocare in qualsiasi momento il consenso con il link «Impostazioni cookie» in fondo a ogni pagina."
       },
       "browser": {
-        "title": "Tramite il Browser",
+        "title": "Tramite il browser",
         "content": "Puoi gestire i cookie attraverso le impostazioni del tuo browser:",
         "chrome": "Impostazioni > Privacy e sicurezza > Cookie",
         "firefox": "Impostazioni > Privacy e sicurezza > Cookie",
@@ -368,7 +424,8 @@
       "title": "Aggiornamenti",
       "content": "Questa Cookie Policy può essere aggiornata. Controlla regolarmente per eventuali modifiche.",
       "lastUpdate": "Ultimo aggiornamento"
-    }
+    },
+    "thirdParty": "I cookie di statistica e pubblicitari sono gestiti da Google Ireland Ltd. e vengono attivati solo dopo il tuo consenso. Per saperne di più: policies.google.com/technologies/cookies."
   },
   "contactForm": {
     "gdprConsent": {
@@ -380,165 +437,165 @@
   },
   "servicesPage": {
     "hero": {
-      "title": "I Nostri Servizi",
-      "subtitle": "Soluzioni complete di ingegneria civile e ambientale per progetti di qualità, sostenibilità e sicurezza."
+      "title": "Servizi",
+      "subtitle": "Le tre linee chiavi in mano e i servizi tecnici dello studio, dalla progettazione alle pratiche."
     },
     "detailed": {
       "structuralDesign": {
-        "title": "Progettazione Strutturale",
-        "description": "Progettazione completa di strutture edili con calcoli strutturali, verifiche statiche e dimensionamento per edifici residenziali, commerciali e industriali.",
+        "title": "Progettazione strutturale",
+        "description": "Progetto delle strutture, calcoli e verifiche statiche e sismiche per edifici residenziali, commerciali e industriali.",
         "features": [
           "Calcoli strutturali e verifiche sismiche",
           "Progettazione fondazioni e strutture portanti",
           "Ristrutturazioni e consolidamenti"
         ],
-        "cardTitle": "Progetti Strutturali",
-        "cardDescription": "Soluzioni tecniche innovative per ogni tipologia di costruzione"
+        "cardTitle": "Strutture",
+        "cardDescription": "Nuove costruzioni, ampliamenti e consolidamenti"
       },
       "energyEfficiency": {
-        "title": "Efficienza Energetica",
-        "description": "Specializzazione in diagnosi energetiche, certificazioni APE e progettazione di impianti fotovoltaici per la sostenibilità ambientale.",
+        "title": "Efficienza energetica",
+        "description": "Diagnosi energetiche, APE e progetti di impianti fotovoltaici, per consumare meno e accedere agli incentivi.",
         "features": [
           "Diagnosi energetiche secondo Legge 10",
-          "Certificazioni APE (Attestato Prestazione Energetica)",
+          "APE (Attestato di Prestazione Energetica)",
           "Progettazione impianti fotovoltaici"
         ],
-        "cardTitle": "Sostenibilità",
-        "cardDescription": "Efficienza energetica e soluzioni eco-sostenibili"
+        "cardTitle": "Energia",
+        "cardDescription": "Meno consumi, più autonomia"
       },
       "projectManagement": {
-        "title": "Direzione Lavori",
-        "description": "Coordinamento completo dei lavori edili con gestione tecnica, controllo qualità e supervisione durante tutte le fasi costruttive.",
+        "title": "Direzione lavori",
+        "description": "Seguiamo il cantiere in tutte le fasi: qualità delle lavorazioni, avanzamento, sicurezza e imprevisti tecnici.",
         "features": [
           "Coordinamento sicurezza in cantiere",
           "Controllo qualità e avanzamento lavori",
-          "Gestione interferenze e problematiche tecniche"
+          "Soluzione degli imprevisti tecnici"
         ],
-        "cardTitle": "Gestione Progetti",
-        "cardDescription": "Controllo e coordinamento professionale"
+        "cardTitle": "Cantiere",
+        "cardDescription": "Controllo diretto, dall'inizio alla fine"
       }
     },
     "cta": {
       "title": "Hai un progetto in mente?",
-      "description": "Contattaci per una consulenza personalizzata e scopri come possiamo trasformare le tue idee in realtà.",
-      "button": "Richiedi Preventivo"
+      "description": "Raccontaci cosa vuoi fare: ti diciamo come procedere e quanto costa.",
+      "button": "Richiedi un preventivo"
     }
   },
   "faq": {
-    "title": "FAQ",
-    "description": "Le risposte alle domande più frequenti sui nostri servizi di ingegneria civile e ambientale.",
+    "title": "Domande frequenti",
+    "description": "Le domande che ci fanno più spesso, con risposte brevi. Per tutto il resto, scrivici.",
     "cta": {
-      "title": "Non hai trovato la risposta che cercavi?",
-      "description": "Contattaci direttamente per ricevere una consulenza personalizzata sui tuoi progetti di ingegneria.",
-      "button": "Contattaci Ora"
+      "title": "Non trovi la tua domanda?",
+      "description": "Scrivici o chiamaci: ti rispondiamo direttamente, senza impegno.",
+      "button": "Contattaci"
     },
     "questions": [
       {
-        "question": "Che tipo di servizi di ingegneria offrite?",
-        "answer": "Offriamo servizi completi di ingegneria civile e ambientale: progettazione strutturale, direzione lavori, pratiche urbanistiche, diagnosi energetiche, certificazioni APE, progettazione impianti fotovoltaici e consulenza tecnica per bandi di gara."
+        "question": "Di cosa vi occupate?",
+        "answer": "Progettazione strutturale, direzione lavori, pratiche edilizie e urbanistiche, diagnosi energetiche, APE, impianti fotovoltaici e documentazione tecnica per le gare d'appalto. In più realizziamo chiavi in mano impianti fotovoltaici, case prefabbricate e ristrutturazioni."
       },
       {
-        "question": "Quanto tempo richiede la progettazione di un edificio?",
-        "answer": "I tempi dipendono dalla complessità del progetto. Una progettazione residenziale standard richiede 4-8 settimane, mentre progetti commerciali più complessi possono richiedere 2-4 mesi. Forniamo sempre una stima precisa durante la consulenza iniziale."
+        "question": "Quanto tempo serve per progettare una casa?",
+        "answer": "Dipende dal progetto. Per una casa unifamiliare di solito servono dalle 4 alle 8 settimane, per un edificio commerciale anche da 2 a 4 mesi. Dopo il primo incontro ti diamo una stima precisa."
       },
       {
-        "question": "Lavorate su tutto il territorio nazionale?",
-        "answer": "Sì, pur avendo sede in Sicilia, offriamo i nostri servizi su tutto il territorio nazionale. Per progetti fuori regione organizziamo sopralluoghi e coordinamento tramite partnership locali qualificate."
+        "question": "Lavorate anche fuori dalla Sicilia?",
+        "answer": "Sì. Lo studio è a Messina, ma seguiamo progetti anche nel resto d'Italia. Per i cantieri fuori regione organizziamo i sopralluoghi e ci appoggiamo a tecnici e imprese della zona."
       },
       {
-        "question": "Quanto costa una consulenza o un preventivo?",
-        "answer": "La prima consulenza è gratuita e include una valutazione preliminare del progetto. I preventivi vengono forniti gratuitamente entro 48 ore dal sopralluogo. I costi variano in base alla tipologia e complessità del progetto."
+        "question": "Il preventivo è a pagamento?",
+        "answer": "No, il primo incontro e il preventivo sono gratuiti. Il preventivo arriva entro 48 ore dal sopralluogo; il costo del lavoro dipende dal tipo di intervento e dalla sua complessità."
       },
       {
-        "question": "Gestite anche le pratiche burocratiche?",
-        "answer": "Assolutamente sì. Ci occupiamo di tutte le pratiche urbanistiche, permessi di costruire, autorizzazioni edilizie e rapporti con gli enti pubblici. Il nostro servizio include il supporto completo dall'ideazione alla realizzazione."
+        "question": "Vi occupate anche delle pratiche burocratiche?",
+        "answer": "Sì. Permessi, CILA, SCIA, pratiche catastali e rapporti con il Comune e gli altri enti li seguiamo noi, dall'inizio alla fine dei lavori."
       },
       {
-        "question": "Offrite servizi di efficienza energetica?",
-        "answer": "Sì, siamo specializzati in diagnosi energetiche secondo Legge 10, certificazioni APE (Attestato di Prestazione Energetica) e progettazione di impianti fotovoltaici. Aiutiamo i clienti a ottenere le migliori classi energetiche e accedere agli incentivi statali."
+        "question": "Fate anche APE e diagnosi energetiche?",
+        "answer": "Sì: APE, diagnosi energetiche secondo la Legge 10 e progetti di impianti fotovoltaici. Ti aiutiamo anche a capire quali interventi migliorano davvero la classe energetica e a quali incentivi puoi accedere."
       }
     ]
   },
   "projectsPage": {
     "hero": {
-      "title": "I Nostri Progetti",
-      "subtitle": "Una selezione dei nostri progetti più significativi, che dimostrano la qualità e l'innovazione del nostro approccio all'ingegneria civile."
+      "title": "Progetti",
+      "subtitle": "Alcuni lavori dello studio, tra ville, residenze e impianti fotovoltaici in Sicilia."
     },
     "projects": [
       {
         "id": 1,
-        "title": "Villa Residenziale Moderna",
-        "category": "Progettazione Residenziale",
-        "description": "Progettazione completa di villa unifamiliare con focus su sostenibilità e efficienza energetica. Include progettazione strutturale, impianti e certificazione energetica.",
+        "title": "Villa residenziale moderna",
+        "category": "Progettazione residenziale",
+        "description": "Villa unifamiliare progettata in ogni parte: strutture, impianti e certificazione energetica, con un occhio di riguardo ai consumi.",
         "features": [
           "Classe energetica A+",
           "Struttura antisismica",
           "Impianto fotovoltaico",
-          "Design sostenibile"
+          "Progetto a basso consumo"
         ]
       },
       {
         "id": 2,
-        "title": "Complesso Residenziale Urbano",
-        "category": "Progettazione Commerciale",
-        "description": "Progetto di ristrutturazione e ampliamento per complesso residenziale con integrazione architettonica nel contesto urbano esistente.",
+        "title": "Complesso residenziale urbano",
+        "category": "Ristrutturazione e ampliamento",
+        "description": "Ristrutturazione e ampliamento di un complesso residenziale in città, inserito nel contesto degli edifici esistenti.",
         "features": [
           "Ristrutturazione completa",
           "Efficienza energetica",
-          "Integrazione urbana",
-          "Spazi comuni innovativi"
+          "Inserimento nel contesto urbano",
+          "Nuovi spazi comuni"
         ]
       },
       {
         "id": 3,
-        "title": "Impianto Fotovoltaico Lipari",
-        "category": "Progettazione Energetica",
-        "description": "Progettazione e realizzazione di impianto fotovoltaico residenziale con ottimizzazione del posizionamento e massimizzazione dell'efficienza energetica. Include studio di fattibilità e certificazione energetica.",
+        "title": "Impianto fotovoltaico a Lipari",
+        "category": "Energia",
+        "description": "Impianto fotovoltaico residenziale a Lipari: studio di fattibilità, scelta dell'orientamento migliore, progetto, realizzazione e certificazione energetica.",
         "features": [
           "Potenza 6 kW",
           "Pannelli ad alta efficienza",
           "Ottimizzazione orientamento",
           "Monitoraggio remoto",
-          "ROI ottimizzato"
+          "Tempi di rientro calcolati"
         ]
       }
     ],
     "projectFeatures": {
-      "title": "Caratteristiche Principali"
+      "title": "Caratteristiche principali"
     },
-    "viewProject": "Visualizza Progetto",
+    "viewProject": "Apri la scheda",
     "photovoltaicSection": {
-      "title": "Progetti Fotovoltaici",
+      "title": "Energia e gare",
       "residentialSystem": {
-        "title": "Impianto Fotovoltaico Residenziale",
-        "description": "Progettazione e installazione impianto fotovoltaico per abitazione privata con ottimizzazione energetica.",
+        "title": "Impianto fotovoltaico residenziale",
+        "description": "Impianto per un'abitazione privata, dimensionato sui consumi della famiglia.",
         "power": "Potenza: 6 kW",
         "year": "Anno: 2023"
       },
       "energyDiagnosis": {
-        "title": "Diagnosi Energetica Commerciale",
-        "description": "Analisi energetica completa per edificio commerciale con proposte di miglioramento.",
+        "title": "Diagnosi energetica commerciale",
+        "description": "Diagnosi energetica di un edificio commerciale, con gli interventi per ridurre i consumi.",
         "savings": "Risparmio: 40%",
         "energyClass": "Classe: A+"
       },
       "publicTender": {
-        "title": "Bando Pubblico Infrastrutture",
-        "description": "Supporto tecnico per partecipazione a bando pubblico per opere infrastrutturali.",
+        "title": "Bando pubblico per infrastrutture",
+        "description": "Supporto tecnico alla partecipazione a un bando pubblico per opere infrastrutturali.",
         "value": "Valore: €2M",
-        "status": "Status: Aggiudicato"
+        "status": "Esito: aggiudicato"
       }
     },
     "cta": {
-      "title": "Vuoi realizzare il tuo progetto?",
-      "description": "Contattaci per discutere del tuo progetto e scoprire come possiamo trasformare le tue idee in soluzioni concrete e sostenibili.",
-      "button": "Inizia il tuo Progetto"
+      "title": "Hai in mente un lavoro simile?",
+      "description": "Raccontaci cosa vuoi realizzare: ti diciamo come lo faremmo e quanto costerebbe.",
+      "button": "Parliamo del tuo progetto"
     }
   },
   "projectModal": {
-    "projectDescription": "Descrizione Progetto",
-    "mainFeatures": "Caratteristiche Principali",
-    "technicalInfo": "Informazioni Tecniche",
-    "projectNumber": "Progetto #",
+    "projectDescription": "Descrizione del progetto",
+    "mainFeatures": "Caratteristiche principali",
+    "technicalInfo": "Informazioni tecniche",
+    "projectNumber": "Progetto n.",
     "category": "Categoria",
     "contactUs": "Contattaci"
   },
@@ -569,34 +626,84 @@
         "Sicurezza Cantieri",
         "Gestione Progetti"
       ]
+    },
+    "pages": {
+      "home": {
+        "title": "Cavallaro Ingegneria e Costruzioni | Fotovoltaico, case prefabbricate e ristrutturazioni chiavi in mano a Messina",
+        "description": "Studio di ingegneria e impresa a Messina: impianti fotovoltaici, case prefabbricate e ristrutturazioni chiavi in mano in Sicilia e in tutta Italia. Un unico referente, prezzi trasparenti, preventivo gratuito."
+      },
+      "about": {
+        "title": "Chi siamo | Ing. Loris Cavallaro, ingegnere civile e ambientale a Messina",
+        "description": "Ing. Loris Cavallaro, ingegnere civile e ambientale: progettazione edile, sicurezza, efficienza energetica e direzione lavori. Studio a Messina, operativo in Sicilia e in tutta Italia."
+      },
+      "services": {
+        "title": "Servizi di ingegneria e costruzioni a Messina e in Sicilia | Cavallaro",
+        "description": "Fotovoltaico, case prefabbricate e ristrutturazioni chiavi in mano, più progettazione strutturale, direzione lavori, pratiche edilizie, APE e Legge 10. Messina, Sicilia e tutta Italia."
+      },
+      "projects": {
+        "title": "Progetti realizzati | Ville, residenze e impianti fotovoltaici | Cavallaro",
+        "description": "Una selezione di progetti: ville moderne, complessi residenziali e impianti fotovoltaici alle Isole Eolie e in Sicilia. Render, foto e caratteristiche tecniche."
+      },
+      "faq": {
+        "title": "Domande frequenti su progettazione, fotovoltaico e ristrutturazioni | Cavallaro",
+        "description": "Tempi, costi, pratiche burocratiche, zone servite ed efficienza energetica: le risposte dell'Ing. Loris Cavallaro alle domande più frequenti."
+      },
+      "contact": {
+        "title": "Contatti e preventivo gratuito | Cavallaro Ingegneria e Costruzioni, Messina",
+        "description": "Richiedi un preventivo gratuito per fotovoltaico, casa prefabbricata o ristrutturazione. Email, telefono e modulo di contatto: rispondiamo in tutta la Sicilia e in Italia."
+      },
+      "privacy": {
+        "title": "Privacy policy | Cavallaro Ingegneria e Costruzioni",
+        "description": "Informativa sul trattamento dei dati personali raccolti tramite il sito e il modulo di contatto."
+      },
+      "cookies": {
+        "title": "Cookie policy | Cavallaro Ingegneria e Costruzioni",
+        "description": "Quali cookie usa il sito, a cosa servono e come gestire le preferenze."
+      },
+      "solar": {
+        "title": "Impianti fotovoltaici chiavi in mano a Messina e in Sicilia | da € 3.999",
+        "description": "Impianti fotovoltaici residenziali con accumulo, inverter di ultima generazione e monitoraggio. Progetto, installazione e messa in servizio chiavi in mano a Messina, Isole Eolie e in tutta la Sicilia."
+      },
+      "prefab": {
+        "title": "Case prefabbricate chiavi in mano in Sicilia | Standard e su misura | Cavallaro",
+        "description": "Case prefabbricate moderne ed efficienti, standard o progettate su misura, con fotovoltaico integrato. Progettazione e realizzazione chiavi in mano a Messina, in Sicilia e in Italia."
+      },
+      "renovation": {
+        "title": "Ristrutturazioni chiavi in mano a Messina | Economy da 450 €/m², Luxury | Cavallaro",
+        "description": "Ristrutturazioni complete di case e appartamenti: bagni, cucine, impianti, pavimenti, efficientamento, pratiche edilizie e direzione lavori. Linea Economy e Luxury, un unico referente."
+      },
+      "practices": {
+        "title": "Pratiche tecniche a Messina: APE da 149 €, CILA, SCIA, DOCFA | Cavallaro",
+        "description": "Listino pratiche tecniche: APE da 149 €, DOCFA da 349 €, CILA da 599 €, SCIA da 1.399 €, permesso di costruire da 3.000 €. Seguite direttamente dall'ing. Loris Cavallaro a Messina e in Sicilia."
+      }
     }
   },
   "contactPage": {
     "hero": {
-      "title": "Contattaci",
-      "subtitle": "Siamo qui per aiutarti a realizzare i tuoi progetti. Contattaci per una consulenza personalizzata e gratuita."
+      "title": "Contatti",
+      "subtitle": "Per un preventivo, un sopralluogo o anche solo una domanda: chiama, scrivi o compila il modulo."
     },
     "professionalInfo": {
-      "title": "Informazioni Professionali",
+      "title": "Profilo professionale",
       "qualifications": {
-        "title": "Qualifiche",
-        "item1": "Laurea Magistrale in Ingegneria Civile e Ambientale",
-        "item2": "Specializzazione in Sicurezza sui Luoghi di Lavoro",
-        "item3": "Abilitazione Professionale Ingegneri",
-        "item4": "Certificazione Efficienza Energetica"
+        "title": "Formazione",
+        "item1": "Laurea magistrale in Ingegneria civile e ambientale",
+        "item2": "Specializzazione in sicurezza sui luoghi di lavoro",
+        "item3": "Abilitazione alla professione di ingegnere",
+        "item4": "Certificazione in efficienza energetica"
       },
       "competencies": {
-        "title": "Aree di Competenza",
-        "item1": "Progettazione Strutturale",
-        "item2": "Bandi di Gara e Appalti Pubblici",
-        "item3": "Diagnosi Energetiche e APE",
-        "item4": "Impianti Fotovoltaici"
+        "title": "Di cosa ci occupiamo",
+        "item1": "Progettazione strutturale",
+        "item2": "Gare d'appalto pubbliche",
+        "item3": "Diagnosi energetiche e APE",
+        "item4": "Impianti fotovoltaici"
       }
     },
     "documents": {
-      "title": "Documenti",
-      "description": "Scarica il curriculum vitae e scopri di più sul nostro background professionale.",
-      "downloadCV": "Scarica CV (PDF)"
+      "title": "Curriculum",
+      "description": "Il curriculum completo dell'ing. Cavallaro, con formazione ed esperienze.",
+      "downloadCV": "Scarica il CV (PDF)"
     }
   },
   "portfolioSection": {
@@ -637,5 +744,329 @@
       "description": "Scopri tutti i nostri progetti e le soluzioni innovative che abbiamo sviluppato",
       "button": "Visualizza Tutti i Progetti"
     }
+  },
+  "landing": {
+    "hero": {
+      "eyebrow": "Cavallaro Ingegneria e Costruzioni",
+      "line1": "Progettiamo.",
+      "line2": "Realizziamo.",
+      "line3": "Trasformiamo.",
+      "subtitle": "Progetto, pratiche e cantiere seguiti dallo stesso ingegnere.",
+      "primaryCta": "Vedi cosa facciamo",
+      "secondaryCta": "Richiedi un preventivo"
+    },
+    "intro": {
+      "statement": "Ingegneria, edilizia ed energia, sotto lo stesso tetto.",
+      "body": "Facciamo il rilievo, disegniamo il progetto, presentiamo le pratiche al Comune e poi seguiamo il cantiere. Così non devi coordinare tecnici e imprese diverse: parli sempre con noi."
+    },
+    "overview": {
+      "eyebrow": "Tre linee chiavi in mano",
+      "title": "Da dove vuoi partire?",
+      "from": "A partire da",
+      "onRequest": "Su misura",
+      "discover": "Scopri",
+      "scrollHint": "Scorri"
+    },
+    "showcase": {
+      "turnkey": "Chiavi in mano",
+      "from": "A partire da",
+      "onRequest": "Su misura",
+      "sqm": "/m²",
+      "drag": "Trascina per esplorare",
+      "dragShort": "Trascina"
+    },
+    "why": {
+      "eyebrow": "Come lavoriamo",
+      "title": "Lo stesso ingegnere dal primo sopralluogo alla consegna delle chiavi.",
+      "items": {
+        "engineering": "Ogni lavoro parte da un progetto firmato da un ingegnere, non da un catalogo.",
+        "tailored": "Il progetto si adatta alla casa e al budget, non il contrario.",
+        "singleContact": "Hai un solo numero da chiamare, dall'inizio alla fine.",
+        "quality": "Materiali e lavorazioni li controlliamo in cantiere, non solo sulla carta.",
+        "transparency": "I prezzi di partenza sono scritti sul sito: sai da dove si parte prima ancora di chiamarci.",
+        "integration": "Edilizia, impianti ed energia pensati insieme, non uno dopo l'altro."
+      }
+    },
+    "closing": {
+      "title": "Hai un progetto in mente?",
+      "text": "Raccontaci cosa vuoi fare. Ti richiamiamo, valutiamo insieme le possibilità e ti diciamo con chiarezza tempi e costi.",
+      "cta": "Raccontaci il tuo progetto",
+      "signature": "Progettazione. Energia. Edilizia. Futuro."
+    },
+    "drawing": {
+      "eyebrow": "Il metodo",
+      "title": "Ogni progetto nasce da un disegno.",
+      "text": "Prima delle opere, le misure. Rileviamo, progettiamo e calcoliamo ogni elemento, poi lo realizziamo esattamente come disegnato.",
+      "steps": {
+        "survey": "Rilievo",
+        "design": "Progetto",
+        "calculation": "Calcolo",
+        "build": "Realizzazione"
+      },
+      "sheet": "Prospetto sud",
+      "scale": "Scala 1:100",
+      "progress": "Avanzamento tavola"
+    },
+    "sheet": {
+      "sheet": "Tavola",
+      "subject": "Oggetto",
+      "scale": "Scala",
+      "date": "Data",
+      "short": "Tav."
+    },
+    "areas": {
+      "eyebrow": "Dove operiamo",
+      "title": "Da Messina a tutta la Sicilia.",
+      "text": "Lavoriamo soprattutto a Messina e provincia, alle Eolie e nel resto della Sicilia. Su richiesta seguiamo progetti anche fuori regione, sempre con lo stesso referente.",
+      "items": [
+        "Messina",
+        "Provincia di Messina",
+        "Isole Eolie",
+        "Milazzo",
+        "Catania",
+        "Palermo",
+        "Sicilia",
+        "Italia su richiesta"
+      ]
+    },
+    "linePage": {
+      "faqTitle": "Domande frequenti",
+      "breadcrumbHome": "Home",
+      "turnkeySuffix": "chiavi in mano"
+    }
+  },
+  "lines": {
+    "solar": {
+      "label": "Linea energia",
+      "title": "Impianti fotovoltaici",
+      "tagline": "La tua energia. Il tuo futuro.",
+      "summary": "Impianti fotovoltaici, sistemi di accumulo e soluzioni energetiche complete.",
+      "lead": "Produci da te l'energia che usi in casa e dipendi meno dalla rete.",
+      "body": "Progettiamo l'impianto sui consumi reali della famiglia e sul tetto che hai, non su un kit standard. Valutazione, progetto, fornitura dei componenti, installazione e messa in servizio: ce ne occupiamo noi.",
+      "solutionsTitle": "Le nostre soluzioni",
+      "solutions": {
+        "s1": "Impianti fotovoltaici residenziali",
+        "s2": "Sistemi di accumulo con batterie",
+        "s3": "Inverter di ultima generazione",
+        "s4": "Monitoraggio della produzione",
+        "s5": "Soluzioni integrate per l'autoconsumo",
+        "s6": "Predisposizione per la ricarica di veicoli elettrici"
+      },
+      "pricingTitle": "Quanto costa",
+      "pricingText": "Il prezzo dipende dalla potenza, dalle batterie e dall'edificio. Questo è il punto di partenza.",
+      "tiers": {
+        "from": {
+          "name": "Impianto chiavi in mano",
+          "description": "Prima del preventivo facciamo una valutazione tecnica per scegliere la configurazione giusta."
+        }
+      },
+      "closingLine": "Dal sopralluogo alla messa in servizio, ce ne occupiamo noi.",
+      "cta": "Richiedi il tuo preventivo gratuito",
+      "plate": {
+        "title": "Schema unifilare",
+        "legend": "Legenda",
+        "labels": {
+          "title": "Schema unifilare impianto"
+        }
+      },
+      "faq": [
+        {
+          "q": "Quanto costa un impianto fotovoltaico chiavi in mano?",
+          "a": "Le soluzioni partono da {price}. Il prezzo finale dipende dalla potenza dell'impianto, dalla capacità di accumulo e dalle caratteristiche dell'edificio. Ogni proposta è accompagnata da una valutazione tecnica e il preventivo è gratuito."
+        },
+        {
+          "q": "Cosa comprende il servizio chiavi in mano?",
+          "a": "Valutazione iniziale, progettazione in base ai consumi, fornitura dei componenti, installazione e messa in servizio. Un unico referente segue tutto il percorso."
+        },
+        {
+          "q": "Si possono aggiungere le batterie di accumulo?",
+          "a": "Sì. Progettiamo impianti con sistemi di accumulo, inverter di ultima generazione e monitoraggio della produzione, con possibilità di predisporre la ricarica per veicoli elettrici."
+        },
+        {
+          "q": "In quali zone installate impianti fotovoltaici?",
+          "a": "Operiamo a Messina e provincia, nelle Isole Eolie e in tutta la Sicilia. Su richiesta seguiamo progetti anche nel resto d'Italia."
+        }
+      ]
+    },
+    "prefab": {
+      "label": "Linea abitare",
+      "title": "Case prefabbricate",
+      "tagline": "La casa che immagini. La realizziamo insieme.",
+      "summary": "Abitazioni prefabbricate personalizzabili, efficienti e progettate su misura.",
+      "lead": "Case prefabbricate dal disegno contemporaneo, veloci da costruire e che consumano poco.",
+      "body": "Puoi partire da una configurazione già pronta oppure disegnare la casa da zero con noi, stanza per stanza. In entrambi i casi puoi aggiungere fotovoltaico e accumulo.",
+      "solutionsTitle": "Le nostre soluzioni",
+      "solutions": {
+        "s1": "Case prefabbricate di diverse metrature",
+        "s2": "Abitazioni moderne e personalizzabili",
+        "s3": "Soluzioni residenziali per privati",
+        "s4": "Progetti su misura",
+        "s5": "Integrazione di fotovoltaico e accumulo",
+        "s6": "Consulenza tecnica e progettazione",
+        "s7": "Coordinamento delle fasi di realizzazione"
+      },
+      "pricingTitle": "Due modi per partire",
+      "pricingText": "Pronta o su misura: il progetto lo seguiamo sempre noi.",
+      "tiers": {
+        "standard": {
+          "name": "Linea Standard",
+          "description": "Configurazioni già studiate, per contenere tempi e costi."
+        },
+        "custom": {
+          "name": "Linea Personalizzata",
+          "description": "Partiamo da come vivi: distribuzione degli ambienti, finiture, impianti."
+        }
+      },
+      "closingLine": "La tua nuova casa parte da un progetto.",
+      "cta": "Parliamo della tua casa",
+      "plate": {
+        "title": "Pianta piano terra",
+        "legend": "Legenda",
+        "labels": {
+          "title": "Pianta piano terra",
+          "living": "Soggiorno",
+          "bedroom": "Camera",
+          "bath": "Bagno",
+          "study": "Studio"
+        }
+      },
+      "faq": [
+        {
+          "q": "Quanto costa una casa prefabbricata chiavi in mano?",
+          "a": "La Linea Standard parte da {price}, con configurazioni definite. La Linea Personalizzata ha un prezzo su misura, calcolato in base al progetto."
+        },
+        {
+          "q": "Che differenza c'è tra Linea Standard e Linea Personalizzata?",
+          "a": "La Standard offre configurazioni già definite per ottimizzare tempi e costi. La Personalizzata parte dalle tue esigenze: distribuzione degli ambienti, finiture e dotazioni tecnologiche."
+        },
+        {
+          "q": "Si può integrare un impianto fotovoltaico?",
+          "a": "Sì. Le abitazioni possono integrare impianti fotovoltaici, sistemi di accumulo e soluzioni tecnologiche ad alta efficienza."
+        },
+        {
+          "q": "Chi segue progettazione e realizzazione?",
+          "a": "Un unico referente: consulenza tecnica, progettazione e coordinamento di tutte le fasi di realizzazione."
+        }
+      ]
+    },
+    "renovation": {
+      "label": "Linea costruzioni",
+      "title": "Ristrutturazioni",
+      "tagline": "Diamo nuova forma ai tuoi spazi.",
+      "summary": "Ristrutturazioni complete, dalla progettazione alla consegna, con soluzioni Economy e Luxury.",
+      "lead": "Una buona ristrutturazione rende la casa più comoda, più bella e più economica da scaldare, e ne aumenta il valore.",
+      "body": "Ti seguiamo dal primo sopralluogo alla consegna: progetto, pratiche in Comune, coordinamento delle squadre e direzione lavori. Un cantiere, un referente.",
+      "solutionsTitle": "I nostri servizi",
+      "solutions": {
+        "s1": "Ristrutturazioni complete di appartamenti e abitazioni",
+        "s2": "Rifacimento di bagni e cucine",
+        "s3": "Rinnovamento di impianti elettrici e idraulici",
+        "s4": "Pavimentazioni e rivestimenti",
+        "s5": "Controsoffitti e opere in cartongesso",
+        "s6": "Efficientamento energetico",
+        "s7": "Progettazione e pratiche edilizie",
+        "s8": "Coordinamento e direzione dei lavori"
+      },
+      "pricingTitle": "Due livelli di finitura",
+      "pricingText": "Cambiano i materiali, non la cura in cantiere.",
+      "tiers": {
+        "economy": {
+          "name": "Linea Economy",
+          "description": "Interventi mirati e materiali scelti per il miglior rapporto qualità-prezzo, eseguiti con la stessa attenzione."
+        },
+        "luxury": {
+          "name": "Linea Luxury",
+          "description": "Materiali ricercati, finiture di pregio e scelte fatte su misura per la tua casa."
+        }
+      },
+      "closingLine": "Dal primo sopralluogo alla consegna delle chiavi.",
+      "cta": "Richiedi una consulenza gratuita",
+      "plate": {
+        "title": "Stato di progetto",
+        "legend": "Legenda",
+        "labels": {
+          "title": "Stato di progetto",
+          "demolition": "Demolizioni",
+          "newWorks": "Nuove opere",
+          "insulation": "Isolamento",
+          "kitchen": "Cucina",
+          "bath": "Bagno"
+        }
+      },
+      "faq": [
+        {
+          "q": "Quanto costa una ristrutturazione chiavi in mano al metro quadro?",
+          "a": "La Linea Economy parte da {economy}/m², la Linea Luxury da {luxury}/m². Il costo finale dipende dagli interventi richiesti, dai materiali e dallo stato dell'immobile."
+        },
+        {
+          "q": "Cosa comprende una ristrutturazione completa?",
+          "a": "Bagni e cucine, impianti elettrici e idraulici, pavimenti e rivestimenti, controsoffitti e cartongesso, efficientamento energetico, progettazione e pratiche edilizie."
+        },
+        {
+          "q": "Vi occupate anche delle pratiche edilizie e della direzione lavori?",
+          "a": "Sì. Gestiamo progettazione, pratiche edilizie, coordinamento delle lavorazioni e direzione dei lavori fino alla consegna."
+        },
+        {
+          "q": "Che differenza c'è tra Economy e Luxury?",
+          "a": "Economy punta su interventi mirati e un ottimo rapporto qualità-prezzo. Luxury prevede materiali ricercati, finiture di pregio e un elevato livello di personalizzazione."
+        }
+      ]
+    }
+  },
+  "practices": {
+    "eyebrow": "Pratiche tecniche",
+    "title": "Listino pratiche tecniche",
+    "description": "Certificazioni, pratiche catastali e titoli edilizi seguiti direttamente dall'ingegnere, con prezzi di partenza chiari.",
+    "from": "da",
+    "note": "Prezzi di partenza indicativi. Il preventivo definitivo dipende dall'immobile, dalla complessità della pratica e da eventuali diritti e oneri dovuti agli enti.",
+    "more": "Altre pratiche su richiesta",
+    "moreText": "Hai bisogno di una pratica che non trovi in elenco? Scrivici e ti diciamo tempi e costi.",
+    "cta": "Richiedi un preventivo",
+    "items": {
+      "ape": {
+        "name": "APE",
+        "full": "Attestato di Prestazione Energetica",
+        "description": "Certifica la classe energetica dell'immobile. È obbligatorio per vendere o affittare casa."
+      },
+      "docfa": {
+        "name": "DOCFA",
+        "full": "Documenti Catasto Fabbricati",
+        "description": "Aggiornamento catastale dell'immobile: nuove planimetrie, variazioni e accatastamenti."
+      },
+      "cila": {
+        "name": "CILA",
+        "full": "Comunicazione Inizio Lavori Asseverata",
+        "description": "Per lavori di manutenzione straordinaria che non toccano le strutture, come rifacimento di bagni, impianti o tramezzi."
+      },
+      "scia": {
+        "name": "SCIA",
+        "full": "Segnalazione Certificata di Inizio Attività",
+        "description": "Per interventi più consistenti, come le ristrutturazioni che riguardano le parti strutturali dell'edificio."
+      },
+      "permit": {
+        "name": "Permesso di costruire",
+        "full": "Titolo edilizio",
+        "description": "Necessario per nuove costruzioni, ampliamenti e ristrutturazioni edilizie importanti."
+      }
+    },
+    "faq": [
+      {
+        "q": "Quanto costa un APE?",
+        "a": "L'Attestato di Prestazione Energetica parte da {ape}. Il prezzo finale dipende da dimensioni e caratteristiche dell'immobile e comprende il sopralluogo."
+      },
+      {
+        "q": "Quando serve la CILA e quando la SCIA?",
+        "a": "La CILA basta per la manutenzione straordinaria che non tocca le strutture, per esempio bagni, impianti e tramezzi. La SCIA serve quando l'intervento è più consistente e riguarda le parti strutturali. Dopo il sopralluogo indichiamo la pratica corretta."
+      },
+      {
+        "q": "Quanto costano le pratiche edilizie?",
+        "a": "La CILA parte da {cila}, la SCIA da {scia} e il permesso di costruire da {permit}. Il costo definitivo dipende dall'intervento e da eventuali diritti e oneri dovuti agli enti."
+      },
+      {
+        "q": "Seguite la pratica anche durante una ristrutturazione?",
+        "a": "Sì. Possiamo occuparci solo della pratica oppure dell'intervento completo, dalla progettazione alla direzione dei lavori, con un unico referente."
+      }
+    ],
+    "pageLink": "Dettagli e domande frequenti"
   }
 }

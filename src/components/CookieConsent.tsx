@@ -1,247 +1,245 @@
 'use client';
 
+import { AnimatePresence, motion } from 'framer-motion';
+import { X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import React, { useEffect, useState } from 'react';
-import { MdClose, MdCookie, MdSettings } from 'react-icons/md';
 
-interface CookieConsentInterface {
-  necessary: boolean;
-  preferences: boolean;
-  timestamp: number;
-}
+import { Link as LocalizedLink } from '@/i18n/navigation';
+import { OPEN_SETTINGS_EVENT, readConsent, saveConsent } from '@/utils/consent';
 
-interface CookieBannerProps {
-  t: (key: string) => string;
-  onShowSettings: () => void;
-  onAccept: () => void;
-}
+type OptionalCategory = 'preferences' | 'analytics' | 'marketing';
+const OPTIONAL_CATEGORIES: OptionalCategory[] = [
+  'preferences',
+  'analytics',
+  'marketing',
+];
+const NONE = { preferences: false, analytics: false, marketing: false };
+const ALL = { preferences: true, analytics: true, marketing: true };
 
-interface CookieSettingsProps {
-  t: (key: string) => string;
-  onClose: () => void;
-  onReject: () => void;
-  onSavePreferences: () => void;
-  onAccept: () => void;
-  preferences: boolean;
-  setPreferences: (value: boolean) => void;
-}
+const ease = [0.16, 1, 0.3, 1] as const;
 
-const CookieBanner: React.FC<CookieBannerProps> = ({
-  t,
-  onShowSettings,
-  onAccept,
-}) => (
-  <div className="fixed inset-x-0 bottom-0 z-50 border-t-2 border-themeSecondary bg-themeSurface p-4 shadow-lg lg:p-6">
-    <div className="container-custom">
-      <div className="flex flex-col items-start justify-between gap-4 lg:flex-row lg:items-center">
-        <div className="flex flex-1 items-start gap-3">
-          <MdCookie className="mt-1 shrink-0 text-2xl text-themeSecondary" />
-          <div className="flex-1">
-            <h3 className="mb-2 text-lg font-semibold text-themeTextPrimary">
-              {t('notice.title')}
-            </h3>
-            <p className="text-sm text-themeTextSecondary lg:text-base">
-              {t('notice.message')}
-            </p>
-          </div>
-        </div>
-        <div className="flex w-full flex-col gap-2 sm:flex-row lg:w-auto">
-          <button
-            type="button"
-            onClick={onShowSettings}
-            className="flex items-center gap-2 rounded-lg border border-themeSecondary px-4 py-2 text-themeTextPrimary transition-colors hover:bg-themeSurfaceLight"
-          >
-            <MdSettings className="text-lg" />
-            {t('notice.settings')}
-          </button>
-          <button
-            type="button"
-            onClick={onAccept}
-            className="rounded-lg bg-themeSecondary px-6 py-2 font-medium text-themeSurface transition-colors hover:bg-themeAccent"
-          >
-            {t('notice.accept')}
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-);
+const buttonBase =
+  'min-w-0 flex-1 px-3 py-3 text-sm font-medium transition-colors whitespace-nowrap sm:px-4';
 
-const CookieSettings: React.FC<CookieSettingsProps> = ({
-  t,
-  onClose,
-  onReject,
-  onSavePreferences,
-  onAccept,
-  preferences,
-  setPreferences,
-}) => (
-  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-    <div className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-lg bg-themeSurface">
-      <div className="p-6">
-        <div className="mb-6 flex items-center justify-between">
-          <h2 className="text-xl font-bold text-themeTextPrimary">
-            {t('settings.title')}
-          </h2>
-          <button
-            type="button"
-            onClick={onClose}
-            className="text-themeTextSecondary hover:text-themeTextPrimary"
-          >
-            <MdClose className="text-xl" />
-          </button>
-        </div>
+type SwitchProps = {
+  checked: boolean;
+  onChange: (value: boolean) => void;
+  label: string;
+};
 
-        <p className="mb-6 text-themeTextSecondary">
-          {t('settings.description')}
-        </p>
-
-        <div className="space-y-6">
-          {/* Essential Cookies */}
-          <div className="rounded-lg border border-themeSurfaceLight p-4">
-            <div className="mb-3 flex items-center justify-between">
-              <h3 className="font-semibold text-themeTextPrimary">
-                {t('settings.necessary.title')}
-              </h3>
-              <span className="rounded bg-themeSurfaceLight px-2 py-1 text-sm text-themeTextSecondary">
-                {t('settings.necessary.always')}
-              </span>
-            </div>
-            <p className="text-sm text-themeTextSecondary">
-              {t('settings.necessary.description')}
-            </p>
-          </div>
-
-          {/* Preference Cookies */}
-          <div className="rounded-lg border border-themeSurfaceLight p-4">
-            <div className="mb-3 flex items-center justify-between">
-              <h3 className="font-semibold text-themeTextPrimary">
-                {t('settings.preferences.title')}
-              </h3>
-              <label
-                className="relative inline-flex cursor-pointer items-center"
-                htmlFor="preferences-toggle"
-              >
-                <span className="sr-only">
-                  {t('settings.preferences.title')}
-                </span>
-                <input
-                  id="preferences-toggle"
-                  type="checkbox"
-                  className="sr-only"
-                  checked={preferences}
-                  onChange={(e) => setPreferences(e.target.checked)}
-                />
-                <div
-                  className={`h-6 w-11 rounded-full transition-colors ${
-                    preferences ? 'bg-themeSecondary' : 'bg-gray-300'
-                  }`}
-                >
-                  <div
-                    className={`size-5 rounded-full bg-white shadow transition-transform ${
-                      preferences ? 'translate-x-5' : 'translate-x-0'
-                    } ml-0.5 mt-0.5`}
-                  />
-                </div>
-              </label>
-            </div>
-            <p className="text-sm text-themeTextSecondary">
-              {t('settings.preferences.description')}
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <button
-            type="button"
-            onClick={onReject}
-            className="rounded-lg border border-themeSecondary px-4 py-2 text-themeTextPrimary transition-colors hover:bg-themeSurfaceLight"
-          >
-            {t('settings.rejectAll')}
-          </button>
-          <button
-            type="button"
-            onClick={onSavePreferences}
-            className="rounded-lg bg-themeSecondary px-4 py-2 font-medium text-themeSurface transition-colors hover:bg-themeAccent"
-          >
-            {t('settings.save')}
-          </button>
-          <button
-            type="button"
-            onClick={onAccept}
-            className="rounded-lg bg-themeAccent px-4 py-2 font-medium text-themeSurface transition-colors hover:bg-themeAccent/80"
-          >
-            {t('settings.acceptAll')}
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+// Square on/off switch in the drawing-sheet style
+const Switch = ({ checked, onChange, label }: SwitchProps) => (
+  <button
+    type="button"
+    role="switch"
+    aria-checked={checked}
+    aria-label={label}
+    onClick={() => onChange(!checked)}
+    className={`relative h-6 w-11 shrink-0 border transition-colors ${
+      checked ? 'border-brick bg-brick' : 'border-bone/30 bg-transparent'
+    }`}
+  >
+    <motion.span
+      className="absolute top-[3px] size-4 bg-bone"
+      animate={{ left: checked ? 23 : 3 }}
+      transition={{ type: 'spring', stiffness: 500, damping: 35 }}
+    />
+  </button>
 );
 
 const CookieConsent: React.FC = () => {
   const [showBanner, setShowBanner] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-  const [preferences, setPreferences] = useState(true);
+  const [choice, setChoice] = useState(NONE);
   const t = useTranslations('cookies');
 
   useEffect(() => {
-    const consent = localStorage.getItem('cookieConsent');
-    if (!consent) {
+    // No (current-version) choice yet: ask. Otherwise pre-fill the toggles.
+    const stored = readConsent();
+    if (stored) {
+      setChoice({
+        preferences: stored.preferences,
+        analytics: stored.analytics,
+        marketing: stored.marketing,
+      });
+    } else {
       setShowBanner(true);
     }
+    // "Cookie settings" link in the footer reopens the panel at any time
+    const open = () => setShowSettings(true);
+    window.addEventListener(OPEN_SETTINGS_EVENT, open);
+    return () => window.removeEventListener(OPEN_SETTINGS_EVENT, open);
   }, []);
 
-  const saveConsent = (consent: CookieConsentInterface) => {
-    localStorage.setItem('cookieConsent', JSON.stringify(consent));
+  const save = (next: typeof NONE) => {
+    saveConsent(next);
+    setChoice(next);
     setShowBanner(false);
     setShowSettings(false);
   };
 
-  const handleAccept = () => {
-    saveConsent({
-      necessary: true,
-      preferences: true,
-      timestamp: Date.now(),
-    });
-  };
-
-  const handleReject = () => {
-    saveConsent({
-      necessary: true,
-      preferences: false,
-      timestamp: Date.now(),
-    });
-  };
-
-  const handleSavePreferences = () => {
-    saveConsent({
-      necessary: true,
-      preferences,
-      timestamp: Date.now(),
-    });
-  };
-
   return (
     <>
-      {showBanner && (
-        <CookieBanner
-          t={t}
-          onShowSettings={() => setShowSettings(true)}
-          onAccept={handleAccept}
-        />
-      )}
-      {showSettings && (
-        <CookieSettings
-          t={t}
-          onClose={() => setShowSettings(false)}
-          onReject={handleReject}
-          onSavePreferences={handleSavePreferences}
-          onAccept={handleAccept}
-          preferences={preferences}
-          setPreferences={setPreferences}
-        />
-      )}
+      {/* Banner: compact title-block card, reject as prominent as accept */}
+      <AnimatePresence>
+        {showBanner && !showSettings && (
+          <motion.div
+            role="dialog"
+            aria-label={t('notice.title')}
+            className="fixed inset-x-3 bottom-3 z-50 border border-bone/20 bg-ink/95 text-bone shadow-2xl backdrop-blur-xl sm:inset-x-auto sm:left-6 sm:w-[420px] md:bottom-6"
+            initial={{ y: 40, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 40, opacity: 0 }}
+            transition={{ duration: 0.6, ease, delay: 0.4 }}
+          >
+            <div className="flex items-center justify-between border-b border-bone/15 px-5 py-3 font-display text-[10px] uppercase tracking-[0.25em] text-bone/50">
+              <span className="flex items-center gap-2">
+                <span className="inline-block size-1.5 rounded-full bg-brick" />
+                {t('notice.title')}
+              </span>
+              <span>L.02</span>
+            </div>
+            <div className="px-5 py-4">
+              <p className="text-sm leading-relaxed text-bone/70">
+                {t('notice.message')}{' '}
+                <LocalizedLink
+                  href="/cookie-policy"
+                  className="text-bone underline underline-offset-4 hover:text-brick"
+                >
+                  {t('notice.learnMore')}
+                </LocalizedLink>
+              </p>
+            </div>
+            <div className="flex border-t border-bone/15">
+              <button
+                type="button"
+                onClick={() => save(NONE)}
+                className={`${buttonBase} border-r border-bone/15 text-bone/80 hover:bg-bone/5 hover:text-bone`}
+              >
+                {t('notice.reject')}
+              </button>
+              <button
+                type="button"
+                onClick={() => setShowSettings(true)}
+                className={`${buttonBase} border-r border-bone/15 text-bone/80 hover:bg-bone/5 hover:text-bone`}
+              >
+                {t('notice.settings')}
+              </button>
+              <button
+                type="button"
+                onClick={() => save(ALL)}
+                className={`${buttonBase} bg-bone text-ink hover:bg-brick hover:text-bone`}
+              >
+                {t('notice.accept')}
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Settings sheet */}
+      <AnimatePresence>
+        {showSettings && (
+          <motion.div
+            className="fixed inset-0 z-[70] flex items-end justify-center bg-ink/70 p-3 backdrop-blur-sm sm:items-center sm:p-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={(event) => {
+              if (event.target === event.currentTarget) setShowSettings(false);
+            }}
+          >
+            <motion.div
+              role="dialog"
+              aria-modal="true"
+              aria-label={t('settings.title')}
+              className="max-h-[90vh] w-full max-w-xl overflow-y-auto border border-bone/20 bg-ink text-bone"
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 40, opacity: 0 }}
+              transition={{ duration: 0.5, ease }}
+            >
+              <div className="flex items-center justify-between border-b border-bone/15 px-6 py-4">
+                <h2 className="font-display text-xl font-semibold tracking-[-0.02em]">
+                  {t('settings.title')}
+                </h2>
+                <button
+                  type="button"
+                  onClick={() => setShowSettings(false)}
+                  className="flex size-9 items-center justify-center border border-bone/20 transition-colors hover:border-bone hover:bg-bone hover:text-ink"
+                  aria-label="Close"
+                >
+                  <X className="size-4" />
+                </button>
+              </div>
+
+              <p className="px-6 py-5 text-sm leading-relaxed text-bone/65">
+                {t('settings.description')}
+              </p>
+
+              <div className="grid gap-px border-y border-bone/15 bg-bone/15">
+                <div className="bg-ink px-6 py-5">
+                  <div className="mb-2 flex items-center justify-between gap-4">
+                    <h3 className="font-display font-semibold">
+                      {t('settings.necessary.title')}
+                    </h3>
+                    <span className="font-display text-[10px] uppercase tracking-[0.2em] text-bone/50">
+                      {t('settings.necessary.always')}
+                    </span>
+                  </div>
+                  <p className="text-sm leading-relaxed text-bone/55">
+                    {t('settings.necessary.description')}
+                  </p>
+                </div>
+                {OPTIONAL_CATEGORIES.map((category) => (
+                  <div key={category} className="bg-ink px-6 py-5">
+                    <div className="mb-2 flex items-center justify-between gap-4">
+                      <h3 className="font-display font-semibold">
+                        {t(`settings.${category}.title`)}
+                      </h3>
+                      <Switch
+                        checked={choice[category]}
+                        onChange={(value) =>
+                          setChoice((prev) => ({ ...prev, [category]: value }))
+                        }
+                        label={t(`settings.${category}.title`)}
+                      />
+                    </div>
+                    <p className="text-sm leading-relaxed text-bone/55">
+                      {t(`settings.${category}.description`)}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-col sm:flex-row">
+                <button
+                  type="button"
+                  onClick={() => save(NONE)}
+                  className={`${buttonBase} border-b border-bone/15 text-bone/80 hover:bg-bone/5 hover:text-bone sm:border-b-0 sm:border-r`}
+                >
+                  {t('settings.rejectAll')}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => save(choice)}
+                  className={`${buttonBase} border-b border-bone/15 text-bone/80 hover:bg-bone/5 hover:text-bone sm:border-b-0 sm:border-r`}
+                >
+                  {t('settings.save')}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => save(ALL)}
+                  className={`${buttonBase} bg-bone text-ink hover:bg-brick hover:text-bone`}
+                >
+                  {t('settings.acceptAll')}
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

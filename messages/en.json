@@ -27,54 +27,61 @@
   },
   "about": {
     "hero": {
-      "title": "About Us",
-      "subtitle": "Civil and environmental engineering firm specialized in high-value projects and sustainability."
+      "title": "About us",
+      "subtitle": "An engineering firm in Messina that designs the work and then runs the site through to handover."
     },
     "company": {
-      "title": "Our Studio",
-      "description1": "is a civil and environmental engineering firm that stands out for its professional and innovative approach to building design, sustainability and safety. Our team is led by Eng. Loris Cavallaro, specialized in workplace safety.",
-      "description2": "We handle tenders, public procurement procedures, civil design, urban planning practices, energy diagnoses according to Law 10, APE certifications and photovoltaic system design. A true reference point for design and sustainability.",
-      "mission": "Our mission is to see what we create on paper transform into tangible reality, building not just structures, but also beauty, functionality and sustainability for future generations."
+      "title": "The firm",
+      "description1": "is a civil and environmental engineering firm based in Sicily. We design homes, systems and renovations and, when needed, we build them too.",
+      "description2": "Day to day we handle building and planning permits, structural design, energy audits under Law 10, energy performance certificates (APE), solar systems and public tenders.",
+      "mission": "We like seeing a drawing turn into a real home: lived in, cheap to run and built to last."
     },
     "team": {
-      "title": "Our Team",
+      "title": "Who looks after your project",
       "director": {
         "name": "Eng. Loris Cavallaro",
-        "role": "Technical Director and Founder",
-        "description": "Civil and environmental engineer with specialization in workplace safety. With years of experience in the sector, he leads the studio's technical team with competence and dedication towards design excellence.",
+        "role": "Founder and technical director",
+        "description": "Civil and environmental engineer, specialised in workplace safety. He personally follows the firm's projects, from the first survey to handover.",
         "qualifications": [
-          "Master's Degree in Civil and Environmental Engineering",
-          "Specialization in Workplace Safety",
-          "Expert in Energy Efficiency and Sustainability"
+          "Master's degree in Civil and Environmental Engineering",
+          "Specialisation in workplace safety",
+          "Energy efficiency and solar"
         ]
       }
     },
     "competencies": {
-      "title": "Competencies",
+      "title": "What we do",
       "buildingDesign": {
-        "title": "Building Design",
-        "description": "Structural and architectural design for residential and commercial buildings"
+        "title": "Building design",
+        "description": "Structural and architectural design for homes, offices and shops"
       },
       "sustainability": {
-        "title": "Sustainability",
-        "description": "Energy efficiency, APE certifications and photovoltaic systems"
+        "title": "Energy",
+        "description": "Energy certificates, energy audits and solar systems"
       },
       "safety": {
         "title": "Safety",
-        "description": "Specialization in workplace safety"
+        "description": "Workplace and construction site safety"
       },
       "tenders": {
-        "title": "Tenders & Contracts",
-        "description": "Management of tenders and public procurement procedures"
+        "title": "Tenders",
+        "description": "Technical documentation for public tenders"
       },
       "urbanPlanning": {
-        "title": "Urban Planning",
-        "description": "Building permits and regulatory compliance"
+        "title": "Planning permits",
+        "description": "Building permits and planning compliance checks"
       },
       "consulting": {
-        "title": "Technical Consulting",
-        "description": "Expertise, technical evaluations and specialized support"
+        "title": "Technical consulting",
+        "description": "Surveys and technical opinions on buildings and sites"
       }
+    },
+    "meta": {
+      "name": "Name",
+      "role": "Role",
+      "location": "Based in",
+      "mission": "Why we do it",
+      "qualifications": "Education"
     }
   },
   "reviews": {
@@ -98,28 +105,28 @@
   },
   "navigation": {
     "home": "Home",
-    "about": "About Us",
+    "about": "About us",
     "services": "Services",
     "projects": "Projects",
     "faq": "FAQ",
     "contact": "Contact",
-    "requestQuote": "Request Quote",
+    "requestQuote": "Request a quote",
     "language": "Language",
     "italian": "Italiano",
     "english": "English"
   },
   "footer": {
-    "companyDescription": "Civil and environmental engineering firm specialized in building design, sustainability and technical innovation for high-value projects.",
+    "companyDescription": "Engineering firm and contractor in Messina. We design and build solar systems, prefab homes and renovations, and handle technical permits.",
     "navigation": {
       "title": "Navigation"
     },
     "services": {
       "title": "Services",
-      "structuralDesign": "Structural Design",
-      "projectManagement": "Project Management",
-      "urbanPlanning": "Urban Planning",
-      "energyEfficiency": "Energy Efficiency",
-      "consulting": "Technical Consulting"
+      "structuralDesign": "Structural design",
+      "projectManagement": "Works supervision",
+      "urbanPlanning": "Planning permits",
+      "energyEfficiency": "Energy efficiency",
+      "consulting": "Technical consulting"
     },
     "contact": {
       "title": "Contact",
@@ -127,133 +134,152 @@
     },
     "legal": {
       "copyright": "All rights reserved.",
-      "vatNumber": "VAT: [TO BE INSERTED]",
+      "vatNumber": "VAT {vat}",
       "privacy": "Privacy Policy",
-      "cookies": "Cookie Policy"
-    }
+      "cookies": "Cookie Policy",
+      "cookieSettings": "Cookie settings"
+    },
+    "lines": {
+      "title": "Turnkey lines"
+    },
+    "backToTop": "Back to top",
+    "partner": "Edilnet.it partner"
   },
   "contact": {
     "form": {
-      "title": "REQUEST A CONSULTATION",
-      "description": "Contact us to discuss your civil engineering project. Our team will provide you with personalized professional consulting.",
-      "name": "Full Name",
+      "title": "Write to us",
+      "description": "Tell us in a few lines what you want to do: we will get back to you to go through the details and, if needed, book a site visit.",
+      "name": "Full name",
       "email": "Email",
       "phone": "Phone",
-      "projectType": "Project Type",
-      "message": "Project Description",
-      "messagePlaceholder": "Briefly describe your project, your needs and your objectives...",
+      "projectType": "Type of work",
+      "message": "Your project",
+      "messagePlaceholder": "E.g. I would like to install a solar system on the roof of a house in Milazzo.",
       "projectTypes": {
-        "placeholder": "Select project type",
-        "residential": "Residential Design",
-        "commercial": "Commercial Design",
-        "structural": "Structural Calculations",
-        "energy": "Energy Efficiency",
-        "permits": "Urban Planning",
-        "consulting": "Technical Consulting"
+        "placeholder": "Select",
+        "solar": "Solar system",
+        "prefab": "Prefabricated home",
+        "renovation": "Renovation",
+        "residential": "Residential design",
+        "commercial": "Commercial design",
+        "structural": "Structural calculations",
+        "energy": "Energy certificates and efficiency",
+        "permits": "Building permits",
+        "consulting": "Technical consulting"
       },
-      "gdprConsent": "Personal data processing consent",
-      "gdprText": "I consent to the processing of my personal data to respond to my contact request, as described in the Privacy Policy. The data will be used exclusively to provide the requested information and will not be shared with third parties.",
+      "gdprConsent": "Privacy consent",
+      "gdprText": "I agree to the processing of my data in order to receive a reply to this request. Data is never passed on to third parties. More details in the",
       "privacyPolicy": "Privacy Policy",
-      "gdprRequired": "You must accept data processing consent to send the form.",
-      "submit": "SEND REQUEST",
-      "submitting": "SENDING...",
-      "success": "✅ Message sent successfully!",
-      "successDescription": "We will reply to your email address as soon as possible.",
-      "error": "❌ Error sending message",
-      "errorDescription": "Try again or contact us directly via email:",
-      "required": "*"
+      "gdprRequired": "Please accept the privacy consent to send the form.",
+      "submit": "Send request",
+      "submitting": "Sending…",
+      "success": "Message sent.",
+      "successDescription": "Thank you, we will reply to the email address you gave us.",
+      "error": "The message was not sent.",
+      "errorDescription": "Please try again shortly or email us directly:",
+      "required": "*",
+      "sheet": "Sheet 00 · Request form"
     },
     "info": {
-      "title": "START YOUR PROJECT TODAY",
-      "description": "We are ready to help you transform your ideas into reality with innovative and sustainable engineering solutions.",
-      "email": "EMAIL",
-      "phone": "PHONE",
-      "location": "WHERE WE ARE",
-      "serviceArea": "Our service area",
-      "nationalService": "Services throughout the national territory"
+      "title": "Let's talk about your project",
+      "description": "Call, write or fill in the form: you will hear back from us directly.",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Where we are",
+      "serviceArea": "Where we work",
+      "nationalService": "Messina, Sicily and the rest of Italy on request"
     },
     "map": {
       "loading": "Loading map...",
-      "popupText": "Services throughout the national territory"
+      "popupText": "Messina, Sicily and the rest of Italy on request"
     }
   },
   "services": {
     "title": "SERVICES",
-    "description": "Complete civil and environmental engineering solutions for every type of project",
+    "description": "Design, works supervision, permits and energy: the firm's technical services.",
     "viewAllServices": "VIEW ALL SERVICES",
-    "ourServices": "Our Services",
+    "ourServices": "Technical services",
     "comprehensiveSet": "A comprehensive set of technical services",
-    "viewMore": "View More",
+    "viewMore": "Learn more",
     "contactUs": "Contact Us",
     "structuralDesign": {
-      "title": "Structural Design",
-      "content": "Building structural design, structural calculations and static verifications for residential and commercial buildings"
+      "title": "Structural design",
+      "content": "Structural calculations and checks for residential and commercial buildings, new or to be strengthened."
     },
     "projectManagement": {
-      "title": "Project Management",
-      "content": "Coordination and supervision of construction works, technical management and quality control during all construction phases"
+      "title": "Works supervision",
+      "content": "We make sure the site follows the design, on the agreed time and quality."
     },
     "buildingPermits": {
-      "title": "Building Permits",
-      "content": "Complete management of building permits, construction permits and regulatory compliance for construction projects"
+      "title": "Planning permits",
+      "content": "CILA, SCIA, building permits and compliance checks, from filing to approval."
     },
     "energyEfficiency": {
-      "title": "Energy Efficiency",
-      "content": "Energy diagnostics Law 10, APE certifications and photovoltaic system design for sustainability"
+      "title": "Energy efficiency",
+      "content": "Energy audits under Law 10, energy certificates and solar system design."
     },
     "technicalConsulting": {
-      "title": "Technical Consulting",
-      "content": "Tender procedures, public contracts, technical verifications and specialized consulting for civil engineering projects"
+      "title": "Technical consulting",
+      "content": "Technical documentation for tenders, surveys and opinions on civil engineering projects."
     }
   },
   "cookies": {
     "notice": {
-      "title": "Cookie Usage",
-      "message": "This website uses technical cookies necessary for the proper functioning of the site and to save your preferences. We do not use tracking or advertising cookies.",
+      "title": "Cookie notice",
+      "message": "We use technical cookies needed for the site to work and, only with your consent, statistics cookies (Google Analytics) and advertising cookies (Google Ads) to understand how the site is used and measure our ads.",
       "accept": "Accept",
-      "learnMore": "Learn More",
-      "settings": "Cookie Settings"
+      "learnMore": "Learn more",
+      "settings": "Preferences",
+      "reject": "Reject"
     },
     "settings": {
-      "title": "Cookie Settings",
+      "title": "Cookie settings",
       "description": "You can manage your cookie preferences below. Essential cookies are necessary for the site to function.",
       "necessary": {
-        "title": "Essential Cookies",
+        "title": "Essential cookies",
         "description": "These cookies are necessary for the basic functionality of the website and cannot be disabled.",
-        "always": "Always Active"
+        "always": "Always active"
       },
       "preferences": {
-        "title": "Preference Cookies",
+        "title": "Preference cookies",
         "description": "These cookies allow the website to remember your preferences (such as language or theme)."
       },
-      "save": "Save Preferences",
-      "acceptAll": "Accept All",
-      "rejectAll": "Reject All"
+      "save": "Save choices",
+      "acceptAll": "Accept all",
+      "rejectAll": "Reject all",
+      "analytics": {
+        "title": "Statistics cookies",
+        "description": "Google Analytics: helps us understand which pages are visited and how visitors arrive. Aggregated data, used only to improve the site."
+      },
+      "marketing": {
+        "title": "Advertising cookies",
+        "description": "Google Ads: measures how well our ads work, for example how many quote requests come from a campaign."
+      }
     }
   },
   "privacy": {
     "title": "Privacy Policy",
     "dataController": {
-      "title": "Data Controller",
+      "title": "Data controller",
       "content": "The data controller is:"
     },
     "dataCollection": {
-      "title": "Data Collection",
+      "title": "Data we collect",
       "content": "We collect your personal data in the following ways:",
       "contactForm": {
-        "title": "Contact Form",
+        "title": "Contact form",
         "content": "When you use our contact form, we collect the following data:",
         "data": {
-          "name": "Full Name",
-          "email": "Email Address",
-          "phone": "Phone Number",
+          "name": "Full name",
+          "email": "Email address",
+          "phone": "Phone number",
           "message": "Message",
-          "projectType": "Project Type"
+          "projectType": "Project type"
         }
       }
     },
     "dataUsage": {
-      "title": "Data Usage",
+      "title": "How we use data",
       "content": "Your personal data is used for:",
       "purposes": {
         "respond": "Responding to your information requests",
@@ -263,11 +289,11 @@
       }
     },
     "dataRetention": {
-      "title": "Data Retention",
+      "title": "Data retention",
       "content": "Your personal data is retained for the time necessary to provide the requested services and to fulfill legal obligations. Generally, data is retained for no more than 3 years from the end of the contractual relationship."
     },
     "userRights": {
-      "title": "Your Rights",
+      "title": "Your rights",
       "content": "You have the right to:",
       "rights": {
         "access": "Access your personal data",
@@ -280,14 +306,14 @@
     },
     "cookies": {
       "title": "Cookies",
-      "content": "Our website uses the following types of cookies:",
+      "content": "The site uses technical cookies and, only with prior consent, statistics (Google Analytics) and advertising (Google Ads) cookies. Details are in the Cookie policy.",
       "types": {
         "technical": {
-          "title": "Technical Cookies",
+          "title": "Technical cookies",
           "content": "Necessary for the basic functioning of the website."
         },
         "preferences": {
-          "title": "Preference Cookies",
+          "title": "Preference cookies",
           "content": "Used to remember your preferences (language, theme)."
         }
       }
@@ -305,25 +331,35 @@
   "cookiePolicy": {
     "title": "Cookie Policy",
     "whatAreCookies": {
-      "title": "What are Cookies",
+      "title": "What cookies are",
       "content": "Cookies are small text files that are stored on your device when you visit a website. They help us provide a better user experience and make the site function properly."
     },
     "cookieTypes": {
-      "title": "Types of Cookies",
+      "title": "Types of cookies",
       "content": "We use the following types of cookies:",
       "technical": {
-        "title": "Technical Cookies",
+        "title": "Technical cookies",
         "content": "Essential for the website to function. Without these cookies, the site cannot work properly.",
         "consent": "Do not require user consent"
       },
       "preferences": {
-        "title": "Preference Cookies",
+        "title": "Preference cookies",
         "content": "Used to remember your preferences such as language and site theme.",
         "consent": "Require user consent"
+      },
+      "analytics": {
+        "title": "Statistics cookies",
+        "content": "Google Analytics 4 collects aggregated data on pages visited, traffic sources and devices, to improve the site.",
+        "consent": "Require the user's consent"
+      },
+      "marketing": {
+        "title": "Advertising cookies",
+        "content": "Google Ads measures conversions from our campaigns, for example a contact form sent after clicking an ad.",
+        "consent": "Require the user's consent"
       }
     },
     "cookiesUsed": {
-      "title": "Cookies Used",
+      "title": "Cookies used",
       "content": "Our website uses the following cookies:",
       "table": {
         "name": "Name",
@@ -332,27 +368,47 @@
         "type": "Type",
         "rows": {
           "consent": {
-            "purpose": "Stores your cookie preferences",
-            "duration": "1 year",
+            "purpose": "Stores your cookie choices (local storage)",
+            "duration": "Until withdrawn",
             "type": "Technical"
           },
-          "theme": {
-            "purpose": "Stores your theme preference",
-            "duration": "Permanent",
-            "type": "Preferences"
+          "intro": {
+            "purpose": "Remembers you have already seen the opening animation (local storage)",
+            "duration": "Until cleared",
+            "type": "Technical"
+          },
+          "locale": {
+            "purpose": "Remembers your language",
+            "duration": "Session",
+            "type": "Technical"
+          },
+          "ga": {
+            "purpose": "Distinguishes visitors anonymously (Google Analytics)",
+            "duration": "2 years",
+            "type": "Statistics"
+          },
+          "gaSession": {
+            "purpose": "Keeps the session state (Google Analytics)",
+            "duration": "2 years",
+            "type": "Statistics"
+          },
+          "gclau": {
+            "purpose": "Measures ad conversions (Google Ads)",
+            "duration": "3 months",
+            "type": "Advertising"
           }
         }
       }
     },
     "cookieManagement": {
-      "title": "Cookie Management",
+      "title": "Managing cookies",
       "content": "You can manage cookies in several ways:",
       "website": {
-        "title": "Through the Website",
-        "content": "You can modify your cookie preferences using the cookie banner or accessing cookie settings."
+        "title": "Through the website",
+        "content": "You can change or withdraw your consent at any time with the “Cookie settings” link at the bottom of every page."
       },
       "browser": {
-        "title": "Through the Browser",
+        "title": "Through the browser",
         "content": "You can manage cookies through your browser settings:",
         "chrome": "Settings > Privacy and security > Cookies",
         "firefox": "Settings > Privacy and security > Cookies",
@@ -368,7 +424,8 @@
       "title": "Updates",
       "content": "This Cookie Policy may be updated. Check regularly for any changes.",
       "lastUpdate": "Last updated"
-    }
+    },
+    "thirdParty": "Statistics and advertising cookies are managed by Google Ireland Ltd. and are only activated after your consent. More information: policies.google.com/technologies/cookies."
   },
   "contactForm": {
     "gdprConsent": {
@@ -380,165 +437,165 @@
   },
   "servicesPage": {
     "hero": {
-      "title": "Our Services",
-      "subtitle": "Complete civil and environmental engineering solutions for quality, sustainability and safety projects."
+      "title": "Services",
+      "subtitle": "The three turnkey lines and the firm's technical services, from design to permits."
     },
     "detailed": {
       "structuralDesign": {
-        "title": "Structural Design",
-        "description": "Complete structural design with structural calculations, static verifications and sizing for residential, commercial and industrial buildings.",
+        "title": "Structural design",
+        "description": "Structural design, static and seismic calculations and checks for residential, commercial and industrial buildings.",
         "features": [
           "Structural calculations and seismic verifications",
           "Foundation and load-bearing structure design",
           "Renovations and consolidations"
         ],
-        "cardTitle": "Structural Projects",
-        "cardDescription": "Innovative technical solutions for every type of construction"
+        "cardTitle": "Structures",
+        "cardDescription": "New builds, extensions and strengthening"
       },
       "energyEfficiency": {
-        "title": "Energy Efficiency",
-        "description": "Specialization in energy audits, APE certifications and photovoltaic system design for environmental sustainability.",
+        "title": "Energy efficiency",
+        "description": "Energy audits, energy certificates and solar system design, to use less energy and access incentives.",
         "features": [
           "Energy audits according to Law 10",
-          "APE certifications (Energy Performance Certificate)",
+          "Energy performance certificates (APE)",
           "Photovoltaic system design"
         ],
-        "cardTitle": "Sustainability",
-        "cardDescription": "Energy efficiency and eco-sustainable solutions"
+        "cardTitle": "Energy",
+        "cardDescription": "Lower bills, more independence"
       },
       "projectManagement": {
-        "title": "Construction Management",
-        "description": "Complete coordination of construction works with technical management, quality control and supervision during all construction phases.",
+        "title": "Works supervision",
+        "description": "We follow the site through every stage: workmanship, progress, safety and technical problems.",
         "features": [
           "Safety coordination on construction sites",
           "Quality control and work progress monitoring",
-          "Management of interferences and technical issues"
+          "Solving technical problems on site"
         ],
-        "cardTitle": "Project Management",
-        "cardDescription": "Professional control and coordination"
+        "cardTitle": "On site",
+        "cardDescription": "Hands-on control, start to finish"
       }
     },
     "cta": {
       "title": "Do you have a project in mind?",
-      "description": "Contact us for personalized consultation and discover how we can turn your ideas into reality.",
-      "button": "Request Quote"
+      "description": "Tell us what you want to do: we will tell you how to proceed and what it costs.",
+      "button": "Request a quote"
     }
   },
   "faq": {
-    "title": "FAQ",
-    "description": "Answers to the most frequently asked questions about our civil and environmental engineering services.",
+    "title": "Frequently asked questions",
+    "description": "The questions we get asked most, with short answers. For anything else, write to us.",
     "cta": {
-      "title": "Didn't find the answer you were looking for?",
-      "description": "Contact us directly to receive personalized consultation on your engineering projects.",
-      "button": "Contact Us Now"
+      "title": "Can't find your question?",
+      "description": "Write or call: you will get an answer straight from us, with no obligation.",
+      "button": "Contact us"
     },
     "questions": [
       {
-        "question": "What type of engineering services do you offer?",
-        "answer": "We offer complete civil and environmental engineering services: structural design, construction management, urban planning practices, energy audits, APE certifications, photovoltaic system design and technical consulting for tenders."
+        "question": "What do you do?",
+        "answer": "Structural design, works supervision, building and planning permits, energy audits, energy certificates, solar systems and technical documentation for tenders. We also deliver turnkey solar systems, prefab homes and renovations."
       },
       {
-        "question": "How long does building design take?",
-        "answer": "Timeframes depend on project complexity. Standard residential design takes 4-8 weeks, while more complex commercial projects may require 2-4 months. We always provide accurate estimates during initial consultation."
+        "question": "How long does it take to design a house?",
+        "answer": "It depends on the project. A detached house usually takes 4 to 8 weeks, a commercial building can take 2 to 4 months. After the first meeting we give you a precise estimate."
       },
       {
-        "question": "Do you work throughout the national territory?",
-        "answer": "Yes, while based in Sicily, we offer our services throughout the national territory. For out-of-region projects, we organize surveys and coordination through qualified local partnerships."
+        "question": "Do you also work outside Sicily?",
+        "answer": "Yes. The firm is based in Messina, but we also take on projects in the rest of Italy. For sites outside the region we arrange the visits and work with local engineers and contractors."
       },
       {
-        "question": "How much does a consultation or quote cost?",
-        "answer": "The first consultation is free and includes a preliminary project assessment. Quotes are provided free of charge within 48 hours of site inspection. Costs vary based on project type and complexity."
+        "question": "Do you charge for a quote?",
+        "answer": "No, the first meeting and the quote are free. The quote arrives within 48 hours of the site visit; the cost of the work depends on the type of job and how complex it is."
       },
       {
-        "question": "Do you also handle bureaucratic procedures?",
-        "answer": "Absolutely yes. We handle all urban planning practices, building permits, construction authorizations and public entity relations. Our service includes complete support from conception to realization."
+        "question": "Do you handle the paperwork too?",
+        "answer": "Yes. Permits, CILA, SCIA, land registry filings and dealings with the municipality and other authorities are on us, from start to finish."
       },
       {
-        "question": "Do you offer energy efficiency services?",
-        "answer": "Yes, we specialize in energy audits according to Law 10, APE certifications (Energy Performance Certificate) and photovoltaic system design. We help clients achieve the best energy classes and access state incentives."
+        "question": "Do you do energy certificates and audits?",
+        "answer": "Yes: energy certificates (APE), energy audits under Law 10 and solar system design. We also help you work out which upgrades really improve the energy rating and which incentives you can get."
       }
     ]
   },
   "projectsPage": {
     "hero": {
-      "title": "Our Projects",
-      "subtitle": "A selection of our most significant projects, demonstrating the quality and innovation of our civil engineering approach."
+      "title": "Projects",
+      "subtitle": "A selection of the firm's work: villas, housing and solar systems in Sicily."
     },
     "projects": [
       {
         "id": 1,
-        "title": "Modern Residential Villa",
-        "category": "Residential Design",
-        "description": "Complete design of single-family villa with focus on sustainability and energy efficiency. Includes structural design, systems and energy certification.",
+        "title": "Modern villa",
+        "category": "Residential design",
+        "description": "A detached villa designed in every part: structure, systems and energy certification, with close attention to running costs.",
         "features": [
           "Energy class A+",
           "Seismic-resistant structure",
           "Photovoltaic system",
-          "Sustainable design"
+          "Low-energy design"
         ]
       },
       {
         "id": 2,
-        "title": "Urban Residential Complex",
-        "category": "Commercial Design",
-        "description": "Renovation and expansion project for residential complex with architectural integration in the existing urban context.",
+        "title": "Urban housing complex",
+        "category": "Renovation and extension",
+        "description": "Renovation and extension of a housing complex in town, fitted into the surrounding buildings.",
         "features": [
           "Complete renovation",
           "Energy efficiency",
-          "Urban integration",
-          "Innovative common spaces"
+          "Fits the urban context",
+          "New shared spaces"
         ]
       },
       {
         "id": 3,
-        "title": "Photovoltaic System Lipari",
-        "category": "Energy Design",
-        "description": "Design and implementation of residential photovoltaic system with positioning optimization and energy efficiency maximization. Includes feasibility study and energy certification.",
+        "title": "Solar system in Lipari",
+        "category": "Energy",
+        "description": "Residential solar system in Lipari: feasibility study, best orientation, design, installation and energy certification.",
         "features": [
           "6 kW power",
           "High-efficiency panels",
           "Orientation optimization",
           "Remote monitoring",
-          "Optimized ROI"
+          "Calculated payback time"
         ]
       }
     ],
     "projectFeatures": {
-      "title": "Main Features"
+      "title": "Key features"
     },
-    "viewProject": "View Project",
+    "viewProject": "Open the sheet",
     "photovoltaicSection": {
-      "title": "Photovoltaic Projects",
+      "title": "Energy and tenders",
       "residentialSystem": {
-        "title": "Residential Photovoltaic System",
-        "description": "Design and installation of photovoltaic system for private residence with energy optimization.",
+        "title": "Residential solar system",
+        "description": "A system for a private home, sized on the family's consumption.",
         "power": "Power: 6 kW",
         "year": "Year: 2023"
       },
       "energyDiagnosis": {
-        "title": "Commercial Energy Diagnosis",
-        "description": "Complete energy analysis for commercial building with improvement proposals.",
+        "title": "Commercial energy audit",
+        "description": "Energy audit of a commercial building, with the upgrades needed to cut consumption.",
         "savings": "Savings: 40%",
         "energyClass": "Class: A+"
       },
       "publicTender": {
-        "title": "Public Infrastructure Tender",
-        "description": "Technical support for participation in public tender for infrastructure works.",
+        "title": "Public infrastructure tender",
+        "description": "Technical support for taking part in a public tender for infrastructure works.",
         "value": "Value: €2M",
-        "status": "Status: Awarded"
+        "status": "Outcome: awarded"
       }
     },
     "cta": {
-      "title": "Want to realize your project?",
-      "description": "Contact us to discuss your project and discover how we can transform your ideas into concrete and sustainable solutions.",
-      "button": "Start Your Project"
+      "title": "Thinking of something similar?",
+      "description": "Tell us what you want to build: we will tell you how we would do it and what it would cost.",
+      "button": "Let's talk about your project"
     }
   },
   "projectModal": {
-    "projectDescription": "Project Description",
-    "mainFeatures": "Main Features",
-    "technicalInfo": "Technical Information",
-    "projectNumber": "Project #",
+    "projectDescription": "Project description",
+    "mainFeatures": "Key features",
+    "technicalInfo": "Technical information",
+    "projectNumber": "Project no.",
     "category": "Category",
     "contactUs": "Contact Us"
   },
@@ -569,34 +626,84 @@
         "Construction Safety",
         "Project Management"
       ]
+    },
+    "pages": {
+      "home": {
+        "title": "Cavallaro Engineering & Construction | Turnkey solar, prefabricated homes and renovations in Sicily",
+        "description": "Engineering and construction studio in Messina, Sicily: turnkey solar systems, prefabricated homes and renovations across Sicily and Italy. One point of contact, transparent prices, free quote."
+      },
+      "about": {
+        "title": "About | Eng. Loris Cavallaro, civil and environmental engineer in Messina",
+        "description": "Eng. Loris Cavallaro, civil and environmental engineer: building design, safety, energy efficiency and works management. Based in Messina, working across Sicily and Italy."
+      },
+      "services": {
+        "title": "Engineering and construction services in Messina and Sicily | Cavallaro",
+        "description": "Turnkey solar, prefabricated homes and renovations, plus structural design, works management, building permits and energy certificates. Messina, Sicily and all of Italy."
+      },
+      "projects": {
+        "title": "Projects | Villas, residences and solar systems | Cavallaro",
+        "description": "Selected projects: modern villas, residential complexes and solar systems in the Aeolian Islands and Sicily. Renders, photos and technical features."
+      },
+      "faq": {
+        "title": "FAQ on design, solar and renovations | Cavallaro",
+        "description": "Timing, costs, permits, areas served and energy efficiency: answers from Eng. Loris Cavallaro to the most common questions."
+      },
+      "contact": {
+        "title": "Contact and free quote | Cavallaro Engineering & Construction, Messina",
+        "description": "Request a free quote for a solar system, a prefabricated home or a renovation. Email, phone and contact form; we work across Sicily and Italy."
+      },
+      "privacy": {
+        "title": "Privacy policy | Cavallaro Engineering & Construction",
+        "description": "How personal data collected through the website and contact form is processed."
+      },
+      "cookies": {
+        "title": "Cookie policy | Cavallaro Engineering & Construction",
+        "description": "Which cookies the website uses, what they are for and how to manage your preferences."
+      },
+      "solar": {
+        "title": "Turnkey solar systems in Messina and Sicily | from €3,999",
+        "description": "Residential solar systems with battery storage, latest-generation inverters and monitoring. Design, installation and commissioning, turnkey, in Messina, the Aeolian Islands and across Sicily."
+      },
+      "prefab": {
+        "title": "Turnkey prefabricated homes in Sicily | Standard and bespoke | Cavallaro",
+        "description": "Modern, efficient prefabricated homes, standard or fully bespoke, with integrated solar. Turnkey design and construction in Messina, Sicily and Italy."
+      },
+      "renovation": {
+        "title": "Turnkey renovations in Messina | Economy from €450/m², Luxury | Cavallaro",
+        "description": "Complete renovations of houses and apartments: bathrooms, kitchens, systems, flooring, energy upgrades, permits and works management. Economy and Luxury lines, one point of contact."
+      },
+      "practices": {
+        "title": "Technical practices in Messina: APE from €149, CILA, SCIA, DOCFA | Cavallaro",
+        "description": "Price list: energy certificate (APE) from €149, DOCFA from €349, CILA from €599, SCIA from €1,399, building permit from €3,000. Handled directly by Eng. Loris Cavallaro in Messina and Sicily."
+      }
     }
   },
   "contactPage": {
     "hero": {
-      "title": "Contact Us",
-      "subtitle": "We're here to help you realize your projects. Contact us for a personalized and free consultation."
+      "title": "Contact",
+      "subtitle": "For a quote, a site visit or just a question: call, write or fill in the form."
     },
     "professionalInfo": {
-      "title": "Professional Information",
+      "title": "Professional profile",
       "qualifications": {
-        "title": "Qualifications",
-        "item1": "Master's Degree in Civil and Environmental Engineering",
-        "item2": "Specialization in Workplace Safety",
-        "item3": "Professional Engineering License",
-        "item4": "Energy Efficiency Certification"
+        "title": "Education",
+        "item1": "Master's degree in Civil and Environmental Engineering",
+        "item2": "Specialisation in workplace safety",
+        "item3": "Licensed professional engineer",
+        "item4": "Energy efficiency certification"
       },
       "competencies": {
-        "title": "Areas of Competence",
-        "item1": "Structural Design",
-        "item2": "Tenders and Public Contracts",
-        "item3": "Energy Diagnostics and APE",
-        "item4": "Photovoltaic Systems"
+        "title": "What we do",
+        "item1": "Structural design",
+        "item2": "Public tenders",
+        "item3": "Energy audits and certificates",
+        "item4": "Solar systems"
       }
     },
     "documents": {
-      "title": "Documents",
-      "description": "Download the curriculum vitae and learn more about our professional background.",
-      "downloadCV": "Download CV (PDF)"
+      "title": "CV",
+      "description": "Loris Cavallaro's full CV, with education and experience.",
+      "downloadCV": "Download the CV (PDF)"
     }
   },
   "portfolioSection": {
@@ -637,5 +744,329 @@
       "description": "Discover all our projects and the innovative solutions we have developed",
       "button": "View All Projects"
     }
+  },
+  "landing": {
+    "hero": {
+      "eyebrow": "Cavallaro Engineering & Construction",
+      "line1": "We design.",
+      "line2": "We build.",
+      "line3": "We transform.",
+      "subtitle": "Design, permits and construction, handled by the same engineer.",
+      "primaryCta": "See what we do",
+      "secondaryCta": "Request a quote"
+    },
+    "intro": {
+      "statement": "Engineering, building and energy, under one roof.",
+      "body": "We survey, draw the design, file the permits with the municipality and then run the site. You don't have to coordinate different engineers and builders: you always talk to us."
+    },
+    "overview": {
+      "eyebrow": "Three turnkey lines",
+      "title": "Where do you want to start?",
+      "from": "Starting from",
+      "onRequest": "Tailored",
+      "discover": "Discover",
+      "scrollHint": "Scroll"
+    },
+    "showcase": {
+      "turnkey": "Turnkey",
+      "from": "Starting from",
+      "onRequest": "Tailored",
+      "sqm": "/m²",
+      "drag": "Drag to explore",
+      "dragShort": "Drag"
+    },
+    "why": {
+      "eyebrow": "How we work",
+      "title": "The same engineer from the first survey to handing over the keys.",
+      "items": {
+        "engineering": "Every job starts from a design signed by an engineer, not from a catalogue.",
+        "tailored": "The design fits your home and your budget, not the other way round.",
+        "singleContact": "One number to call, from start to finish.",
+        "quality": "We check materials and workmanship on site, not just on paper.",
+        "transparency": "Starting prices are on the website, so you know where things begin before you even call.",
+        "integration": "Building, systems and energy planned together, not one after the other."
+      }
+    },
+    "closing": {
+      "title": "Have a project in mind?",
+      "text": "Tell us what you want to do. We call you back, look at the options together and tell you clearly how long it takes and what it costs.",
+      "cta": "Tell us about your project",
+      "signature": "Design. Energy. Construction. Future."
+    },
+    "drawing": {
+      "eyebrow": "Our method",
+      "title": "Every project starts with a drawing.",
+      "text": "Measurements before construction. We survey, design and calculate every element, then build it exactly as drawn.",
+      "steps": {
+        "survey": "Survey",
+        "design": "Design",
+        "calculation": "Engineering",
+        "build": "Construction"
+      },
+      "sheet": "South elevation",
+      "scale": "Scale 1:100",
+      "progress": "Sheet progress"
+    },
+    "sheet": {
+      "sheet": "Sheet",
+      "subject": "Subject",
+      "scale": "Scale",
+      "date": "Date",
+      "short": "Sheet"
+    },
+    "areas": {
+      "eyebrow": "Where we work",
+      "title": "From Messina across Sicily.",
+      "text": "We mostly work in Messina and its province, the Aeolian Islands and the rest of Sicily. On request we also take on projects elsewhere in Italy, always with the same point of contact.",
+      "items": [
+        "Messina",
+        "Province of Messina",
+        "Aeolian Islands",
+        "Milazzo",
+        "Catania",
+        "Palermo",
+        "Sicily",
+        "Italy on request"
+      ]
+    },
+    "linePage": {
+      "faqTitle": "Frequently asked questions",
+      "breadcrumbHome": "Home",
+      "turnkeySuffix": "turnkey"
+    }
+  },
+  "lines": {
+    "solar": {
+      "label": "Energy line",
+      "title": "Solar systems",
+      "tagline": "Your energy. Your future.",
+      "summary": "Solar systems, battery storage and complete energy solutions.",
+      "lead": "Produce the energy you use at home and rely less on the grid.",
+      "body": "We size the system on your family's real consumption and on the roof you have, not on a standard kit. Assessment, design, supply, installation and commissioning: we take care of it.",
+      "solutionsTitle": "Our solutions",
+      "solutions": {
+        "s1": "Residential solar systems",
+        "s2": "Battery storage systems",
+        "s3": "Latest-generation inverters",
+        "s4": "Production monitoring",
+        "s5": "Integrated self-consumption solutions",
+        "s6": "EV charging readiness"
+      },
+      "pricingTitle": "What it costs",
+      "pricingText": "The price depends on the power, the batteries and the building. This is the starting point.",
+      "tiers": {
+        "from": {
+          "name": "Turnkey system",
+          "description": "Before the quote we carry out a technical assessment to choose the right setup."
+        }
+      },
+      "closingLine": "From the site visit to commissioning, we take care of it.",
+      "cta": "Request your free quote",
+      "plate": {
+        "title": "Single-line diagram",
+        "legend": "Legend",
+        "labels": {
+          "title": "System single-line diagram"
+        }
+      },
+      "faq": [
+        {
+          "q": "How much does a turnkey solar system cost?",
+          "a": "Solutions start from {price}. The final price depends on system power, storage capacity and the building. Every proposal includes a technical assessment and the quote is free."
+        },
+        {
+          "q": "What does the turnkey service include?",
+          "a": "Initial assessment, design based on your consumption, component supply, installation and commissioning. One point of contact follows the whole process."
+        },
+        {
+          "q": "Can battery storage be added?",
+          "a": "Yes. We design systems with battery storage, latest-generation inverters and production monitoring, and can prepare for EV charging."
+        },
+        {
+          "q": "Where do you install solar systems?",
+          "a": "We work in Messina and its province, the Aeolian Islands and across Sicily. On request we also follow projects elsewhere in Italy."
+        }
+      ]
+    },
+    "prefab": {
+      "label": "Living line",
+      "title": "Prefabricated homes",
+      "tagline": "The home you imagine. We build it together.",
+      "summary": "Customisable, efficient prefabricated homes designed around you.",
+      "lead": "Prefab homes with a contemporary design, quick to build and cheap to run.",
+      "body": "Start from a ready-made layout or design the house from scratch with us, room by room. Either way you can add solar panels and storage.",
+      "solutionsTitle": "Our solutions",
+      "solutions": {
+        "s1": "Prefabricated homes in several sizes",
+        "s2": "Modern, customisable homes",
+        "s3": "Residential solutions for private clients",
+        "s4": "Bespoke projects",
+        "s5": "Integrated solar and storage",
+        "s6": "Technical consulting and design",
+        "s7": "Coordination of every build phase"
+      },
+      "pricingTitle": "Two ways to start",
+      "pricingText": "Ready-made or custom: we always look after the design.",
+      "tiers": {
+        "standard": {
+          "name": "Standard line",
+          "description": "Layouts already worked out, to keep time and costs down."
+        },
+        "custom": {
+          "name": "Bespoke line",
+          "description": "We start from how you live: room layout, finishes, systems."
+        }
+      },
+      "closingLine": "Your new home starts with a project.",
+      "cta": "Let's talk about your home",
+      "plate": {
+        "title": "Ground-floor plan",
+        "legend": "Legend",
+        "labels": {
+          "title": "Ground-floor plan",
+          "living": "Living",
+          "bedroom": "Bedroom",
+          "bath": "Bath",
+          "study": "Study"
+        }
+      },
+      "faq": [
+        {
+          "q": "How much does a turnkey prefabricated home cost?",
+          "a": "The Standard line starts from {price} with defined layouts. The Bespoke line is priced on the project."
+        },
+        {
+          "q": "What is the difference between Standard and Bespoke?",
+          "a": "Standard offers defined layouts to optimise time and cost. Bespoke starts from your needs: room layout, finishes and technology."
+        },
+        {
+          "q": "Can a solar system be integrated?",
+          "a": "Yes. Homes can integrate solar systems, battery storage and high-efficiency technology."
+        },
+        {
+          "q": "Who manages design and construction?",
+          "a": "A single point of contact: technical consulting, design and coordination of every build phase."
+        }
+      ]
+    },
+    "renovation": {
+      "label": "Construction line",
+      "title": "Renovations",
+      "tagline": "We give your spaces a new shape.",
+      "summary": "Complete renovations, from design to handover, in Economy and Luxury.",
+      "lead": "A good renovation makes a home more comfortable, better looking and cheaper to heat, and it adds value.",
+      "body": "We are with you from the first site visit to handover: design, permits, coordinating the trades and works supervision. One site, one point of contact.",
+      "solutionsTitle": "Our services",
+      "solutions": {
+        "s1": "Complete renovation of apartments and houses",
+        "s2": "Bathroom and kitchen remodelling",
+        "s3": "Electrical and plumbing upgrades",
+        "s4": "Flooring and wall finishes",
+        "s5": "False ceilings and drywall",
+        "s6": "Energy efficiency upgrades",
+        "s7": "Design and building permits",
+        "s8": "Site coordination and works management"
+      },
+      "pricingTitle": "Two levels of finish",
+      "pricingText": "The materials change, the care on site does not.",
+      "tiers": {
+        "economy": {
+          "name": "Economy line",
+          "description": "Targeted work and materials chosen for the best value, carried out with the same care."
+        },
+        "luxury": {
+          "name": "Luxury line",
+          "description": "Fine materials, premium finishes and choices made to measure for your home."
+        }
+      },
+      "closingLine": "From the first site visit to handing over the keys.",
+      "cta": "Request a free consultation",
+      "plate": {
+        "title": "Proposed layout",
+        "legend": "Legend",
+        "labels": {
+          "title": "Proposed layout",
+          "demolition": "Demolition",
+          "newWorks": "New works",
+          "insulation": "Insulation",
+          "kitchen": "Kitchen",
+          "bath": "Bath"
+        }
+      },
+      "faq": [
+        {
+          "q": "How much does a turnkey renovation cost per square metre?",
+          "a": "The Economy line starts from {economy}/m², the Luxury line from {luxury}/m². The final cost depends on the works, materials and condition of the property."
+        },
+        {
+          "q": "What does a complete renovation include?",
+          "a": "Bathrooms and kitchens, electrical and plumbing systems, flooring and wall finishes, false ceilings and drywall, energy upgrades, design and building permits."
+        },
+        {
+          "q": "Do you also handle permits and works management?",
+          "a": "Yes. We manage design, building permits, coordination of trades and works management through to handover."
+        },
+        {
+          "q": "What is the difference between Economy and Luxury?",
+          "a": "Economy focuses on targeted work and great value. Luxury uses fine materials, premium finishes and a high level of customisation."
+        }
+      ]
+    }
+  },
+  "practices": {
+    "eyebrow": "Technical practices",
+    "title": "Technical practices price list",
+    "description": "Energy certificates, cadastral filings and building permits handled directly by the engineer, with clear starting prices.",
+    "from": "from",
+    "note": "Indicative starting prices. The final quote depends on the property, the complexity of the practice and any fees due to public offices.",
+    "more": "Other practices on request",
+    "moreText": "Need a practice that is not listed? Write to us and we will tell you timing and cost.",
+    "cta": "Request a quote",
+    "items": {
+      "ape": {
+        "name": "APE",
+        "full": "Energy Performance Certificate",
+        "description": "Certifies the energy class of the property. It is mandatory to sell or rent a home."
+      },
+      "docfa": {
+        "name": "DOCFA",
+        "full": "Cadastral update",
+        "description": "Updates the property at the land registry: new floor plans, changes and registrations."
+      },
+      "cila": {
+        "name": "CILA",
+        "full": "Certified notice of works",
+        "description": "For non-structural extraordinary maintenance, such as new bathrooms, systems or internal partitions."
+      },
+      "scia": {
+        "name": "SCIA",
+        "full": "Certified notice of start of activity",
+        "description": "For larger works, such as renovations that affect the structural parts of the building."
+      },
+      "permit": {
+        "name": "Building permit",
+        "full": "Permesso di costruire",
+        "description": "Required for new buildings, extensions and major renovations."
+      }
+    },
+    "faq": [
+      {
+        "q": "How much does an APE cost?",
+        "a": "The Energy Performance Certificate starts from {ape}. The final price depends on the size and features of the property and includes the site visit."
+      },
+      {
+        "q": "When do I need a CILA and when a SCIA?",
+        "a": "A CILA is enough for non-structural extraordinary maintenance, such as bathrooms, systems and partitions. A SCIA is needed for larger works affecting structural parts. After the site visit we tell you which one applies."
+      },
+      {
+        "q": "How much do building permits cost?",
+        "a": "A CILA starts from {cila}, a SCIA from {scia} and a building permit from {permit}. The final cost depends on the works and any fees due to public offices."
+      },
+      {
+        "q": "Do you handle the paperwork during a renovation too?",
+        "a": "Yes. We can take care of the practice alone or of the whole job, from design to works management, with a single point of contact."
+      }
+    ],
+    "pageLink": "Details and FAQ"
   }
 }

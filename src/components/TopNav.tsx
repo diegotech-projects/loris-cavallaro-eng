@@ -1,12 +1,20 @@
 'use client';
 
-import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
-import { BsBuilding } from 'react-icons/bs';
 
 import { Link as LocalizedLink, usePathname } from '@/i18n/navigation';
 
+import BrandMark from './BrandMark';
 import MenuBar from './MenuBar';
+
+const navItems = [
+  { key: 'home', href: '/' },
+  { key: 'about', href: '/about' },
+  { key: 'services', href: '/services' },
+  { key: 'projects', href: '/projects' },
+  { key: 'faq', href: '/faq' },
+  { key: 'contact', href: '/contact' },
+] as const;
 
 const TopNav = () => {
   const t = useTranslations('navigation');
@@ -15,111 +23,56 @@ const TopNav = () => {
 
   return (
     <div className="container-custom text-themeTextPrimary">
-      <div className="wrapper flex w-full items-center justify-between">
-        <div className="flex w-[25%] items-center gap-1 font-bold 2xl:text-2xl">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="flex flex-col">
-              <span className="font-bold leading-none text-themeTextPrimary">
-                {process.env.NEXT_PUBLIC_NOME_COGNOME || 'Loris Cavallaro'}
-              </span>
-              <span className="text-xs font-medium uppercase tracking-wide text-themeTextSecondary">
-                {process.env.NEXT_PUBLIC_SIGLA || 'Ing. Civile'}
-              </span>
-            </div>
-            <BsBuilding className="text-themeSecondary" />
-          </Link>
-        </div>
-        <div className="hidden w-2/5 items-center justify-center gap-x-5 text-sm font-semibold lg:flex 2xl:gap-x-10 2xl:text-base">
-          <LocalizedLink
-            className={`anchor transition-colors ${
-              pathname === '/'
-                ? 'text-themeSecondary underline underline-offset-4'
-                : 'hover:text-themeSecondary'
-            }`}
-            href="/"
-          >
-            {t('home')}
-          </LocalizedLink>
-          <LocalizedLink
-            className={`anchor transition-colors ${
-              pathname === '/about'
-                ? 'text-themeSecondary underline underline-offset-4'
-                : 'hover:text-themeSecondary'
-            }`}
-            href="/about"
-          >
-            {t('about')}
-          </LocalizedLink>
-          <LocalizedLink
-            className={`anchor transition-colors ${
-              pathname === '/services'
-                ? 'text-themeSecondary underline underline-offset-4'
-                : 'hover:text-themeSecondary'
-            }`}
-            href="/services"
-          >
-            {t('services')}
-          </LocalizedLink>
-          <LocalizedLink
-            className={`anchor transition-colors ${
-              pathname === '/projects'
-                ? 'text-themeSecondary underline underline-offset-4'
-                : 'hover:text-themeSecondary'
-            }`}
-            href="/projects"
-          >
-            {t('projects')}
-          </LocalizedLink>
-          <LocalizedLink
-            className={`anchor transition-colors ${
-              pathname === '/faq'
-                ? 'text-themeSecondary underline underline-offset-4'
-                : 'hover:text-themeSecondary'
-            }`}
-            href="/faq"
-          >
-            {t('faq')}
-          </LocalizedLink>
-        </div>
+      <div className="flex w-full items-center justify-between gap-6">
+        <LocalizedLink href="/" aria-label="Cavallaro Ingegneria e Costruzioni">
+          <BrandMark />
+        </LocalizedLink>
 
-        {/* Language Toggle */}
-        <div className="hidden items-center gap-2 lg:flex">
-          <LocalizedLink
-            href={pathname}
-            locale="it"
-            className={`flex items-center gap-1 rounded px-2 py-1 transition-colors ${
-              locale === 'it'
-                ? 'bg-themeSecondary text-themeSurface'
-                : 'hover:bg-themeSurfaceLight'
-            }`}
-          >
-            <span className="text-lg">🇮🇹</span>
-            <span className="text-xs font-medium">IT</span>
-          </LocalizedLink>
-          <LocalizedLink
-            href={pathname}
-            locale="en"
-            className={`flex items-center gap-1 rounded px-2 py-1 transition-colors ${
-              locale === 'en'
-                ? 'bg-themeSecondary text-themeSurface'
-                : 'hover:bg-themeSurfaceLight'
-            }`}
-          >
-            <span className="text-lg">🇬🇧</span>
-            <span className="text-xs font-medium">EN</span>
-          </LocalizedLink>
-        </div>
+        <nav className="hidden items-center gap-x-7 text-[13px] lg:flex 2xl:gap-x-9">
+          {navItems.map((item) => (
+            <LocalizedLink
+              key={item.key}
+              href={item.href}
+              className={`group relative block overflow-hidden ${
+                pathname === item.href
+                  ? 'text-themeTextPrimary'
+                  : 'text-themeTextSecondary'
+              }`}
+            >
+              {/* Label rolls up on hover, replaced by a bright copy from below */}
+              <span className="block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-full">
+                {t(item.key)}
+              </span>
+              <span
+                aria-hidden
+                className="absolute inset-0 block translate-y-full text-themeTextPrimary transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-y-0"
+              >
+                {t(item.key)}
+              </span>
+            </LocalizedLink>
+          ))}
+        </nav>
 
-        <div className="hidden w-[30%] items-center justify-end gap-x-5 text-sm font-semibold lg:flex 2xl:gap-x-10 2xl:text-base">
-          <LocalizedLink
-            href="/contact"
-            className="anchor transition-colors hover:text-themeSecondary"
-          >
-            {t('contact')}
-          </LocalizedLink>
+        <div className="hidden items-center gap-5 lg:flex">
+          <div className="flex items-center gap-1 text-xs">
+            {(['it', 'en'] as const).map((lang) => (
+              <LocalizedLink
+                key={lang}
+                href={pathname}
+                locale={lang}
+                className={`rounded-full px-2 py-1 uppercase tracking-wide transition-colors ${
+                  locale === lang
+                    ? 'text-themeTextPrimary'
+                    : 'text-themeTextSecondary hover:text-themeTextPrimary'
+                }`}
+              >
+                {lang}
+              </LocalizedLink>
+            ))}
+          </div>
           <LocalizedLink
             href="/contact#contact-form"
-            className="rounded-full bg-themeAccent px-4 py-3 text-themeSurface opacity-80 transition-colors hover:bg-themeSecondary"
+            className="rounded-full bg-bone px-4 py-2 text-[13px] font-semibold text-ink transition-colors hover:bg-brick hover:text-bone"
           >
             {t('requestQuote')}
           </LocalizedLink>

@@ -6,107 +6,115 @@ const resend = process.env.RESEND_API_KEY
   ? new Resend(process.env.RESEND_API_KEY)
   : null;
 
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// Visitor input goes into an HTML email: escape it
+const escapeHtml = (value: unknown) =>
+  String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
+const fail = (status: number, error: string) =>
+  NextResponse.json({ error }, { status });
+
 export async function POST(request: NextRequest) {
+  let body: Record<string, unknown>;
   try {
-    const body = await request.json();
-    const { name, email, phone, projectType, message } = body;
+    body = await request.json();
+  } catch {
+    return fail(400, 'Richiesta non valida');
+  }
 
-    // Validate required fields
-    if (!name || !email || !message) {
-      return NextResponse.json(
-        { error: 'Nome, email e messaggio sono obbligatori' },
-        { status: 400 },
-      );
-    }
+  const name = String(body.name ?? '').trim();
+  const email = String(body.email ?? '').trim();
+  const phone = String(body.phone ?? '').trim();
+  const projectType = String(body.projectType ?? '').trim();
+  const message = String(body.message ?? '').trim();
 
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return NextResponse.json({ error: 'Email non valida' }, { status: 400 });
-    }
+  if (!name || !email || !message) {
+    return fail(400, 'Nome, email e messaggio sono obbligatori');
+  }
+  if (!EMAIL_REGEX.test(email)) {
+    return fail(400, 'Email non valida');
+  }
 
-    // Check if Resend is configured
-    if (!resend) {
-      console.log('Email would be sent:', {
+  if (!resend) {
+    // Local development without a key: pretend it worked so the form can be
+    // tested. In production a missing key is a real error, never a fake success.
+    if (process.env.NODE_ENV !== 'production') {
+      // eslint-disable-next-line no-console
+      console.log('[contact] RESEND_API_KEY missing, email not sent:', {
         name,
         email,
         phone,
         projectType,
-        message,
       });
-      return NextResponse.json(
-        {
-          success: true,
-          message: 'Messaggio ricevuto (email non configurata)',
-        },
-        { status: 200 },
-      );
+      return NextResponse.json({ success: true, dev: true });
     }
-
-    // Send email using Resend
-    // Build recipients list from env variables
-    const recipients: string[] = [];
-
-    // Primary recipient (client email)
-    const primaryRecipient =
-      process.env.CONTACT_FORM_RECIPIENT || 'loriscavallaro22@gmail.com';
-    recipients.push(primaryRecipient);
-
-    // Secondary recipient (for testing/backup)
-    if (process.env.CONTACT_FORM_RECIPIENT_CC) {
-      recipients.push(process.env.CONTACT_FORM_RECIPIENT_CC);
-    }
-
-    // Debug logging - check Vercel Function logs
     // eslint-disable-next-line no-console
-    console.log('Attempting to send email to:', recipients);
-
-    // Sender email - use verified domain or fallback to Resend test domain
-    const senderEmail =
-      process.env.RESEND_FROM_EMAIL || 'Sito Web <onboarding@resend.dev>';
-
-    // eslint-disable-next-line no-console
-    console.log('Sending from:', senderEmail);
-
-    const data = await resend.emails.send({
-      from: senderEmail,
-      to: recipients,
-      subject: `Nuovo messaggio dal sito web - ${projectType || 'Richiesta generale'}`,
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px;">
-            Nuovo messaggio dal sito web
-          </h2>
-          
-          <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="color: #2c3e50; margin-top: 0;">Informazioni del contatto:</h3>
-            <p><strong>Nome:</strong> ${name}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            ${phone ? `<p><strong>Telefono:</strong> ${phone}</p>` : ''}
-            ${projectType ? `<p><strong>Tipo di progetto:</strong> ${projectType}</p>` : ''}
-          </div>
-
-          <div style="background-color: #ffffff; padding: 20px; border-left: 4px solid #3498db; margin: 20px 0;">
-            <h3 style="color: #2c3e50; margin-top: 0;">Messaggio:</h3>
-            <p style="line-height: 1.6; white-space: pre-wrap;">${message}</p>
-          </div>
-
-          <div style="background-color: #ecf0f1; padding: 15px; border-radius: 8px; margin-top: 20px;">
-            <p style="margin: 0; color: #7f8c8d; font-size: 12px;">
-              Questo messaggio è stato inviato dal form di contatto del sito web il ${new Date().toLocaleDateString('it-IT')} alle ${new Date().toLocaleTimeString('it-IT')}.
-            </p>
-          </div>
-        </div>
-      `,
-    });
-
-    return NextResponse.json({ success: true, data }, { status: 200 });
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Error sending email:', error);
-    return NextResponse.json(
-      { error: "Errore nell'invio del messaggio. Riprova più tardi." },
-      { status: 500 },
-    );
+    console.error('[contact] RESEND_API_KEY is not set');
+    return fail(503, 'Invio email non configurato');
   }
+
+  const recipients = [
+    process.env.CONTACT_FORM_RECIPIENT || 'loriscavallaro22@gmail.com',
+    process.env.CONTACT_FORM_RECIPIENT_CC,
+  ].filter((value): value is string => Boolean(value));
+
+  // The domain must be verified in Resend, otherwise use onboarding@resend.dev
+  // (which can only deliver to the Resend account owner's address)
+  const sender =
+    process.env.RESEND_FROM_EMAIL || 'Sito Web <onboarding@resend.dev>';
+
+  const now = new Date();
+  const when = `${now.toLocaleDateString('it-IT', { timeZone: 'Europe/Rome' })} alle ${now.toLocaleTimeString('it-IT', { timeZone: 'Europe/Rome' })}`;
+  const row = (label: string, value: string) =>
+    value
+      ? `<p style="margin:0 0 6px"><strong>${label}:</strong> ${escapeHtml(value)}</p>`
+      : '';
+
+  const { data, error } = await resend.emails.send({
+    from: sender,
+    to: recipients,
+    replyTo: email,
+    subject: `Nuova richiesta dal sito: ${projectType || 'richiesta generale'} (${name})`,
+    text: [
+      `Nome: ${name}`,
+      `Email: ${email}`,
+      ...(phone ? [`Telefono: ${phone}`] : []),
+      ...(projectType ? [`Tipo di progetto: ${projectType}`] : []),
+      '',
+      message,
+      '',
+      `Inviato dal form del sito il ${when}.`,
+    ].join('\n'),
+    html: `
+      <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;color:#1a1816">
+        <h2 style="border-bottom:2px solid #b4452b;padding-bottom:10px">Nuova richiesta dal sito</h2>
+        <div style="background:#f4f1ec;padding:16px 20px;margin:20px 0">
+          ${row('Nome', name)}
+          ${row('Email', email)}
+          ${row('Telefono', phone)}
+          ${row('Tipo di progetto', projectType)}
+        </div>
+        <div style="padding:16px 20px;border-left:4px solid #b4452b">
+          <p style="line-height:1.6;white-space:pre-wrap;margin:0">${escapeHtml(message)}</p>
+        </div>
+        <p style="color:#8c8781;font-size:12px;margin-top:20px">
+          Inviato dal form del sito il ${when}. Rispondi a questa email per scrivere direttamente al cliente.
+        </p>
+      </div>
+    `,
+  });
+
+  if (error) {
+    // eslint-disable-next-line no-console
+    console.error('[contact] Resend error:', error);
+    return fail(502, "Errore nell'invio del messaggio. Riprova più tardi.");
+  }
+
+  return NextResponse.json({ success: true, id: data?.id });
 }

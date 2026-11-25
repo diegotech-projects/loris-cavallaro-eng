@@ -1,71 +1,39 @@
-import { useTranslations } from 'next-intl';
-
 import { FAQData } from '@/data/content';
 
+// Numbered accordion on hairlines; native <details> so it works without JS
 function FAQS() {
-  const t = useTranslations('faq');
   const faqData = FAQData();
 
   return (
     <div className="container-custom">
-      {/* Header */}
-      <div className="mb-20 text-center">
-        <h2 className="mb-6 text-4xl font-bold tracking-tight text-themeTextPrimary lg:text-5xl xl:text-6xl">
-          {t('title')}
-        </h2>
-        <p className="mx-auto max-w-2xl text-lg leading-relaxed text-themeTextSecondary">
-          {t('description')}
-        </p>
-      </div>
-
-      {/* FAQ List */}
-      <div className="mx-auto max-w-4xl">
-        {faqData.map((item: any) => (
-          <div
-            key={item.question}
-            className="border-b border-themeTextSecondary border-opacity-20"
-          >
+      <ol className="border-b border-bone/15">
+        {faqData.map((item: any, index: number) => (
+          <li key={item.question} className="border-t border-bone/15">
             <details className="group">
-              <summary className="flex cursor-pointer list-none items-center justify-between py-6 text-lg font-bold tracking-wide text-themeTextPrimary group-open:text-themeTextPrimary">
-                {item.question.toUpperCase()}
-                <div className="ml-4 text-themeTextSecondary">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2"
-                    stroke="currentColor"
-                    className="block size-6 group-open:hidden"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M12 4.5v15m7.5-7.5h-15"
-                    />
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2"
-                    stroke="currentColor"
-                    className="hidden size-6 group-open:block"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19.5 12h-15"
-                    />
-                  </svg>
-                </div>
+              <summary className="flex cursor-pointer list-none items-baseline gap-5 py-7 md:gap-10 md:py-9 [&::-webkit-details-marker]:hidden">
+                <span className="w-12 shrink-0 font-display text-xs tabular-nums tracking-[0.2em] text-brick">
+                  F.{String(index + 1).padStart(2, '0')}
+                </span>
+                <span className="flex-1 font-display text-xl font-semibold leading-snug tracking-[-0.02em] text-bone/80 transition-colors group-open:text-bone md:text-3xl">
+                  {item.question}
+                </span>
+                <span
+                  aria-hidden
+                  className="relative mt-2 size-5 shrink-0 self-start md:mt-3"
+                >
+                  <span className="absolute inset-x-0 top-1/2 h-px bg-bone/60" />
+                  <span className="absolute inset-y-0 left-1/2 w-px bg-bone/60 transition-transform duration-300 group-open:scale-y-0" />
+                </span>
               </summary>
-              <div className="pb-6 leading-relaxed text-themeTextSecondary">
-                {item.answer}
+              <div className="pb-9 md:pl-[5.5rem]">
+                <p className="max-w-3xl text-lg leading-relaxed text-bone/65">
+                  {item.answer}
+                </p>
               </div>
             </details>
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
     </div>
   );
 }

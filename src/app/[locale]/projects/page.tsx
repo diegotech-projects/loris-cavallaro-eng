@@ -1,272 +1,211 @@
 'use client';
 
+import { AnimatePresence } from 'framer-motion';
+import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 
+import { Reveal } from '@/components/landing/motion';
+import {
+  FramedImage,
+  NumberedList,
+  PageCta,
+  PageHero,
+  SectionHeader,
+  SheetGrid,
+} from '@/components/page/PageParts';
 import ProjectModal from '@/components/ProjectModal';
 import { ProjectsData } from '@/data/content';
 import type { Project } from '@/data/types';
 
-// Define project images
+const projectImages = [
+  [
+    '/images/portfolio/projects/01_3D_esterno casa_2.jpeg',
+    '/images/portfolio/projects/01_3D_interno_casa_bagno.jpeg',
+    '/images/portfolio/projects/03_3D_model_pool.jpeg',
+  ],
+  [
+    '/images/portfolio/projects/01_esterno_giorno_notte.jpeg',
+    '/images/portfolio/projects/02_esterno_giorno.jpeg',
+    '/images/portfolio/projects/03_interno salone.jpeg',
+  ],
+  [
+    '/images/lines/solar-sea.jpg',
+    '/images/lines/solar-vineyard.jpg',
+    '/images/lines/solar-pergola.jpg',
+  ],
+];
+
+const energyCards = [
+  {
+    key: 'residentialSystem',
+    image: '/images/lines/solar-hero.jpg',
+    meta: ['power', 'year'],
+  },
+  {
+    key: 'energyDiagnosis',
+    image: '/images/lines/solar-storage.jpg',
+    meta: ['savings', 'energyClass'],
+  },
+  {
+    key: 'publicTender',
+    image: '/images/lines/prefab-hillside.jpg',
+    meta: ['value', 'status'],
+  },
+] as const;
 
 const ProjectsPage = () => {
   const t = useTranslations('projectsPage');
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const tSheet = useTranslations('landing.sheet');
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const closeModal = useCallback(() => setOpenIndex(null), []);
 
-  const openModal = (project: Project) => {
-    setSelectedProject(project);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedProject(null);
-  };
-
-  // Get translation data and combine with images
-  const translatedProjects = ProjectsData();
-  const projects: Project[] = [
-    {
-      ...translatedProjects[0],
-      images: [
-        '/images/portfolio/projects/01_3D_esterno casa_2.jpeg',
-        '/images/portfolio/projects/01_3D_interno_casa_bagno.jpeg',
-        '/images/portfolio/projects/03_3D_model_pool.jpeg',
-      ],
-    },
-    {
-      ...translatedProjects[1],
-      images: [
-        '/images/portfolio/projects/01_esterno_giorno_notte.jpeg',
-        '/images/portfolio/projects/02_esterno_giorno.jpeg',
-        '/images/portfolio/projects/03_interno salone.jpeg',
-      ],
-    },
-    {
-      ...translatedProjects[2],
-      images: [
-        '/images/portfolio/photovoltaic/02_fotovotaico.png',
-        '/images/portfolio/photovoltaic/05_fotovotaico.png',
-        '/images/portfolio/photovoltaic/07_fotovotaico.png',
-      ],
-    },
-  ];
+  const projectsText = ProjectsData() as Omit<Project, 'images'>[];
+  const projects: Project[] = projectsText
+    .slice(0, projectImages.length)
+    .map((project, index) => ({ ...project, images: projectImages[index]! }));
 
   return (
-    <div className="relative bg-eliteLight">
-      {/* Hero Section */}
-      <div className="bg-eliteNavy py-20">
-        <div className="container-custom text-center">
-          <h1 className="mb-6 text-4xl font-bold text-whiteOne lg:text-5xl">
-            {t('hero.title')}
-          </h1>
-          <p className="mx-auto max-w-3xl text-xl text-blue-100">
-            {t('hero.subtitle')}
-          </p>
-        </div>
-      </div>
+    <main className="relative bg-ink text-bone">
+      <PageHero
+        sheet={`${tSheet('short')} P · ${t('hero.title')}`}
+        title={t('hero.title')}
+        subtitle={t('hero.subtitle')}
+      />
 
-      {/* Projects Grid */}
-      <div className="bg-whiteOne py-20">
-        <div className="container-custom">
-          <div className="space-y-20">
-            {projects.map((project, index) => (
-              <div
-                key={project.id}
-                className={`grid grid-cols-1 items-center gap-12 lg:grid-cols-2 ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}
-              >
-                {/* Project Images */}
-                <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="col-span-2">
-                      {project.images[0] && (
-                        <Image
-                          src={project.images[0]}
-                          alt={project.title}
-                          width={600}
-                          height={400}
-                          className="h-64 w-full rounded-lg object-cover shadow-lg"
-                        />
-                      )}
-                    </div>
-                    {project.images[1] && (
-                      <Image
-                        src={project.images[1]}
-                        alt={`${project.title} - Interior`}
-                        width={290}
-                        height={200}
-                        className="h-40 w-full rounded-lg object-cover shadow-md"
-                      />
-                    )}
-                    {project.images[2] && (
-                      <Image
-                        src={project.images[2]}
-                        alt={`${project.title} - Plan`}
-                        width={290}
-                        height={200}
-                        className="h-40 w-full rounded-lg object-cover shadow-md"
-                      />
-                    )}
-                  </div>
-                </div>
-
-                {/* Project Info */}
-                <div
-                  className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}
-                >
-                  <div className="mb-4">
-                    <span className="rounded-full bg-eliteGold px-4 py-2 text-sm font-medium text-whiteOne">
-                      {project.category}
-                    </span>
-                  </div>
-                  <h2 className="mb-4 text-3xl font-bold text-primary">
-                    {project.title}
-                  </h2>
-                  <p className="mb-6 text-lg text-themeTextSecondary">
-                    {project.description}
-                  </p>
-
-                  <div className="mb-6">
-                    <h3 className="mb-3 text-xl font-semibold text-primary">
-                      {t('projectFeatures.title')}
-                    </h3>
-                    <ul className="space-y-2">
-                      {project.features.map((feature: string) => (
-                        <li
-                          key={`feature-${feature.slice(0, 15)}`}
-                          className="flex items-center text-themeTextSecondary opacity-70"
-                        >
-                          <span className="mr-3 size-2 rounded-full bg-eliteGold" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <button
-                      type="button"
-                      onClick={() => openModal(project)}
-                      className="ext-themeSurface rounded-lg bg-themeAccent px-6 py-3 font-medium opacity-70 transition-colors hover:bg-themeSecondary"
-                    >
-                      {t('viewProject')}
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Photovoltaic Projects Section */}
-      <div className="bg-eliteLight py-20">
-        <div className="container-custom">
-          <h2 className="mb-12 text-center text-3xl font-bold text-primary">
-            {t('photovoltaicSection.title')}
-          </h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {/* Residential Photovoltaic System */}
-            <div className="overflow-hidden rounded-lg bg-whiteOne shadow-md">
-              <div className="flex h-48 items-center justify-center bg-gradient-to-br from-eliteNavy to-eliteGold">
-                <span className="font-semibold text-whiteOne">
-                  Impianto Fotovoltaico Lipari
-                </span>
-              </div>
-              <div className="p-6">
-                <h3 className="mb-3 text-xl font-semibold text-primary">
-                  {t('photovoltaicSection.residentialSystem.title')}
-                </h3>
-                <p className="mb-4 text-themeTextSecondary opacity-50">
-                  {t('photovoltaicSection.residentialSystem.description')}
-                </p>
-                <div className="flex justify-between text-sm text-gray-500">
-                  <span>
-                    {t('photovoltaicSection.residentialSystem.power')}
-                  </span>
-                  <span>{t('photovoltaicSection.residentialSystem.year')}</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Energy Diagnosis */}
-            <div className="overflow-hidden rounded-lg bg-whiteOne shadow-md">
-              <div className="flex h-48 items-center justify-center bg-gradient-to-br from-eliteGold to-eliteNavy">
-                <span className="font-semibold text-whiteOne">
-                  Efficienza Energetica
-                </span>
-              </div>
-              <div className="p-6">
-                <h3 className="mb-3 text-xl font-semibold text-primary">
-                  {t('photovoltaicSection.energyDiagnosis.title')}
-                </h3>
-                <p className="mb-4 text-themeTextSecondary opacity-50">
-                  {t('photovoltaicSection.energyDiagnosis.description')}
-                </p>
-                <div className="flex justify-between text-sm text-gray-500">
-                  <span>
-                    {t('photovoltaicSection.energyDiagnosis.savings')}
-                  </span>
-                  <span>
-                    {t('photovoltaicSection.energyDiagnosis.energyClass')}
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Public Tender */}
-            <div className="overflow-hidden rounded-lg bg-whiteOne shadow-md">
-              <div className="flex h-48 items-center justify-center bg-gradient-to-br from-eliteNavy to-eliteGold">
-                <span className="font-semibold text-whiteOne">
-                  Consulenza Tecnica
-                </span>
-              </div>
-              <div className="p-6">
-                <h3 className="mb-3 text-xl font-semibold text-primary">
-                  {t('photovoltaicSection.publicTender.title')}
-                </h3>
-                <p className="mb-4 text-themeTextSecondary opacity-50">
-                  {t('photovoltaicSection.publicTender.description')}
-                </p>
-                <div className="flex justify-between text-sm text-gray-500">
-                  <span>{t('photovoltaicSection.publicTender.value')}</span>
-                  <span>{t('photovoltaicSection.publicTender.status')}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="bg-eliteGray py-20">
-        <div className="container-custom text-center">
-          <h2 className="mb-6 text-4xl font-bold text-whiteOne">
-            {t('cta.title')}
-          </h2>
-          <p className="text-black-100 mx-auto mb-8 max-w-2xl text-xl">
-            {t('cta.description')}
-          </p>
-          <a
-            href="/contact#contact-form"
-            className="rounded-lg bg-whiteOne px-8 py-4 font-semibold text-eliteGold transition-colors hover:bg-eliteLight"
+      {/* Projects */}
+      {projects.map((project, index) => {
+        const code = `P.${String(index + 1).padStart(2, '0')}`;
+        const reversed = index % 2 === 1;
+        return (
+          <section
+            key={project.id}
+            className="border-b border-bone/10 py-24 md:py-32"
           >
-            {t('cta.button')}
-          </a>
-        </div>
-      </div>
+            <div className="container-custom grid gap-12 lg:grid-cols-12 lg:gap-16">
+              <Reveal
+                className={`lg:col-span-7 ${reversed ? 'lg:order-2' : ''}`}
+              >
+                <FramedImage
+                  src={project.images[0]!}
+                  alt={project.title}
+                  caption={`${code} · ${project.title}`}
+                  className="aspect-[16/10]"
+                  sizes="(min-width: 1024px) 55vw, 100vw"
+                />
+                <div className="mt-4 grid grid-cols-2 gap-4 px-3 md:px-4">
+                  {project.images.slice(1, 3).map((src) => (
+                    <div
+                      key={typeof src === 'string' ? src : src.src}
+                      className="relative aspect-[4/3] overflow-hidden bg-bone/5"
+                    >
+                      <Image
+                        src={src}
+                        alt={project.title}
+                        fill
+                        sizes="(min-width: 1024px) 27vw, 50vw"
+                        className="object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
 
-      {/* Project Modal */}
-      {selectedProject && (
-        <ProjectModal
-          project={selectedProject}
-          isOpen={isModalOpen}
-          onClose={closeModal}
-        />
-      )}
-    </div>
+              <Reveal
+                delay={0.1}
+                className={`lg:col-span-5 ${reversed ? 'lg:order-1' : ''}`}
+              >
+                <p className="mb-4 flex items-center gap-3 font-display text-xs uppercase tracking-[0.25em] text-bone/55">
+                  <span className="tabular-nums text-brick">{code}</span>
+                  {project.category}
+                </p>
+                <h2 className="font-display text-4xl font-semibold leading-[1.02] tracking-[-0.035em] md:text-5xl">
+                  {project.title}
+                </h2>
+                <p className="mt-6 text-lg leading-relaxed text-bone/65">
+                  {project.description}
+                </p>
+                <p className="mb-2 mt-10 font-display text-[11px] uppercase tracking-[0.25em] text-bone/45">
+                  {t('projectFeatures.title')}
+                </p>
+                <NumberedList items={project.features} prefix={code} />
+                <button
+                  type="button"
+                  onClick={() => setOpenIndex(index)}
+                  className="group mt-10 inline-flex items-center gap-3 rounded-full border border-bone/30 px-6 py-3 text-sm font-medium transition-colors hover:border-bone hover:bg-bone hover:text-ink"
+                >
+                  {t('viewProject')}
+                  <ArrowUpRight
+                    className="size-4 transition-transform group-hover:rotate-45"
+                    aria-hidden
+                  />
+                </button>
+              </Reveal>
+            </div>
+          </section>
+        );
+      })}
+
+      {/* Energy and technical work */}
+      <section className="py-24 md:py-36">
+        <div className="container-custom">
+          <SectionHeader index="P.04" title={t('photovoltaicSection.title')} />
+          <SheetGrid className="md:grid-cols-3">
+            {energyCards.map((card, index) => (
+              <article key={card.key} className="flex flex-col bg-ink">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={card.image}
+                    alt={t(`photovoltaicSection.${card.key}.title`)}
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col justify-between gap-8 p-6 md:p-8">
+                  <div>
+                    <p className="mb-3 font-display text-xs tabular-nums tracking-[0.2em] text-brick">
+                      P.04.{String(index + 1).padStart(2, '0')}
+                    </p>
+                    <h3 className="font-display text-2xl font-semibold tracking-[-0.02em]">
+                      {t(`photovoltaicSection.${card.key}.title`)}
+                    </h3>
+                    <p className="mt-3 leading-relaxed text-bone/60">
+                      {t(`photovoltaicSection.${card.key}.description`)}
+                    </p>
+                  </div>
+                  <div className="flex justify-between gap-4 border-t border-bone/15 pt-4 font-display text-[11px] uppercase tracking-[0.18em] text-bone/55">
+                    {card.meta.map((metaKey) => (
+                      <span key={metaKey}>
+                        {t(`photovoltaicSection.${card.key}.${metaKey}`)}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </SheetGrid>
+        </div>
+      </section>
+
+      <PageCta
+        title={t('cta.title')}
+        description={t('cta.description')}
+        button={t('cta.button')}
+      />
+
+      <AnimatePresence>
+        {openIndex !== null && projects[openIndex] && (
+          <ProjectModal
+            key={projects[openIndex]!.id}
+            project={projects[openIndex]!}
+            code={`P.${String(openIndex + 1).padStart(2, '0')}`}
+            onClose={closeModal}
+          />
+        )}
+      </AnimatePresence>
+    </main>
   );
 };
 
